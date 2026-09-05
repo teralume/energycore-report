@@ -67,7 +67,17 @@ Durante AV1 se preparó la plataforma EnergyCore a partir de un proyecto académ
 
 #### Evidencias de colaboración y commits
 
-_Evidencia pendiente de incorporar después de publicar los commits y obtener las capturas de GitHub Insights correspondientes a AV1._
+Los siguientes commits locales organizan el trabajo existente en bloques verificables. Se generaron con la fecha real de incorporación al control de versiones y no pretenden simular una cronología anterior.
+
+| Repositorio | Commits preparados para AV1 |
+|:--|:--|
+| Report | `1a0eced` - estructura del informe y Student Outcome |
+| Platform | `63d5a7a` - inicialización; `6f7f47e` - bounded contexts; `250517e` - pruebas |
+| WebApp | `d3b1c79` - inicialización; `eb76229` - experiencia web; `85ee2eb` - referencias de diseño |
+| Mobile | `1fe1a80` - inicialización Flutter; `24cf286` - experiencia móvil; `0f545f0` - pruebas y paridad web |
+| Website | `b3adb4e` - Landing Page; `268de90` - sistema de diseño |
+
+_Las capturas de commits y GitHub Insights permanecen pendientes hasta publicar las ramas en los repositorios remotos._
 
 <div style="page-break-after: always;"></div>
 
