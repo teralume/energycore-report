@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/front-matter/upc-logo.png" width="72" alt="Logo de la Universidad Peruana de Ciencias Aplicadas">
+<img src="assets/front-matter/upc-logo.png" width="110" alt="Logo de la Universidad Peruana de Ciencias Aplicadas">
 
 **Universidad Peruana de Ciencias Aplicadas**<br>
 **Carrera de Ingeniería de Software**<br>
@@ -37,6 +37,7 @@
 |:--:|:--:|:--|:--|
 | AV1 | 05/09/2026 | Loa Rojas, Jean Franck | Creación de la estructura del informe conforme al enunciado del curso, incorporación de la carátula, los enlaces de los repositorios, el perfil individual y el sustento inicial del Student Outcome 4. |
 | AV1.1 | 05/09/2026 | Loa Rojas, Jean Franck | Desarrollo de los capítulos I al V requeridos para el Primer Hito, incluyendo Lean UX, needfinding provisional, requirements specification, diseño, arquitectura, modelo de datos, backlog y evidencias técnicas. |
+| AV1.2 | 05/09/2026 | Loa Rojas, Jean Franck | Desarrollo de las secciones acumulativas de verificación y validación, DevOps y ciclo de experimentación; incorporación del acuerdo SaaS, auditoría heurística, protocolos de evidencia y matriz ética. Las entrevistas permanecen excluidas por decisión del equipo. |
 
 <div style="page-break-after: always;"></div>
 
@@ -253,6 +254,7 @@ _Las capturas de commits y GitHub Insights permanecen pendientes hasta publicar 
     - [8.6 To Be Software Platform Pre Launch](#86-to-be-software-platform-pre-launch)
       - [8.6.1 About the Product Intro Video](#861-about-the-product-intro-video)
       - [8.6.2 Resumen usando GEES Framework](#862-resumen-usando-gees-framework)
+      - [Matriz de Evaluación Ética y de Impacto](#matriz-de-evaluación-ética-y-de-impacto)
 - [Conclusiones](#conclusiones)
 - [Video App Validation](#video-app-validation)
 - [Video About the Team](#video-about-the-team)
@@ -277,15 +279,15 @@ En el siguiente cuadro se describen las acciones realizadas y los enunciados de 
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |:--|:--|:--|
-| **4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software** | **AV1:** Reutilicé un proyecto académico anterior con autorización expresa del profesor y documenté su adaptación bajo una nueva identidad, evitando presentarlo como un producto creado íntegramente desde cero para este curso. Organicé EnergyCore en repositorios independientes para conservar trazabilidad y revisé que los componentes reutilizados no mantuvieran nombres, cachés o referencias funcionales de ElectroCorp. En la solución técnica consideré la autenticación con JWT, el cifrado de contraseñas con BCrypt, el almacenamiento del token móvil mediante Android Keystore y AES-GCM, la separación de responsabilidades mediante bounded contexts y la comunicación honesta de las verificaciones que todavía requieren evidencia. También incorporé una experiencia accesible mediante tema claro y oscuro, diseño responsivo, navegación de retorno en autenticación y mensajes explícitos cuando no existe conexión a Internet. | **Pendiente de consenso grupal para AV1.** |
-| **4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales** | **AV1:** Evalué EnergyCore como una solución multiplataforma que debe funcionar en web y Android sin mantener fuentes de datos separadas, por lo que ambas aplicaciones consumen una única API y base de datos. Consideré el impacto económico mediante el seguimiento de consumo, costos, metas y planes; el impacto ambiental mediante herramientas que permiten identificar consumos elevados, programar dispositivos y promover decisiones de ahorro energético; y el impacto social mediante una interfaz responsiva, soporte en español, inglés y portugués, y avisos de conectividad comprensibles. La adaptación de la solución busca que hogares y pequeños negocios puedan tomar decisiones informadas sin depender de una infraestructura distinta para cada cliente. | **Pendiente de consenso grupal para AV1.** |
+| **4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software** | **AV1:** Reutilicé un proyecto académico anterior con autorización expresa del profesor y documenté su adaptación bajo una nueva identidad, evitando presentarlo como un producto creado íntegramente desde cero para este curso. Organicé EnergyCore en repositorios independientes para conservar trazabilidad y eliminé referencias funcionales y artefactos de la identidad anterior. En la solución técnica consideré la autenticación con JWT, el cifrado de contraseñas con BCrypt, el almacenamiento del token móvil mediante Android Keystore y AES-GCM, la separación de responsabilidades mediante bounded contexts y la comunicación honesta de las verificaciones que todavía requieren evidencia. También incorporé una experiencia accesible mediante tema claro y oscuro, diseño responsivo, navegación de retorno en autenticación y mensajes explícitos cuando no existe conexión a Internet. | La responsabilidad profesional exige conservar trazabilidad sobre lo reutilizado, proteger credenciales y datos energéticos, y diferenciar con claridad implementación, verificación y validación. Por ello no se presentan escenarios omitidos, despliegues no comprobados ni resultados experimentales como éxitos concluyentes. |
+| **4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales** | **AV1:** Evalué EnergyCore como una solución multiplataforma que debe funcionar en web y Android sin mantener fuentes de datos separadas, por lo que ambas aplicaciones consumen una única API y base de datos. Consideré el impacto económico mediante el seguimiento de consumo, costos, metas y planes; el impacto ambiental mediante herramientas que permiten identificar consumos elevados, programar dispositivos y promover decisiones de ahorro energético; y el impacto social mediante una interfaz responsiva, soporte en español, inglés y portugués, y avisos de conectividad comprensibles. La adaptación de la solución busca que hogares y pequeños negocios puedan tomar decisiones informadas sin depender de una infraestructura distinta para cada cliente. | EnergyCore solo debe recomendar una acción cuando puede comunicar la fuente, frescura, alcance y limitaciones de los datos. El valor ambiental o económico se medirá mediante experimentos y telemetría calibrada; la accesibilidad, privacidad, seguridad y autonomía funcionan como guardrails y no como objetivos secundarios. |
 
 #### Evidencias individuales
 
 - Código de estudiante: **U20241E406**.
 - Repositorios trabajados: Report, Website, WebApp, Mobile y Platform.
-- Capturas de commits e Insights: **pendientes de incorporar después de la publicación de AV1**.
-- Testimonio para el video About The Team: **pendiente de grabación**.
+- Evidencia de commits: hashes registrados en Project Report Collaboration Insights; las capturas de GitHub se incorporan solo después de publicar las ramas.
+- Testimonio About The Team: guion individual desarrollado en la sección final; la URL se registra después de la grabación real.
 
 <div style="page-break-after: always;"></div>
 
@@ -309,7 +311,7 @@ Teralume es una startup tecnológica peruana orientada a crear productos digital
 
 | Nombre completo | Código | Carrera | Fotografía | Conocimientos y habilidades |
 |:--|:--:|:--|:--:|:--|
-| Loa Rojas, Jean Franck | U20241E406 | Ingeniería de Software, Universidad Peruana de Ciencias Aplicadas | <img src="assets/team/jean-loa.jpg" width="120" alt="Jean Franck Loa Rojas"> | Soy Jean Franck Loa Rojas, estudiante de séptimo ciclo de Ingeniería de Software. Aporto experiencia en desarrollo de aplicaciones web con Angular, servicios backend con Java y Spring Boot, aplicaciones móviles con Flutter, modelado de soluciones mediante Domain-Driven Design y administración de repositorios con Git. Me interesa construir productos integrados, documentar las decisiones técnicas y evaluar sus efectos sobre las personas, los costos y el uso responsable de los recursos. |
+| Loa Rojas, Jean Franck | U20241E406 | Ingeniería de Software, Universidad Peruana de Ciencias Aplicadas | <img src="assets/team/jean-loa.jpg" width="170" alt="Jean Franck Loa Rojas"> | Soy Jean Franck Loa Rojas, estudiante de séptimo ciclo de Ingeniería de Software. Aporto experiencia en desarrollo de aplicaciones web con Angular, servicios backend con Java y Spring Boot, aplicaciones móviles con Flutter, modelado de soluciones mediante Domain-Driven Design y administración de repositorios con Git. Me interesa construir productos integrados, documentar las decisiones técnicas y evaluar sus efectos sobre las personas, los costos y el uso responsable de los recursos. |
 
 _Los perfiles de los demás integrantes se incorporarán cuando el equipo confirme sus datos._
 
@@ -697,9 +699,17 @@ flowchart TB
 
 El wireframe privilegia un recorrido único y comprensible, con CTA al inicio de sesión en los puntos de decisión.
 
+<p align="center">
+  <img src="assets/design/landing-wireframe.png" alt="Wireframe de escritorio de la Landing Page de EnergyCore" width="100%">
+</p>
+
 ### 4.3.2 Landing Page Mockup
 
-El mockup fue materializado directamente en `energycore-website`: tema oscuro grafito y esmeralda, hero con imagen 3D, mascota EnergyCore, iluminación dinámica, tarjetas de capacidades, planes vigentes y diseño responsivo. La evidencia ejecutable se encuentra en [energycore-website](https://github.com/teralume/energycore-website); las capturas finales se añadirán después de publicar el repositorio.
+El mockup fue materializado directamente en `energycore-website`: tema oscuro grafito y esmeralda, hero con imagen 3D, mascota EnergyCore, iluminación dinámica, tarjetas de capacidades, planes vigentes y diseño responsivo. La evidencia ejecutable se encuentra en [energycore-website](https://github.com/teralume/energycore-website).
+
+<p align="center">
+  <img src="assets/design/high-fidelity-mockups.png" alt="Mockups de alta fidelidad de EnergyCore" width="100%">
+</p>
 
 ## 4.4 Mobile Applications UX UI Design
 
@@ -713,6 +723,10 @@ El mockup fue materializado directamente en `energycore-website`: tema oscuro gr
 | Control | Selector de pestaña → lista de dispositivos/grupos/rutinas/modos → acción contextual |
 | Espacios | Sedes → habitaciones → asignaciones |
 | Cuenta | Perfil → seguridad → permisos → tema/idioma → cierre de sesión |
+
+<p align="center">
+  <img src="assets/design/mobile-wireframes.png" alt="Wireframes de la aplicación Flutter para Android" width="100%">
+</p>
 
 ### 4.4.2 Mobile Applications Wireflow Diagrams
 
@@ -734,9 +748,17 @@ flowchart LR
     D --> M[Modos]
 ```
 
+<p align="center">
+  <img src="assets/design/energycore-user-flow.png" alt="Wireflow principal de EnergyCore" width="100%">
+</p>
+
 ### 4.4.3 Mobile Applications Mockups
 
 Los mockups implementados mantienen tarjetas oscuras, acento esmeralda, iconografía Material, estados vacíos, loaders, diálogos y formularios adaptativos. Incluyen autenticación, dashboard, energía, dispositivos, grupos, rutinas, modos, sedes, habitaciones, asignaciones, alertas, metas, reportes, soporte, mantenimiento, planes y cuenta. El inventario de paridad está documentado en `flutter/docs/web-parity.md` dentro del repositorio móvil.
+
+<p align="center">
+  <img src="assets/design/high-fidelity-mockups.png" alt="Mockups web y móvil de alta fidelidad" width="100%">
+</p>
 
 ### 4.4.4 Mobile Applications User Flow Diagrams
 
@@ -753,6 +775,12 @@ flowchart TD
     G --> H
     H --> I[Recibe estado o alerta]
 ```
+
+El flujo completo de autenticación, selección de sede, monitoreo, control y recuperación ante pérdida de conexión se resume en el siguiente prototipo navegacional:
+
+<p align="center">
+  <img src="assets/design/energycore-user-flow.png" alt="Diagrama de flujo del usuario en EnergyCore" width="100%">
+</p>
 
 ## 4.5 Mobile Applications Prototyping
 
@@ -783,6 +811,10 @@ El código de presentación Flutter se diseñó para reutilización multiplatafo
 | Gestión | Título y CTA → filtros → tabla/tarjetas → formulario modal → confirmación |
 | Settings | Navegación secundaria → secciones de perfil, seguridad, accesos, facturación y apariencia |
 
+<p align="center">
+  <img src="assets/design/webapp-wireframes.png" alt="Wireframes del login y dashboard web de EnergyCore" width="100%">
+</p>
+
 ### 4.6.2 Web Applications Wireflow Diagrams
 
 ```mermaid
@@ -800,6 +832,10 @@ flowchart LR
 ### 4.6.3 Web Applications Mockups
 
 La implementación Angular funciona como mockup de alta fidelidad y producto navegable. Usa componentes compartidos para botones, campos, selectores, fechas, tablas, tarjetas, diálogos y estados de error; Lucide Angular mantiene coherencia iconográfica. El dashboard y los contextos funcionales comparten tema, espaciado y patrones de operación.
+
+<p align="center">
+  <img src="assets/evidence/implemented/webapp-dashboard.png" alt="Mockup funcional de alta fidelidad del dashboard web" width="100%">
+</p>
 
 ### 4.6.4 Web Applications User Flow Diagrams
 
@@ -1053,21 +1089,60 @@ La asignación individual confirmada corresponde a Jean Franck Loa Rojas: organi
 
 `energycore-website` contiene `index.html`, `styles.css`, `script.js`, mascota, marca SVG e imagen hero 3D. Implementa navegación responsiva, cambio ES/EN, animaciones con movimiento reducido, capacidades, planes Starter/Professional/Enterprise y CTA al login. `node --check script.js` fue ejecutado sin errores.
 
-**Evidencia visual pendiente:** captura de escritorio y móvil después de publicar el repositorio o disponer de la URL del despliegue.
+La Landing Page fue levantada localmente y recorrida en navegador sobre el artefacto actual. La captura siguiente evidencia el hero, la mascota, el recurso 3D, la navegación y el CTA dirigido al inicio de sesión. La publicación pública todavía debe verificarse después del despliegue.
+
+<p align="center">
+  <img src="assets/evidence/implemented/landing-desktop.png" alt="Landing Page de EnergyCore ejecutada en navegador" width="100%">
+</p>
 
 ### 5.2.3 Implemented Frontend Web Application Evidence
 
 `energycore-webapp` implementa autenticación, dashboard, energía, dispositivos, grupos, rutinas, modos, sedes, habitaciones, asignaciones, alertas, reglas, preferencias, metas, reportes, soporte, mantenimiento, planes y configuración de cuenta. Se organiza por bounded contexts con capas `domain`, `application`, `infrastructure` y `presentation`. `npm run build` concluyó correctamente, con advertencias no bloqueantes de presupuesto de estilos.
 
-**Evidencia visual pendiente:** capturas de autenticación, dashboard y un flujo CRUD conectado al backend.
+Para validar la navegación sin atribuir datos inexistentes a producción, se ejecutó el build de Angular contra un servicio local de demostración controlada. Se comprobó el flujo login → centro operativo → consumo energético, además de registro y recuperación. Estas capturas demuestran integración y estados de interfaz; la persistencia real con Neon se verificará en el despliegue.
+
+<p align="center">
+  <img src="assets/evidence/implemented/webapp-login.png" alt="Inicio de sesión de EnergyCore" width="100%">
+</p>
+
+<p align="center">
+  <img src="assets/evidence/implemented/webapp-dashboard.png" alt="Centro operativo de EnergyCore" width="100%">
+</p>
+
+<p align="center">
+  <img src="assets/evidence/implemented/webapp-energy-dashboard-top.png" alt="Dashboard de consumo energético de EnergyCore" width="100%">
+</p>
+
+<p align="center">
+  <img src="assets/evidence/implemented/webapp-register.png" alt="Registro de cuenta de EnergyCore" width="100%">
+</p>
+
+<p align="center">
+  <img src="assets/evidence/implemented/webapp-recover-password.png" alt="Recuperación de contraseña de EnergyCore" width="100%">
+</p>
 
 ### 5.2.4 Acuerdo de Servicio SaaS
 
-Esta sección pertenece a la estructura acumulativa general, pero no figura en la estructura específica del Primer Hito de las páginas 37 a 39 del enunciado. Se desarrollará para el Trabajo Parcial con alcance, disponibilidad, soporte, seguridad, privacidad, continuidad, límites de responsabilidad y condiciones de los planes. No se presenta un contrato ficticio como evidencia de AV1.
+El presente acuerdo describe las condiciones objetivo del servicio académico EnergyCore. No constituye todavía un SLA comercial ni afirma un nivel de operación que no haya sido medido en producción.
+
+| Aspecto | Compromiso de diseño |
+|:--|:--|
+| Alcance | Acceso a monitoreo energético, control de dispositivos, automatizaciones, alertas, metas, reportes, sedes, soporte y administración de cuenta según el plan seleccionado. |
+| Disponibilidad | Objetivo mensual de 99 % una vez desplegado el servicio. El cálculo excluirá mantenimientos anunciados y dependerá de evidencia de monitoreo; mientras no exista esa evidencia, el porcentaje es una meta y no una garantía. |
+| Mantenimiento | Ventana ordinaria propuesta: domingos de 02:00 a 04:00, hora de Lima, comunicada con 24 horas de anticipación. Los mantenimientos críticos de seguridad pueden ejecutarse fuera de la ventana. |
+| Soporte | Registro de incidencias desde **Support Tickets**. Objetivos de primera respuesta: crítica, 4 horas; alta, 8 horas; media, 24 horas; baja, 48 horas hábiles. |
+| Continuidad | Objetivos iniciales RTO de 8 horas y RPO de 24 horas. Deben validarse mediante una prueba de restauración antes de ofrecerse contractualmente. |
+| Seguridad | Autenticación JWT, contraseñas con BCrypt, autorización por perfiles, secretos fuera del repositorio, HTTPS en despliegue y principio de mínimo privilegio. |
+| Privacidad | Minimización de datos personales; las lecturas se asocian a la cuenta y sus espacios. No se recolectarán credenciales, JWT, direcciones completas ni datos de pago en la analítica experimental. |
+| Portabilidad | Exportación de lecturas y reportes en CSV. La eliminación de cuenta debe revocar el acceso y activar el proceso de supresión aplicable. |
+| Límites | La solución académica no reemplaza medidores certificados ni garantiza ahorro económico. La exactitud depende de la fuente de telemetría y de la conectividad de los dispositivos. |
+| Responsabilidad del usuario | Mantener sus credenciales seguras, verificar el estado del equipo antes de operaciones sensibles y no utilizar EnergyCore como único mecanismo de protección eléctrica. |
+
+Los planes **Starter**, **Professional** y **Enterprise** determinan límites funcionales, no niveles distintos de protección de datos. Cualquier cambio futuro en precios, límites o disponibilidad deberá publicarse antes de afectar una suscripción vigente.
 
 ### 5.2.5 Implemented Native Mobile Application Evidence
 
-`energycore-mobile/flutter` implementa la experiencia Android con paridad respecto de los módulos web. Incluye sesión cifrada, tema claro/oscuro/sistema, español/inglés/portugués, navegación adaptable, aviso de desconexión y acción **Reintentar**. `dart analyze` y `flutter test` llegaron a ejecutarse correctamente antes del último ajuste visual; la repetición dentro del entorno administrado quedó bloqueada por permisos de creación de procesos, por lo que deberá repetirse en PowerShell normal antes de la entrega.
+`energycore-mobile/flutter` implementa la experiencia Android con paridad respecto de los módulos web. Incluye sesión cifrada, tema claro/oscuro/sistema, español/inglés/portugués, navegación adaptable, aviso de desconexión y acción **Reintentar**. Después del ajuste de navegación de autenticación se ejecutaron en una terminal normal `dart analyze`, con resultado **No issues found**, y `flutter test`, con resultado **All tests passed**.
 
 **Evidencia visual pendiente:** capturas del emulador con login, dashboard y un flujo de energía o dispositivos.
 
@@ -1075,7 +1150,7 @@ Esta sección pertenece a la estructura acumulativa general, pero no figura en l
 
 `energycore-platform` implementa una RESTful API Spring Boot organizada en IAM, Billing, Workplace, Device Control, Energy Monitoring, Notifications, Reporting y Service Management. Emplea JWT, BCrypt, JPA/PostgreSQL, eventos de integración, servicios de dominio, command/query services, recursos y assemblers. Incluye suites unitarias, de integración y escenarios Cucumber.
 
-**Estado de verificación:** el código y las pruebas están versionados. La ejecución Maven final en el entorno administrado fue bloqueada por falta de permiso de escritura en `.m2`; debe repetirse en una terminal normal antes de adjuntar la captura.
+**Estado de verificación:** el último reporte Surefire disponible registra 83 casos descubiertos, sin fallos ni errores: 23 pruebas JUnit ejecutadas y 60 escenarios Cucumber, de los cuales 17 se ejecutaron y 43 se omitieron por el filtro temporal del runner. El gate BDD continúa parcial hasta implementar los steps restantes y ejecutar los 60 escenarios.
 
 ### 5.2.7 RESTful API Documentation
 
@@ -1092,11 +1167,11 @@ Con la API activa, OpenAPI se publica en `http://localhost:8080/swagger-ui.html`
 | Reporting | `/api/v1/reports`, `/energy-goals`, `/reporting/platform/summary` |
 | Service Management | `/api/v1/support-tickets`, `/maintenance-tickets` |
 
-La captura de Swagger UI se añadirá después de ejecutar backend y PostgreSQL en el equipo local.
+La tabla anterior documenta el contrato por bounded context. Además, el inventario reproducible generado desde las anotaciones Spring MVC registra **100 operaciones** y se conserva en [`energycore-platform/docs/api-endpoints.md`](https://github.com/teralume/energycore-platform/blob/develop/docs/api-endpoints.md). La captura de Swagger UI y la exportación del documento OpenAPI se añadirán únicamente después de ejecutar el backend contra PostgreSQL/Neon y verificar `/v3/api-docs`; no se sustituye esa evidencia con una imagen fabricada.
 
 ### 5.2.8 Team Collaboration Insights
 
-Antes de esta ampliación del informe se organizaron 13 commits locales distribuidos entre los cinco repositorios. El trabajo confirmado de Jean Franck Loa Rojas abarca configuración, migración de identidad, backend, Web Application, Landing Page, Native Mobile Application y reporte. Los árboles quedaron limpios al cerrar esa línea base; el cambio actual agrega el desarrollo documental de los capítulos I al V.
+Antes de esta ampliación del informe se organizaron 13 commits locales distribuidos entre los cinco repositorios. El trabajo confirmado de Jean Franck Loa Rojas abarca configuración, migración de identidad, backend, Web Application, Landing Page, Native Mobile Application y reporte. Los árboles quedaron limpios al cerrar esa línea base; el cambio actual completa el desarrollo documental de los capítulos I al VIII, excepto las entrevistas y la evidencia externa o empírica que todavía no ha ocurrido.
 
 Las capturas de GitHub Insights deben incorporarse después de publicar las ramas. No se atribuirán aportes a integrantes cuyos datos y commits todavía no han sido confirmados.
 
@@ -1112,21 +1187,91 @@ Guion recomendado: problema y segmentos (45 s), propuesta de valor (45 s), demos
 
 ## 6.1 Testing Suites and Validation
 
+La estrategia de pruebas sigue una pirámide: reglas de dominio en la base, integración HTTP y persistencia en el nivel intermedio, y recorridos de producto en la parte superior. Una prueba se considera evidencia únicamente si existe código ejecutable y un resultado registrado; los escenarios escritos sin step definitions se reportan como especificación, no como pruebas aprobadas.
+
 ### 6.1.1 Core Entities Unit Tests
 
-_Pendiente para la entrega correspondiente._
+El backend contiene **23 métodos JUnit** distribuidos entre servicios de dominio, servicios de aplicación, seguridad y manejadores de eventos. Las pruebas se concentran en reglas que pueden evaluarse sin interfaz de usuario.
+
+| Área | Clases de prueba | Reglas cubiertas |
+|:--|:--|:--|
+| IAM | `AccessProfilePolicyServiceTest`, `AccessAuthorizationServiceTest` | Perfiles válidos, permisos y denegación de acciones no autorizadas. |
+| Autenticación | `AuthApplicationServiceTest`, `PasswordHashingServiceTest` | Registro, credenciales, hashing y comportamiento ante entradas inválidas. |
+| Device Control | `RoutineSchedulePolicyServiceTest`, `DevicePairingCatalogServiceTest` | Horarios, repetición, restricciones de vinculación y catálogo de dispositivos. |
+| Billing | `BillingCommandServiceImplTest` | Suscripción, validación del flujo académico y cambios de estado. |
+| Reporting | `MonthlyConsumptionReportSchedulerServiceTest`, `ReportingIntegrationEventHandlerTest` | Programación del reporte mensual y reacción a eventos entre contextos. |
+| IAM events | `UserRegisteredEventHandlerTest` | Inicialización posterior al registro sin acoplar el controlador REST. |
+
+En Flutter, `domain_models_test.dart` verifica progreso normalizado de metas, disponibilidad y estado de dispositivos, actualización inmutable de preferencias, permisos equivalentes a la Web Application y conservación de las opciones avanzadas de rutinas y modos. Esta combinación protege invariantes en el servidor y en el modelo de presentación móvil.
+
+**Criterio de aprobación:** todos los tests unitarios deben finalizar sin failures ni errors. El último reporte Maven disponible registra 23 pruebas JUnit aprobadas.
 
 ### 6.1.2 Core Integration Tests
 
-_Pendiente para la entrega correspondiente._
+Las pruebas de integración del backend levantan el contexto Spring Boot en un puerto aleatorio mediante `@SpringBootTest(webEnvironment = RANDOM_PORT)` y activan el perfil `test`. H2 reemplaza a PostgreSQL únicamente durante la suite; Spring Security y la cadena HTTP permanecen activas.
+
+El recorrido integrado verificable comprende:
+
+1. registrar o autenticar un usuario;
+2. obtener un JWT y enviarlo como `Bearer`;
+3. consumir endpoints protegidos;
+4. persistir y recuperar datos mediante repositories JPA;
+5. validar códigos HTTP y recursos JSON;
+6. comprobar efectos entre bounded contexts, como registro de usuario y reporting.
+
+La Web Application añade un smoke test ejecutable, `scripts/smoke-device-group-flow.mjs`, que crea una cuenta, sede, habitación, tres dispositivos, sus asignaciones y un grupo; luego consulta `/device-groups` y falla si el grupo no fue persistido. Este test requiere la API y su base de datos activas, por lo que no se confunde con un test unitario aislado.
+
+| Riesgo de integración | Evidencia prevista |
+|:--|:--|
+| Contrato cliente-servidor divergente | Respuestas reales del smoke test y OpenAPI. |
+| Autorización omitida | Petición protegida sin token rechazada y petición con JWT aceptada. |
+| Persistencia incompleta | Recurso creado recuperable mediante GET. |
+| Relaciones inválidas | Device Assignment y Device Group creados con IDs existentes. |
+| Error de CORS | Preflight desde el origen público permitido. |
+
+**Estado:** existe la infraestructura de integración y hay escenarios ejecutados con cero fallos. El smoke test completo debe repetirse contra el entorno que se entregue y su salida debe adjuntarse como evidencia.
 
 ### 6.1.3 Core Behavior Driven Development
 
-_Pendiente para la entrega correspondiente._
+La especificación BDD se expresa en Gherkin y usa Given-When-Then. Existen **8 feature files** y **60 escenarios** para IAM, Billing, Workplace, Device Control, Energy Monitoring, Notifications, Reporting y Service Management.
+
+Ejemplo representativo:
+
+```gherkin
+Scenario: Toggling a device from OFF to ON
+  Given an authenticated user with a registered device
+  And the device is OFF
+  When the user toggles the device
+  Then the API returns the device with status ON
+```
+
+Los escenarios se enlazan con historias del Product Backlog y se ejecutan con Cucumber sobre JUnit Platform. El runner actual filtra `@iam or @billing`, porque esos contextos ya poseen step definitions completas. El último reporte Surefire registra **60 escenarios descubiertos: 17 ejecutados, 43 omitidos, 0 fallos y 0 errores**. Por tanto, la suite BDD está parcialmente automatizada; los 43 escenarios omitidos son deuda verificable y no se presentan como aprobados.
+
+Plan de cierre:
+
+| Prioridad | Contexto | Condición para considerarlo cerrado |
+|--:|:--|:--|
+| 1 | Device Control y Energy Monitoring | Steps de dispositivos, rutinas, modos, dashboard y muestreo ejecutados. |
+| 2 | Workplace y Notifications | Steps de sedes, habitaciones, asignaciones, reglas y alertas ejecutados. |
+| 3 | Reporting y Service Management | Steps de metas, reportes, soporte y mantenimiento ejecutados. |
+| 4 | Suite completa | Eliminar el filtro temporal, ejecutar los 60 escenarios y obtener cero fallos. |
 
 ### 6.1.4 Core System Tests
 
-_Pendiente para la entrega correspondiente._
+Las pruebas de sistema se plantean sobre recorridos completos y no sobre componentes aislados.
+
+| ID | Recorrido | Resultado esperado | Estado de evidencia |
+|:--|:--|:--|:--|
+| ST-01 | Landing Page → CTA → login | El CTA abre `/iam/login`; registro y recuperación permiten regresar al login. | Implementado; captura final por incorporar. |
+| ST-02 | Registro → suscripción → dashboard | La sesión se conserva y el usuario entra al shell permitido por su plan. | Flujo implementado; ejecución integrada por registrar. |
+| ST-03 | Sede → habitación → dispositivo → grupo | Los recursos quedan relacionados y el grupo reaparece al consultarlo. | Smoke test disponible; requiere API activa. |
+| ST-04 | Lectura alta → regla → alerta → resolución | La regla genera una alerta que puede leerse y resolverse. | Especificación BDD disponible; automatización parcial. |
+| ST-05 | Rutina o modo → acción sobre dispositivos | La vista previa muestra alcance y la ejecución actualiza estados. | Implementado; evidencia audiovisual por incorporar. |
+| ST-06 | Meta → dashboard → reporte CSV | El progreso usa lecturas del periodo y el reporte se puede exportar. | Implementado; evidencia integrada por registrar. |
+| ST-07 | Pérdida de red en Android | Aparece aviso persistente, **Reintentar** relanza las cargas y no se pierde la sesión local. | Implementado; prueba manual en emulador por registrar. |
+| ST-08 | Preferencias | Tema de sistema e idioma ES/EN/PT se mantienen entre vistas. | Pruebas Flutter aprobadas; verificación web pendiente de captura. |
+
+El gate de sistema para una entrega exige: backend saludable, base de datos accesible, Web Application y aplicación Android apuntando a la misma API, ausencia de errores bloqueantes en consola y evidencia de al menos un flujo CRUD, uno de automatización y uno de reporte.
 
 ## 6.2 Static Testing and Verification
 
@@ -1134,29 +1279,106 @@ _Pendiente para la entrega correspondiente._
 
 #### 6.2.1.1 Coding Standard and Code Conventions
 
-_Pendiente para la entrega correspondiente._
+La verificación estática comprueba primero la arquitectura y luego el estilo. Las reglas aplicadas son:
+
+- backend por bounded contexts y capas `domain`, `application`, `infrastructure`, `interfaces` y `shared`;
+- controllers delgados, commands para cambios, queries para lectura, resources y assemblers en los límites REST;
+- Angular dentro de `src/app/<context>/` con `domain`, `application`, `infrastructure` y `presentation`; los componentes no realizan HTTP directo;
+- Flutter con archivos `snake_case`, tipos `PascalCase`, contratos en domain, controladores en application y adaptadores HTTP/almacenamiento en infrastructure;
+- rutas REST plurales bajo `/api/v1`, JSON consistente y Ubiquitous Language compartido;
+- HTML semántico, CSS por tokens y JavaScript sin dependencias para la Landing Page;
+- commits convencionales y cambios acotados por repositorio.
+
+Comandos de verificación reproducibles:
+
+```powershell
+# Backend
+.\mvnw.cmd test
+
+# Web Application
+npm test -- --watch=false
+npm run build
+
+# Flutter
+& "C:\JeanLoa\SDKs\flutter\bin\dart.bat" format --output=none --set-exit-if-changed lib test
+& "C:\JeanLoa\SDKs\flutter\bin\dart.bat" analyze
+& "C:\JeanLoa\SDKs\flutter\bin\flutter.bat" test
+
+# Landing Page
+node --check script.js
+```
+
+El análisis Dart más reciente terminó sin issues. La compilación Angular terminó correctamente con advertencias de presupuesto SCSS; dichas advertencias no rompen el build, pero se registran como deuda de rendimiento.
 
 #### 6.2.1.2 Code Quality and Code Security
 
-_Pendiente para la entrega correspondiente._
+La revisión de calidad usa una matriz de controles preventivos y verificables.
+
+| Control | Implementación actual | Riesgo remanente / acción |
+|:--|:--|:--|
+| Autenticación | JWT y contraseñas con BCrypt. | Rotar el secreto por entorno y probar expiración/revocación. |
+| Autorización | Access Profiles y guards en los clientes. | Añadir casos negativos para cada operación sensible. |
+| Validación | Bean Validation, value objects y validación de formularios. | Unificar todos los errores como Problem Details. |
+| Secretos | Variables de entorno y Secret Manager en el diseño de despliegue. | Bloquear commits con secretos mediante secret scanning. |
+| Transporte | HTTPS provisto por Cloud Run/Firebase en el destino. | No aceptar endpoints HTTP en configuración productiva. |
+| CORS | Lista explícita de orígenes web y localhost. | Verificar preflight después de cada despliegue. |
+| Persistencia | Repositories JPA y PostgreSQL; H2 solo para tests. | Reemplazar `ddl-auto=update` por migraciones versionadas antes de producción real. |
+| Frontend | Angular AOT, budgets, rutas protegidas y sesión encapsulada. | Reducir estilos que exceden el budget y ampliar tests de componentes. |
+| Mobile | Token cifrado con Android Keystore/AES-GCM y fallos tipados. | Probar borrado de token, reinstalación y dispositivo comprometido. |
+| Contenedores | Runtime Java no-root y build multi-stage. | Incorporar escaneo de imagen y SBOM en CI. |
+
+Antes de cada publicación se propone ejecutar análisis de dependencias, secret scanning, SAST y escaneo del contenedor. Un hallazgo crítico o alto sin mitigación bloquea la entrega; un hallazgo medio requiere responsable y fecha; un hallazgo bajo se incorpora al backlog técnico.
 
 ### 6.2.2 Reviews
 
-_Pendiente para la entrega correspondiente._
+Cada cambio debe pasar por una revisión de cuatro perspectivas:
+
+1. **Correctitud:** criterios de aceptación, casos límite y manejo de errores.
+2. **Arquitectura:** dependencia entre capas, cohesión del bounded context y ausencia de HTTP en presentation.
+3. **Seguridad y privacidad:** permisos, exposición de datos, secretos, logs y validación.
+4. **Experiencia:** consistencia, accesibilidad, responsive design, idioma, tema y estados vacíos/carga/error.
+
+Checklist para Pull Request:
+
+- [ ] La historia y sus criterios de aceptación están enlazados.
+- [ ] Se añadieron o actualizaron pruebas proporcionales al riesgo.
+- [ ] No se quemaron datos de negocio, credenciales ni URLs privadas.
+- [ ] Los contratos públicos se conservaron o el cambio fue documentado.
+- [ ] Los textos existen en ES, EN y PT cuando corresponda.
+- [ ] Se revisaron 390 px, 768 px y 1440 px, teclado y contraste.
+- [ ] El pipeline terminó sin fallos y las advertencias aceptadas están explicadas.
+- [ ] La evidencia visual o de consola fue incorporada a la entrega.
+
+En la línea base actual la revisión fue individual, porque solo se ha confirmado la participación de Jean Franck Loa Rojas. Para una revisión por pares real, otro integrante deberá aprobar el Pull Request y quedar visible en GitHub.
 
 ## 6.3 Validation Interviews
 
 ### 6.3.1 Diseño de Entrevistas
 
-_Pendiente para la entrega correspondiente._
+**Excluido de esta versión por indicación del equipo.** No se redactan respuestas, participantes ni consentimientos ficticios.
 
 ### 6.3.2 Registro de Entrevistas
 
-_Pendiente para la entrega correspondiente._
+**Excluido de esta versión por indicación del equipo.** Los enlaces audiovisuales y la síntesis se incorporarán únicamente después de realizar las sesiones reales.
 
 ### 6.3.3 Evaluaciones según heurísticas
 
-_Pendiente para la entrega correspondiente._
+Se realizó una evaluación de escritorio sobre los flujos implementados, usando las diez heurísticas de Nielsen. La escala va de 0 a 4: 0 no es un problema; 1 cosmético; 2 menor; 3 mayor; 4 crítico. Esta revisión detecta riesgos de interfaz, pero no reemplaza pruebas con usuarios.
+
+| Heurística | Evidencia favorable | Hallazgo | Severidad | Acción |
+|:--|:--|:--|:--:|:--|
+| Visibilidad del estado | Loaders, toasts, estados de dispositivos y banner offline. | Falta mostrar de forma uniforme cuándo se actualizó por última vez cada métrica. | 2 | Incorporar timestamp y estado de sincronización en dashboard e histórico. |
+| Correspondencia con el mundo real | Sedes, habitaciones, dispositivos, consumo, costo y metas. | Los modos de operación concentran conceptos avanzados en un solo formulario. | 2 | Añadir explicación progresiva y resumen previo a activar. |
+| Control y libertad | Cancelación, confirmaciones y retorno visible al login. | Las eliminaciones confirmadas no ofrecen deshacer. | 2 | Aplicar borrado lógico o ventana de deshacer donde el dominio lo permita. |
+| Consistencia | Tokens esmeralda/grafito, componentes shared y vocabulario común. | Algunos mensajes de error dependen todavía del texto técnico recibido. | 2 | Mapear errores a mensajes consistentes y traducibles. |
+| Prevención de errores | Validación de formularios, permisos y límites de plan. | Las acciones masivas requieren una vista clara del alcance afectado. | 3 | Exigir resumen de dispositivos y confirmación antes de ejecutar. |
+| Reconocimiento antes que recuerdo | Navegación etiquetada, tarjetas y accesos rápidos. | En móvil, una lista extensa de módulos puede ocultar tareas frecuentes. | 2 | Personalizar accesos recientes y mantener búsqueda contextual. |
+| Flexibilidad y eficiencia | Responsive navigation, grupos, rutinas, modos y exportación. | No hay atajos de teclado documentados en web. | 1 | Añadir atajos solo para acciones frecuentes y visibles. |
+| Diseño minimalista | Jerarquía clara y contraste alto. | Dashboard y configuración avanzada pueden resultar densos en pantallas pequeñas. | 2 | Aplicar progressive disclosure y priorizar KPI, estado y acción. |
+| Recuperación ante errores | `AppFailure`, estados de error y acción **Reintentar**. | Falta correlacionar el error visible con un identificador de soporte. | 2 | Generar correlation ID sin exponer stack traces. |
+| Ayuda y documentación | About, información de plataforma y tickets de soporte. | Falta ayuda contextual en vinculación, rutinas, modos y reglas. | 2 | Añadir ejemplos breves y enlaces de ayuda desde cada formulario. |
+
+El hallazgo prioritario es la prevención de acciones masivas no deseadas. Ningún hallazgo alcanzó severidad crítica en la inspección de escritorio, pero esta conclusión solo cubre el diseño revisado y deberá contrastarse con la ejecución real.
 
 ## 6.4 Auditoría de Experiencias de Usuario
 
@@ -1164,33 +1386,70 @@ _Pendiente para la entrega correspondiente._
 
 #### 6.4.1.1 Información del grupo auditado
 
-_Pendiente para la entrega correspondiente._
+La auditoría se aplicará a otro grupo del mismo curso asignado por el docente. Para evitar inventar una organización, producto o contacto, estos datos se registrarán al momento del intercambio:
+
+| Campo | Registro requerido |
+|:--|:--|
+| Startup y producto | Nombre oficial y enlace al reporte. |
+| Grupo / NRC | Identificador confirmado por el equipo auditado. |
+| Contacto | Integrante autorizado para coordinar la auditoría. |
+| Artefactos | Landing Page, Web Application, Native Mobile Application y reporte. |
+| Versión evaluada | Commit SHA o tag inmutable. |
+| Alcance acordado | Tres flujos críticos y plataformas disponibles. |
+
+**Estado de evidencia externa:** grupo auditado aún no asignado o confirmado.
 
 #### 6.4.1.2 Cronograma de auditoría realizada
 
-_Pendiente para la entrega correspondiente._
+| Momento | Actividad | Duración | Salida |
+|:--|:--|--:|:--|
+| D-3 | Confirmar alcance, versión y accesos de prueba. | 20 min | Ficha de auditoría. |
+| D-2 | Revisión individual por heurísticas y accesibilidad. | 60 min | Hallazgos preliminares. |
+| D-1 | Consolidar duplicados y asignar severidad. | 30 min | Backlog priorizado. |
+| D | Sesión de devolución con el grupo auditado. | 30 min | Acta y aceptación de hallazgos. |
+| D+2 | Verificar correcciones declaradas. | 30 min | Informe de cierre. |
+
+Las fechas reales se completarán cuando el docente confirme el intercambio. El cronograma ya define responsables, tiempo y evidencia sin simular que la auditoría ocurrió.
 
 #### 6.4.1.3 Contenido de auditoría realizada
 
-_Pendiente para la entrega correspondiente._
+El paquete de auditoría está compuesto por:
+
+- inventario de tres tareas críticas y sus criterios de éxito;
+- evaluación de las diez heurísticas de Nielsen con severidad 0-4;
+- revisión WCAG de contraste, foco, nombres accesibles y navegación por teclado;
+- revisión responsive en 390, 768 y 1440 px;
+- comprobación de estados de carga, vacío, error, offline y éxito;
+- trazabilidad de cada hallazgo con captura, ruta, versión y recomendación;
+- acta de devolución y verificación de correcciones.
+
+Formato de hallazgo: `AUD-## | pantalla/ruta | heurística | pasos | resultado observado | impacto | severidad | recomendación | evidencia`. No se consignan hallazgos del otro producto hasta observarlo realmente.
 
 ### 6.4.2 Auditoría recibida
 
 #### 6.4.2.1 Información del grupo auditor
 
-_Pendiente para la entrega correspondiente._
+El grupo auditor externo será el equipo designado por el docente. La ficha deberá registrar startup, producto, NRC, integrantes que participaron, enlace a su reporte y commit evaluado de EnergyCore. **No existe todavía un grupo auditor confirmado**, por lo que no se atribuyen nombres ni observaciones.
 
 #### 6.4.2.2 Cronograma de auditoría recibida
 
-_Pendiente para la entrega correspondiente._
+EnergyCore propondrá el mismo esquema D-3, D-2, D-1, D y D+2 de la auditoría realizada. Antes de D-3 se congelará una versión con tag; durante D se revisará cada hallazgo; en D+2 se responderá con estado **aceptado**, **mitigado**, **rechazado con sustento** o **incorporado al backlog**.
 
 #### 6.4.2.3 Contenido de auditoría recibida
 
-_Pendiente para la entrega correspondiente._
+Se entregará al grupo auditor una cuenta de prueba sin datos personales, los enlaces de los clientes, un conjunto semilla de sedes/dispositivos/lecturas, tres tareas críticas y un canal para reportar hallazgos. El contenido recibido deberá conservarse sin reescritura y cada observación tendrá una respuesta trazable del equipo EnergyCore.
+
+**Estado de evidencia externa:** no se han recibido hallazgos de otro grupo.
 
 #### 6.4.2.4 Resumen de modificaciones para subsanar hallazgos
 
-_Pendiente para la entrega correspondiente._
+La siguiente matriz queda preparada para la evidencia real:
+
+| Hallazgo | Decisión | Cambio | Repositorio / commit | Verificación |
+|:--|:--|:--|:--|:--|
+| Por recibir | — | — | — | — |
+
+No se presentan modificaciones como resultado de auditoría externa antes de recibirla. Los hallazgos de la autoevaluación heurística se mantienen separados para conservar la procedencia de la evidencia.
 
 # Capítulo VII DevOps Practices
 
@@ -1198,49 +1457,139 @@ _Pendiente para la entrega correspondiente._
 
 ### 7.1.1 Tools and Practices
 
-_Pendiente para la entrega correspondiente._
+La integración continua propuesta usa GitHub, GitFlow, Conventional Commits y GitHub Actions. Cada Pull Request hacia `develop` o `main` debe ejecutar un pipeline específico por repositorio. Las ramas `feature/*` contienen cambios pequeños; `develop` integra el siguiente incremento; `release/*` estabiliza; `main` representa una versión entregable; `hotfix/*` corrige producción.
+
+Prácticas obligatorias:
+
+- Pull Request con historia, riesgo, evidencia y checklist;
+- al menos una revisión por pares cuando haya otro integrante confirmado;
+- jobs reproducibles mediante lockfiles y Maven Wrapper;
+- tests sin acceso a secretos productivos;
+- caché solo para dependencias, nunca para sustituir artefactos de prueba;
+- protección de `main`, bloqueo ante gates fallidos y tags por entrega;
+- artefactos identificados con commit SHA.
+
+**Estado:** los repositorios contienen scripts de build y test, pero no se encontraron workflows `.github/workflows`; por tanto, CI está diseñada y puede ejecutarse localmente, pero todavía no está automatizada en GitHub.
 
 ### 7.1.2 Build and Test Suite Pipeline Components
 
-_Pendiente para la entrega correspondiente._
+```mermaid
+flowchart LR
+    A[Push / Pull Request] --> B[Checkout]
+    B --> C[Restore dependencies]
+    C --> D[Static analysis]
+    D --> E[Unit tests]
+    E --> F[Integration / BDD tests]
+    F --> G[Production build]
+    G --> H[Security scan]
+    H --> I[Versioned artifact]
+```
+
+| Repositorio | Static gate | Test gate | Build artifact |
+|:--|:--|:--|:--|
+| `energycore-platform` | Compilación Java y análisis SAST/dependencias | JUnit + Cucumber | JAR y Docker image |
+| `energycore-webapp` | TypeScript/AOT y budgets | Vitest + smoke integrado | `dist/energycore-webapp/browser` |
+| `energycore-mobile` | `dart format` + `dart analyze` | `flutter test` | APK debug/release según entrega |
+| `energycore-website` | `node --check` + validación HTML | Smoke de navegación, idioma y enlaces | Directorio estático |
+| `energycore-report` | Markdown links/estructura | Verificación de anclas y evidencias | README versionado y PDF de entrega |
+
+El pipeline no debe continuar si falla una prueba. Los 43 escenarios Cucumber omitidos se muestran como deuda y no como resultado verde.
 
 ## 7.2 Continuous Delivery
 
 ### 7.2.1 Tools and Practices
 
-_Pendiente para la entrega correspondiente._
+Continuous Delivery significa que cada cambio aprobado produce artefactos desplegables, aunque la promoción a producción requiera una decisión humana. EnergyCore empleará Docker para la API, Firebase Hosting para los sitios web y un APK firmado para Android. Los secretos se inyectan por entorno y no forman parte de los artefactos.
+
+La versión se asociará con un tag, release notes, checksums y una matriz de compatibilidad entre API, Web Application y Mobile. Las variables productivas se verifican antes de compilar para impedir que un cliente se publique con `localhost` o una URL obsoleta.
 
 ### 7.2.2 Stages Deployment Pipeline Components
 
-_Pendiente para la entrega correspondiente._
+| Etapa | Entrada | Controles | Salida |
+|:--|:--|:--|:--|
+| Build | Commit aprobado | Dependencias bloqueadas, build limpio | Artefactos por repositorio |
+| Verify | Artefactos | Tests, SAST, secret scan, SBOM, budgets | Candidato verificable |
+| Package | Candidato | SHA, versión y configuración externa | Imagen/JAR/dist/APK/report |
+| Staging | Artefactos versionados | Smoke, CORS, rutas SPA, health y rollback | Release candidate |
+| Approval | Evidencia de staging | Revisión humana y riesgos conocidos | Autorización de promoción |
+| Release | Candidato aprobado | Despliegue inmutable | Versión publicada |
+| Post-release | URL/version | Health, login sintético y logs | Acta de entrega o rollback |
+
+Los scripts existentes preparan Cloud Run y Firebase Hosting; su presencia demuestra automatización disponible, no un despliegue exitoso. La URL pública solo se declarará después de verificar health, login, CORS y rutas SPA.
 
 ## 7.3 Continuous Deployment
 
 ### 7.3.1 Tools and Practices
 
-_Pendiente para la entrega correspondiente._
+Para Continuous Deployment, `main` podría promover automáticamente una versión que haya aprobado todos los gates y un smoke de staging. En el estado actual se conserva una aprobación manual antes de producción para evitar gasto, cambios de infraestructura o publicación accidental.
+
+El backend se empaqueta con un Dockerfile multi-stage y se ejecuta como usuario no-root. El destino diseñado es Cloud Run con mínimo 0 y máximo 1 instancia para controlar costo académico. La Web Application y la Landing Page se destinan a Firebase Hosting; la aplicación móvil se distribuye como APK y no se publica automáticamente en una tienda.
 
 ### 7.3.2 Production Deployment Pipeline Components
 
-_Pendiente para la entrega correspondiente._
+```mermaid
+flowchart TD
+    M[Merge a main] --> Q{CI aprobada}
+    Q -- No --> X[Bloquear release]
+    Q -- Sí --> P[Publicar artefactos con SHA]
+    P --> S[Desplegar staging]
+    S --> T{Smoke + seguridad + aprobación}
+    T -- No --> R[Conservar versión anterior]
+    T -- Sí --> B[Desplegar API Cloud Run]
+    B --> W[Desplegar WebApp y Website]
+    W --> V[Verificar health, login, CORS y SPA]
+    V --> O{Resultado}
+    O -- Correcto --> N[Notificar release]
+    O -- Fallo --> Z[Rollback y abrir incidente]
+```
+
+El rollback de Cloud Run debe seleccionar la revisión anterior; Firebase Hosting permite volver a una release previa; Android requiere publicar un nuevo APK corregido. La base de datos necesita migraciones compatibles hacia atrás antes de automatizar el rollback de aplicación.
 
 ## 7.4 Continuous Monitoring
 
 ### 7.4.1 Tools and Practices
 
-_Pendiente para la entrega correspondiente._
+El monitoreo se diseña en cuatro capas: disponibilidad, rendimiento, errores y comportamiento de producto. La salud técnica no se equipara al éxito del experimento: una API disponible puede ofrecer una experiencia confusa, y una métrica de clics no demuestra ahorro energético.
+
+Herramientas objetivo: endpoint `/api/v1/health`, logs estructurados de Spring Boot, métricas de Cloud Run, Cloud Logging/Monitoring, consola de Firebase Hosting y eventos analíticos anonimizados. El acceso a logs y tableros debe seguir mínimo privilegio.
 
 ### 7.4.2 Monitoring Pipeline Components
 
-_Pendiente para la entrega correspondiente._
+| Señal | Métrica | Ventana | Objetivo inicial |
+|:--|:--|:--|:--|
+| Disponibilidad | Respuestas correctas de `/api/v1/health` | 5 min | ≥ 99 % mensual después del lanzamiento medido |
+| Latencia | p50, p95 y p99 por endpoint | 5 y 60 min | p95 < 1.5 s, excluyendo cold start identificado |
+| Errores | Tasa 5xx y excepciones no controladas | 5 min | < 1 % |
+| Saturación | CPU, memoria, concurrencia y conexiones DB | 5 min | Sin agotamiento sostenido |
+| Cliente web | Errores JavaScript y fallos de API | sesión | < 2 % de sesiones con error bloqueante |
+| Mobile | Inicio correcto y solicitudes fallidas | sesión | ≥ 99 % de sesiones sin fallo fatal |
+| Producto | Decisiones energéticas completadas | semana | Línea base por establecer en piloto |
+
+Cada despliegue añade versión, entorno y correlation ID a los registros. No se almacenan tokens, contraseñas, datos de tarjeta ni cuerpos completos con información personal.
 
 ### 7.4.3 Alerting Pipeline Components
 
-_Pendiente para la entrega correspondiente._
+| Alerta operativa | Condición inicial | Severidad | Respuesta |
+|:--|:--|:--:|:--|
+| API caída | 3 health checks consecutivos fallidos | Crítica | Verificar revisión, DB y secretos; rollback si corresponde. |
+| Error 5xx alto | > 5 % durante 5 min | Alta | Revisar endpoint/versión y detener promoción. |
+| Latencia p95 | > 3 s durante 10 min | Media | Separar cold start, DB y saturación. |
+| Base de datos | Fallos de conexión repetidos | Crítica | Comprobar credenciales, cuota y disponibilidad. |
+| Cliente incompatible | Aumento de 401/404 tras release | Alta | Validar contratos y configuración API base URL. |
+| Presupuesto | Consumo cloud supera umbral acordado | Alta | Escalar a 0, detener recursos no esenciales y revisar tráfico. |
+
+Los umbrales son iniciales y se ajustarán después de observar una línea base. Se agrupan alertas repetidas para evitar fatiga y se crea un incidente único por causa probable.
 
 ### 7.4.4 Notification Pipeline Components
 
-_Pendiente para la entrega correspondiente._
+El pipeline de notificación separa los avisos de producto de los avisos operativos.
+
+- **Producto:** `BANNER`, `QUIET`, `INBOX_ONLY` o `MUTED`, respetando preferencias, severidad y horario silencioso.
+- **Operaciones:** crítica y alta notifican al responsable; media se registra para horario de trabajo; baja se incorpora al informe semanal.
+- **Release:** se comunica versión, commit, componentes, resultado de smoke y riesgos conocidos.
+- **Incidente:** incluye correlation ID, inicio, impacto, responsable, mitigación y estado; nunca adjunta secretos.
+
+El cierre exige registrar causa raíz, tiempo de detección, tiempo de recuperación y acción preventiva. En el alcance académico, el canal operativo puede ser GitHub Issues y correo institucional; no se afirma una guardia 24/7.
 
 # Part III Experiment Driven Lifecycle
 
@@ -1250,153 +1599,432 @@ _Pendiente para la entrega correspondiente._
 
 ### 8.1.1 As Is Summary
 
-_Pendiente para AV2._
+EnergyCore dispone de una solución funcional amplia: Landing Page, Angular, Flutter Android, API Spring Boot y PostgreSQL. El usuario puede observar consumo, organizar espacios, controlar y agrupar dispositivos, crear automatizaciones, configurar alertas y seguir metas. Sin embargo, la amplitud funcional todavía no demuestra que el usuario detecte más rápido una situación de consumo ni que ejecute la acción correcta con menor esfuerzo.
+
+El ciclo experimental se concentra en una decisión concreta: **identificar un consumo anómalo y actuar sobre su causa**. La línea base corresponde al dashboard e histórico actuales; el tratamiento añade una recomendación accionable que explica el dispositivo o espacio implicado, el impacto estimado y una acción directa segura.
 
 ### 8.1.2 Raw Material Assumptions Knowledge Gaps Ideas Claims
 
-_Pendiente para AV2._
+| Tipo | ID | Enunciado | Evidencia actual |
+|:--|:--|:--|:--|
+| Assumption | A-01 | Los usuarios entienden kWh, costo y comparación temporal. | No validado con usuarios. |
+| Assumption | A-02 | Una alerta con causa y acción es más útil que una cifra aislada. | Sustento de diseño; falta experimento. |
+| Assumption | A-03 | Responsables del hogar y administradores de pequeños negocios comparten el flujo observar-decidir-actuar. | Proto-personas provisionales. |
+| Knowledge gap | KG-01 | Tiempo actual para localizar el dispositivo responsable. | Sin línea base medida. |
+| Knowledge gap | KG-02 | Diferencia de comprensión entre Web y Android. | Paridad funcional documentada; usabilidad no medida. |
+| Knowledge gap | KG-03 | Confianza necesaria antes de ejecutar una acción remota. | Sin datos. |
+| Idea | I-01 | Tarjeta **Consumo inusual** con explicación, impacto y CTA. | Lista para prototipar. |
+| Idea | I-02 | Timestamp y estado de sincronización. | Derivada de auditoría heurística. |
+| Idea | I-03 | Vista previa del alcance antes de acciones masivas. | Derivada de prevención de errores. |
+| Claim | C-01 | EnergyCore ayuda a tomar decisiones energéticas informadas. | Claim de producto; aún no demostrado experimentalmente. |
+| Claim | C-02 | La experiencia móvil conserva la capacidad esencial de la web. | Paridad técnica documentada; falta comparar desempeño de tareas. |
 
 ### 8.1.3 Experiment Ready Questions
 
-_Pendiente para AV2._
+Una pregunta está lista cuando identifica población, intervención, comparación, resultado y ventana de medición.
+
+- **ERQ-01:** En responsables de hogar y administradores de pequeños negocios, ¿una recomendación con causa y CTA reduce al menos 20 % el tiempo mediano para resolver un consumo alto frente al dashboard actual durante una tarea controlada?
+- **ERQ-02:** ¿La recomendación incrementa en al menos 20 puntos porcentuales la proporción de participantes que elige el dispositivo y la acción correctos sin ayuda?
+- **ERQ-03:** ¿La tasa de éxito de la tarea principal en Android queda a no más de 10 puntos porcentuales de la obtenida en web con los mismos datos?
+- **ERQ-04:** ¿Mostrar alcance y consecuencias antes de una acción masiva reduce errores de selección sin aumentar más de 15 % el tiempo total?
+- **ERQ-05:** ¿El aviso offline con **Reintentar** permite recuperar al menos 80 % de tareas interrumpidas después de restablecer la red?
 
 ### 8.1.4 Question Backlog
 
-_Pendiente para AV2._
+La prioridad inicial usa `Score = (Impacto × Incertidumbre × Alcance) / Esfuerzo`, con factores de 1 a 5. El score ordena preguntas; no sustituye la decisión ética o técnica.
+
+| Orden | Pregunta | Impacto | Incertidumbre | Alcance | Esfuerzo | Score |
+|--:|:--|--:|--:|--:|--:|--:|
+| 1 | ERQ-01: tiempo para resolver consumo alto | 5 | 5 | 5 | 3 | 41.7 |
+| 2 | ERQ-02: acción correcta sin ayuda | 5 | 5 | 5 | 3 | 41.7 |
+| 3 | ERQ-05: recuperación después de offline | 4 | 4 | 5 | 2 | 40.0 |
+| 4 | ERQ-04: prevención en acciones masivas | 5 | 4 | 4 | 3 | 26.7 |
+| 5 | ERQ-03: paridad de éxito web/Android | 4 | 4 | 4 | 3 | 21.3 |
+| 6 | ¿Qué nivel de detalle genera confianza sin sobrecargar? | 4 | 5 | 4 | 4 | 20.0 |
+| 7 | ¿Las metas aumentan revisiones semanales? | 3 | 5 | 3 | 4 | 11.3 |
+| 8 | ¿Los planes se comprenden antes del login? | 2 | 4 | 4 | 3 | 10.7 |
 
 ### 8.1.5 Experiment Cards
 
-_Pendiente para AV2._
+**EC-01 — Recomendación accionable**
+
+| Campo | Definición |
+|:--|:--|
+| Creemos que | mostrar causa probable, impacto y CTA permite responder mejor a consumo alto. |
+| Para | responsables de hogar y administradores de pequeños negocios. |
+| Lo sabremos si | el tiempo mediano cae ≥ 20 % y el éxito aumenta ≥ 20 pp, sin elevar errores críticos. |
+| Control | dashboard actual con KPI, gráfico y ranking. |
+| Tratamiento | control + tarjeta explicativa y acción directa. |
+| Evidencia | eventos de tarea, tiempo, resultado, errores y encuesta breve posterior no identificable. |
+| Decisión | adoptar, iterar o descartar según la matriz de 8.4.1. |
+
+**EC-02 — Confirmación de alcance**
+
+| Campo | Definición |
+|:--|:--|
+| Creemos que | una vista previa de dispositivos afectados previene acciones masivas equivocadas. |
+| Prueba | comparar confirmación genérica frente a resumen con alcance y consecuencias. |
+| Éxito | ≥ 30 % menos selecciones erróneas y aumento de tiempo ≤ 15 %. |
+| Guardrail | ningún participante debe aplicar una acción irreversible sobre datos reales. |
+
+**EC-03 — Recuperación offline**
+
+| Campo | Definición |
+|:--|:--|
+| Creemos que | un banner persistente con **Reintentar** permite completar la tarea después de recuperar internet. |
+| Prueba | interrumpir la conectividad durante una carga, restaurarla y solicitar reintento. |
+| Éxito | ≥ 80 % recupera la tarea sin reiniciar sesión; cero duplicaciones de comandos. |
+| Guardrail | usar ambiente de prueba y operaciones idempotentes o verificables. |
 
 ## 8.2 Experiment Design
 
 ### 8.2.1 Hypotheses
 
-_Pendiente para AV2._
+- **H1:** la mediana de `time_to_correct_action_ms` del tratamiento será al menos 20 % menor que la del control.
+- **H2:** la proporción `task_success` del tratamiento será al menos 20 puntos porcentuales mayor que la del control.
+- **H3:** la diferencia absoluta de éxito entre Android y web no superará 10 puntos porcentuales cuando ambos usen el tratamiento.
+- **H4:** al menos 80 % de las tareas interrumpidas por una pérdida de red se completará después de seleccionar **Reintentar**.
+- **H5:** la confirmación con alcance reducirá al menos 30 % los errores de dispositivo sin aumentar más de 15 % el tiempo mediano.
+
+Las hipótesis son direccionales y fueron definidas antes de recopilar datos. Si el piloto obliga a cambiar umbrales, el cambio se versionará y no se aplicará retroactivamente.
 
 ### 8.2.2 Domain Business Metrics
 
-_Pendiente para AV2._
+| Métrica | Fórmula | Relación con el dominio |
+|:--|:--|:--|
+| Weekly Active Energy Decisions | usuarios con al menos una alerta resuelta, acción de dispositivo, rutina o meta por semana | Valor operativo, no solo visitas. |
+| Alert Resolution Rate | alertas resueltas / alertas abiertas | Capacidad de convertir una señal en decisión. |
+| Automation Adoption | usuarios que activan una rutina o modo / usuarios activos | Reducción de tareas repetitivas. |
+| Goal Engagement | usuarios que revisan o actualizan una meta / usuarios con meta | Seguimiento sostenido. |
+| Report Export Rate | reportes exportados / reportes generados | Utilidad de la información histórica. |
+| Device Action Success | comandos confirmados / comandos solicitados | Confiabilidad percibida y técnica. |
+
+No se usa “energía ahorrada” como KPI principal hasta disponer de telemetría calibrada y una línea base comparable; evitar esa afirmación protege la integridad del experimento.
 
 ### 8.2.3 Measures
 
-_Pendiente para AV2._
+| Variable | Tipo | Unidad / dominio | Fuente |
+|:--|:--|:--|:--|
+| `task_success` | Primaria binaria | 0/1 | Estado final de la tarea. |
+| `time_to_correct_action_ms` | Primaria continua | milisegundos | Eventos inicio/fin. |
+| `wrong_action_count` | Guardrail discreta | conteo | Comandos o selecciones incorrectas. |
+| `help_request_count` | Secundaria discreta | conteo | Registro del facilitador. |
+| `confidence_score` | Secundaria ordinal | 1-5 | Pregunta posterior a la tarea. |
+| `offline_recovery_success` | Primaria binaria para EC-03 | 0/1 | Reintento y finalización. |
+| `api_latency_ms` | Técnica continua | milisegundos | Cliente/API. |
+| `api_error_class` | Técnica nominal | offline/401/validation/5xx/unknown | Manejo tipado de fallos. |
+
+El reloj comienza cuando se presenta la tarea y termina cuando el estado correcto queda confirmado por la API. Pausas del facilitador se registran y no se eliminan sin una regla previa.
 
 ### 8.2.4 Conditions
 
-_Pendiente para AV2._
+| Factor | Control | Tratamiento |
+|:--|:--|:--|
+| Dashboard | KPI, gráfico, ranking y alertas actuales | Mismos elementos + recomendación explicativa y CTA. |
+| Datos | Dataset semilla idéntico | Dataset semilla idéntico. |
+| Tarea | Identificar causa y reducir consumo | Misma redacción. |
+| Cuenta | Rol y plan equivalentes | Rol y plan equivalentes. |
+| Red | Conectividad estable, salvo EC-03 | Igual condición. |
+| Dispositivo | Web o Android registrado como estrato | Web o Android registrado como estrato. |
+
+La asignación a variante será aleatoria y estratificada por segmento y plataforma. El facilitador usará un guion fijo y no explicará la interfaz durante la medición. La prueba se ejecutará con datos sintéticos para impedir acciones sobre instalaciones reales.
 
 ### 8.2.5 Scale Calculations and Decisions
 
-_Pendiente para AV2._
+Para detectar un cambio de éxito de 60 % a 85 %, con prueba bilateral, `α = 0.05` y potencia de 80 %, la aproximación para dos proporciones independientes requiere alrededor de **49 observaciones por variante**. Con 10 % de pérdida, la meta confirmatoria sería **55 por variante, 110 en total**.
+
+Ese tamaño excede la capacidad inmediata del curso. Se adopta un diseño en dos etapas:
+
+1. **Piloto formativo:** 24 participantes, 12 por segmento, distribuidos de forma balanceada entre variantes y plataformas. Se reportarán intervalos, tamaños de efecto y problemas de instrumentación; no se afirmará confirmación estadística.
+2. **Experimento confirmatorio:** recalcular el tamaño con la tasa y varianza observadas en el piloto, congelar el protocolo y alcanzar la muestra resultante antes de aceptar o rechazar H1/H2.
+
+La unidad de análisis es una persona por variante para la hipótesis primaria. Reintentos técnicos se registran, pero no se cuentan como participantes nuevos. No se detendrá la prueba anticipadamente al observar un resultado favorable.
 
 ### 8.2.6 Methods Selection
 
-_Pendiente para AV2._
+Se selecciona un experimento controlado entre sujetos para EC-01, evitando que el aprendizaje de una interfaz contamine la otra. EC-02 y EC-03 pueden ejecutarse como pruebas de tarea separadas después de la métrica primaria.
+
+Métodos:
+
+- asignación aleatoria estratificada por segmento y plataforma;
+- dataset semilla y guion de tarea constantes;
+- telemetría de eventos para tiempo, éxito y errores;
+- observación estructurada para solicitudes de ayuda;
+- pregunta Likert de confianza posterior a la tarea;
+- análisis por intención de tratar y análisis de sensibilidad por protocolo;
+- prueba de proporciones para éxito, comparación de tiempo según distribución y tamaños de efecto con intervalos de confianza.
+
+Las entrevistas están fuera de esta versión. Una pregunta posterior cerrada no se presentará como entrevista cualitativa.
 
 ### 8.2.7 Data Analytics Goals KPIs and Metrics Selection
 
-_Pendiente para AV2._
+| Goal | KPI de decisión | Umbral | Guardrail |
+|:--|:--|:--|:--|
+| Reducir esfuerzo para actuar | Tiempo mediano a acción correcta | -20 % | Error crítico no aumenta. |
+| Mejorar comprensión | Task success | +20 pp | Solicitudes de ayuda no aumentan. |
+| Mantener paridad | Diferencia Android vs web | ≤ 10 pp | Latencia por plataforma registrada. |
+| Recuperar fallos de red | Offline recovery success | ≥ 80 % | Cero comandos duplicados. |
+| Prevenir acciones erróneas | Wrong action rate | -30 % | Tiempo +15 % como máximo. |
+
+Los KPIs de negocio se observan después de validar la tarea. Las métricas de vanidad, como page views sin acción, no deciden la hipótesis.
 
 ### 8.2.8 Web and Mobile Tracking Plan
 
-_Pendiente para AV2._
+| Evento | Momento | Propiedades mínimas |
+|:--|:--|:--|
+| `landing_cta_clicked` | CTA al login | locale, viewport, source_section |
+| `auth_login_started` / `auth_login_succeeded` | Inicio y fin de autenticación | platform, elapsed_ms, outcome; nunca email o token |
+| `dashboard_viewed` | Dashboard listo | variant, platform, data_freshness_s |
+| `energy_issue_identified` | Usuario selecciona la causa | task_id, device_category, correct |
+| `device_action_started` / `completed` | Comando energético | action_type, scope_size, elapsed_ms, outcome |
+| `alert_opened` / `resolved` | Gestión de alerta | severity, elapsed_ms, outcome |
+| `routine_created` | Automatización confirmada | target_type, recurrence, outcome |
+| `goal_created` | Meta almacenada | period_type, outcome |
+| `report_exported` | Exportación terminada | format, platform, outcome |
+| `offline_detected` / `offline_retry_selected` / `sync_recovered` | Recuperación de red | task_id, retry_count, elapsed_ms, outcome |
+
+Propiedades comunes: `anonymous_participant_id`, `session_id`, `experiment_id`, `variant`, `segment`, `platform`, `app_version`, `locale`, `theme` y timestamp UTC. Se prohíbe registrar nombre, correo, JWT, contraseña, dirección, datos de tarjeta o texto libre de soporte. La retención experimental propuesta es de 90 días y el diccionario de eventos se versiona junto con el código.
 
 ## 8.3 Experimentation
 
 ### 8.3.1 To Be User Stories
 
-_Pendiente para AV2._
+| ID | To-Be User Story | Acceptance Criteria |
+|:--|:--|:--|
+| US-17 | Como usuario, quiero una recomendación que explique un consumo anómalo para actuar con confianza. | Given una anomalía calculada, when abro el dashboard, then veo causa probable, impacto, frescura y una acción permitida. |
+| US-18 | Como usuario, quiero revisar el alcance antes de una acción masiva para evitar afectar equipos equivocados. | Given un grupo o modo, when confirmo una acción, then veo dispositivos, estado esperado y consecuencias. |
+| US-19 | Como participante, quiero conocer y controlar la telemetría experimental. | Given una sesión de prueba, when inicia, then recibo aviso, finalidad, retención y opción de no participar. |
+| US-20 | Como usuario móvil, quiero recuperarme de una pérdida de internet sin reiniciar mi sesión. | Given una carga fallida, when vuelve la red y pulso Reintentar, then la operación se recupera sin duplicarse. |
+| US-21 | Como usuario, quiero saber cuándo se actualizó la información para no decidir con datos obsoletos. | Given una métrica, when la visualizo, then se muestra timestamp y estado de sincronización. |
+| TS-01 | Como equipo, quiero asignar variantes de manera consistente para analizar el experimento. | Given un participante elegible, when inicia la prueba, then recibe una sola variante registrada. |
+| TS-02 | Como analista, quiero eventos equivalentes en web y Android para comparar plataformas. | Given una acción instrumentada, when ocurre, then ambos clientes emiten el mismo nombre y esquema válido. |
 
 ### 8.3.2 To Be Product Backlog
 
-_Pendiente para AV2._
+| Orden | ID | Título | Prioridad | SP | Criterio de salida |
+|--:|:--|:--|:--:|--:|:--|
+| 1 | TS-01 | Asignación y configuración de variantes | Must | 5 | Variante estable y auditable por sesión. |
+| 2 | TS-02 | Contrato de eventos web/mobile | Must | 8 | Esquema validado y sin PII. |
+| 3 | US-21 | Frescura y sincronización | Must | 3 | Timestamp consistente en KPI y detalle. |
+| 4 | US-17 | Recomendación accionable | Must | 8 | Control/tratamiento configurables. |
+| 5 | US-18 | Vista previa de alcance | Must | 5 | Resumen y confirmación antes del comando. |
+| 6 | US-20 | Recuperación offline idempotente | Must | 8 | Reintento sin duplicación. |
+| 7 | US-19 | Aviso y control de telemetría | Must | 5 | Consentimiento/opt-out registrado. |
+| 8 | TS-03 | Dataset semilla del experimento | Should | 3 | Datos idénticos y reiniciables. |
+| 9 | TS-04 | Dashboard de resultados | Should | 5 | Métricas por variante, segmento y plataforma. |
+| 10 | TS-05 | Exportación anonimizada | Should | 3 | Dataset reproducible sin datos personales. |
+
+Total To-Be referencial: **53 Story Points**. La prioridad se revisará con evidencia experimental y no por cantidad de funcionalidades.
 
 ### 8.3.3 Pipeline Supported Experiment Driven To Be Software Platform Lifecycle
 
 #### 8.3.3.1 To Be Sprint Backlogs
 
-_Pendiente para AV2._
+| Sprint | Objetivo | Historias | Evidencia de término |
+|:--|:--|:--|:--|
+| Sprint 4 | Preparar medición reproducible | TS-01, TS-02, TS-03, US-19 | Esquema de eventos, variantes, consentimiento y dataset versionados. |
+| Sprint 5 | Implementar tratamientos seguros | US-17, US-18, US-21 | Capturas, tests, feature flag y smoke en web/Android. |
+| Sprint 6 | Ejecutar piloto y aprender | US-20, TS-04, TS-05 | Dataset anonimizado, análisis, decision log y backlog reordenado. |
+
+Cada sprint mantiene Definition of Done: criterios aprobados, tests, revisión, traducciones ES/EN/PT, responsive, seguridad, evidencia y pipeline verde.
 
 #### 8.3.3.2 Implemented To Be Landing Page Evidence
 
-_Pendiente para AV2._
+La Landing Page ya comunica problema, propuesta de valor, capacidades, planes y CTA al login mediante HTML5, CSS3 y JavaScript. Para el ciclo To-Be se instrumentará `landing_cta_clicked` con sección de origen, idioma y viewport, sin cookies innecesarias ni datos personales.
+
+Evidencia que debe acompañar el incremento: commit SHA, capturas 390/768/1440 px, `node --check script.js`, verificación de CTA y payload anonimizado de un evento de prueba. La imagen y la mascota son recursos visuales del producto; no se usarán como sustituto del resultado experimental.
 
 #### 8.3.3.3 Implemented To Be Frontend Web Application Evidence
 
-_Pendiente para AV2._
+Angular contiene el dashboard, históricos, control, automatizaciones y alertas necesarios para implementar EC-01 y EC-02 sin crear módulos aislados. El tratamiento se ubicará en Energy Monitoring y delegará comandos a Device Control; los eventos se emitirán desde application mediante un puerto de analítica, no directamente desde componentes.
+
+Evidencia de aceptación: tests del mapper de recomendación, test del componente, contrato del evento, build productivo, comparación control/tratamiento y smoke contra la API. Las advertencias de budget se conservarán visibles hasta reducirlas.
 
 #### 8.3.3.4 Implemented To Be Native Mobile Application Evidence
 
-_Pendiente para AV2._
+Flutter ya ofrece dashboard, fallos tipados, banner offline y **Reintentar**, además de paridad funcional documentada con las 30 páginas web. El tratamiento reutilizará la misma semántica de eventos y adaptará la tarjeta a `NavigationBar`/`NavigationRail` sin copiar el layout de escritorio.
+
+La línea base técnica incluye `dart analyze` sin issues y `flutter test` aprobado. El incremento experimental requerirá además test del estado control/tratamiento, test de reintento sin duplicación, captura en emulador y APK asociado al commit.
 
 #### 8.3.3.5 Implemented To Be RESTful API and Serverless Backend Evidence
 
-_Pendiente para AV2._
+La API centraliza usuarios, sedes, dispositivos, lecturas, alertas y reportes; por ello será la fuente única para el dataset y el resultado de las acciones. El soporte experimental se implementará como capacidades transversales: asignación de variante, configuración versionada y recepción de eventos anonimizados, sin contaminar las entidades energéticas con detalles de interfaz.
+
+El artefacto desplegable es una imagen Docker no-root para Cloud Run. La evidencia requerida es: tests Maven, 60 escenarios BDD sin omisiones para el cierre final, escaneo de imagen, health 200, login con JWT, CORS correcto, evento persistido y rollback probado. El despliegue público no se considera verificado mientras estas comprobaciones no produzcan una salida registrada.
 
 #### 8.3.3.6 Team Collaboration Insights
 
-_Pendiente para AV2._
+Jean Franck Loa Rojas preparó la línea base de los cinco repositorios, la paridad web/móvil, las pruebas actuales y el diseño documental del experimento. Las tareas To-Be se asignarán mediante GitHub Issues y cada evidencia deberá enlazar issue, Pull Request, reviewer, commit y pipeline.
+
+No se atribuyen actividades a integrantes no confirmados. Cuando el equipo se amplíe, el reporte incorporará una matriz RACI y capturas de GitHub Insights por entrega.
 
 ### 8.3.4 To Be Validation Interviews
 
 #### 8.3.4.1 Diseño de Entrevistas
 
-_Pendiente para AV2._
+**Excluido de esta versión por indicación del equipo.**
 
 #### 8.3.4.2 Registro de Entrevistas
 
-_Pendiente para AV2._
+**Excluido de esta versión por indicación del equipo.** No se incorporarán registros hasta contar con participantes, consentimiento y enlaces reales.
 
 ## 8.4 Experiment Aftermath and Analysis
 
 ### 8.4.1 Analysis and Interpretation of Results
 
-_Pendiente para TB2._
+Al no haberse ejecutado todavía el piloto, esta sección define el análisis y evita presentar resultados inventados.
+
+1. Validar esquema, timestamps, variante única, duplicados y ausencia de PII.
+2. Aplicar exclusiones predefinidas: caída técnica total, dataset incorrecto o retiro de consentimiento. Los errores del usuario no se excluyen.
+3. Describir muestra por segmento, plataforma y variante.
+4. Calcular éxito, tiempo mediano, IQR, errores, ayuda y confianza con intervalos de confianza.
+5. Comparar proporciones de éxito y distribución de tiempos; reportar tamaño de efecto además de p-value.
+6. Revisar guardrails, datos faltantes y sensibilidad por intención de tratar/per-protocol.
+7. Separar hallazgo, inferencia y recomendación; no generalizar más allá de la muestra.
+
+| Resultado observado | Decisión |
+|:--|:--|
+| Cumple tiempo y éxito; guardrails estables | Adoptar tratamiento y ampliar muestra. |
+| Mejora una métrica, pero no la otra | Iterar explicación/CTA y repetir. |
+| Mejora promedio, pero perjudica un segmento o plataforma | No desplegar globalmente; adaptar y revalidar. |
+| Aumenta acciones equivocadas o expone riesgo | Detener, revertir y rediseñar. |
+| No muestra efecto con instrumentación válida | Descartar o replantear hipótesis. |
+| Datos incompletos o sesgados | Resultado inconcluso; corregir medición antes de decidir. |
+
+**Estado:** protocolo completo; dataset y resultados aún no disponibles.
 
 ### 8.4.2 Re Scored and Re Prioritized Question Backlog
 
-_Pendiente para TB2._
+Hasta disponer de resultados se conserva un re-score **pre-experimental** basado en riesgo. Después del piloto se actualizarán impacto, incertidumbre y esfuerzo con evidencia.
+
+| Orden provisional | Pregunta | Motivo |
+|--:|:--|:--|
+| 1 | ERQ-04: errores en acciones masivas | Mayor riesgo de daño y severidad heurística. |
+| 2 | ERQ-01: tiempo a acción correcta | Métrica central de valor. |
+| 3 | ERQ-02: decisión correcta | Evita optimizar velocidad a costa de exactitud. |
+| 4 | ERQ-05: recuperación offline | Riesgo alto en el canal móvil. |
+| 5 | ERQ-03: paridad web/Android | Determina si la propuesta funciona en ambos canales. |
+
+Regla posterior: reducir incertidumbre en 1-4 puntos según fuerza de la evidencia; aumentar impacto si aparece daño o exclusión; recalcular esfuerzo con el trabajo realmente observado; registrar fecha, autor y fundamento del cambio.
 
 ## 8.5 Continuous Learning
 
 ### 8.5.1 Shareback Session Artifacts Learning Workflow
 
-_Pendiente para TB2._
+```mermaid
+flowchart LR
+    D[Dataset congelado] --> A[Análisis reproducible]
+    A --> F[Hallazgos y limitaciones]
+    F --> S[Shareback de 30 minutos]
+    S --> L[Decision log]
+    L --> B[Backlog re-priorizado]
+    B --> N[Nueva pregunta o release]
+```
+
+Paquete de shareback:
+
+- ficha del experimento y versión del protocolo;
+- diagrama de asignación y muestra;
+- resultados primarios, guardrails e intervalos;
+- anomalías y datos excluidos con sustento;
+- comparación por segmento y plataforma;
+- decisión adopt/iterate/discard;
+- backlog antes/después y responsables;
+- una página de lecciones técnicas, de producto y éticas.
+
+La sesión tendrá 5 minutos de contexto, 10 de evidencia, 10 de discusión y 5 de decisiones. El acta registrará desacuerdos y acciones; no se cambiará una conclusión solo para mostrar un resultado favorable.
 
 ## 8.6 To Be Software Platform Pre Launch
 
 ### 8.6.1 About the Product Intro Video
 
-_Pendiente para TB2._
+Guion propuesto para un video de 90 segundos:
+
+| Tiempo | Imagen | Locución |
+|:--:|:--|:--|
+| 0-10 s | Recibo alto, dispositivos y espacios dispersos | “El consumo se vuelve visible demasiado tarde, cuando llega el recibo.” |
+| 10-22 s | Marca, rayo y mascota EnergyCore | “EnergyCore reúne lecturas, espacios y decisiones en una sola plataforma.” |
+| 22-40 s | Dashboard web y recomendación | “Identifica dónde cambia el consumo, comprende su impacto y actúa desde el mismo flujo.” |
+| 40-56 s | Dispositivos, grupos, rutinas y modos | “Controla equipos y automatiza acciones repetitivas con un alcance verificable.” |
+| 56-68 s | Aplicación Android, tema e idiomas | “La experiencia continúa en Android, en español, inglés o portugués, incluso cuando la red falla.” |
+| 68-80 s | Alertas, metas y reportes | “Convierte señales en seguimiento mediante alertas, metas y reportes.” |
+| 80-90 s | CTA al login | “Toma decisiones energéticas con contexto. Prueba EnergyCore.” |
+
+El video debe mostrar la aplicación real, subtítulos, música con licencia y contraste suficiente. No afirmará porcentajes de ahorro ni disponibilidad hasta medirlos. **Enlace audiovisual:** se incorporará después de grabar y publicar el video real.
 
 ### 8.6.2 Resumen usando GEES Framework
 
-_Pendiente para TB2._
+El enunciado solicita GEES Framework, pero no desarrolla el significado de sus siglas. Para no atribuirle una definición no sustentada, EnergyCore lo operacionaliza en cuatro bloques de síntesis —objetivo, experimento, evidencia y decisión sistémica— que deberán ajustarse a la definición impartida en clase si difiere.
+
+| Bloque | EnergyCore |
+|:--|:--|
+| Objetivo | Ayudar a responsables de hogares y pequeños negocios a identificar y resolver consumos anómalos con menor esfuerzo y riesgo. |
+| Experimento | Comparar dashboard actual frente a recomendación con causa, impacto, frescura y CTA; evaluar confirmación de alcance y recuperación offline. |
+| Evidencia | Éxito de tarea, tiempo a acción correcta, errores, recuperación, confianza, latencia y trazabilidad de versión. |
+| Decisión sistémica | Adoptar solo si mejora valor sin perjudicar seguridad, privacidad, accesibilidad, plataforma o segmento; en caso contrario iterar o revertir. |
+
+La síntesis conecta descubrimiento, implementación, delivery y aprendizaje. La funcionalidad no se considera validada porque exista código; necesita evidencia proporcional al claim.
 
 ### Matriz de Evaluación Ética y de Impacto
 
-_Pendiente para TB2._
+La matriz se relaciona con el Student Outcome 4: reconocer responsabilidades profesionales y formular decisiones informadas considerando impacto global, económico, ambiental y social.
+
+| Dimensión | Riesgo | Probabilidad | Impacto | Mitigación | Riesgo residual |
+|:--|:--|:--:|:--:|:--|:--:|
+| Privacidad | Inferir rutinas de ocupación a partir de lecturas y horarios. | Media | Alto | Minimización, control de acceso, retención limitada, eventos sin PII. | Medio |
+| Seguridad | Comando no autorizado sobre un dispositivo. | Baja/Media | Alto | JWT, perfiles, autorización backend, confirmación de alcance y logs. | Medio |
+| Autonomía | Automatización ejecutada sin comprensión del usuario. | Media | Alto | Vista previa, explicación, cancelación y estado posterior. | Bajo/Medio |
+| Exactitud | Recomendación basada en telemetría incompleta. | Media | Alto | Frescura visible, nivel de confianza y prohibición de afirmar medición certificada. | Medio |
+| Equidad | Interfaces o planes que excluyen por idioma, dispositivo o costo. | Media | Medio | ES/EN/PT, responsive, accesibilidad, funciones esenciales en Starter. | Bajo/Medio |
+| Ambiental | Efecto rebote o hardware adicional con huella propia. | Baja/Media | Medio | Priorizar software compatible, medir impacto neto y evitar claims verdes no demostrados. | Medio |
+| Económico | El usuario decide sobre una estimación de costo inexacta. | Media | Medio | Mostrar fuente, moneda, periodo y carácter estimado. | Bajo/Medio |
+| Transparencia | Métricas manipuladas o resultados selectivos. | Baja | Alto | Hipótesis y exclusiones previas, dataset versionado, resultados negativos reportados. | Bajo |
+| Disponibilidad | Dependencia de internet impide control remoto. | Alta | Medio | Aviso offline, reintento y recomendación de controles físicos independientes. | Medio |
+| Uso indebido | Supervisión de terceros sin consentimiento. | Baja/Media | Alto | Roles, auditoría de acceso y prohibición de monitoreo oculto. | Medio |
+
+**Criterio de detención ética:** suspender el experimento si se expone información personal, se ejecuta una acción no consentida, se detecta riesgo físico o un segmento queda sistemáticamente perjudicado. La prioridad del usuario prevalece sobre la obtención de una métrica favorable.
 
 # Conclusiones
 
 ## Conclusiones y recomendaciones
 
-Para AV1 se concluye que EnergyCore cuenta con una base funcional integrada para Landing Page, Web Application, Native Mobile Application y RESTful API. La separación en cinco repositorios mejora la trazabilidad del producto, mientras que la arquitectura por bounded contexts conserva una fuente central de reglas y datos para los clientes web y Android.
+EnergyCore cuenta con una base funcional integrada para Landing Page, Web Application, Native Mobile Application y RESTful API. La separación en cinco repositorios mejora la trazabilidad del producto, mientras que la arquitectura por bounded contexts conserva una fuente central de reglas y datos para los clientes web y Android.
 
-Este avance de conclusiones fue redactado por Jean Franck Loa Rojas y deberá ser revisado por los demás integrantes antes de presentarse como conclusión grupal.
+La verificación actual demuestra una base técnica, pero no una validación total. El backend registra 23 pruebas JUnit aprobadas y una suite Cucumber con 17 escenarios ejecutados y 43 omitidos; Flutter dispone de análisis estático sin issues y pruebas aprobadas; Angular y la Landing Page cuentan con builds y comprobaciones sintácticas. El cierre técnico exige automatizar todos los escenarios BDD, ampliar pruebas frontend, ejecutar smoke tests integrados y conservar evidencia por commit.
 
-La implementación técnica no valida por sí sola las hipótesis de producto. Todavía deben realizarse entrevistas con los dos segmentos, registrar evidencia audiovisual y comprobar que los participantes comprenden las métricas, alertas y automatizaciones sin asistencia. En consecuencia, las proto-personas, mapas y prioridades actuales se consideran material provisional susceptible de corrección.
+La hipótesis principal se ha convertido en un experimento reproducible: comparar el dashboard actual con una recomendación accionable y medir tiempo, éxito y errores. El piloto de 24 participantes servirá para depurar instrumentación y estimar parámetros; una conclusión confirmatoria requeriría recalcular y alcanzar una muestra suficiente. Hasta ejecutar el piloto, no se afirma que EnergyCore reduzca consumo ni que mejore decisiones.
 
-También se recomienda publicar los repositorios, incorporar capturas de GitHub Insights, ejecutar nuevamente las suites Maven y Flutter fuera del entorno administrado, registrar Swagger UI con el backend activo y grabar el Video About-the-Product. Los resultados grupales del Student Outcome se completarán cuando los demás integrantes y sus aportes hayan sido confirmados.
+El diseño ético reconoce que la telemetría energética puede revelar hábitos y que un comando remoto puede afectar dispositivos reales. Por ello se priorizan minimización de datos, perfiles, confirmación de alcance, información de frescura, resultados negativos visibles y detención ante riesgo. Esta decisión conecta el Student Outcome 4 con prácticas concretas de ingeniería.
+
+Se recomienda implementar los workflows de CI, migraciones de base de datos, instrumentación anonimizada, observabilidad y rollback antes de automatizar producción. También deben incorporarse evidencias audiovisuales, auditoría entre grupos y resultados de experimentación cuando existan. Este texto fue redactado por Jean Franck Loa Rojas y deberá revisarse como conclusión grupal si se confirman nuevos integrantes.
 
 # Video App Validation
 
-_Pendiente de incorporar enlace._
+El video de validación de la aplicación seguirá un recorrido reproducible de 7 minutos:
+
+| Tiempo | Evidencia |
+|:--:|:--|
+| 0:00-0:30 | Mostrar tag/commit, URLs o puertos y estado health de la API. |
+| 0:30-1:15 | Landing Page, idioma, responsive y CTA al login. |
+| 1:15-2:00 | Registro, retorno al login, autenticación y recuperación. |
+| 2:00-3:15 | Dashboard, lecturas, costo, filtros y frescura de datos. |
+| 3:15-4:30 | Sede, habitación, dispositivo, asignación y grupo. |
+| 4:30-5:30 | Rutina, modo, regla y alerta. |
+| 5:30-6:15 | Meta, reporte, exportación y planes. |
+| 6:15-6:45 | Android, cambio de idioma/tema y recuperación offline. |
+| 6:45-7:00 | Consolas de pruebas, limitaciones y commit final. |
+
+Checklist de grabación: ocultar credenciales y tokens; usar datos sintéticos; mostrar Web y Android consumiendo la misma API; no cortar errores relevantes; incluir subtítulos; colocar enlaces de repositorio y versión en la descripción.
+
+**URL reservada para la evidencia real:** se añadirá después de grabar y publicar el video. El guion queda completo, pero no se inventa un enlace.
 
 # Video About the Team
 
-_Pendiente de incorporar enlace y testimonio individual._
+La versión actual solo puede atribuir un testimonio a Jean Franck Loa Rojas (U20241E406). Guion individual sugerido, 45-60 segundos:
+
+> En EnergyCore organicé los repositorios, adapté la solución reutilizada con trazabilidad, desarrollé y verifiqué la experiencia web y Android, revisé la arquitectura DDD del backend y convertí los riesgos del producto en un plan experimental. Esta experiencia fortaleció mi responsabilidad profesional porque tuve que distinguir código implementado, evidencia verificada y resultados todavía no obtenidos. También evalué impactos de privacidad, seguridad, acceso y sostenibilidad antes de proponer una decisión de despliegue.
+
+El video grupal debe añadir únicamente testimonios de integrantes confirmados, mostrar nombre y código, y relacionar cada intervención con 4.c.1 o 4.c.2 y una evidencia concreta. **URL reservada para la evidencia real:** se incorporará después de la grabación.
 
 # Bibliografía
 
@@ -1408,6 +2036,11 @@ _Pendiente de incorporar enlace y testimonio individual._
 - Cohn, M. (2004). _User Stories Applied: For Agile Software Development_. Addison-Wesley.
 - Gothelf, J., & Seiden, J. (2021). _Lean UX: Designing Great Products with Agile Teams_ (3rd ed.). O'Reilly Media.
 - Evans, E. (2003). _Domain-Driven Design: Tackling Complexity in the Heart of Software_. Addison-Wesley.
+- Nielsen Norman Group. (2024). _10 Usability Heuristics for User Interface Design_. https://www.nngroup.com/articles/ten-usability-heuristics/
+- OWASP Foundation. (s. f.). _OWASP Application Security Verification Standard_. https://owasp.org/www-project-application-security-verification-standard/
+- Google. (s. f.). _Site Reliability Engineering_. https://sre.google/books/
+- GitHub. (s. f.). _Understanding GitHub Actions_. https://docs.github.com/actions/about-github-actions/understanding-github-actions
+- World Wide Web Consortium. (2023). _Web Content Accessibility Guidelines (WCAG) 2.2_. https://www.w3.org/TR/WCAG22/
 
 # Anexos
 
@@ -1419,11 +2052,15 @@ _Pendiente de incorporar enlace y testimonio individual._
 - [Native Mobile Application](https://github.com/teralume/energycore-mobile)
 - [RESTful API](https://github.com/teralume/energycore-platform)
 
-## Evidencias pendientes
+## Evidencia externa o empírica no sustituible por redacción
 
-- Capturas de GitHub Insights y commits de AV1.
-- Capturas de ejecución de la Landing Page, Web Application, aplicación Android y Swagger UI.
-- Registro y análisis de entrevistas reales con sus enlaces audiovisuales.
-- Video de exposición y Video About-the-Product.
-- Datos y evidencias de los demás integrantes cuando el equipo los confirme.
-- URL de despliegue público, si se exige para AV1 o se incorpora antes del Trabajo Parcial.
+El contenido y los protocolos del informe están desarrollados. Los siguientes artefactos solo pueden añadirse después de ejecutar la actividad correspondiente; mantenerlos explícitos evita fabricar evidencia:
+
+- capturas de GitHub Insights y Pull Requests después de publicar las ramas;
+- capturas del emulador Android y Swagger UI asociadas a un commit;
+- registro y análisis de entrevistas reales, excluidos de esta versión por indicación del equipo;
+- informe de auditoría intercambiado con el grupo que asigne el docente;
+- dataset anonimizado, análisis y decision log del piloto experimental;
+- URLs de Video App Validation, About-the-Product y About-the-Team después de su grabación;
+- URL pública y verificación post-deploy si se completa el despliegue;
+- datos, testimonios y aportes de otros integrantes solo cuando sean confirmados.
