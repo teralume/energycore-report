@@ -1175,7 +1175,19 @@ Antes de esta ampliación del informe se organizaron 13 commits locales distribu
 
 Para AV1 se aplicó GitFlow sin reconstruir ni falsificar historia: cada repositorio conserva `main`, se creó `develop` y los cambios se desarrollaron en `feature/hito-1-evidence`, `feature/cloud-run-neon` y `feature/firebase-production`. Las ramas feature fueron integradas localmente a `develop` mediante merges `--no-ff` y Conventional Commits. `release/av1` se utiliza como candidato de publicación; `main` solo debe recibir el merge después de validar Cloud Run, Neon y Firebase en sus URLs públicas.
 
-Las capturas de GitHub Insights y Pull Requests deben incorporarse después de publicar las ramas remotas. No se atribuirán aportes a integrantes cuyos datos y commits todavía no han sido confirmados.
+Las cinco bases de código y sus ramas `develop`/`release/av1` fueron publicadas en la organización de GitHub. La evidencia de ramas muestra los merges GitFlow y su distancia respecto de `main`. GitHub Insights calcula **Contributors** sobre la rama por defecto y excluye merges; por eso la captura todavía refleja los dos commits que ya estaban en `main`, mientras el trabajo AV1 permanece deliberadamente en `release/av1` hasta superar la verificación pública. No se atribuyen aportes a integrantes cuyos datos y commits todavía no han sido confirmados.
+
+<p align="center">
+  <img src="assets/evidence/implemented/github-report-branches.png" alt="Ramas GitFlow publicadas del repositorio del informe" width="100%">
+</p>
+
+<p align="center">
+  <img src="assets/evidence/implemented/github-platform-branches.png" alt="Ramas GitFlow publicadas del backend" width="100%">
+</p>
+
+<p align="center">
+  <img src="assets/evidence/implemented/github-report-contributors.png" alt="GitHub Insights Contributors del repositorio del informe" width="100%">
+</p>
 
 ## 5.3 Video About the Product
 
@@ -2058,7 +2070,7 @@ El video grupal debe añadir únicamente testimonios de integrantes confirmados,
 
 El contenido y los protocolos del informe están desarrollados. Los siguientes artefactos solo pueden añadirse después de ejecutar la actividad correspondiente; mantenerlos explícitos evita fabricar evidencia:
 
-- capturas de GitHub Insights y Pull Requests después de publicar las ramas;
+- Pull Requests de liberación y actualización de Insights sobre `main` después de aprobar `release/av1`;
 - capturas del emulador Android y Swagger UI asociadas a un commit;
 - registro y análisis de entrevistas reales, excluidos de esta versión por indicación del equipo;
 - informe de auditoría intercambiado con el grupo que asigne el docente;
