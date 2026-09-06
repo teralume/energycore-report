@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">EnergyCore Landing Page wireframe</title>
+  <desc id="desc">Desktop wireframe showing navigation, hero, value proposition, product visual, capabilities, audiences, plans and call to action.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f6f7f6}.panel{fill:#fff;stroke:#8d9690;stroke-width:2}.line{stroke:#aab1ad;stroke-width:2}.ink{fill:#25312a}.muted{fill:#68726c}.accent{fill:#d9fbe6;stroke:#1b7f46;stroke-width:2}.label{font:700 18px Arial,sans-serif}.small{font:500 14px Arial,sans-serif}.title{font:800 34px Arial,sans-serif}.caption{font:700 16px Arial,sans-serif;letter-spacing:2px}
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="900"/>
+  <text x="70" y="58" class="caption ink">WIREFRAME 01 / LANDING PAGE / DESKTOP</text>
+  <rect x="70" y="85" width="1460" height="82" rx="22" class="panel"/>
+  <rect x="98" y="108" width="190" height="38" rx="12" class="accent"/>
+  <text x="119" y="133" class="label ink">⚡ EnergyCore</text>
+  <line x1="625" y1="127" x2="1045" y2="127" class="line"/>
+  <rect x="1310" y="105" width="186" height="42" rx="14" class="accent"/>
+  <text x="1342" y="132" class="small ink">PROBAR ENERGYCORE</text>
+  <rect x="70" y="194" width="1460" height="405" rx="30" class="panel"/>
+  <text x="112" y="250" class="caption muted">PROPUESTA DE VALOR</text>
+  <rect x="112" y="283" width="610" height="38" rx="8" fill="#28352e"/>
+  <rect x="112" y="339" width="520" height="38" rx="8" fill="#28352e"/>
+  <rect x="112" y="395" width="580" height="38" rx="8" fill="#28352e"/>
+  <line x1="112" y1="475" x2="640" y2="475" class="line"/>
+  <line x1="112" y1="500" x2="575" y2="500" class="line"/>
+  <rect x="112" y="532" width="215" height="46" rx="14" class="accent"/>
+  <rect x="344" y="532" width="190" height="46" rx="14" class="panel"/>
+  <rect x="820" y="235" width="630" height="315" rx="28" fill="#eef1ef" stroke="#8d9690" stroke-width="2"/>
+  <circle cx="1135" cy="391" r="91" fill="#d9fbe6" stroke="#1b7f46" stroke-width="3"/>
+  <path d="M1154 300l-73 103h57l-24 79 80-112h-59z" fill="#1b7f46"/>
+  <text x="1021" y="525" class="small muted">VISUAL 3D DINÁMICO</text>
+  <rect x="70" y="627" width="458" height="183" rx="24" class="panel"/>
+  <rect x="571" y="627" width="458" height="183" rx="24" class="panel"/>
+  <rect x="1072" y="627" width="458" height="183" rx="24" class="panel"/>
+  <text x="98" y="670" class="caption muted">CAPACIDADES</text><text x="599" y="670" class="caption muted">AUDIENCIAS</text><text x="1100" y="670" class="caption muted">PLANES</text>
+  <line x1="98" y1="705" x2="468" y2="705" class="line"/><line x1="98" y1="736" x2="430" y2="736" class="line"/><line x1="98" y1="767" x2="390" y2="767" class="line"/>
+  <line x1="599" y1="705" x2="969" y2="705" class="line"/><line x1="599" y1="736" x2="930" y2="736" class="line"/><line x1="599" y1="767" x2="890" y2="767" class="line"/>
+  <line x1="1100" y1="705" x2="1470" y2="705" class="line"/><line x1="1100" y1="736" x2="1430" y2="736" class="line"/><line x1="1100" y1="767" x2="1390" y2="767" class="line"/>
+  <text x="70" y="858" class="small muted">Responsive: 390 / 768 / 1024 / 1440 px · CTA principal siempre dirige al login · Sin formularios ni tracking en la landing</text>
+</svg>

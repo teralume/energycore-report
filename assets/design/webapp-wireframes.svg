@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">EnergyCore Web Application wireframes</title>
+  <desc id="desc">Wireframes for login, energy dashboard and device control flow.</desc>
+  <defs><style>.bg{fill:#f6f7f6}.frame{fill:#fff;stroke:#7f8983;stroke-width:2}.dark{fill:#25312a}.line{stroke:#aab1ad;stroke-width:2}.accent{fill:#d9fbe6;stroke:#1b7f46;stroke-width:2}.t{font:700 18px Arial,sans-serif;fill:#25312a}.s{font:500 13px Arial,sans-serif;fill:#66706a}.cap{font:700 15px Arial,sans-serif;fill:#25312a;letter-spacing:2px}</style></defs>
+  <rect class="bg" width="1600" height="900"/>
+  <text x="55" y="52" class="cap">WIREFRAMES 02 / WEB APPLICATION</text>
+  <g transform="translate(55 88)">
+    <rect width="450" height="735" rx="24" class="frame"/><text x="24" y="42" class="cap">A · LOGIN</text>
+    <rect x="24" y="72" width="402" height="245" rx="22" fill="#eef1ef"/><circle cx="225" cy="175" r="58" class="accent"/><path d="M240 120l-51 70h39l-16 51 56-77h-41z" fill="#1b7f46"/>
+    <rect x="48" y="353" width="354" height="34" rx="8" class="dark"/><line x1="48" y1="418" x2="402" y2="418" class="line"/>
+    <rect x="48" y="444" width="354" height="58" rx="12" class="frame"/><rect x="48" y="524" width="354" height="58" rx="12" class="frame"/>
+    <rect x="48" y="607" width="354" height="54" rx="14" class="accent"/><text x="169" y="640" class="t">INGRESAR</text>
+    <line x1="98" y1="695" x2="352" y2="695" class="line"/><text x="115" y="722" class="s">Recuperar acceso · Crear cuenta</text>
+  </g>
+  <g transform="translate(575 88)">
+    <rect width="970" height="735" rx="24" class="frame"/><text x="24" y="42" class="cap">B · DASHBOARD DE ENERGÍA</text>
+    <rect x="24" y="70" width="188" height="641" rx="18" fill="#25312a"/><rect x="47" y="95" width="142" height="38" rx="10" class="accent"/>
+    <g stroke="#89928d" stroke-width="8" stroke-linecap="round"><line x1="50" y1="181" x2="177" y2="181"/><line x1="50" y1="228" x2="159" y2="228"/><line x1="50" y1="275" x2="172" y2="275"/><line x1="50" y1="322" x2="145" y2="322"/><line x1="50" y1="369" x2="164" y2="369"/></g>
+    <rect x="239" y="70" width="707" height="76" rx="16" fill="#eef1ef"/><rect x="263" y="91" width="280" height="20" rx="5" class="dark"/><line x1="263" y1="125" x2="660" y2="125" class="line"/>
+    <g><rect x="239" y="169" width="166" height="110" rx="16" class="accent"/><rect x="420" y="169" width="166" height="110" rx="16" class="frame"/><rect x="601" y="169" width="166" height="110" rx="16" class="frame"/><rect x="782" y="169" width="164" height="110" rx="16" class="frame"/></g>
+    <text x="260" y="201" class="s">POTENCIA ACTIVA</text><text x="260" y="245" class="t">1 465 W</text>
+    <rect x="239" y="305" width="447" height="244" rx="18" class="frame"/><text x="264" y="343" class="t">Tendencia del periodo</text><polyline points="270,492 335,460 400,473 468,401 532,425 596,352 655,383" fill="none" stroke="#1b7f46" stroke-width="6"/>
+    <rect x="711" y="305" width="235" height="244" rx="18" class="frame"/><text x="735" y="343" class="t">Top dispositivos</text><rect x="735" y="382" width="180" height="24" rx="8" fill="#d9fbe6"/><rect x="735" y="428" width="142" height="24" rx="8" fill="#e5e8e6"/><rect x="735" y="474" width="98" height="24" rx="8" fill="#e5e8e6"/>
+    <rect x="239" y="574" width="707" height="137" rx="18" class="frame"/><text x="264" y="612" class="t">Actividad reciente y alertas</text><line x1="264" y1="643" x2="917" y2="643" class="line"/><line x1="264" y1="676" x2="845" y2="676" class="line"/>
+  </g>
+</svg>
