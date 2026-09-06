@@ -1173,7 +1173,9 @@ La tabla anterior documenta el contrato por bounded context. Además, el inventa
 
 Antes de esta ampliación del informe se organizaron 13 commits locales distribuidos entre los cinco repositorios. El trabajo confirmado de Jean Franck Loa Rojas abarca configuración, migración de identidad, backend, Web Application, Landing Page, Native Mobile Application y reporte. Los árboles quedaron limpios al cerrar esa línea base; el cambio actual completa el desarrollo documental de los capítulos I al VIII, excepto las entrevistas y la evidencia externa o empírica que todavía no ha ocurrido.
 
-Las capturas de GitHub Insights deben incorporarse después de publicar las ramas. No se atribuirán aportes a integrantes cuyos datos y commits todavía no han sido confirmados.
+Para AV1 se aplicó GitFlow sin reconstruir ni falsificar historia: cada repositorio conserva `main`, se creó `develop` y los cambios se desarrollaron en `feature/hito-1-evidence`, `feature/cloud-run-neon` y `feature/firebase-production`. Las ramas feature fueron integradas localmente a `develop` mediante merges `--no-ff` y Conventional Commits. `release/av1` se utiliza como candidato de publicación; `main` solo debe recibir el merge después de validar Cloud Run, Neon y Firebase en sus URLs públicas.
+
+Las capturas de GitHub Insights y Pull Requests deben incorporarse después de publicar las ramas remotas. No se atribuirán aportes a integrantes cuyos datos y commits todavía no han sido confirmados.
 
 ## 5.3 Video About the Product
 
