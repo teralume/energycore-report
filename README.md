@@ -277,10 +277,29 @@ En el siguiente cuadro se describen las acciones realizadas y los enunciados de 
 
 ### Loa Rojas Jean Franck
 
+**Código:** U20241E406
+
+#### AV1
+
 | Criterio específico | Acciones realizadas | Conclusiones |
 |:--|:--|:--|
-| **4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software** | **AV1:** Reutilicé un proyecto académico anterior con autorización expresa del profesor y documenté su adaptación bajo una nueva identidad, evitando presentarlo como un producto creado íntegramente desde cero para este curso. Organicé EnergyCore en repositorios independientes para conservar trazabilidad y eliminé referencias funcionales y artefactos de la identidad anterior. En la solución técnica consideré la autenticación con JWT, el cifrado de contraseñas con BCrypt, el almacenamiento del token móvil mediante Android Keystore y AES-GCM, la separación de responsabilidades mediante bounded contexts y la comunicación honesta de las verificaciones que todavía requieren evidencia. También incorporé una experiencia accesible mediante tema claro y oscuro, diseño responsivo, navegación de retorno en autenticación y mensajes explícitos cuando no existe conexión a Internet. | La responsabilidad profesional exige conservar trazabilidad sobre lo reutilizado, proteger credenciales y datos energéticos, y diferenciar con claridad implementación, verificación y validación. Por ello no se presentan escenarios omitidos, despliegues no comprobados ni resultados experimentales como éxitos concluyentes. |
-| **4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales** | **AV1:** Evalué EnergyCore como una solución multiplataforma que debe funcionar en web y Android sin mantener fuentes de datos separadas, por lo que ambas aplicaciones consumen una única API y base de datos. Consideré el impacto económico mediante el seguimiento de consumo, costos, metas y planes; el impacto ambiental mediante herramientas que permiten identificar consumos elevados, programar dispositivos y promover decisiones de ahorro energético; y el impacto social mediante una interfaz responsiva, soporte en español, inglés y portugués, y avisos de conectividad comprensibles. La adaptación de la solución busca que hogares y pequeños negocios puedan tomar decisiones informadas sin depender de una infraestructura distinta para cada cliente. | EnergyCore solo debe recomendar una acción cuando puede comunicar la fuente, frescura, alcance y limitaciones de los datos. El valor ambiental o económico se medirá mediante experimentos y telemetría calibrada; la accesibilidad, privacidad, seguridad y autonomía funcionan como guardrails y no como objetivos secundarios. |
+| **4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software** | Reutilicé un proyecto académico anterior con autorización expresa del profesor y documenté su adaptación bajo una nueva identidad, evitando presentarlo como un producto creado íntegramente desde cero para este curso. Organicé EnergyCore en repositorios independientes para conservar trazabilidad y eliminé referencias funcionales y artefactos de la identidad anterior. En la solución técnica consideré la autenticación con JWT, el cifrado de contraseñas con BCrypt, el almacenamiento seguro del token móvil mediante Android Keystore e iOS Keychain, la separación de responsabilidades mediante bounded contexts y la comunicación honesta de las verificaciones que todavía requieren evidencia. También incorporé una experiencia accesible mediante tema claro y oscuro, diseño responsivo, navegación de retorno en autenticación y mensajes explícitos cuando no existe conexión a Internet. | La responsabilidad profesional exige conservar trazabilidad sobre lo reutilizado, proteger credenciales y datos energéticos, y diferenciar con claridad implementación, verificación y validación. Por ello no se presentan escenarios omitidos, despliegues no comprobados ni resultados experimentales como éxitos concluyentes. |
+| **4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales** | Evalué EnergyCore como una solución multiplataforma que debe funcionar en web, Android e iOS sin mantener fuentes de datos separadas, por lo que todos los clientes consumen una única API y base de datos. Consideré el impacto económico mediante el seguimiento de consumo, costos, metas y planes; el impacto ambiental mediante herramientas que permiten identificar consumos elevados, programar dispositivos y promover decisiones de ahorro energético; y el impacto social mediante una interfaz responsiva, soporte en español, inglés y portugués, y avisos de conectividad comprensibles. La adaptación de la solución busca que hogares y pequeños negocios puedan tomar decisiones informadas sin depender de una infraestructura distinta para cada cliente. | EnergyCore solo debe recomendar una acción cuando puede comunicar la fuente, frescura, alcance y limitaciones de los datos. El valor ambiental o económico se medirá mediante experimentos y telemetría calibrada; la accesibilidad, privacidad, seguridad y autonomía funcionan como condiciones obligatorias del producto. |
+
+#### TB1
+
+- **4.c.1:** —
+- **4.c.2:** —
+
+#### AV2
+
+- **4.c.1:** —
+- **4.c.2:** —
+
+#### TB2
+
+- **4.c.1:** —
+- **4.c.2:** —
 
 #### Evidencias individuales
 
@@ -288,6 +307,18 @@ En el siguiente cuadro se describen las acciones realizadas y los enunciados de 
 - Repositorios trabajados: Report, Website, WebApp, Mobile y Platform.
 - Evidencia de commits: hashes registrados en Project Report Collaboration Insights; las capturas de GitHub se incorporan solo después de publicar las ramas.
 - Testimonio About The Team: guion individual desarrollado en la sección final; la URL se registra después de la grabación real.
+
+### Integrantes pendientes de confirmar
+
+La misma estructura se repetirá por cada integrante cuando el equipo confirme sus
+nombres, códigos y aportes reales:
+
+#### Nombre del integrante
+
+- **AV1:** —
+- **TB1:** —
+- **AV2:** —
+- **TB2:** —
 
 <div style="page-break-after: always;"></div>
 
@@ -645,7 +676,7 @@ Los breakpoints priorizan 375 px, 768 px, 1024 px y 1440 px. En pantallas peque�
 
 #### 4.1.3.1 iOS Mobile Style Guidelines
 
-El diseño Flutter comparte jerarquía, espaciado, componentes adaptativos y temas con Android, por lo que constituye una base visual portable a iOS. Sin embargo, el incremento AV1 se ejecutó y verificó en Android; no se declara una compilación ni evidencia nativa iOS desde Windows. Esta limitación debe confirmarse con el docente antes de atribuir soporte iOS al entregable.
+EnergyCore utiliza una sola aplicación Flutter para Android e iOS, con jerarquía, espaciado, navegación adaptable y temas compartidos. El proyecto incluye el destino Xcode y almacenamiento de sesión mediante Keychain para iOS. Se verificó la apertura de autenticación a 393 × 852 con la plataforma iOS en una prueba de widgets; no constituye una captura ni ejecución en iPhone. La compilación y ejecución iOS requieren macOS/Xcode y permanecen no verificadas.
 
 #### 4.1.3.2 Android Mobile Style Guidelines
 
@@ -798,7 +829,7 @@ Set-Location M:\
 
 ### 4.5.2 iOS Mobile Applications Prototyping
 
-El código de presentación Flutter se diseñó para reutilización multiplataforma, pero el proyecto fue creado con plataforma Android y no dispone de evidencia de compilación iOS. Para AV1 se declara **fuera del alcance verificado** hasta recibir confirmación del docente y disponer de un entorno macOS/Xcode.
+La misma base Flutter incorpora ahora el proyecto `flutter/ios`, con nombre e iconos EnergyCore, integración de sesión JWT con iOS Keychain y la API pública HTTPS como destino predeterminado. Se reutilizan las pantallas y los bounded contexts de Android, sin desarrollar una aplicación iOS independiente. Las 11 pruebas Flutter pasan, incluida una prueba de autenticación con `TargetPlatform.iOS` y tamaño de iPhone. El documento `flutter/docs/ios-compatibility.md` del repositorio `energycore-mobile` describe la adaptación y la validación pendiente. **Estado: compatibilidad preparada en código; compilación, Keychain y ejecución real en iOS no verificadas por ausencia de macOS/Xcode.** No se presenta evidencia Android como ejecución iOS.
 
 ## 4.6 Web Applications UX UI Design
 
@@ -1099,19 +1130,31 @@ La Landing Page fue levantada localmente y recorrida en navegador sobre el artef
 
 `energycore-webapp` implementa autenticación, dashboard, energía, dispositivos, grupos, rutinas, modos, sedes, habitaciones, asignaciones, alertas, reglas, preferencias, metas, reportes, soporte, mantenimiento, planes y configuración de cuenta. Se organiza por bounded contexts con capas `domain`, `application`, `infrastructure` y `presentation`. `npm run build` concluyó correctamente, con advertencias no bloqueantes de presupuesto de estilos.
 
-Para validar la navegación sin atribuir datos inexistentes a producción, se ejecutó el build de Angular contra un servicio local de demostración controlada. Se comprobó el flujo login → centro operativo → consumo energético, además de registro y recuperación. Estas capturas demuestran integración y estados de interfaz; la persistencia real con Neon se verificará en el despliegue.
+El 06/09/2026 se ejecutó el build existente de Angular contra el backend real Spring Boot y una base PostgreSQL 18.4 local aislada. Se comprobó inicio de sesión → centro operativo → consumo energético → dispositivos, con una cuenta, tres equipos y lecturas de demostración persistidas en PostgreSQL. No se interceptaron respuestas HTTP en estas nuevas capturas. Los datos no provienen de sensores físicos y esta ejecución no demuestra despliegue ni persistencia en Neon.
+
+El rebuild de Angular en esta sesión quedó bloqueado por `spawn EPERM`; se documenta el hash del bundle usado, los commits y los límites de la prueba en la [auditoría de evidencias](presentation/evidence-audit-2026-09-06.md). El HTTP 500 de preferencias observado durante el primer acceso fue reproducido y corregido: se sincronizó la inicialización/actualización por usuario mediante un bloqueo transaccional en PostgreSQL. La [regresión de concurrencia](assets/evidence/implemented/preferences-concurrency-smoke.json) aprobó 24 GET iniciales simultáneos y 24 GET/PUT simultáneos, además de persistencia ES/EN/PT y aislamiento entre cuentas. En navegador se verificó login → inicio → cambio PT → ES con siete respuestas de preferencias HTTP 200 y ningún 500. Esta comprobación no equivale a un gate completo de todos los módulos.
 
 <p align="center">
-  <img src="assets/evidence/implemented/webapp-login.png" alt="Inicio de sesión de EnergyCore" width="100%">
+  <img src="assets/evidence/implemented/webapp-live-login.png" alt="Inicio de sesión real de EnergyCore en el entorno local" width="100%">
 </p>
 
 <p align="center">
-  <img src="assets/evidence/implemented/webapp-dashboard.png" alt="Centro operativo de EnergyCore" width="100%">
+  <img src="assets/evidence/implemented/webapp-live-home.png" alt="Centro operativo de EnergyCore conectado a Spring Boot y PostgreSQL local con datos de demostración" width="100%">
 </p>
 
 <p align="center">
-  <img src="assets/evidence/implemented/webapp-energy-dashboard-top.png" alt="Dashboard de consumo energético de EnergyCore" width="100%">
+  <img src="assets/evidence/implemented/webapp-live-energy-chart.png" alt="Gráfico de consumo en la aplicación real con lecturas de demostración persistidas localmente" width="100%">
 </p>
+
+<p align="center">
+  <img src="assets/evidence/implemented/webapp-live-energy-metrics.png" alt="Indicadores calculados por el backend real sobre los datos locales de demostración" width="100%">
+</p>
+
+<p align="center">
+  <img src="assets/evidence/implemented/webapp-live-devices.png" alt="Dispositivos de demostración vinculados a la sede y habitación en PostgreSQL local" width="100%">
+</p>
+
+Las siguientes capturas de registro y recuperación corresponden a la revisión visual anterior con un servicio de demostración; se conservan como evidencia de interfaz, no de persistencia real.
 
 <p align="center">
   <img src="assets/evidence/implemented/webapp-register.png" alt="Registro de cuenta de EnergyCore" width="100%">
@@ -1144,7 +1187,26 @@ Los planes **Starter**, **Professional** y **Enterprise** determinan límites fu
 
 `energycore-mobile/flutter` implementa la experiencia Android con paridad respecto de los módulos web. Incluye sesión cifrada, tema claro/oscuro/sistema, español/inglés/portugués, navegación adaptable, aviso de desconexión y acción **Reintentar**. Después del ajuste de navegación de autenticación se ejecutaron en una terminal normal `dart analyze`, con resultado **No issues found**, y `flutter test`, con resultado **All tests passed**.
 
-**Evidencia visual pendiente:** capturas del emulador con login, dashboard y un flujo de energía o dispositivos.
+**Evidencia visual verificada el 06/09/2026:** Flutter ejecutándose en Pixel_7 (`emulator-5554`, Android 17/API 37). Se recorrieron login → inicio → consumo → dispositivos con la cuenta local EnergyCore Demo. Las vistas autenticadas muestran 1370 W, 1.10 kWh y tres dispositivos de demostración, consumiendo la misma API Spring Boot y PostgreSQL que la web. No son mediciones físicas ni evidencia de despliegue público.
+
+<p align="center">
+  <img src="assets/evidence/implemented/android-live-login-20260906-065244.png" alt="Login real de EnergyCore en Android, sin credenciales visibles" width="360" />
+  <img src="assets/evidence/implemented/android-live-home-20260906-065526.png" alt="Inicio de EnergyCore Android con potencia actual y espacios de demostración" width="360" />
+</p>
+<p align="center">
+  <img src="assets/evidence/implemented/android-live-energy-20260906-065529.png" alt="Consumo y costos de demostración en Flutter Android" width="360" />
+  <img src="assets/evidence/implemented/android-live-devices-20260906-065544.png" alt="Dispositivos de demostración cargados desde la API en Android" width="360" />
+</p>
+
+Captura adicional: [tendencia de consumo](assets/evidence/implemented/android-live-energy-20260906-065620.png). El SHA-256 del APK instalado coincide con el APK local; trazabilidad y limitaciones en la [auditoría de evidencias](presentation/evidence-audit-2026-09-06.md). Este recorrido no reemplaza las pruebas completas de todos los módulos.
+
+**Corrección de potencia por habitación (06/09/2026):** el backend sumaba watts de muestras sucesivas. Ahora devuelve potencia actual estimada de los equipos encendidos, consistente con el total del dashboard: **120 + 350 + 900 = 1370 W**. Los kWh y costos conservan su acumulación temporal. Cinco pruebas JUnit específicas y la comprobación contra la API local aprobaron; se confirmó el resultado visible en Android después de recargar la aplicación. No fue necesario cambiar ni reinstalar Flutter.
+
+<p align="center">
+  <img src="assets/evidence/implemented/android-live-energy-20260906-071137.png" alt="Corrección verificada en Android: Laboratorio de software muestra 1370 W" width="420" />
+</p>
+
+Resultado de la API: [`energy-power-smoke.json`](assets/evidence/implemented/energy-power-smoke.json). Las capturas anteriores se conservan como historial; los kWh aumentaron entre tomas por el muestreo de demostración.
 
 ### 5.2.6 Implemented RESTful API and Serverless Backend Evidence
 
@@ -1167,7 +1229,19 @@ Con la API activa, OpenAPI se publica en `http://localhost:8080/swagger-ui.html`
 | Reporting | `/api/v1/reports`, `/energy-goals`, `/reporting/platform/summary` |
 | Service Management | `/api/v1/support-tickets`, `/maintenance-tickets` |
 
-La tabla anterior documenta el contrato por bounded context. Además, el inventario reproducible generado desde las anotaciones Spring MVC registra **100 operaciones** y se conserva en [`energycore-platform/docs/api-endpoints.md`](https://github.com/teralume/energycore-platform/blob/develop/docs/api-endpoints.md). La captura de Swagger UI y la exportación del documento OpenAPI se añadirán únicamente después de ejecutar el backend contra PostgreSQL/Neon y verificar `/v3/api-docs`; no se sustituye esa evidencia con una imagen fabricada.
+La tabla anterior documenta el contrato por bounded context. El 06/09/2026 se ejecutó Spring Boot contra PostgreSQL 18.4 local y se verificó `/v3/api-docs` con HTTP 200: el [documento OpenAPI exportado](assets/evidence/implemented/openapi-live.json) contiene **100 operaciones** y coincide en cantidad con el [inventario de controladores](https://github.com/teralume/energycore-platform/blob/develop/docs/api-endpoints.md). Desde Swagger se ejecutó `GET /api/v1/health`, obteniendo HTTP 200 y `status: UP`. Esto acredita ejecución local; Neon y el despliegue público siguen pendientes de evidencia.
+
+<p align="center">
+  <img src="assets/evidence/implemented/swagger-live-overview.png" alt="Swagger UI real de EnergyCore Platform REST API ejecutado localmente" width="100%">
+</p>
+
+<p align="center">
+  <img src="assets/evidence/implemented/swagger-live-energy-endpoints.png" alt="Cinco operaciones de Energy Monitoring documentadas por Swagger" width="100%">
+</p>
+
+<p align="center">
+  <img src="assets/evidence/implemented/swagger-live-health-200.png" alt="Ejecución real de GET api v1 health desde Swagger con respuesta HTTP 200 y estado UP" width="100%">
+</p>
 
 ### 5.2.8 Team Collaboration Insights
 
@@ -2071,7 +2145,7 @@ El video grupal debe añadir únicamente testimonios de integrantes confirmados,
 El contenido y los protocolos del informe están desarrollados. Los siguientes artefactos solo pueden añadirse después de ejecutar la actividad correspondiente; mantenerlos explícitos evita fabricar evidencia:
 
 - Pull Requests de liberación y actualización de Insights sobre `main` después de aprobar `release/av1`;
-- capturas del emulador Android y Swagger UI asociadas a un commit;
+- verificación pública de Swagger; las capturas reales de Android y la evidencia local de Swagger ya están incorporadas y trazadas en la [auditoría del 06/09/2026](presentation/evidence-audit-2026-09-06.md);
 - registro y análisis de entrevistas reales, excluidos de esta versión por indicación del equipo;
 - informe de auditoría intercambiado con el grupo que asigne el docente;
 - dataset anonimizado, análisis y decision log del piloto experimental;
