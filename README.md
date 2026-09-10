@@ -24,6 +24,7 @@
 | Código | Apellidos y nombres |
 |:--:|:--|
 | U20241E406 | Loa Rojas, Jean Franck |
+| U202418755 | Santiago Atanacio, Jairo Mathias |
 
 **Septiembre de 2026**
 
