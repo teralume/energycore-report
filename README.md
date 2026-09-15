@@ -1568,7 +1568,7 @@ No se presentan modificaciones como resultado de auditoría externa antes de rec
 
 ### 7.1.1 Tools and Practices
 
-La integración continua propuesta usa GitHub, GitFlow, Conventional Commits y GitHub Actions. Cada Pull Request hacia `develop` o `main` debe ejecutar un pipeline específico por repositorio. Las ramas `feature/*` contienen cambios pequeños; `develop` integra el siguiente incremento; `release/*` estabiliza; `main` representa una versión entregable; `hotfix/*` corrige producción.
+La integración continua usa GitHub, GitFlow, Conventional Commits y GitHub Actions. Cada `push` y Pull Request ejecuta un pipeline específico por repositorio. Las ramas `feature/*` contienen cambios pequeños; `develop` integra el siguiente incremento; `release/*` estabiliza; `main` representa una versión entregable; `hotfix/*` corrige producción.
 
 Prácticas obligatorias:
 
@@ -1580,7 +1580,7 @@ Prácticas obligatorias:
 - protección de `main`, bloqueo ante gates fallidos y tags por entrega;
 - artefactos identificados con commit SHA.
 
-**Estado:** los repositorios contienen scripts de build y test, pero no se encontraron workflows `.github/workflows`; por tanto, CI está diseñada y puede ejecutarse localmente, pero todavía no está automatizada en GitHub.
+**Estado:** los cinco repositorios contienen `.github/workflows/ci-cd.yml`. Los workflows se activan con cada commit publicado y con cada Pull Request, bloquean la entrega cuando falla una verificación y publican artefactos identificados por el SHA del commit.
 
 ### 7.1.2 Build and Test Suite Pipeline Components
 
@@ -1598,11 +1598,11 @@ flowchart LR
 
 | Repositorio | Static gate | Test gate | Build artifact |
 |:--|:--|:--|:--|
-| `energycore-platform` | Compilación Java y análisis SAST/dependencias | JUnit + Cucumber | JAR y Docker image |
-| `energycore-webapp` | TypeScript/AOT y budgets | Vitest + smoke integrado | `dist/energycore-webapp/browser` |
-| `energycore-mobile` | `dart format` + `dart analyze` | `flutter test` | APK debug/release según entrega |
-| `energycore-website` | `node --check` + validación HTML | Smoke de navegación, idioma y enlaces | Directorio estático |
-| `energycore-report` | Markdown links/estructura | Verificación de anclas y evidencias | README versionado y PDF de entrega |
+| `energycore-platform` | Compilación Java y Dockerfile | JUnit unitario + integración Spring/H2 + Cucumber BDD | JAR, reportes Surefire e imagen Docker verificada |
+| `energycore-webapp` | TypeScript/AOT y budgets | Vitest unitario + integración HttpClient + prueba de shell | `dist/energycore-webapp/browser` |
+| `energycore-mobile` | `dart format` + `flutter analyze` | Unit tests + widget/compatibilidad | APK release, cobertura y build para simulador iOS |
+| `energycore-website` | Estructura HTML accesible | Unit tests + integración de assets + servidor HTTP funcional | Directorio estático probado |
+| `energycore-report` | Diff y estructura documental | Verificación de ABET, Keynote, ZIP y SHA-256 | Documentos y paquete AV1 verificados |
 
 El pipeline no debe continuar si falla una prueba. Los 43 escenarios Cucumber omitidos se muestran como deuda y no como resultado verde.
 
@@ -1632,7 +1632,7 @@ Los scripts existentes preparan Cloud Run y Firebase Hosting; su presencia demue
 
 ### 7.3.1 Tools and Practices
 
-Para Continuous Deployment, `main` podría promover automáticamente una versión que haya aprobado todos los gates y un smoke de staging. En el estado actual se conserva una aprobación manual antes de producción para evitar gasto, cambios de infraestructura o publicación accidental.
+Para Continuous Deployment, `main` promueve automáticamente una versión que haya aprobado todos los gates cuando el repositorio tiene habilitada la variable de despliegue. `energycore-platform` utiliza `GCP_DEPLOY_ENABLED` y autenticación federada; `energycore-webapp` y `energycore-website` utilizan `FIREBASE_DEPLOY_ENABLED` y el secret cifrado de Firebase. Mientras esas variables estén desactivadas, el pipeline conserva y publica los artefactos probados sin modificar producción.
 
 El backend se empaqueta con un Dockerfile multi-stage y se ejecuta como usuario no-root. El destino diseñado es Cloud Run con mínimo 0 y máximo 1 instancia para controlar costo académico. La Web Application y la Landing Page se destinan a Firebase Hosting; la aplicación móvil se distribuye como APK y no se publica automáticamente en una tienda.
 
