@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "executedAt": "2026-09-06T12:09:54.965Z",
+  "environment": "isolated-local-demo",
+  "assertions": [
+    "room power equals sum of active devices",
+    "room totals equal dashboard power",
+    "top device power is not cumulative sample watts",
+    "1370 W and 3 active demo devices"
+  ],
+  "snapshots": [
+    {
+      "currentWatts": 1370,
+      "todayKilowattHours": 1.430807,
+      "rooms": [
+        {
+          "room": "Laboratorio de software",
+          "watts": 1370,
+          "kilowattHours": 1.430807,
+          "estimatedCost": 1.07,
+          "activeDevices": 3
+        }
+      ],
+      "topDevices": [
+        {
+          "deviceId": 3,
+          "name": "Climatización · Demo",
+          "room": "Laboratorio de software",
+          "type": "OTHER",
+          "watts": 900,
+          "kilowattHours": 0.94,
+          "estimatedCost": 0.71,
+          "readings": 250,
+          "highReadings": 0
+        },
+        {
+          "deviceId": 2,
+          "name": "Estación de trabajo · Demo",
+          "room": "Laboratorio de software",
+          "type": "PLUG",
+          "watts": 350,
+          "kilowattHours": 0.365473,
+          "estimatedCost": 0.27,
+          "readings": 250,
+          "highReadings": 0
+        },
+        {
+          "deviceId": 1,
+          "name": "Iluminación LED · Demo",
+          "room": "Laboratorio de software",
+          "type": "LIGHT",
+          "watts": 120,
+          "kilowattHours": 0.125334,
+          "estimatedCost": 0.09,
+          "readings": 250,
+          "highReadings": 0
+        }
+      ]
+    },
+    {
+      "currentWatts": 1370,
+      "todayKilowattHours": 1.430807,
+      "rooms": [
+        {
+          "room": "Laboratorio de software",
+          "watts": 1370,
+          "kilowattHours": 1.430807,
+          "estimatedCost": 1.07,
+          "activeDevices": 3
+        }
+      ],
+      "topDevices": [
+        {
+          "deviceId": 3,
+          "name": "Climatización · Demo",
+          "room": "Laboratorio de software",
+          "type": "OTHER",
+          "watts": 900,
+          "kilowattHours": 0.94,
+          "estimatedCost": 0.71,
+          "readings": 250,
+          "highReadings": 0
+        },
+        {
+          "deviceId": 2,
+          "name": "Estación de trabajo · Demo",
+          "room": "Laboratorio de software",
+          "type": "PLUG",
+          "watts": 350,
+          "kilowattHours": 0.365473,
+          "estimatedCost": 0.27,
+          "readings": 250,
+          "highReadings": 0
+        },
+        {
+          "deviceId": 1,
+          "name": "Iluminación LED · Demo",
+          "room": "Laboratorio de software",
+          "type": "LIGHT",
+          "watts": 120,
+          "kilowattHours": 0.125334,
+          "estimatedCost": 0.09,
+          "readings": 250,
+          "highReadings": 0
+        }
+      ]
+    }
+  ]
+}
