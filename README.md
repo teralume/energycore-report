@@ -1604,6 +1604,16 @@ flowchart LR
 | `energycore-website` | Estructura HTML accesible | Unit tests + integración de assets + servidor HTTP funcional | Directorio estático probado |
 | `energycore-report` | Diff y estructura documental | Verificación de ABET, Keynote, ZIP y SHA-256 | Documentos y paquete AV1 verificados |
 
+Ejecuciones verificadas en la rama `develop` el 15 de septiembre de 2026:
+
+| Repositorio | Commit verificado | Resultado y evidencia |
+|:--|:--|:--|
+| `energycore-platform` | `356d75c` | [Exitosa: tests unitarios, integración, BDD, contenedor y artefactos](https://github.com/teralume/energycore-platform/actions/runs/34974147033) |
+| `energycore-webapp` | `dd994f4` | [Exitosa: tests unitarios, integración HTTP, build y artefacto](https://github.com/teralume/energycore-webapp/actions/runs/34974146278) |
+| `energycore-mobile` | `f781375` | [Exitosa: análisis, tests, APK Android y build de simulador iOS](https://github.com/teralume/energycore-mobile/actions/runs/34974145807) |
+| `energycore-website` | `734e81a` | [Exitosa: tests unitarios, integración, prueba funcional y artefacto](https://github.com/teralume/energycore-website/actions/runs/34974146184) |
+| `energycore-report` | `a922b8f` | [Exitosa: validación documental, ABET, Keynote, ZIP y checksums](https://github.com/teralume/energycore-report/actions/runs/34974149176) |
+
 El pipeline no debe continuar si falla una prueba. Los 43 escenarios Cucumber omitidos se muestran como deuda y no como resultado verde.
 
 ## 7.2 Continuous Delivery
