@@ -699,7 +699,7 @@ Los breakpoints priorizan 375 px, 768 px, 1024 px y 1440 px. En pantallas peque�
 
 #### 4.1.3.1 iOS Mobile Style Guidelines
 
-EnergyCore utiliza una sola aplicación Flutter para Android e iOS, con jerarquía, espaciado, navegación adaptable y temas compartidos. El proyecto incluye el destino Xcode y almacenamiento de sesión mediante Keychain para iOS. Se verificó la apertura de autenticación a 393 × 852 con la plataforma iOS en una prueba de widgets; no constituye una captura ni ejecución en iPhone. La compilación y ejecución iOS requieren macOS/Xcode y permanecen no verificadas.
+EnergyCore utiliza una sola aplicación Flutter para Android e iOS, con jerarquía, espaciado, navegación adaptable y temas compartidos. El proyecto incluye el destino Xcode y almacenamiento de sesión mediante Keychain para iOS. Se verificó la apertura de autenticación a 393 × 852 con la plataforma iOS en una prueba de widgets y GitHub Actions compiló correctamente la aplicación para un simulador iOS en un runner macOS. La ejecución interactiva en un iPhone y el comportamiento de Keychain en un dispositivo físico permanecen no verificados.
 
 #### 4.1.3.2 Android Mobile Style Guidelines
 
@@ -852,7 +852,7 @@ Set-Location M:\
 
 ### 4.5.2 iOS Mobile Applications Prototyping
 
-La misma base Flutter incorpora ahora el proyecto `flutter/ios`, con nombre e iconos EnergyCore, integración de sesión JWT con iOS Keychain y la API pública HTTPS como destino predeterminado. Se reutilizan las pantallas y los bounded contexts de Android, sin desarrollar una aplicación iOS independiente. Las 11 pruebas Flutter pasan, incluida una prueba de autenticación con `TargetPlatform.iOS` y tamaño de iPhone. El documento `flutter/docs/ios-compatibility.md` del repositorio `energycore-mobile` describe la adaptación y la validación pendiente. **Estado: compatibilidad preparada en código; compilación, Keychain y ejecución real en iOS no verificadas por ausencia de macOS/Xcode.** No se presenta evidencia Android como ejecución iOS.
+La misma base Flutter incorpora ahora el proyecto `flutter/ios`, con nombre e iconos EnergyCore, integración de sesión JWT con iOS Keychain y la API pública HTTPS como destino predeterminado. Se reutilizan las pantallas y los bounded contexts de Android, sin desarrollar una aplicación iOS independiente. Las 11 pruebas Flutter pasan, incluida una prueba de autenticación con `TargetPlatform.iOS` y tamaño de iPhone. GitHub Actions también genera satisfactoriamente `Runner.app` para un simulador iOS mediante un runner macOS y publica ese build como artefacto. El documento `flutter/docs/ios-compatibility.md` del repositorio `energycore-mobile` describe la adaptación y sus límites. **Estado: compatibilidad y compilación para simulador verificadas; Keychain y ejecución interactiva en un iPhone físico no verificadas.** No se presenta evidencia Android como ejecución iOS.
 
 ## 4.6 Web Applications UX UI Design
 
