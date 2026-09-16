@@ -1288,7 +1288,7 @@ Las cinco bases de código y sus ramas `develop`/`release/av1` fueron publicadas
 
 ## 5.3 Video About the Product
 
-EnergyCore cuenta con un Video About-the-Product publicado para el Sprint 1. El video presenta la propuesta de Teralume, el problema energético abordado, las funciones principales del producto y la experiencia disponible en sus clientes web y móvil.
+EnergyCore cuenta con un Video About-the-Product publicado en YouTube y Microsoft Stream para el Sprint 1. El video presenta la propuesta de Teralume, el problema energético abordado, las funciones principales del producto y la experiencia disponible en sus clientes web y móvil.
 
 <p align="center">
   <a href="https://youtu.be/4HOjUHXYUsA">
@@ -1296,7 +1296,8 @@ EnergyCore cuenta con un Video About-the-Product publicado para el Sprint 1. El 
   </a>
 </p>
 
-- **Video publicado:** [EnergyCore | About the Product | Sprint 1](https://youtu.be/4HOjUHXYUsA)
+- **YouTube:** [EnergyCore | About the Product | Sprint 1](https://youtu.be/4HOjUHXYUsA)
+- **Microsoft Stream:** [Ver el video institucional](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241e406_upc_edu_pe/IQBtoXdgjYbdTZJPjvNwEg75AeDDLuhhK7GwfbBt7tmcooU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=2ovKZK) — acceso de lectura para usuarios de la organización UPC.
 - **Archivo:** `upc-pre-202610-1asi0732-9100-teralume-about-the-product-sprint-1.mp4`
 - **Fecha de publicación:** 16 de septiembre de 2026.
 
