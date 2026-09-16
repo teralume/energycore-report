@@ -195,11 +195,11 @@ Las ramas fueron publicadas y las capturas disponibles de GitHub se conservan en
       - [5.2.1 Sprint Backlogs](#521-sprint-backlogs)
       - [5.2.2 Implemented Landing Page Evidence](#522-implemented-landing-page-evidence)
       - [5.2.3 Implemented Frontend Web Application Evidence](#523-implemented-frontend-web-application-evidence)
-      - [5.2.4 Acuerdo de Servicio SaaS](#524-acuerdo-de-servicio-saas)
-      - [5.2.5 Implemented Native Mobile Application Evidence](#525-implemented-native-mobile-application-evidence)
-      - [5.2.6 Implemented RESTful API and Serverless Backend Evidence](#526-implemented-restful-api-and-serverless-backend-evidence)
-      - [5.2.7 RESTful API Documentation](#527-restful-api-documentation)
-      - [5.2.8 Team Collaboration Insights](#528-team-collaboration-insights)
+      - [5.2.4 Implemented Native Mobile Application Evidence](#524-implemented-native-mobile-application-evidence)
+      - [5.2.5 Implemented RESTful API and Serverless Backend Evidence](#525-implemented-restful-api-and-serverless-backend-evidence)
+      - [5.2.6 RESTful API Documentation](#526-restful-api-documentation)
+      - [5.2.7 Team Collaboration Insights](#527-team-collaboration-insights)
+      - [Acuerdo de Servicio SaaS](#acuerdo-de-servicio-saas)
     - [5.3 Video About the Product](#53-video-about-the-product)
 - [Part II Verification Validation and Pipeline](#part-ii-verification-validation-and-pipeline)
   - [Capítulo VI Product Verification and Validation](#capítulo-vi-product-verification-and-validation)
@@ -1187,26 +1187,7 @@ Las siguientes capturas de registro y recuperación corresponden a la revisión 
   <img src="assets/evidence/implemented/webapp-recover-password.png" alt="Recuperación de contraseña de EnergyCore" width="100%">
 </p>
 
-### 5.2.4 Acuerdo de Servicio SaaS
-
-El presente acuerdo describe las condiciones objetivo del servicio académico EnergyCore. No constituye todavía un SLA comercial ni afirma un nivel de operación que no haya sido medido en producción.
-
-| Aspecto | Compromiso de diseño |
-|:--|:--|
-| Alcance | Acceso a monitoreo energético, control de dispositivos, automatizaciones, alertas, metas, reportes, sedes, soporte y administración de cuenta según el plan seleccionado. |
-| Disponibilidad | Objetivo mensual de 99 % una vez desplegado el servicio. El cálculo excluirá mantenimientos anunciados y dependerá de evidencia de monitoreo; mientras no exista esa evidencia, el porcentaje es una meta y no una garantía. |
-| Mantenimiento | Ventana ordinaria propuesta: domingos de 02:00 a 04:00, hora de Lima, comunicada con 24 horas de anticipación. Los mantenimientos críticos de seguridad pueden ejecutarse fuera de la ventana. |
-| Soporte | Registro de incidencias desde **Support Tickets**. Objetivos de primera respuesta: crítica, 4 horas; alta, 8 horas; media, 24 horas; baja, 48 horas hábiles. |
-| Continuidad | Objetivos iniciales RTO de 8 horas y RPO de 24 horas. Deben validarse mediante una prueba de restauración antes de ofrecerse contractualmente. |
-| Seguridad | Autenticación JWT, contraseñas con BCrypt, autorización por perfiles, secretos fuera del repositorio, HTTPS en despliegue y principio de mínimo privilegio. |
-| Privacidad | Minimización de datos personales; las lecturas se asocian a la cuenta y sus espacios. No se recolectarán credenciales, JWT, direcciones completas ni datos de pago en la analítica experimental. |
-| Portabilidad | Exportación de lecturas y reportes en CSV. La eliminación de cuenta debe revocar el acceso y activar el proceso de supresión aplicable. |
-| Límites | La solución académica no reemplaza medidores certificados ni garantiza ahorro económico. La exactitud depende de la fuente de telemetría y de la conectividad de los dispositivos. |
-| Responsabilidad del usuario | Mantener sus credenciales seguras, verificar el estado del equipo antes de operaciones sensibles y no utilizar EnergyCore como único mecanismo de protección eléctrica. |
-
-Los planes **Starter**, **Professional** y **Enterprise** determinan límites funcionales, no niveles distintos de protección de datos. Cualquier cambio futuro en precios, límites o disponibilidad deberá publicarse antes de afectar una suscripción vigente.
-
-### 5.2.5 Implemented Native Mobile Application Evidence
+### 5.2.4 Implemented Native Mobile Application Evidence
 
 `energycore-mobile/flutter` implementa la experiencia Android con paridad respecto de los módulos web. Incluye sesión cifrada, tema claro/oscuro/sistema, español/inglés/portugués, navegación adaptable, aviso de desconexión y acción **Reintentar**. Después del ajuste de navegación de autenticación se ejecutaron en una terminal normal `dart analyze`, con resultado **No issues found**, y `flutter test`, con resultado **All tests passed**.
 
@@ -1231,13 +1212,13 @@ Captura adicional: [tendencia de consumo](assets/evidence/implemented/android-li
 
 Resultado de la API: [`energy-power-smoke.json`](assets/evidence/implemented/energy-power-smoke.json). Las capturas anteriores se conservan como historial; los kWh aumentaron entre tomas por el muestreo de demostración.
 
-### 5.2.6 Implemented RESTful API and Serverless Backend Evidence
+### 5.2.5 Implemented RESTful API and Serverless Backend Evidence
 
 `energycore-platform` implementa una RESTful API Spring Boot organizada en IAM, Billing, Workplace, Device Control, Energy Monitoring, Notifications, Reporting y Service Management. Emplea JWT, BCrypt, JPA/PostgreSQL, eventos de integración, servicios de dominio, command/query services, recursos y assemblers. Incluye suites unitarias, de integración y escenarios Cucumber.
 
 **Estado de verificación:** el último reporte Surefire disponible registra 83 casos descubiertos, sin fallos ni errores: 23 pruebas JUnit ejecutadas y 60 escenarios Cucumber, de los cuales 17 se ejecutaron y 43 se omitieron por el filtro temporal del runner. El gate BDD continúa parcial hasta implementar los steps restantes y ejecutar los 60 escenarios.
 
-### 5.2.7 RESTful API Documentation
+### 5.2.6 RESTful API Documentation
 
 Con la API activa, OpenAPI se publica en `http://localhost:8080/swagger-ui.html` y el documento JSON en `/v3/api-docs`.
 
@@ -1266,7 +1247,7 @@ La tabla anterior documenta el contrato por bounded context. El 06/09/2026 se ej
   <img src="assets/evidence/implemented/swagger-live-health-200.png" alt="Ejecución real de GET api v1 health desde Swagger con respuesta HTTP 200 y estado UP" width="100%">
 </p>
 
-### 5.2.8 Team Collaboration Insights
+### 5.2.7 Team Collaboration Insights
 
 Antes de esta ampliación del informe se organizaron 13 commits locales distribuidos entre los cinco repositorios. El trabajo confirmado de Jean Franck Loa Rojas abarca configuración, migración de identidad, backend, Web Application, Landing Page, Native Mobile Application y reporte. La primera entrevista real de needfinding ya está incorporada; permanecen pendientes las entrevistas necesarias para completar la muestra y las demás evidencias externas o empíricas todavía no realizadas.
 
@@ -1285,6 +1266,25 @@ Las cinco bases de código y sus ramas `develop`/`release/av1` fueron publicadas
 <p align="center">
   <img src="assets/evidence/implemented/github-report-contributors.png" alt="GitHub Insights Contributors del repositorio del informe" width="100%">
 </p>
+
+### Acuerdo de Servicio SaaS
+
+El presente acuerdo describe las condiciones objetivo del servicio académico EnergyCore. No constituye todavía un SLA comercial ni afirma un nivel de operación que no haya sido medido en producción.
+
+| Aspecto | Compromiso de diseño |
+|:--|:--|
+| Alcance | Acceso a monitoreo energético, control de dispositivos, automatizaciones, alertas, metas, reportes, sedes, soporte y administración de cuenta según el plan seleccionado. |
+| Disponibilidad | Objetivo mensual de 99 % una vez desplegado el servicio. El cálculo excluirá mantenimientos anunciados y dependerá de evidencia de monitoreo; mientras no exista esa evidencia, el porcentaje es una meta y no una garantía. |
+| Mantenimiento | Ventana ordinaria propuesta: domingos de 02:00 a 04:00, hora de Lima, comunicada con 24 horas de anticipación. Los mantenimientos críticos de seguridad pueden ejecutarse fuera de la ventana. |
+| Soporte | Registro de incidencias desde **Support Tickets**. Objetivos de primera respuesta: crítica, 4 horas; alta, 8 horas; media, 24 horas; baja, 48 horas hábiles. |
+| Continuidad | Objetivos iniciales RTO de 8 horas y RPO de 24 horas. Deben validarse mediante una prueba de restauración antes de ofrecerse contractualmente. |
+| Seguridad | Autenticación JWT, contraseñas con BCrypt, autorización por perfiles, secretos fuera del repositorio, HTTPS en despliegue y principio de mínimo privilegio. |
+| Privacidad | Minimización de datos personales; las lecturas se asocian a la cuenta y sus espacios. No se recolectarán credenciales, JWT, direcciones completas ni datos de pago en la analítica experimental. |
+| Portabilidad | Exportación de lecturas y reportes en CSV. La eliminación de cuenta debe revocar el acceso y activar el proceso de supresión aplicable. |
+| Límites | La solución académica no reemplaza medidores certificados ni garantiza ahorro económico. La exactitud depende de la fuente de telemetría y de la conectividad de los dispositivos. |
+| Responsabilidad del usuario | Mantener sus credenciales seguras, verificar el estado del equipo antes de operaciones sensibles y no utilizar EnergyCore como único mecanismo de protección eléctrica. |
+
+Los planes **Starter**, **Professional** y **Enterprise** determinan límites funcionales, no niveles distintos de protección de datos. Cualquier cambio futuro en precios, límites o disponibilidad deberá publicarse antes de afectar una suscripción vigente.
 
 ## 5.3 Video About the Product
 
@@ -2187,8 +2187,8 @@ El video grupal debe añadir únicamente testimonios de integrantes confirmados,
 ### Exposición AV1
 
 - **Archivo de entrega:** `upc-pre-202610-1asi0732-9100-teralume-expo-av1.mp4`
-- **Duración:** 00:06:10.
-- **Microsoft Stream:** pendiente de publicar y reemplazar por el enlace institucional antes de subir el Project Report definitivo al aula virtual.
+- **Duración:** 00:08:12.
+- **Microsoft Stream:** [Ver la exposición institucional de AV1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241e406_upc_edu_pe/IQAkgo0agXNcQ6niBO2B2AdfAfjjUJBZmUbQTy6c8-moYCg?e=QLRzKM&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) — acceso de lectura para usuarios de la organización UPC.
 
 ## Evidencia externa o empírica no sustituible por redacción
 
