@@ -22,7 +22,7 @@ Revisión realizada el 15/09/2026 contra las páginas físicas 3 a 5 y 37 a 39 d
 2. **Pendiente después de las entrevistas:** editar el video consolidado de needfinding, publicarlo en Microsoft Stream y añadir el enlace y los timings al informe.
 3. **Pendiente:** exportar el Project Report como `upc-pre-202610-1asi0732-9100-teralume-report-av1.pdf`.
 4. **Hecho:** Keynote disponible como `upc-pre-202610-1asi0732-9100-teralume-keynote-av1.pptx` y `.pdf`.
-5. **Pendiente:** producir los videos finales requeridos para la entrega, incluido `upc-pre-202610-1asi0732-9100-teralume-expo-av1.mp4` y el Video About-the-Product con sus enlaces.
+5. **Parcial:** el Video About-the-Product del Sprint 1 está publicado en https://youtu.be/4HOjUHXYUsA. Permanece pendiente el video de exposición `upc-pre-202610-1asi0732-9100-teralume-expo-av1.mp4`.
 6. **Hecho:** sustentos ABET AV1 completados para los cinco integrantes dentro de la tabla exigida por el enunciado.
 7. **Hecho:** cambios integrados mediante GitFlow hasta `develop` en esta actualización.
 
