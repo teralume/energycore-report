@@ -14,6 +14,8 @@ Este paquete reúne los artefactos reales disponibles para sustentar el Primer H
 - Participant Performance Report en DOCX y PDF.
 - APK Android de tipo release y archivo de suma generado por Flutter.
 - Material de preparación del Keynote y auditoría de evidencias. Los archivos finales PPTX y PDF se conservan como entregables independientes en `output/keynote` para evitar duplicarlos dentro del ZIP.
+- Project Report AV1 exportado en PDF como entregable independiente.
+- Video de exposición AV1 consolidado, con duración de 6 minutos y 10 segundos, como entregable independiente.
 - `SHA256SUMS.txt` con la huella de cada archivo contenido en el ZIP.
 
 ## Repositorios
@@ -32,4 +34,4 @@ Este paquete reúne los artefactos reales disponibles para sustentar el Primer H
 
 ## Elementos que el ZIP no sustituye
 
-El paquete complementario no reemplaza los archivos de entrega independientes. El Keynote final ya está disponible en PPTX/PDF. Todavía debe exportarse el Project Report en PDF y deben producirse, después de completar las entrevistas, el video consolidado de needfinding, el Video About-the-Product y el video de exposición AV1 con sus enlaces de publicación.
+El paquete complementario no reemplaza los archivos de entrega independientes. El Project Report, el Keynote, el Participant Performance Report y el video de exposición AV1 ya están disponibles con la nomenclatura exigida. El Video About-the-Product está publicado en YouTube y Microsoft Stream. Permanecen pendientes el video consolidado de needfinding, por falta de entrevistas adicionales, y el enlace institucional de la exposición AV1.

@@ -1,6 +1,6 @@
 # Estado de cierre AV1
 
-Revisión realizada el 15/09/2026 contra las páginas físicas 3 a 5 y 37 a 39 del enunciado del curso.
+Revisión actualizada el 16/09/2026 contra las páginas físicas 3 a 5 y 37 a 39 del enunciado del curso.
 
 ## Disponible y verificado
 
@@ -14,15 +14,17 @@ Revisión realizada el 15/09/2026 contra las páginas físicas 3 a 5 y 37 a 39 d
 - Primera entrevista del segmento pequeño negocio con captura, resumen y análisis preliminar.
 - APK Android release y paquete ZIP de artefactos complementarios.
 - Keynote final en PPTX y PDF con la nomenclatura exigida.
+- Project Report AV1 exportado en PDF.
+- Video de exposición AV1 consolidado con duración de 00:06:10.
 - Sustentos ABET AV1 de los cinco integrantes.
 
 ## Estado acordado para cerrar AV1
 
 1. **Pendiente:** completar las entrevistas requeridas. Actualmente existe una entrevista del segmento pequeño negocio.
 2. **Pendiente después de las entrevistas:** editar el video consolidado de needfinding, publicarlo en Microsoft Stream y añadir el enlace y los timings al informe.
-3. **Pendiente:** exportar el Project Report como `upc-pre-202610-1asi0732-9100-teralume-report-av1.pdf`.
+3. **Hecho:** Project Report exportado como `upc-pre-202610-1asi0732-9100-teralume-report-av1.pdf`.
 4. **Hecho:** Keynote disponible como `upc-pre-202610-1asi0732-9100-teralume-keynote-av1.pptx` y `.pdf`.
-5. **Parcial:** el Video About-the-Product del Sprint 1 está publicado en YouTube (https://youtu.be/4HOjUHXYUsA) y Microsoft Stream (acceso de lectura para la organización UPC). Permanece pendiente el video de exposición `upc-pre-202610-1asi0732-9100-teralume-expo-av1.mp4`.
+5. **Parcial:** el Video About-the-Product del Sprint 1 está publicado en YouTube (https://youtu.be/4HOjUHXYUsA) y Microsoft Stream. La exposición `upc-pre-202610-1asi0732-9100-teralume-expo-av1.mp4` ya está consolidada; falta publicarla en Stream y colocar el enlace en el informe.
 6. **Hecho:** sustentos ABET AV1 completados para los cinco integrantes dentro de la tabla exigida por el enunciado.
 7. **Hecho:** cambios integrados mediante GitFlow hasta `develop` en esta actualización.
 
