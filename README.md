@@ -1288,9 +1288,17 @@ Las cinco bases de código y sus ramas `develop`/`release/av1` fueron publicadas
 
 ## 5.3 Video About the Product
 
-**Bloqueo de evidencia AV1:** el enunciado exige un video de exposición y un Video About-the-Product, pero todavía no se ha proporcionado un enlace. El video debe mostrar la propuesta, el flujo Landing Page → login, la Web Application, la aplicación Android y la API, evitando afirmar despliegues o resultados de ahorro no demostrados.
+EnergyCore cuenta con un Video About-the-Product publicado para el Sprint 1. El video presenta la propuesta de Teralume, el problema energético abordado, las funciones principales del producto y la experiencia disponible en sus clientes web y móvil.
 
-Guion recomendado: problema y segmentos (45 s), propuesta de valor (45 s), demostración web (2 min), demostración móvil (2 min), arquitectura/API (1 min) y cierre con alcance y limitaciones (30 s).
+<p align="center">
+  <a href="https://youtu.be/4HOjUHXYUsA">
+    <img src="https://img.youtube.com/vi/4HOjUHXYUsA/hqdefault.jpg" alt="Video About-the-Product de EnergyCore publicado en YouTube" width="720">
+  </a>
+</p>
+
+- **Video publicado:** [EnergyCore | About the Product | Sprint 1](https://youtu.be/4HOjUHXYUsA)
+- **Archivo:** `upc-pre-202610-1asi0732-9100-teralume-about-the-product-sprint-1.mp4`
+- **Fecha de publicación:** 16 de septiembre de 2026.
 
 # Part II Verification Validation and Pipeline
 
@@ -2182,6 +2190,6 @@ El contenido y los protocolos del informe están desarrollados. Los siguientes a
 - entrevistas adicionales hasta completar entre tres y cinco participantes por segmento, análisis consolidado y publicación del video en Microsoft Stream;
 - informe de auditoría intercambiado con el grupo que asigne el docente;
 - dataset anonimizado, análisis y decision log del piloto experimental;
-- URLs de Video App Validation, About-the-Product y About-the-Team después de su grabación;
+- URLs de Video App Validation y About-the-Team después de su grabación;
 - merge final de la entrega a `main` y capturas actualizadas de colaboración después de integrar los cambios actuales;
 - testimonios de los integrantes y detalle individual del apoyo de Fabricio, Renzo y Brayan cuando quede documentado.
