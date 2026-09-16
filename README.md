@@ -2182,6 +2182,14 @@ El video grupal debe añadir únicamente testimonios de integrantes confirmados,
 - [Native Mobile Application](https://github.com/teralume/energycore-mobile)
 - [RESTful API](https://github.com/teralume/energycore-platform)
 
+## Videos de Exposiciones
+
+### Exposición AV1
+
+- **Archivo de entrega:** `upc-pre-202610-1asi0732-9100-teralume-expo-av1.mp4`
+- **Duración:** 00:06:10.
+- **Microsoft Stream:** pendiente de publicar y reemplazar por el enlace institucional antes de subir el Project Report definitivo al aula virtual.
+
 ## Evidencia externa o empírica no sustituible por redacción
 
 El contenido y los protocolos del informe están desarrollados. Los siguientes artefactos solo pueden añadirse después de ejecutar la actividad correspondiente; mantenerlos explícitos evita fabricar evidencia:
