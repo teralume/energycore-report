@@ -25,6 +25,7 @@
 |:--:|:--|
 | U20241E406 | Loa Rojas, Jean Franck |
 | U202418755 | Santiago Atanacio, Jairo Mathias |
+| U20241E550 | Huerta Cardenas, Brayan Benjamin |
 
 **Septiembre de 2026**
 
