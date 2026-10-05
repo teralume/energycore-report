@@ -43,6 +43,8 @@
 | AV1.1 | 05/09/2026 | Loa Rojas, Jean Franck | Desarrollo de los capítulos I al V requeridos para el Primer Hito, incluyendo Lean UX, needfinding provisional, requirements specification, diseño, arquitectura, modelo de datos, backlog y evidencias técnicas. |
 | AV1.2 | 05/09/2026 | Loa Rojas, Jean Franck | Desarrollo de las secciones acumulativas de verificación y validación, DevOps y ciclo de experimentación; incorporación del acuerdo SaaS, auditoría heurística, protocolos de evidencia y matriz ética. Las entrevistas permanecen excluidas por decisión del equipo. |
 | AV1.3 | 15/09/2026 | Loa Rojas, Jean Franck | Incorporación de la primera entrevista de needfinding realizada por Jairo Mathias Santiago Atanacio, junto con su registro audiovisual, resumen y análisis preliminar del segmento pequeño negocio. |
+| TB1.1 | 05/10/2026 | Rivera Rupay, Fabricio Jose | Auditoría de todas las ramas remotas del Project Report, creación de `feature/stage-review-report-improvements` desde `develop` e integración controlada de los dos aportes de integrantes que solo existían en `main`, sin modificar la rama estable. |
+| TB1.2 | 05/10/2026 | Rivera Rupay, Fabricio Jose | Incorporación de su fotografía real previamente publicada en Molinex, actualización de su perfil profesional y corrección del Student Outcome con evidencias verificables, límites explícitos y vacíos de participación pendientes. |
 
 <div style="page-break-after: always;"></div>
 
@@ -106,6 +108,22 @@ Los siguientes commits locales organizan el trabajo existente en bloques verific
 | Website | `b3adb4e` - Landing Page; `268de90` - sistema de diseño |
 
 Las ramas fueron publicadas y las capturas disponibles de GitHub se conservan en `assets/evidence/implemented`. La participación posterior de Jairo y Brayan también aparece en el historial remoto de `main`.
+
+### Trabajo Parcial - Stage Review
+
+Antes de iniciar las correcciones se compararon `origin/main`, `origin/develop`, `origin/release/*` y todas las ramas `origin/feature/*`. Todas las ramas de AV1 estaban integradas en `origin/develop`; `main` conservaba únicamente dos commits posteriores de integrantes. La rama `feature/stage-review-report-improvements` se creó desde `origin/develop` y se sincronizó con esos aportes mediante el commit `e98923f`, preservando la tabla más completa y sin hacer merge a `main`.
+
+Fabricio Jose Rivera Rupay trabaja con la identidad Git `Fabricio1924 <u202423883@upc.edu.pe>`. El commit `1b96857` incorpora su fotografía real, perfil y sustento inicial del Student Outcome para Trabajo Parcial. La fotografía proviene del perfil que el propio integrante ya había publicado en el repositorio Molinex; se descartaron los identicon de GitHub porque no constituyen una fotografía personal.
+
+| Integrante | Evidencia trazable disponible | Acción requerida antes de cerrar TB1 |
+|:--|:--|:--|
+| Loa Rojas, Jean Franck | Commits en Report, Platform, WebApp, Mobile y Website. | Mantener referencias a commits y pipelines concretos en las secciones que sustenta. |
+| Santiago Atanacio, Jairo Mathias | Commits de perfil, fotografía y entrevista en el Project Report. | Realizar o revisar una corrección de TB1 mediante un commit o Pull Request propio. |
+| Rivera Rupay, Fabricio Jose | Commits `9bf3d4f`, `e98923f` y `1b96857`; rama actual de corrección. | Completar los artefactos asignados y conservar commits separados por tipo de cambio. |
+| Revilla Quispe, Renzo Zamir | Un commit de perfil en el Project Report. | Incorporar una contribución técnica o documental de TB1 con evidencia propia. |
+| Huerta Cardenas, Brayan Benjamin | Commits de identificación y ajustes del Project Report. | Vincular cualquier sustento técnico adicional con commit, revisión o evidencia audiovisual propia. |
+
+Esta matriz no reemplaza GitHub Insights ni el Participant Performance Report. Su propósito es evitar atribuir trabajo sin evidencia y señalar con anticipación los vacíos que requieren participación humana.
 
 <div style="page-break-after: always;"></div>
 
