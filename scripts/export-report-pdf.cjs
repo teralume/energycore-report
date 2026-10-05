@@ -5,14 +5,16 @@ const { pathToFileURL } = require('url');
 
 const repoRoot = path.resolve(__dirname, '..');
 const inputPath = path.join(repoRoot, 'README.md');
+const milestone = (process.env.ENERGYCORE_REPORT_MILESTONE || 'AV1').toUpperCase();
+const milestoneSlug = milestone.toLowerCase();
 const outputPath = path.join(
   repoRoot,
   'output',
   'pdf',
-  'upc-pre-202610-1asi0732-9100-teralume-report-av1.pdf',
+  `upc-pre-202610-1asi0732-9100-teralume-report-${milestoneSlug}.pdf`,
 );
 const tempDirectory = path.join(repoRoot, 'tmp', 'pdfs');
-const tempHtmlPath = path.join(tempDirectory, 'energycore-report-av1.html');
+const tempHtmlPath = path.join(tempDirectory, `energycore-report-${milestoneSlug}.html`);
 
 const extensionsRoot = path.join(os.homedir(), '.vscode', 'extensions');
 const extensionDirectory = fs
@@ -68,7 +70,7 @@ async function main() {
     .map((name) => fs.readFileSync(path.join(extensionDirectory, 'styles', name), 'utf8'))
     .join('\n');
   const baseUrl = pathToFileURL(`${repoRoot}${path.sep}`).href;
-  const title = 'EnergyCore - Project Report AV1';
+  const title = `EnergyCore - Project Report ${milestone}`;
   const html = `<!doctype html>
 <html lang="es">
 <head>
@@ -105,7 +107,7 @@ async function main() {
       format: 'A4',
       printBackground: true,
       displayHeaderFooter: true,
-      headerTemplate: '<div style="font-size:8px;margin-left:1cm;color:#555">EnergyCore - Project Report AV1</div>',
+      headerTemplate: `<div style="font-size:8px;margin-left:1cm;color:#555">EnergyCore - Project Report ${escapeHtml(milestone)}</div>`,
       footerTemplate: '<div style="font-size:8px;margin:0 auto;color:#555"><span class="pageNumber"></span> / <span class="totalPages"></span></div>',
       margin: { top: '1.5cm', right: '1cm', bottom: '1cm', left: '1cm' },
     });
