@@ -649,25 +649,25 @@ Las historias representan el incremento implementado. La redacción y prioridad 
 
 ## 3.3 Product Backlog
 
-| Orden | ID | Título | Prioridad | Story Points | Estado AV1 |
+| Orden | ID | Título | Prioridad | Story Points | Estado al TB1 |
 |--:|:--|:--|:--:|--:|:--|
-| 1 | US-02 | Registro, login y recuperación | Must | 8 | Implementado |
-| 2 | US-04 | Sedes y habitaciones | Must | 8 | Implementado |
-| 3 | US-05 | Vinculación de dispositivos | Must | 8 | Implementado |
-| 4 | US-06 | Control remoto | Must | 5 | Implementado |
-| 5 | US-10 | Dashboard e histórico energético | Must | 8 | Implementado |
-| 6 | US-07 | Grupos de dispositivos | Should | 5 | Implementado |
-| 7 | US-08 | Rutinas | Should | 8 | Implementado |
-| 8 | US-11 | Alertas y preferencias | Should | 8 | Implementado |
-| 9 | US-12 | Metas y reportes | Should | 8 | Implementado |
-| 10 | US-09 | Modos de operación | Could | 8 | Implementado |
-| 11 | US-15 | Soporte y mantenimiento | Could | 5 | Implementado |
-| 12 | US-16 | Planes y suscripción | Could | 8 | Implementado como flujo académico |
-| 13 | US-13 | Perfiles y permisos | Should | 5 | Implementado |
-| 14 | US-14 | Tema e idiomas | Should | 5 | Implementado |
-| 15 | US-01 | Landing Page y CTA | Must | 5 | Implementado |
+| 1 | US-01 | Landing Page y CTA | Must | 3 | Implementado |
+| 2 | US-02 | Registro, login y recuperación | Must | 5 | Implementado |
+| 3 | US-04 | Sedes y habitaciones | Must | 5 | Implementado |
+| 4 | US-05 | Vinculación de dispositivos | Must | 5 | Implementado |
+| 5 | US-06 | Control remoto | Must | 3 | Implementado |
+| 6 | US-10 | Dashboard e histórico energético | Must | 5 | Implementado |
+| 7 | US-07 | Grupos de dispositivos | Should | 3 | Implementado |
+| 8 | US-08 | Rutinas | Should | 5 | Implementado |
+| 9 | US-11 | Alertas y preferencias | Should | 5 | Implementado |
+| 10 | US-12 | Metas y reportes | Should | 5 | Implementado |
+| 11 | US-13 | Perfiles y permisos | Should | 3 | Implementado |
+| 12 | US-14 | Tema e idiomas | Should | 3 | Implementado |
+| 13 | US-09 | Modos de operación | Could | 5 | Implementado |
+| 14 | US-15 | Soporte y mantenimiento | Could | 3 | Implementado |
+| 15 | US-16 | Planes y suscripción | Could | 5 | Implementado como flujo académico |
 
-Total referencial del incremento AV1: **102 Story Points**. Los puntos expresan complejidad relativa del equipo, no horas.
+Total reestimado: **63 Story Points**. Aunque el enunciado general admite la serie 1/2/3/5/8, para esta entrega se aplica el feedback específico de AV1 y ninguna historia conserva una estimación de 8. La Landing Page se ubica primero porque valida la propuesta y el CTA antes de los recorridos autenticados. Los puntos expresan complejidad relativa del equipo, no horas; una historia que exceda 5 debe dividirse antes de ingresar a un Sprint.
 
 ## 3.4 Impact Mapping
 
@@ -1082,8 +1082,26 @@ La configuración actual permite ejecución local integrada. La API usa el puert
 | Sprint 1 | Crear la base integrada del producto | Repositorios, backend DDD, Angular y Landing Page | Commits de inicialización y producto |
 | Sprint 2 | Completar la experiencia móvil y la paridad funcional | Flutter Android, autenticación, shell, contextos y conectividad | Commits `1fe1a80`, `24cf286`, `0f545f0` |
 | Sprint 3 | Preparar AV1 y trazabilidad | Informe, verificación, diseño y documentación | Commits del Report y verificaciones registradas |
+| Sprint 4 (TB1) | Corregir el informe con base en el feedback de AV1 y preparar evidencia verificable | Perfiles, Student Outcome, diagramas renderizados, ERD real, backlogs y trazabilidad de mejora | Commits de `feature/stage-review-report-improvements` y PDF revisado |
 
-La asignación individual documentada corresponde a Jean Franck Loa Rojas: organización de repositorios, rebranding, backend, Angular, Landing Page, Flutter y documentación. Jairo Mathias Santiago Atanacio incorporó y actualizó su perfil en el Project Report, subió su fotografía y corrigió el formato y una entrada duplicada; estos cambios constan en los commits `8925167`, `89eca8d`, `bc19b77` y `7129be7`. El Team Leader confirma el apoyo de Fabricio, Renzo y Brayan en la preparación de AV1; el detalle de sus tareas individuales no quedó registrado en los repositorios.
+**Sprint Planning — Sprint 4 (TB1).** Fecha de actualización del backlog: 04/10/2026. La fecha, hora y medio de la ceremonia síncrona quedan pendientes de confirmación por el equipo; no se presenta una reunión no evidenciada como realizada. El Sprint Goal es subsanar observaciones de AV1 con artefactos renderizados, trazabilidad Git y contenido sustentado por los repositorios reales.
+
+| ID | Engineering Task | Historia / artefacto | Horas | Responsable | Estado | Evidencia / condición de cierre |
+|:--|:--|:--|--:|:--|:--|:--|
+| ET-01 | Completar perfil, fotografía y sustento individual | Student Outcome 4 | 4 h | Fabricio Rivera | Done | Commit `1b96857` |
+| ET-02 | Auditar ramas e incorporar trazabilidad de la entrega | Collaboration Insights | 4 h | Fabricio Rivera | Done | Commits `e98923f` y `9d7b603` |
+| ET-03 | Modelar y renderizar Architecture Overview, C4 y UML | US-01–US-16 / Architecture | 8 h | Fabricio Rivera | Done | Commit `fb5953f`; fuentes PlantUML y SVG |
+| ET-04 | Reconstruir el ERD desde las entidades JPA y diferenciar FK/LFK | Database Design | 8 h | Fabricio Rivera | Done | Commit `fb5953f`; 27 entidades contrastadas con el backend |
+| ET-05 | Reestimar Product Backlog y detallar Sprint Planning | Product Backlog | 6 h | Fabricio Rivera | Done | Backlogs sin SP 8 y Engineering Tasks de 4–8 h documentadas |
+| ET-06 | Contrastar bounded contexts y relaciones del ERD con el backend | Architecture / Database | 4 h | Jean Loa | Por confirmar | Revisión en Pull Request; no cuenta como aporte hasta quedar registrada |
+| ET-07 | Ejecutar la suite y actualizar el estado de escenarios BDD | US-02–US-16 | 6 h | Jairo Santiago | Por confirmar | Log de ejecución y commit/PR propio |
+| ET-08 | Revisar evidencia UX de Landing Page y clientes | US-01, US-14 | 4 h | Brayan Julca | Por confirmar | Hallazgos/capturas y commit/PR propio |
+| ET-09 | Realizar revisión cruzada de trazabilidad y legibilidad del PDF | Reporte TB1 | 4 h | Renzo Fernandez | Por confirmar | Aprobación o comentarios visibles en el Pull Request |
+| ET-10 | Generar y verificar el PDF final del Stage Review | Reporte TB1 | 4 h | Fabricio Rivera | To do | PDF sin Mermaid crudo, enlaces rotos ni contenido cortado |
+
+Las asignaciones marcadas **Por confirmar** reservan trabajo distribuido, pero no constituyen evidencia de contribución. Cada integrante debe aceptar la tarea y dejar un commit, Pull Request, review o evidencia equivalente bajo su propia cuenta.
+
+La asignación individual histórica documentada corresponde a Jean Franck Loa Rojas: organización de repositorios, rebranding, backend, Angular, Landing Page, Flutter y documentación. Jairo Mathias Santiago Atanacio incorporó y actualizó su perfil en el Project Report, subió su fotografía y corrigió el formato y una entrada duplicada; estos cambios constan en los commits `8925167`, `89eca8d`, `bc19b77` y `7129be7`. El apoyo previo de Fabricio, Renzo y Brayan mencionado por el Team Leader no se contabiliza como contribución técnica mientras no exista trazabilidad verificable.
 
 ### 5.2.2 Implemented Landing Page Evidence
 
@@ -1880,17 +1898,17 @@ Propiedades comunes: `anonymous_participant_id`, `session_id`, `experiment_id`, 
 | Orden | ID | Título | Prioridad | SP | Criterio de salida |
 |--:|:--|:--|:--:|--:|:--|
 | 1 | TS-01 | Asignación y configuración de variantes | Must | 5 | Variante estable y auditable por sesión. |
-| 2 | TS-02 | Contrato de eventos web/mobile | Must | 8 | Esquema validado y sin PII. |
+| 2 | TS-02 | Contrato de eventos web/mobile | Must | 5 | Esquema validado y sin PII. |
 | 3 | US-21 | Frescura y sincronización | Must | 3 | Timestamp consistente en KPI y detalle. |
-| 4 | US-17 | Recomendación accionable | Must | 8 | Control/tratamiento configurables. |
+| 4 | US-17 | Recomendación accionable | Must | 5 | Control/tratamiento configurables. |
 | 5 | US-18 | Vista previa de alcance | Must | 5 | Resumen y confirmación antes del comando. |
-| 6 | US-20 | Recuperación offline idempotente | Must | 8 | Reintento sin duplicación. |
+| 6 | US-20 | Recuperación offline idempotente | Must | 5 | Reintento sin duplicación. |
 | 7 | US-19 | Aviso y control de telemetría | Must | 5 | Consentimiento/opt-out registrado. |
 | 8 | TS-03 | Dataset semilla del experimento | Should | 3 | Datos idénticos y reiniciables. |
 | 9 | TS-04 | Dashboard de resultados | Should | 5 | Métricas por variante, segmento y plataforma. |
 | 10 | TS-05 | Exportación anonimizada | Should | 3 | Dataset reproducible sin datos personales. |
 
-Total To-Be referencial: **53 Story Points**. La prioridad se revisará con evidencia experimental y no por cantidad de funcionalidades.
+Total To-Be reestimado: **44 Story Points**. También se aplica aquí el límite indicado en el feedback de AV1: ninguna historia o tarea técnica se estima en 8; si supera 5, debe dividirse antes de planificarla. La prioridad se revisará con evidencia experimental y no por cantidad de funcionalidades.
 
 ### 8.3.3 Pipeline Supported Experiment Driven To Be Software Platform Lifecycle
 
