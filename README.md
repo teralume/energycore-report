@@ -45,6 +45,7 @@
 | AV1.3 | 15/09/2026 | Loa Rojas, Jean Franck | Incorporación de la primera entrevista de needfinding realizada por Jairo Mathias Santiago Atanacio, junto con su registro audiovisual, resumen y análisis preliminar del segmento pequeño negocio. |
 | TB1.1 | 04/10/2026 | Rivera Rupay, Fabricio Jose | Actualización del perfil de integrante y del Student Outcome 4 con información profesional, fotografía real y evidencias verificables de participación; identificación de los aportes todavía pendientes de sustento por parte del equipo. |
 | TB1.2 | 04/10/2026 | Rivera Rupay, Fabricio Jose | Corrección del Architecture Overview y de los diagramas C4, UML y de base de datos para su visualización en el informe, alineándolos con la implementación real de las aplicaciones y del backend de EnergyCore. |
+| TB1.3 | 04/10/2026 | Rivera Rupay, Fabricio Jose | Reestimación del Product Backlog y del backlog To-Be sin historias de 8 Story Points; incorporación del Sprint Planning con Engineering Tasks de 4 a 8 horas y matriz de mejora continua que enlaza el feedback de AV1 con cambios y commits verificables. |
 
 <div style="page-break-after: always;"></div>
 
@@ -115,11 +116,21 @@ Antes de iniciar las correcciones se compararon `origin/main`, `origin/develop`,
 
 Fabricio Jose Rivera Rupay trabaja con la identidad Git `Fabricio1924 <u202423883@upc.edu.pe>`. El commit `1b96857` incorpora su fotografía real, perfil y sustento inicial del Student Outcome para Trabajo Parcial. La fotografía proviene del perfil que el propio integrante ya había publicado en el repositorio Molinex; se descartaron los identicon de GitHub porque no constituyen una fotografía personal.
 
+#### Evidencia de mejora continua desde AV1
+
+| Origen | Observación o hallazgo | Cambio realizado | Evidencia | Pendiente verificable |
+|:--|:--|:--|:--|:--|
+| Feedback del profesor | No se visualizaban los componentes ni la base de datos porque el informe conservaba Mermaid sin renderizar. | Se reemplazaron Architecture Overview, C4 Context/Container/Component, Class Diagram y ERD por SVG renderizados desde fuentes PlantUML. | Commit `fb5953f`; `assets/architecture` | Revisión por pares y comprobación final dentro del PDF. |
+| Feedback del profesor | El Product Backlog no debe utilizar historias de 8 Story Points para esta entrega. | Se reestimaron el Product Backlog AS-IS y el To-Be con máximo 5 SP y se priorizó la Landing Page antes de los recorridos autenticados. | Commit `92205fd` | Validación del equipo durante Sprint Planning. |
+| Feedback del profesor / enunciado | El Sprint Backlog debe descomponer el trabajo en Engineering Tasks de 4 a 8 horas, con responsable y estado. | Se documentaron Sprint Goal, estado, horas, responsables y condición de cierre; las asignaciones no aceptadas permanecen como **Por confirmar**. | Commit `92205fd`; sección 5.2.1 | Cada responsable pendiente debe aceptar y evidenciar su tarea. |
+| Hallazgo de revisión interna | Otros flujos del informe también dependían de Mermaid crudo. | Se renderizaron Scenario Maps, Impact Map, flujos web, pipelines y aprendizaje continuo; se retiraron bloques redundantes cuando ya existía una imagen. | Commit `0a7e393`; `assets/diagrams` | Verificar escala y saltos de página en el PDF final. |
+| Hallazgo de trazabilidad | El perfil y el sustento individual de Fabricio estaban incompletos. | Se incorporaron fotografía real, perfil profesional, Student Outcome y límites de atribución basados en evidencia. | Commit `1b96857` | Grabar el testimonio individual real para el Video About the Team. |
+
 | Integrante | Evidencia trazable disponible | Acción requerida antes de cerrar TB1 |
 |:--|:--|:--|
 | Loa Rojas, Jean Franck | Commits en Report, Platform, WebApp, Mobile y Website. | Mantener referencias a commits y pipelines concretos en las secciones que sustenta. |
 | Santiago Atanacio, Jairo Mathias | Commits de perfil, fotografía y entrevista en el Project Report. | Realizar o revisar una corrección de TB1 mediante un commit o Pull Request propio. |
-| Rivera Rupay, Fabricio Jose | Commits `9bf3d4f`, `e98923f` y `1b96857`; rama actual de corrección. | Completar los artefactos asignados y conservar commits separados por tipo de cambio. |
+| Rivera Rupay, Fabricio Jose | Commits `9bf3d4f`, `e98923f`, `1b96857`, `9d7b603`, `fb5953f`, `92205fd` y `0a7e393`; rama actual de corrección. | Generar y verificar el PDF, publicar la rama y solicitar revisión sin hacer merge directo a `main`. |
 | Revilla Quispe, Renzo Zamir | Un commit de perfil en el Project Report. | Incorporar una contribución técnica o documental de TB1 con evidencia propia. |
 | Huerta Cardenas, Brayan Benjamin | Commits de identificación y ajustes del Project Report. | Vincular cualquier sustento técnico adicional con commit, revisión o evidencia audiovisual propia. |
 
@@ -130,7 +141,6 @@ Esta matriz no reemplaza GitHub Insights ni el Participant Performance Report. S
 ## Contenido
 
 - [Student Outcome](#student-outcome)
-  - [Loa Rojas Jean Franck](#loa-rojas-jean-franck)
 - [Part I As Is Software Project](#part-i-as-is-software-project)
   - [Capítulo I Introducción](#capítulo-i-introducción)
     - [1.1 Startup Profile](#11-startup-profile)
@@ -321,17 +331,21 @@ En el siguiente cuadro se describen las acciones realizadas y los enunciados de 
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |:--|:--|:--|
-| **4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software** | **Loa Rojas, Jean Franck (U20241E406)**<br>**AV1:** documentó la reutilización autorizada del producto base, organizó los repositorios públicos y registró las limitaciones reales de pruebas, despliegue y compatibilidad. Sus commits abarcan Report, Platform, WebApp, Mobile y Website.<br><br>**Santiago Atanacio, Jairo Mathias (U202418755)**<br>**AV1:** incorporó su perfil, fotografía y una entrevista real de needfinding. El historial del informe permite distinguir esos aportes de las afirmaciones grupales que aún requieren evidencia.<br><br>**Rivera Rupay, Fabricio Jose (U202423883)**<br>**AV1:** incorporó su identificación al informe mediante el commit `9bf3d4f` de `main`.<br>**Trabajo Parcial:** auditó `main`, `develop`, `release/*` y `feature/*` antes de editar, conservó el historial de los demás integrantes y trabajó en `feature/stage-review-report-improvements`. Verificó su fotografía contra el perfil previamente publicado en Molinex en lugar de generar o atribuir una imagen falsa, y separó los hechos comprobables de los aportes que aún necesitan evidencia personal.<br><br>**Revilla Quispe, Renzo Zamir (U201717085)**<br>**AV1:** incorporó su perfil en el informe. No se le atribuyen cambios técnicos en los repositorios de producto sin commits verificables.<br><br>**Huerta Cardenas, Brayan Benjamin (U20241E550)**<br>**AV1:** incorporó y corrigió información de integrante en el informe mediante commits identificables. Sus aportes técnicos adicionales deben enlazarse a commits propios antes de presentarse como evidencia individual. | La responsabilidad profesional requiere preservar la autoría real, no fabricar fotos, entrevistas ni resultados, y distinguir implementación, verificación y trabajo planificado. El informe adopta esa regla para las correcciones del Trabajo Parcial y mantiene visibles las brechas que requieren acción humana. |
+| **4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software** | **Loa Rojas, Jean Franck (U20241E406)**<br>**AV1:** documentó la reutilización autorizada del producto base, organizó los repositorios públicos y registró las limitaciones reales de pruebas, despliegue y compatibilidad. Sus commits abarcan Report, Platform, WebApp, Mobile y Website.<br><br>**Santiago Atanacio, Jairo Mathias (U202418755)**<br>**AV1:** incorporó su perfil, fotografía y una entrevista real de needfinding. El historial del informe permite distinguir esos aportes de las afirmaciones grupales que aún requieren evidencia.<br><br>**Rivera Rupay, Fabricio Jose (U202423883)**<br>**AV1:** incorporó su identificación al informe mediante el commit `9bf3d4f` de `main`.<br>**Trabajo Parcial:** auditó `main`, `develop`, `release/*` y `feature/*` antes de editar, conservó el historial de los demás integrantes y trabajó en `feature/stage-review-report-improvements`. Verificó su fotografía contra el perfil previamente publicado en Molinex en lugar de generar o atribuir una imagen falsa; reconstruyó los diagramas desde código real; y mantuvo como pendientes las reuniones, entrevistas, pruebas y aportes personales que no tienen evidencia.<br><br>**Revilla Quispe, Renzo Zamir (U201717085)**<br>**AV1:** incorporó su perfil en el informe. No se le atribuyen cambios técnicos en los repositorios de producto sin commits verificables.<br><br>**Huerta Cardenas, Brayan Benjamin (U20241E550)**<br>**AV1:** incorporó y corrigió información de integrante en el informe mediante commits identificables. Sus aportes técnicos adicionales deben enlazarse a commits propios antes de presentarse como evidencia individual. | La responsabilidad profesional requiere preservar la autoría real, no fabricar fotos, entrevistas ni resultados, y distinguir implementación, verificación y trabajo planificado. El informe adopta esa regla para las correcciones del Trabajo Parcial y mantiene visibles las brechas que requieren acción humana. |
 | **4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales** | **Loa Rojas, Jean Franck (U20241E406)**<br>**AV1:** documentó una arquitectura común para web y móvil, el uso de una única API y base PostgreSQL, y las decisiones sobre seguridad, accesibilidad, costos y consumo energético.<br><br>**Santiago Atanacio, Jairo Mathias (U202418755)**<br>**AV1:** su entrevista aportó evidencia primaria para comprender necesidades del segmento pequeño negocio; el análisis continúa siendo provisional hasta completar la muestra.<br><br>**Rivera Rupay, Fabricio Jose (U202423883)**<br>**Trabajo Parcial:** contrastó el feedback del profesor con el enunciado y el backend real. Estableció como criterio que los diagramas deben representar componentes, entidades, PK/FK, cardinalidades y limitaciones reales de PostgreSQL/JPA, evitando que una visualización incompleta conduzca a decisiones erróneas sobre seguridad, costos o alcance. También priorizó que las afirmaciones ambientales y económicas permanezcan como hipótesis mientras no existan mediciones experimentales suficientes.<br><br>**Revilla Quispe, Renzo Zamir (U201717085)** y **Huerta Cardenas, Brayan Benjamin (U20241E550)**<br>Sus reflexiones individuales para Trabajo Parcial deben acompañarse de una evidencia propia verificable -commit, revisión o participación grabada- antes de cerrar esta sección. | EnergyCore puede apoyar decisiones económicas y ambientales, pero solo si comunica la procedencia, frescura y límites de los datos. La accesibilidad, privacidad, seguridad, autonomía del usuario y honestidad de la evidencia son condiciones obligatorias, no beneficios opcionales. |
 
 #### Evidencias individuales
 
 - **Loa Rojas, Jean Franck (U20241E406):** repositorios Report, Website, WebApp, Mobile y Platform; hashes registrados en Project Report Collaboration Insights.
 - **Santiago Atanacio, Jairo Mathias (U202418755):** perfil, fotografía, entrevista y contenido ABET registrados en el historial de `origin/main`.
-- **Rivera Rupay, Fabricio Jose (U202423883):** commit `9bf3d4f` en `main`; rama `feature/stage-review-report-improvements`; perfil y fotografía verificable reutilizada desde Molinex; commits de Trabajo Parcial registrados en el historial de esta rama.
+- **Rivera Rupay, Fabricio Jose (U202423883):** commit `9bf3d4f` en `main`; rama `feature/stage-review-report-improvements`; perfil y fotografía verificable reutilizada desde Molinex; commits `1b96857`, `9d7b603`, `fb5953f`, `92205fd` y `0a7e393` para outcome, colaboración, arquitectura, ERD, backlogs y diagramas del informe.
 - **Revilla Quispe, Renzo Zamir (U201717085):** perfil incorporado en el historial del informe. Requiere una evidencia técnica propia para completar el sustento individual del Trabajo Parcial.
 - **Huerta Cardenas, Brayan Benjamin (U20241E550):** commits de identificación y ajustes del informe. Requiere vincular cada sustento técnico adicional con un commit, revisión o evidencia audiovisual propia.
 - **Video About The Team:** la URL se registrará después de grabar y publicar los testimonios reales.
+
+#### Rivera Rupay, Fabricio Jose (U202423883)
+
+Durante el Trabajo Parcial asumí la corrección documental y arquitectónica sin alterar ni atribuirme el trabajo funcional desarrollado por otros integrantes. Para el criterio 4.c.1 preservé el historial Git, trabajé en una rama feature y marqué como pendiente cualquier evidencia humana o técnica que no pude comprobar. Para el criterio 4.c.2 contrasté los diagramas con los cuatro repositorios de producto y con las 27 entidades JPA del backend, diferenciando relaciones físicas y lógicas para no presentar una base de datos inexistente. Esta experiencia refuerza que una decisión profesional no solo debe verse completa: debe ser rastreable, reproducible y honesta respecto de sus límites.
 
 <div style="page-break-after: always;"></div>
 
@@ -1015,8 +1029,8 @@ La configuración actual permite ejecución local integrada. La API usa el puert
 | ET-05 | Reestimar Product Backlog y detallar Sprint Planning | Product Backlog | 6 h | Fabricio Rivera | Done | Backlogs sin SP 8 y Engineering Tasks de 4–8 h documentadas |
 | ET-06 | Contrastar bounded contexts y relaciones del ERD con el backend | Architecture / Database | 4 h | Jean Loa | Por confirmar | Revisión en Pull Request; no cuenta como aporte hasta quedar registrada |
 | ET-07 | Ejecutar la suite y actualizar el estado de escenarios BDD | US-02–US-16 | 6 h | Jairo Santiago | Por confirmar | Log de ejecución y commit/PR propio |
-| ET-08 | Revisar evidencia UX de Landing Page y clientes | US-01, US-14 | 4 h | Brayan Julca | Por confirmar | Hallazgos/capturas y commit/PR propio |
-| ET-09 | Realizar revisión cruzada de trazabilidad y legibilidad del PDF | Reporte TB1 | 4 h | Renzo Fernandez | Por confirmar | Aprobación o comentarios visibles en el Pull Request |
+| ET-08 | Revisar evidencia UX de Landing Page y clientes | US-01, US-14 | 4 h | Brayan Huerta | Por confirmar | Hallazgos/capturas y commit/PR propio |
+| ET-09 | Realizar revisión cruzada de trazabilidad y legibilidad del PDF | Reporte TB1 | 4 h | Renzo Revilla | Por confirmar | Aprobación o comentarios visibles en el Pull Request |
 | ET-10 | Generar y verificar el PDF final del Stage Review | Reporte TB1 | 4 h | Fabricio Rivera | To do | PDF sin Mermaid crudo, enlaces rotos ni contenido cortado |
 
 Las asignaciones marcadas **Por confirmar** reservan trabajo distribuido, pero no constituyen evidencia de contribución. Cada integrante debe aceptar la tarea y dejar un commit, Pull Request, review o evidencia equivalente bajo su propia cuenta.
@@ -1133,11 +1147,17 @@ La tabla anterior documenta el contrato por bounded context. El 06/09/2026 se ej
 
 ### 5.2.7 Team Collaboration Insights
 
-Antes de esta ampliación del informe se organizaron 13 commits locales distribuidos entre los cinco repositorios. El trabajo confirmado de Jean Franck Loa Rojas abarca configuración, migración de identidad, backend, Web Application, Landing Page, Native Mobile Application y reporte. La primera entrevista real de needfinding ya está incorporada; permanecen pendientes las entrevistas necesarias para completar la muestra y las demás evidencias externas o empíricas todavía no realizadas.
+El trabajo confirmado de Jean Franck Loa Rojas abarca la línea base técnica de Platform, WebApp, Mobile, Website y Report. Jairo Mathias Santiago Atanacio registra perfil, fotografía y la primera entrevista real; Renzo Zamir Revilla Quispe y Brayan Benjamin Huerta Cardenas cuentan con aportes identificables en el informe. En Trabajo Parcial, Fabricio Jose Rivera Rupay agregó perfil y outcome, reconstruyó arquitectura y ERD desde los repositorios reales, reestimó los backlogs y eliminó Mermaid crudo mediante commits convencionales separados.
 
-Para AV1 se aplicó GitFlow sin reconstruir ni falsificar historia: cada repositorio conserva `main`, se creó `develop` y los cambios se desarrollaron en `feature/hito-1-evidence`, `feature/cloud-run-neon` y `feature/firebase-production`. Las ramas feature fueron integradas localmente a `develop` mediante merges `--no-ff` y Conventional Commits. `release/av1` se utiliza como candidato de publicación; `main` solo debe recibir el merge después de validar Cloud Run, Neon y Firebase en sus URLs públicas.
+GitFlow se conserva sin reescribir historia: `feature/stage-review-report-improvements` parte de `develop`, incorpora de forma controlada los dos aportes que solo estaban en `main` y no modifica la rama estable. Los repositorios de producto se usaron como fuentes de verificación, pero no se alteraron porque las correcciones actuales corresponden al reporte. El Sprint Backlog reserva revisiones para los cuatro integrantes restantes; esas asignaciones no se consideran contribución hasta que cada persona deje un commit, review, Pull Request o evidencia propia.
 
-Las cinco bases de código y sus ramas `develop`/`release/av1` fueron publicadas en la organización de GitHub. La evidencia de ramas muestra los merges GitFlow y su distancia respecto de `main`. GitHub Insights calcula **Contributors** sobre la rama por defecto y excluye merges; por eso la captura todavía refleja los dos commits que ya estaban en `main`, mientras el trabajo AV1 permanece deliberadamente en `release/av1` hasta superar la verificación pública. No se atribuyen aportes a integrantes cuyos datos y commits todavía no han sido confirmados.
+| Integrante | Participación verificable al TB1 | Vacío que requiere acción humana |
+|:--|:--|:--|
+| Jean Franck Loa Rojas | Línea base funcional y documental en los cinco repositorios. | Revisar en PR la correspondencia entre backend, C4 y ERD. |
+| Jairo Mathias Santiago Atanacio | Perfil, fotografía y primera entrevista. | Ejecutar/documentar BDD o aportar una corrección propia de TB1. |
+| Fabricio Jose Rivera Rupay | Perfil, Student Outcome, arquitectura, ERD, backlogs y trazabilidad de mejora en la rama TB1. | Finalizar validación PDF y solicitar revisión por pares. |
+| Renzo Zamir Revilla Quispe | Perfil registrado en el Project Report. | Realizar revisión cruzada del PDF/PR con evidencia visible. |
+| Brayan Benjamin Huerta Cardenas | Identificación y ajustes previos del Project Report. | Revisar evidencia UX y registrar hallazgos o corrección propia. |
 
 <p align="center">
   <img src="assets/evidence/implemented/github-report-branches.png" alt="Ramas GitFlow publicadas del repositorio del informe" width="100%">
@@ -1852,9 +1872,9 @@ El artefacto desplegable es una imagen Docker no-root para Cloud Run. La evidenc
 
 #### 8.3.3.6 Team Collaboration Insights
 
-Jean Franck Loa Rojas preparó la línea base de los cinco repositorios, la paridad web/móvil, las pruebas actuales y el diseño documental del experimento. Las tareas To-Be se asignarán mediante GitHub Issues y cada evidencia deberá enlazar issue, Pull Request, reviewer, commit y pipeline.
+Jean Franck Loa Rojas preparó la línea base de los cinco repositorios, la paridad web/móvil, las pruebas actuales y el diseño documental del experimento. Fabricio Jose Rivera Rupay convirtió las observaciones de AV1 en cambios trazables del reporte y dejó el Sprint 4 descompuesto en tareas verificables. Las tareas To-Be restantes deberán gestionarse mediante GitHub Issues y cada evidencia enlazará issue, Pull Request, reviewer, commit y pipeline.
 
-Los cinco integrantes ya están identificados. Además de la línea base técnica de Jean Franck Loa Rojas, el historial del Project Report registra las modificaciones de perfil y fotografía de Jairo Mathias Santiago Atanacio. El Team Leader confirma que Fabricio Jose Rivera Rupay, Renzo Zamir Revilla Quispe y Brayan Benjamin Huerta Cardenas apoyaron la preparación de AV1, pero sus tareas específicas no quedaron registradas por integrante. El reporte incorporará una matriz RACI y capturas de GitHub Insights por entrega cuando estén disponibles.
+Jairo, Renzo y Brayan tienen tareas propuestas de prueba, revisión y UX en la sección 5.2.1, pero permanecen **Por confirmar**. Esta separación permite distribuir el trabajo sin presentar como ejecutado lo que todavía no tiene autoría verificable.
 
 ### 8.3.4 To Be Validation Interviews
 
@@ -1990,7 +2010,7 @@ La hipótesis principal se ha convertido en un experimento reproducible: compara
 
 El diseño ético reconoce que la telemetría energética puede revelar hábitos y que un comando remoto puede afectar dispositivos reales. Por ello se priorizan minimización de datos, perfiles, confirmación de alcance, información de frescura, resultados negativos visibles y detención ante riesgo. Esta decisión conecta el Student Outcome 4 con prácticas concretas de ingeniería.
 
-Se recomienda implementar los workflows de CI, migraciones de base de datos, instrumentación anonimizada, observabilidad y rollback antes de automatizar producción. También deben incorporarse evidencias audiovisuales, auditoría entre grupos y resultados de experimentación cuando existan. Este texto fue redactado por Jean Franck Loa Rojas y deberá revisarse como conclusión grupal si se confirman nuevos integrantes.
+Se recomienda implementar los workflows de CI, migraciones de base de datos, instrumentación anonimizada, observabilidad y rollback antes de automatizar producción. También deben incorporarse evidencias audiovisuales, auditoría entre grupos y resultados de experimentación cuando existan. Estas conclusiones constituyen un avance documental y todavía requieren revisión explícita de todos los integrantes antes de presentarse como conclusión grupal.
 
 # Video App Validation
 
