@@ -1,0 +1,194 @@
+@startuml
+title EnergyCore - Domain Class Diagram (AS-IS)
+hide empty methods
+hide circle
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam classAttributeIconSize 0
+
+package IAM {
+  class User {
+    +id: Long
+    +fullName: String
+    +email: String
+    +status: AccountStatus
+  }
+  class AccessProfile {
+    +id: Long
+    +name: String
+    +description: String
+  }
+  class UserUiPreference {
+    +id: Long
+    +language: String
+    +theme: String
+  }
+}
+package Workplace {
+  class Location {
+    +id: Long
+    +userId: Long
+    +name: String
+    +address: String
+  }
+  class Room {
+    +id: Long
+    +locationId: Long
+    +name: String
+    +floor: String
+  }
+  class DeviceAssignment {
+    +id: Long
+    +deviceId: Long
+    +roomId: Long
+    +locationId: Long
+  }
+}
+package "Device Control" {
+  class Device {
+    +id: Long
+    +userId: Long
+    +name: String
+    +powerWatts: BigDecimal
+    +status: DeviceStatus
+  }
+  class DeviceGroup {
+    +id: Long
+    +userId: Long
+    +name: String
+  }
+  class DeviceGroupDevice {
+    +deviceGroupId: Long
+    +deviceId: Long
+  }
+  class Routine {
+    +id: Long
+    +userId: Long
+    +targetType: RoutineTargetType
+    +targetId: Long
+    +action: RoutineAction
+  }
+  class OperationMode {
+    +id: Long
+    +userId: Long
+    +locationId: Long
+    +status: OperationModeStatus
+    +activate()
+    +archive()
+  }
+}
+package "Energy Monitoring" {
+  class EnergyReading {
+    +id: Long
+    +userId: Long
+    +deviceId: Long
+    +watts: BigDecimal
+    +kilowattHours: BigDecimal
+  }
+}
+package Notifications {
+  class AlertRule {
+    +id: Long
+    +userId: Long
+    +metric: String
+    +threshold: BigDecimal
+    +enabled: Boolean
+  }
+  class Alert {
+    +id: Long
+    +userId: Long
+    +level: String
+    +sourceType: AlertSourceType
+    +resolved: Boolean
+  }
+}
+package Reporting {
+  class EnergyGoal {
+    +id: Long
+    +userId: Long
+    +targetKilowattHours: BigDecimal
+    +deadline: LocalDate
+  }
+  class ConsumptionReport {
+    +id: Long
+    +userId: Long
+    +totalWatts: BigDecimal
+    +startDate: LocalDate
+    +endDate: LocalDate
+  }
+}
+package Billing {
+  class Plan {
+    +id: Long
+    +code: String
+    +monthlyPrice: Money
+    +maxDevices: Integer
+  }
+  class Subscription {
+    +id: Long
+    +userId: Long
+    +status: SubscriptionStatus
+    +startDate: LocalDate
+  }
+  class Payment {
+    +id: Long
+    +userId: Long
+    +amount: Money
+    +status: PaymentStatus
+  }
+  class Invoice {
+    +id: Long
+    +userId: Long
+    +invoiceNumber: String
+    +totalAmount: Money
+  }
+}
+package "Service Management" {
+  class SupportTicket {
+    +id: Long
+    +userId: Long
+    +subject: String
+    +priority: String
+    +status: String
+  }
+  class MaintenanceTicket {
+    +id: Long
+    +userId: Long
+    +deviceId: Long
+    +scheduledDate: LocalDate
+    +status: String
+  }
+}
+
+AccessProfile "1" <-- "0..*" User : accessProfile
+User "1" -- "0..1" UserUiPreference
+User "1" -- "0..*" Location
+Location "1" -- "0..*" Room
+Location "1" -- "0..*" DeviceAssignment
+Room "0..1" -- "0..*" DeviceAssignment
+Device "1" -- "0..*" DeviceAssignment
+User "1" -- "0..*" Device
+User "1" -- "0..*" DeviceGroup
+DeviceGroup "1" -- "0..*" DeviceGroupDevice
+Device "1" -- "0..*" DeviceGroupDevice
+User "1" -- "0..*" Routine
+User "1" -- "0..*" OperationMode
+Device "1" -- "0..*" EnergyReading
+User "1" -- "0..*" AlertRule
+User "1" -- "0..*" Alert
+User "1" -- "0..*" EnergyGoal
+User "1" -- "0..*" ConsumptionReport
+Plan "1" -- "0..*" Subscription
+User "1" -- "0..*" Subscription
+Subscription "1" -- "0..*" Payment
+Payment "1" -- "0..1" Invoice
+User "1" -- "0..*" SupportTicket
+User "1" -- "0..*" MaintenanceTicket
+Device "1" -- "0..*" MaintenanceTicket
+
+note bottom
+  Las asociaciones por campos *Id son relaciones logicas del dominio.
+  Las asociaciones JPA fisicas se distinguen en el ERD.
+end note
+@enduml

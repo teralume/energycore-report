@@ -1,0 +1,82 @@
+@startuml
+title EnergyCore PostgreSQL - Reporting and Service ERD
+hide methods
+hide stereotypes
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam classAttributeIconSize 0
+
+entity USERS {
+  * id : BIGSERIAL <<PK>>
+}
+entity DEVICES {
+  * id : BIGSERIAL <<PK>>
+}
+entity ENERGY_GOALS {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  title : VARCHAR(160)
+  target_watts : NUMERIC(12,6)
+  current_watts : NUMERIC(12,6)
+  deadline : DATE
+  status : VARCHAR(40)
+  scope_type : VARCHAR(20)
+  scope_id : BIGINT
+}
+entity CONSUMPTION_REPORTS {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  total_watts : NUMERIC(12,2)
+  average_watts : NUMERIC(12,2)
+  highest_watts : NUMERIC(12,2)
+  start_date : DATE
+  end_date : DATE
+}
+entity REPORTING_EVENTS {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  event_key : VARCHAR(240) <<UQ>>
+  event_name : VARCHAR(120)
+  source_context : VARCHAR(80)
+  subject_type : VARCHAR(80)
+  subject_id : VARCHAR(80)
+  occurred_on : TIMESTAMP
+}
+entity SUPPORT_TICKETS {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  subject : VARCHAR(160)
+  description : TEXT
+  priority : VARCHAR(40)
+  status : VARCHAR(40)
+}
+entity MAINTENANCE_TICKETS {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  device_id : BIGINT <<LFK>>
+  device_name : VARCHAR(120)
+  type : VARCHAR(60)
+  description : TEXT
+  scheduled_date : DATE
+  status : VARCHAR(40)
+}
+
+USERS ||..o{ ENERGY_GOALS : logical FK
+USERS ||..o{ CONSUMPTION_REPORTS : logical FK
+USERS ||..o{ REPORTING_EVENTS : logical FK
+USERS ||..o{ SUPPORT_TICKETS : logical FK
+USERS ||..o{ MAINTENANCE_TICKETS : logical FK
+DEVICES ||..o{ MAINTENANCE_TICKETS : logical FK
+
+legend bottom
+  |= Marker |= Meaning |
+  | PK | primary key inherited from AuditableEntity |
+  | LFK | logical foreign key stored as Long; application-enforced |
+endlegend
+@enduml

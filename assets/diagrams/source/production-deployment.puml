@@ -1,0 +1,36 @@
+@startuml
+title Production Deployment Pipeline
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam activity {
+  BackgroundColor #F0FDF4
+  BorderColor #15803D
+  FontColor #111827
+}
+
+start
+:Merge a main;
+if (¿CI aprobada?) then (No)
+  :Bloquear release;
+  stop
+else (Sí)
+  :Publicar artefactos con SHA;
+  :Desplegar staging;
+  if (¿Smoke, seguridad y aprobación?) then (No)
+    :Conservar versión anterior;
+    stop
+  else (Sí)
+    :Desplegar API en Cloud Run;
+    :Desplegar WebApp y Website;
+    :Verificar health, login, CORS y SPA;
+    if (¿Resultado correcto?) then (Sí)
+      :Notificar release;
+      stop
+    else (No)
+      :Rollback y abrir incidente;
+      stop
+    endif
+  endif
+endif
+@enduml

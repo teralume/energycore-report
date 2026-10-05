@@ -1,0 +1,41 @@
+@startuml
+title Impact Map — decisiones energéticas informadas
+top to bottom direction
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam rectangle {
+  BackgroundColor #F0FDF4
+  BorderColor #15803D
+  FontColor #111827
+}
+
+rectangle "GOAL\nAyudar a tomar decisiones\nenergéticas informadas" as G #DCFCE7
+rectangle "Responsable\ndel hogar" as H
+rectangle "Administrador\nde negocio" as N
+rectangle "Operador\nautorizado" as O
+rectangle "Comprende consumo\ny costo" as H1 #FEF3C7
+rectangle "Reduce olvidos" as H2 #FEF3C7
+rectangle "Controla espacios\ny sedes" as N1 #FEF3C7
+rectangle "Delega con\npermisos" as N2 #FEF3C7
+rectangle "Ejecuta tareas\nseguras" as O1 #FEF3C7
+rectangle "Dashboard, lecturas,\nmetas y reportes" as F1 #E0F2FE
+rectangle "Alertas, rutinas\ny modos" as F2 #E0F2FE
+rectangle "Sedes, habitaciones,\ndispositivos y grupos" as F3 #E0F2FE
+rectangle "Access Profiles" as F4 #E0F2FE
+rectangle "Controles según\npermisos" as F5 #E0F2FE
+
+G --> H
+G --> N
+G --> O
+H --> H1
+H --> H2
+N --> N1
+N --> N2
+O --> O1
+H1 --> F1
+H2 --> F2
+N1 --> F3
+N2 --> F4
+O1 --> F5
+@enduml

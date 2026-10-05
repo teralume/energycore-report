@@ -5,28 +5,33 @@ const { pathToFileURL } = require('url');
 
 const repoRoot = path.resolve(__dirname, '..');
 const inputPath = path.join(repoRoot, 'README.md');
-const milestone = (process.env.ENERGYCORE_REPORT_MILESTONE || 'AV1').toUpperCase();
-const milestoneSlug = milestone.toLowerCase();
+const stage = (
+  process.argv[2]
+  || process.env.ENERGYCORE_REPORT_MILESTONE
+  || 'tb1'
+).toLowerCase();
+
+if (!/^[a-z0-9-]+$/.test(stage)) {
+  throw new Error('Stage must contain only lowercase letters, numbers, or hyphens.');
+}
+const milestone = stage.toUpperCase();
 const outputPath = path.join(
   repoRoot,
   'output',
   'pdf',
-  `upc-pre-202610-1asi0732-9100-teralume-report-${milestoneSlug}.pdf`,
+  `upc-pre-202610-1asi0732-9100-teralume-report-${stage}.pdf`,
 );
 const tempDirectory = path.join(repoRoot, 'tmp', 'pdfs');
-const tempHtmlPath = path.join(tempDirectory, `energycore-report-${milestoneSlug}.html`);
+const tempHtmlPath = path.join(tempDirectory, `energycore-report-${stage}.html`);
 
 const extensionsRoot = path.join(os.homedir(), '.vscode', 'extensions');
-const extensionDirectory = fs
-  .readdirSync(extensionsRoot, { withFileTypes: true })
+const extensionDirectory = (fs.existsSync(extensionsRoot)
+  ? fs.readdirSync(extensionsRoot, { withFileTypes: true })
+  : [])
   .filter((entry) => entry.isDirectory() && entry.name.startsWith('yzane.markdown-pdf-'))
   .map((entry) => path.join(extensionsRoot, entry.name))
   .sort()
   .at(-1);
-
-if (!extensionDirectory) {
-  throw new Error('The yzane.markdown-pdf VS Code extension is not installed.');
-}
 
 const bundledModules = path.join(
   os.homedir(),
@@ -66,9 +71,11 @@ async function main() {
 
   const markdown = fs.readFileSync(inputPath, 'utf8');
   const content = marked.parse(markdown, { gfm: true, breaks: false });
-  const styles = ['markdown.css', 'markdown-pdf.css', 'tomorrow.css']
-    .map((name) => fs.readFileSync(path.join(extensionDirectory, 'styles', name), 'utf8'))
-    .join('\n');
+  const styles = extensionDirectory
+    ? ['markdown.css', 'markdown-pdf.css', 'tomorrow.css']
+        .map((name) => fs.readFileSync(path.join(extensionDirectory, 'styles', name), 'utf8'))
+        .join('\n')
+    : 'body { color: #1f2937; line-height: 1.45; } h1, h2, h3, h4 { color: #111827; }';
   const baseUrl = pathToFileURL(`${repoRoot}${path.sep}`).href;
   const title = `EnergyCore - Project Report ${milestone}`;
   const html = `<!doctype html>
@@ -107,7 +114,7 @@ async function main() {
       format: 'A4',
       printBackground: true,
       displayHeaderFooter: true,
-      headerTemplate: `<div style="font-size:8px;margin-left:1cm;color:#555">EnergyCore - Project Report ${escapeHtml(milestone)}</div>`,
+      headerTemplate: `<div style="font-size:8px;margin-left:1cm;color:#555">${escapeHtml(title)}</div>`,
       footerTemplate: '<div style="font-size:8px;margin:0 auto;color:#555"><span class="pageNumber"></span> / <span class="totalPages"></span></div>',
       margin: { top: '1.5cm', right: '1cm', bottom: '1cm', left: '1cm' },
     });
