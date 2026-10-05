@@ -40,6 +40,8 @@ required_assets = (
     "assets/architecture/class-diagram.svg",
     "assets/architecture/database-core.svg",
     "assets/architecture/database-support.svg",
+    "assets/architecture/database-billing.svg",
+    "assets/architecture/database-notifications.svg",
 )
 for asset in required_assets:
     require((ROOT / asset).is_file(), f"Required asset is missing: {asset}")

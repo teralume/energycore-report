@@ -1,0 +1,72 @@
+@startuml
+title EnergyCore PostgreSQL - Notifications ERD
+hide methods
+hide stereotypes
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam classAttributeIconSize 0
+
+entity USERS {
+  * id : BIGSERIAL <<PK>>
+}
+entity ALERT_RULE_PROFILES {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  name : VARCHAR(120)
+  scope_type : VARCHAR(30)
+  scope_id : VARCHAR(80)
+  mode : VARCHAR(30)
+  sensitivity : VARCHAR(30)
+  active : BOOLEAN
+}
+entity ALERT_RULES {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  name : VARCHAR(120)
+  metric : VARCHAR(60)
+  condition_type : VARCHAR(40)
+  threshold : NUMERIC(10,2)
+  level : VARCHAR(30)
+  scope_type : VARCHAR(40)
+  scope_id : VARCHAR(80)
+  enabled : BOOLEAN
+}
+entity ALERTS {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  title : VARCHAR(160)
+  message : TEXT
+  level : VARCHAR(30)
+  source_type : VARCHAR(30)
+  source_id : VARCHAR(80)
+  event_type : VARCHAR(40)
+  resolved : BOOLEAN
+  read_status : BOOLEAN
+}
+entity NOTIFICATION_PREFERENCES {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK,UQ>>
+  scope_type : VARCHAR(30)
+  scope_id : VARCHAR(80)
+  email_enabled : BOOLEAN
+  push_enabled : BOOLEAN
+  minimum_level : VARCHAR(30)
+  cooldown_minutes : INTEGER
+}
+
+USERS ||..o{ ALERT_RULE_PROFILES : logical FK
+USERS ||..o{ ALERT_RULES : logical FK
+USERS ||..o{ ALERTS : logical FK
+USERS ||..o| NOTIFICATION_PREFERENCES : logical FK
+
+legend bottom
+  |= Marker |= Meaning |
+  | PK | primary key inherited from AuditableEntity |
+  | LFK | logical foreign key stored as Long; application-enforced |
+endlegend
+@enduml

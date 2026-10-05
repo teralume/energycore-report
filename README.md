@@ -46,6 +46,7 @@
 | TB1.1 | 04/10/2026 | Rivera Rupay, Fabricio Jose | Actualización del perfil de integrante y del Student Outcome 4 con información profesional, fotografía real y evidencias verificables de participación; identificación de los aportes todavía pendientes de sustento por parte del equipo. |
 | TB1.2 | 04/10/2026 | Rivera Rupay, Fabricio Jose | Corrección del Architecture Overview y de los diagramas C4, UML y de base de datos para su visualización en el informe, alineándolos con la implementación real de las aplicaciones y del backend de EnergyCore. |
 | TB1.3 | 04/10/2026 | Rivera Rupay, Fabricio Jose | Reestimación del Product Backlog y del backlog To-Be sin historias de 8 Story Points; incorporación del Sprint Planning con Engineering Tasks de 4 a 8 horas y matriz de mejora continua que enlaza el feedback de AV1 con cambios y commits verificables. |
+| TB1.4 | 04/10/2026 | Rivera Rupay, Fabricio Jose | Generación y revisión visual del Project Report TB1; división del ERD en vistas de núcleo, notificaciones, reporting/servicio y facturación para conservar atributos, claves y cardinalidades legibles en el PDF. |
 
 <div style="page-break-after: always;"></div>
 
@@ -943,7 +944,9 @@ El diagrama resume los agregados y entidades implementados en `energycore-platfo
 
 ### 4.10.1 Relational Non Relational Database Diagram
 
-EnergyCore utiliza PostgreSQL mediante Spring Data JPA. El modelo fue reconstruido desde las **27 clases anotadas con `@Entity`** y `AuditableEntity` de `energycore-platform/develop`; no mantiene una base NoSQL en el alcance actual. Para conservar legibilidad, el ERD se divide en dos vistas complementarias.
+EnergyCore utiliza PostgreSQL mediante Spring Data JPA. El modelo fue reconstruido desde las **27 clases anotadas con `@Entity`** y `AuditableEntity` de `energycore-platform/develop`; no mantiene una base NoSQL en el alcance actual. Para conservar legibilidad, el ERD se divide en cuatro vistas complementarias.
+
+<div style="page-break-before: always;"></div>
 
 **Núcleo de identidad, espacios, dispositivos y monitoreo:**
 
@@ -951,15 +954,35 @@ EnergyCore utiliza PostgreSQL mediante Spring Data JPA. El modelo fue reconstrui
   <img src="assets/architecture/database-core.svg" alt="ERD principal PostgreSQL de EnergyCore" width="100%">
 </p>
 
-**Facturación, notificaciones, reporting y servicio:**
+<div style="page-break-before: always;"></div>
+
+**Notificaciones:**
 
 <p align="center">
-  <img src="assets/architecture/database-support.svg" alt="ERD de facturación, notificaciones, reporting y servicio de EnergyCore" width="100%">
+  <img src="assets/architecture/database-notifications.svg" alt="ERD de notificaciones de EnergyCore" width="100%">
+</p>
+
+<div style="page-break-before: always;"></div>
+
+**Reporting y servicio:**
+
+<p align="center">
+  <img src="assets/architecture/database-support.svg" alt="ERD de reporting y servicio de EnergyCore" width="100%">
+</p>
+
+<div style="page-break-before: always;"></div>
+
+**Facturación:**
+
+<p align="center">
+  <img src="assets/architecture/database-billing.svg" alt="ERD de facturación de EnergyCore" width="100%">
 </p>
 
 Cada tabla incluye la PK heredada `id`, atributos relevantes, tipos PostgreSQL aproximados, unicidad y cardinalidades. `FK` identifica asociaciones que Hibernate materializa como constraints por una relación JPA (`@ManyToOne` o `@OneToOne`); `LFK` identifica referencias lógicas almacenadas actualmente como `Long` y validadas por la aplicación. Esta distinción evita presentar como integridad referencial física lo que todavía es una regla de dominio. Todos los agregados heredan además `created_at` y `updated_at`, aunque se omiten en las tablas secundarias para mantener la lectura.
 
-**Fuentes diagram-as-code:** [`database-core.puml`](assets/architecture/source/database-core.puml) y [`database-support.puml`](assets/architecture/source/database-support.puml).
+**Fuentes diagram-as-code:** [`database-core.puml`](assets/architecture/source/database-core.puml), [`database-notifications.puml`](assets/architecture/source/database-notifications.puml), [`database-support.puml`](assets/architecture/source/database-support.puml) y [`database-billing.puml`](assets/architecture/source/database-billing.puml).
+
+<div style="page-break-after: always;"></div>
 
 # Capítulo V Product Implementation
 
@@ -1031,7 +1054,7 @@ La configuración actual permite ejecución local integrada. La API usa el puert
 | ET-07 | Ejecutar la suite y actualizar el estado de escenarios BDD | US-02–US-16 | 6 h | Jairo Santiago | Por confirmar | Log de ejecución y commit/PR propio |
 | ET-08 | Revisar evidencia UX de Landing Page y clientes | US-01, US-14 | 4 h | Brayan Huerta | Por confirmar | Hallazgos/capturas y commit/PR propio |
 | ET-09 | Realizar revisión cruzada de trazabilidad y legibilidad del PDF | Reporte TB1 | 4 h | Renzo Revilla | Por confirmar | Aprobación o comentarios visibles en el Pull Request |
-| ET-10 | Generar y verificar el PDF final del Stage Review | Reporte TB1 | 4 h | Fabricio Rivera | To do | PDF sin Mermaid crudo, enlaces rotos ni contenido cortado |
+| ET-10 | Generar y verificar el PDF final del Stage Review | Reporte TB1 | 4 h | Fabricio Rivera | Done | PDF de 92 páginas, sin Mermaid crudo ni imágenes locales faltantes; páginas críticas revisadas visualmente |
 
 Las asignaciones marcadas **Por confirmar** reservan trabajo distribuido, pero no constituyen evidencia de contribución. Cada integrante debe aceptar la tarea y dejar un commit, Pull Request, review o evidencia equivalente bajo su propia cuenta.
 
