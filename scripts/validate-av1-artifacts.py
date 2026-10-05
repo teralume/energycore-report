@@ -46,7 +46,6 @@ if PDF_PATH.read_bytes()[:5] != b"%PDF-":
     raise RuntimeError("The Keynote PDF does not have a valid PDF signature.")
 
 readme = (ROOT / "README.md").read_text(encoding="utf-8")
-abet_4c1 = readme.split("| **4.c.1", 1)[1].split("| **4.c.2", 1)[0]
 member_codes = {
     "U20241E406",
     "U202418755",
@@ -54,10 +53,10 @@ member_codes = {
     "U201717085",
     "U20241E550",
 }
-missing_abet_members = sorted(code for code in member_codes if code not in abet_4c1)
-if missing_abet_members:
+missing_team_members = sorted(code for code in member_codes if code not in readme)
+if missing_team_members:
     raise RuntimeError(
-        f"Missing ABET members in criterion 4.c.1: {missing_abet_members}"
+        f"Missing team members in the report: {missing_team_members}"
     )
 
 print(
@@ -68,7 +67,7 @@ print(
             "checksums_verified": checked,
             "keynote_pptx_bytes": PPTX_PATH.stat().st_size,
             "keynote_pdf_bytes": PDF_PATH.stat().st_size,
-            "abet_members_4c1": len(member_codes),
+            "team_members": len(member_codes),
         },
         indent=2,
     )

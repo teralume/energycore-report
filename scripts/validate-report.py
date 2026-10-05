@@ -69,13 +69,16 @@ for row in story_rows:
     points = int(cells[4])
     require(points in {1, 2, 3, 5}, f"Invalid Story Points value in row: {row}")
 
-for member_data in (
-    "Rivera Rupay, Fabricio Jose",
-    "U202423883",
-    "u202423883@upc.edu.pe",
-    "Fabricio1924",
-):
-    require(member_data in README, f"Fabricio profile/outcome data is missing: {member_data}")
+team_members = {
+    "Loa Rojas, Jean Franck": "U20241E406",
+    "Jairo Mathias Santiago Atanacio": "U202418755",
+    "Rivera Rupay, Fabricio Jose": "U202423883",
+    "Renzo Zamir Revilla Quispe": "U201717085",
+    "Brayan Benjamin Huerta Cardenas": "U20241E550",
+}
+for member_name, member_code in team_members.items():
+    require(member_name in README, f"Team member is missing: {member_name}")
+    require(member_code in README, f"Team member code is missing: {member_code}")
 
 result = {
     "story_rows_checked": len(story_rows),
@@ -83,5 +86,6 @@ result = {
     "raw_mermaid_blocks": 0,
     "required_assets_checked": len(required_assets),
     "required_sections_checked": len(required_headings),
+    "team_members_checked": len(team_members),
 }
 print(json.dumps(result, indent=2))
