@@ -1,0 +1,33 @@
+name: Report CI and delivery
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+      - name: Validate ABET, Keynote, package, and checksums
+        run: python3 scripts/validate-av1-artifacts.py
+      - name: Check changed text for whitespace errors
+        run: git diff --check HEAD^ HEAD
+      - name: Publish verified AV1 delivery artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: energycore-report-${{ github.sha }}
+          path: |
+            README.md
+            delivery
+            output/docx
+            output/pdf
+            output/keynote
+            output/zip
+          if-no-files-found: error

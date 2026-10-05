@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "executedAt": "2026-09-06T11:37:23.951Z",
+  "environment": "real Spring Boot + isolated local PostgreSQL",
+  "results": [
+    {
+      "test": "24 concurrent first GET requests",
+      "status": "PASS",
+      "singlePreference": true
+    },
+    {
+      "test": "24 concurrent first GET/PUT requests",
+      "status": "PASS",
+      "singlePreference": true,
+      "partialUpdatesPreserved": true
+    },
+    {
+      "test": "ES/EN/PT persistence and account isolation",
+      "status": "PASS"
+    }
+  ]
+}
