@@ -121,7 +121,7 @@ Fabricio Jose Rivera Rupay trabaja con la identidad Git `Fabricio1924 <u20242388
 
 | Origen | Observación o hallazgo | Cambio realizado | Evidencia | Pendiente verificable |
 |:--|:--|:--|:--|:--|
-| Feedback del profesor | No se visualizaban los componentes ni la base de datos porque el informe conservaba Mermaid sin renderizar. | Se reemplazaron Architecture Overview, C4 Context/Container/Component, Class Diagram y ERD por SVG renderizados desde fuentes PlantUML. | Commit `fb5953f`; `assets/architecture` | Revisión por pares y comprobación final dentro del PDF. |
+| Feedback del profesor | No se visualizaban los componentes ni la base de datos porque el informe conservaba Mermaid sin renderizar. | Se reemplazaron Architecture Overview, C4 Context/Container/Component, Class Diagram y ERD por SVG renderizados desde fuentes PlantUML. | Commits `fb5953f` y `bcd40c8`; `assets/architecture`; PDF TB1 revisado | Revisión por pares en el Pull Request. |
 | Feedback del profesor | El Product Backlog no debe utilizar historias de 8 Story Points para esta entrega. | Se reestimaron el Product Backlog AS-IS y el To-Be con máximo 5 SP y se priorizó la Landing Page antes de los recorridos autenticados. | Commit `92205fd` | Validación del equipo durante Sprint Planning. |
 | Feedback del profesor / enunciado | El Sprint Backlog debe descomponer el trabajo en Engineering Tasks de 4 a 8 horas, con responsable y estado. | Se documentaron Sprint Goal, estado, horas, responsables y condición de cierre; las asignaciones no aceptadas permanecen como **Por confirmar**. | Commit `92205fd`; sección 5.2.1 | Cada responsable pendiente debe aceptar y evidenciar su tarea. |
 | Hallazgo de revisión interna | Otros flujos del informe también dependían de Mermaid crudo. | Se renderizaron Scenario Maps, Impact Map, flujos web, pipelines y aprendizaje continuo; se retiraron bloques redundantes cuando ya existía una imagen. | Commit `0a7e393`; `assets/diagrams` | Verificar escala y saltos de página en el PDF final. |
@@ -131,7 +131,7 @@ Fabricio Jose Rivera Rupay trabaja con la identidad Git `Fabricio1924 <u20242388
 |:--|:--|:--|
 | Loa Rojas, Jean Franck | Commits en Report, Platform, WebApp, Mobile y Website. | Mantener referencias a commits y pipelines concretos en las secciones que sustenta. |
 | Santiago Atanacio, Jairo Mathias | Commits de perfil, fotografía y entrevista en el Project Report. | Realizar o revisar una corrección de TB1 mediante un commit o Pull Request propio. |
-| Rivera Rupay, Fabricio Jose | Commits `9bf3d4f`, `e98923f`, `1b96857`, `9d7b603`, `fb5953f`, `92205fd` y `0a7e393`; rama actual de corrección. | Generar y verificar el PDF, publicar la rama y solicitar revisión sin hacer merge directo a `main`. |
+| Rivera Rupay, Fabricio Jose | Commits `9bf3d4f`, `e98923f`, `1b96857`, `9d7b603`, `fb5953f`, `92205fd`, `0a7e393`, `6d2f71b`, `c940de3` y `bcd40c8`; rama actual de corrección. | Publicar la rama y solicitar revisión sin hacer merge directo a `main`. |
 | Revilla Quispe, Renzo Zamir | Un commit de perfil en el Project Report. | Incorporar una contribución técnica o documental de TB1 con evidencia propia. |
 | Huerta Cardenas, Brayan Benjamin | Commits de identificación y ajustes del Project Report. | Vincular cualquier sustento técnico adicional con commit, revisión o evidencia audiovisual propia. |
 
@@ -339,7 +339,7 @@ En el siguiente cuadro se describen las acciones realizadas y los enunciados de 
 
 - **Loa Rojas, Jean Franck (U20241E406):** repositorios Report, Website, WebApp, Mobile y Platform; hashes registrados en Project Report Collaboration Insights.
 - **Santiago Atanacio, Jairo Mathias (U202418755):** perfil, fotografía, entrevista y contenido ABET registrados en el historial de `origin/main`.
-- **Rivera Rupay, Fabricio Jose (U202423883):** commit `9bf3d4f` en `main`; rama `feature/stage-review-report-improvements`; perfil y fotografía verificable reutilizada desde Molinex; commits `1b96857`, `9d7b603`, `fb5953f`, `92205fd` y `0a7e393` para outcome, colaboración, arquitectura, ERD, backlogs y diagramas del informe.
+- **Rivera Rupay, Fabricio Jose (U202423883):** commit `9bf3d4f` en `main`; rama `feature/stage-review-report-improvements`; perfil y fotografía verificable reutilizada desde Molinex; commits `1b96857`, `9d7b603`, `fb5953f`, `92205fd`, `0a7e393`, `6d2f71b`, `c940de3` y `bcd40c8` para outcome, colaboración, arquitectura, ERD, backlogs, automatización y PDF del informe.
 - **Revilla Quispe, Renzo Zamir (U201717085):** perfil incorporado en el historial del informe. Requiere una evidencia técnica propia para completar el sustento individual del Trabajo Parcial.
 - **Huerta Cardenas, Brayan Benjamin (U20241E550):** commits de identificación y ajustes del informe. Requiere vincular cada sustento técnico adicional con un commit, revisión o evidencia audiovisual propia.
 - **Video About The Team:** la URL se registrará después de grabar y publicar los testimonios reales.
@@ -1054,7 +1054,7 @@ La configuración actual permite ejecución local integrada. La API usa el puert
 | ET-07 | Ejecutar la suite y actualizar el estado de escenarios BDD | US-02–US-16 | 6 h | Jairo Santiago | Por confirmar | Log de ejecución y commit/PR propio |
 | ET-08 | Revisar evidencia UX de Landing Page y clientes | US-01, US-14 | 4 h | Brayan Huerta | Por confirmar | Hallazgos/capturas y commit/PR propio |
 | ET-09 | Realizar revisión cruzada de trazabilidad y legibilidad del PDF | Reporte TB1 | 4 h | Renzo Revilla | Por confirmar | Aprobación o comentarios visibles en el Pull Request |
-| ET-10 | Generar y verificar el PDF final del Stage Review | Reporte TB1 | 4 h | Fabricio Rivera | Done | PDF de 92 páginas, sin Mermaid crudo ni imágenes locales faltantes; páginas críticas revisadas visualmente |
+| ET-10 | Generar y verificar el PDF final del Stage Review | Reporte TB1 | 4 h | Fabricio Rivera | Done | Commit `bcd40c8`; PDF de 92 páginas sin Mermaid crudo ni imágenes locales faltantes, con páginas críticas revisadas visualmente |
 
 Las asignaciones marcadas **Por confirmar** reservan trabajo distribuido, pero no constituyen evidencia de contribución. Cada integrante debe aceptar la tarea y dejar un commit, Pull Request, review o evidencia equivalente bajo su propia cuenta.
 
