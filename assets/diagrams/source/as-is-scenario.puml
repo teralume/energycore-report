@@ -1,0 +1,29 @@
+@startuml
+title As-Is Scenario Map
+left to right direction
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam activity {
+  BackgroundColor #F0FDF4
+  BorderColor #15803D
+  FontColor #111827
+}
+
+rectangle "Recibe o revisa\nel recibo" as A
+rectangle "Detecta un monto\ninesperado" as B
+rectangle "Recuerda hábitos\ny equipos" as C
+rectangle "Revisa cada espacio\nmanualmente" as D
+rectangle "Apaga o desconecta\nequipos" as E
+rectangle "Espera al siguiente\nrecibo" as F
+rectangle "No identifica\nla causa" as G #FEF3C7
+rectangle "No puede comprobar\nel estado" as H #FEF3C7
+
+A --> B
+B --> C
+C --> D
+D --> E
+E --> F
+C ..> G : Falta información\npor dispositivo
+D ..> H : Varias sedes\no ausencia
+@enduml

@@ -1,0 +1,30 @@
+@startuml
+title Web Application User Flow
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam activity {
+  BackgroundColor #F0FDF4
+  BorderColor #15803D
+  FontColor #111827
+}
+
+start
+:Login;
+if (¿Sesión válida?) then (No)
+  :Error o recuperación;
+  stop
+else (Sí)
+  :Dashboard;
+  :Seleccionar módulo;
+  if (¿Permiso y plan suficientes?) then (No)
+    :Acceso restringido o planes;
+    stop
+  else (Sí)
+    :Listar y consultar;
+    :Crear, editar o ejecutar;
+    :Confirmación y actualización;
+    stop
+  endif
+endif
+@enduml

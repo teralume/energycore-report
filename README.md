@@ -572,16 +572,11 @@ La entrevista de Catherine aporta una primera validación parcial de la proto-pe
 
 ### 2.3.5 As Is Scenario Mapping
 
-```mermaid
-flowchart LR
-    A[Recibe o revisa el recibo] --> B[Detecta un monto inesperado]
-    B --> C[Recuerda hábitos y equipos]
-    C --> D[Revisa cada espacio manualmente]
-    D --> E[Apaga o desconecta equipos]
-    E --> F[Espera al siguiente recibo]
-    C -. Falta información por dispositivo .-> G[No identifica la causa]
-    D -. Varias sedes o ausencia .-> H[No puede comprobar el estado]
-```
+<p align="center">
+  <img src="assets/diagrams/as-is-scenario.svg" alt="As-Is Scenario Map de gestión energética manual" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`as-is-scenario.puml`](assets/diagrams/source/as-is-scenario.puml).
 
 Los principales puntos de dolor son la información tardía, la inspección manual y la ausencia de una relación directa entre consumo, espacio y acción.
 
@@ -609,18 +604,11 @@ Los principales puntos de dolor son la información tardía, la inspección manu
 
 ## 3.1 To Be Scenario Mapping
 
-```mermaid
-flowchart LR
-    A[Inicia sesión] --> B[Selecciona sede]
-    B --> C[Consulta dashboard]
-    C --> D{¿Existe alerta o consumo alto?}
-    D -- No --> E[Revisa progreso de meta]
-    D -- Sí --> F[Identifica dispositivo o espacio]
-    F --> G[Apaga, agrupa o programa]
-    G --> H[Configura regla, rutina o modo]
-    H --> I[Consulta lecturas y reporte]
-    I --> E
-```
+<p align="center">
+  <img src="assets/diagrams/to-be-scenario.svg" alt="To-Be Scenario Map de EnergyCore" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`to-be-scenario.puml`](assets/diagrams/source/to-be-scenario.puml).
 
 El escenario futuro reduce la distancia entre observación y acción: la misma plataforma presenta la señal, el contexto y los controles disponibles.
 
@@ -671,23 +659,11 @@ Total reestimado: **63 Story Points**. Aunque el enunciado general admite la ser
 
 ## 3.4 Impact Mapping
 
-```mermaid
-flowchart TB
-    G[Goal: ayudar a tomar decisiones energéticas informadas]
-    G --> H[Responsable del hogar]
-    G --> N[Administrador de negocio]
-    G --> O[Operador autorizado]
-    H --> H1[Comprende consumo y costo]
-    H --> H2[Reduce olvidos]
-    N --> N1[Controla espacios y sedes]
-    N --> N2[Delega con permisos]
-    O --> O1[Ejecuta tareas seguras]
-    H1 --> F1[Dashboard, lecturas, metas y reportes]
-    H2 --> F2[Alertas, rutinas y modos]
-    N1 --> F3[Sedes, habitaciones, dispositivos y grupos]
-    N2 --> F4[Access Profiles]
-    O1 --> F5[Controles condicionados por permisos]
-```
+<p align="center">
+  <img src="assets/diagrams/impact-map.svg" alt="Impact Map de EnergyCore" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`impact-map.puml`](assets/diagrams/source/impact-map.puml).
 
 # Capítulo IV Product Design
 
@@ -760,17 +736,6 @@ La Landing Page utiliza navegación global por secciones y CTA persistente hacia
 
 ### 4.3.1 Landing Page Wireframe
 
-```mermaid
-flowchart TB
-    N[Header: marca, navegación, idioma, CTA]
-    H[Hero: propuesta + mascota/escena 3D + Probar EnergyCore]
-    P[Problema y propuesta de valor]
-    C[Capacidades y flujo del producto]
-    R[Planes Starter / Professional / Enterprise]
-    F[Contacto UPC + CTA final + footer]
-    N --> H --> P --> C --> R --> F
-```
-
 El wireframe privilegia un recorrido único y comprensible, con CTA al inicio de sesión en los puntos de decisión.
 
 <p align="center">
@@ -804,24 +769,6 @@ El mockup fue materializado directamente en `energycore-website`: tema oscuro gr
 
 ### 4.4.2 Mobile Applications Wireflow Diagrams
 
-```mermaid
-flowchart LR
-    S[Splash] --> L[Login]
-    L -->|Cuenta nueva| R[Registro]
-    L -->|Olvidó clave| P[Recuperación]
-    R --> L
-    P --> L
-    L --> H[Inicio]
-    H --> E[Energía]
-    H --> D[Dispositivos]
-    H --> W[Espacios]
-    H --> A[Alertas]
-    H --> C[Cuenta]
-    D --> G[Grupos]
-    D --> U[Rutinas]
-    D --> M[Modos]
-```
-
 <p align="center">
   <img src="assets/design/energycore-user-flow.png" alt="Wireflow principal de EnergyCore" width="100%">
 </p>
@@ -835,20 +782,6 @@ Los mockups implementados mantienen tarjetas oscuras, acento esmeralda, iconogra
 </p>
 
 ### 4.4.4 Mobile Applications User Flow Diagrams
-
-```mermaid
-flowchart TD
-    A[Usuario autenticado] --> B[Selecciona sede]
-    B --> C[Revisa consumo]
-    C --> D{Requiere acción}
-    D -- Control inmediato --> E[Selecciona dispositivo o grupo]
-    D -- Automatización --> F[Crea rutina o modo]
-    D -- Seguimiento --> G[Crea meta o reporte]
-    E --> H[Confirma resultado]
-    F --> H
-    G --> H
-    H --> I[Recibe estado o alerta]
-```
 
 El flujo completo de autenticación, selección de sede, monitoreo, control y recuperación ante pérdida de conexión se resume en el siguiente prototipo navegacional:
 
@@ -891,17 +824,11 @@ La misma base Flutter incorpora ahora el proyecto `flutter/ios`, con nombre e ic
 
 ### 4.6.2 Web Applications Wireflow Diagrams
 
-```mermaid
-flowchart LR
-    Login --> Dashboard
-    Dashboard --> Energy[Energy dashboard]
-    Dashboard --> Spaces[Sedes y habitaciones]
-    Dashboard --> Control[Dispositivos, grupos, rutinas y modos]
-    Dashboard --> Notifications[Alertas y reglas]
-    Dashboard --> Reports[Metas y reportes]
-    Dashboard --> Service[Soporte y mantenimiento]
-    Dashboard --> Settings[Cuenta, preferencias y facturación]
-```
+<p align="center">
+  <img src="assets/diagrams/web-wireflow.svg" alt="Wireflow de la Web Application" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`web-wireflow.puml`](assets/diagrams/source/web-wireflow.puml).
 
 ### 4.6.3 Web Applications Mockups
 
@@ -913,18 +840,11 @@ La implementación Angular funciona como mockup de alta fidelidad y producto nav
 
 ### 4.6.4 Web Applications User Flow Diagrams
 
-```mermaid
-flowchart TD
-    A[Login] --> B{Sesión válida}
-    B -- No --> C[Error o recuperación]
-    B -- Sí --> D[Dashboard]
-    D --> E[Seleccionar módulo]
-    E --> F{Permiso y plan suficientes}
-    F -- No --> G[Acceso restringido o planes]
-    F -- Sí --> H[Listar y consultar]
-    H --> I[Crear, editar o ejecutar]
-    I --> J[Confirmación y actualización]
-```
+<p align="center">
+  <img src="assets/diagrams/web-user-flow.svg" alt="User Flow de la Web Application" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`web-user-flow.puml`](assets/diagrams/source/web-user-flow.puml).
 
 ## 4.7 Web Applications Prototyping
 
@@ -1557,17 +1477,11 @@ Prácticas obligatorias:
 
 ### 7.1.2 Build and Test Suite Pipeline Components
 
-```mermaid
-flowchart LR
-    A[Push / Pull Request] --> B[Checkout]
-    B --> C[Restore dependencies]
-    C --> D[Static analysis]
-    D --> E[Unit tests]
-    E --> F[Integration / BDD tests]
-    F --> G[Production build]
-    G --> H[Security scan]
-    H --> I[Versioned artifact]
-```
+<p align="center">
+  <img src="assets/diagrams/ci-pipeline.svg" alt="Build and Test Suite Pipeline" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`ci-pipeline.puml`](assets/diagrams/source/ci-pipeline.puml).
 
 | Repositorio | Static gate | Test gate | Build artifact |
 |:--|:--|:--|:--|
@@ -1621,21 +1535,11 @@ El backend se empaqueta con un Dockerfile multi-stage y se ejecuta como usuario 
 
 ### 7.3.2 Production Deployment Pipeline Components
 
-```mermaid
-flowchart TD
-    M[Merge a main] --> Q{CI aprobada}
-    Q -- No --> X[Bloquear release]
-    Q -- Sí --> P[Publicar artefactos con SHA]
-    P --> S[Desplegar staging]
-    S --> T{Smoke + seguridad + aprobación}
-    T -- No --> R[Conservar versión anterior]
-    T -- Sí --> B[Desplegar API Cloud Run]
-    B --> W[Desplegar WebApp y Website]
-    W --> V[Verificar health, login, CORS y SPA]
-    V --> O{Resultado}
-    O -- Correcto --> N[Notificar release]
-    O -- Fallo --> Z[Rollback y abrir incidente]
-```
+<p align="center">
+  <img src="assets/diagrams/production-deployment.svg" alt="Production Deployment Pipeline" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`production-deployment.puml`](assets/diagrams/source/production-deployment.puml).
 
 El rollback de Cloud Run debe seleccionar la revisión anterior; Firebase Hosting permite volver a una release previa; Android requiere publicar un nuevo APK corregido. La base de datos necesita migraciones compatibles hacia atrás antes de automatizar el rollback de aplicación.
 
@@ -2005,15 +1909,11 @@ Regla posterior: reducir incertidumbre en 1-4 puntos según fuerza de la evidenc
 
 ### 8.5.1 Shareback Session Artifacts Learning Workflow
 
-```mermaid
-flowchart LR
-    D[Dataset congelado] --> A[Análisis reproducible]
-    A --> F[Hallazgos y limitaciones]
-    F --> S[Shareback de 30 minutos]
-    S --> L[Decision log]
-    L --> B[Backlog re-priorizado]
-    B --> N[Nueva pregunta o release]
-```
+<p align="center">
+  <img src="assets/diagrams/continuous-learning.svg" alt="Workflow de aprendizaje continuo y shareback" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`continuous-learning.puml`](assets/diagrams/source/continuous-learning.puml).
 
 Paquete de shareback:
 
