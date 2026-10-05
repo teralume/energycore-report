@@ -1,0 +1,43 @@
+@startuml
+title EnergyCore - C4 Level 2: Containers
+left to right direction
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam rectangle {
+  RoundCorner 14
+  BorderColor #166534
+  BackgroundColor #ECFDF5
+}
+
+actor "Visitante" as visitor
+actor "Usuario / Administrador" as user
+
+rectangle "EnergyCore" {
+  rectangle "Landing Page\n[Container: Static Web]\nHTML5, CSS3, JavaScript" as landing
+  rectangle "Web Application\n[Container: SPA]\nAngular, TypeScript" as web
+  rectangle "Mobile Application\n[Container: Native Client]\nFlutter, Dart" as mobile
+  rectangle "RESTful API\n[Container: Application]\nJava, Spring Boot" as api
+  database "EnergyCore DB\n[Container: Database]\nPostgreSQL" as db
+}
+
+rectangle "Payment gateway" as payment #FFF7ED
+rectangle "Mail provider" as mail #FFF7ED
+rectangle "Nominatim" as geo #FFF7ED
+
+visitor --> landing : HTTPS
+landing --> web : CTA al login
+user --> web : HTTPS
+user --> mobile : HTTPS
+web --> api : REST/JSON + JWT
+mobile --> api : REST/JSON + JWT
+api --> db : JDBC/JPA
+api --> payment : HTTPS
+api --> mail : HTTPS
+web --> geo : HTTPS
+
+note bottom of api
+  Unica API para ambos clientes.
+  Reglas y persistencia permanecen en energycore-platform.
+end note
+@enduml

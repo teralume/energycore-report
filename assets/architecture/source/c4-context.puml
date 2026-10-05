@@ -1,0 +1,34 @@
+@startuml
+title EnergyCore - C4 Level 1: System Context
+left to right direction
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam rectangle {
+  RoundCorner 18
+  BorderColor #166534
+  BackgroundColor #ECFDF5
+}
+
+actor "Visitante" as visitor
+actor "Usuario EnergyCore" as user
+actor "Administrador" as admin
+rectangle "EnergyCore\n[Software System]\nMonitorea, controla y automatiza\nel consumo energetico" as energycore #DCFCE7
+rectangle "Proveedor de pagos\n[External System]" as payment #FFF7ED
+rectangle "Proveedor de correo\n[External System]" as mail #FFF7ED
+rectangle "OpenStreetMap / Nominatim\n[External System]" as geo #FFF7ED
+
+visitor --> energycore : consulta propuesta y planes
+user --> energycore : gestiona espacios, dispositivos,\nconsumo, alertas y reportes
+admin --> energycore : administra perfiles y permisos
+energycore --> payment : procesa checkout academico
+energycore --> mail : envia recuperacion y avisos
+energycore --> geo : busca y normaliza direcciones
+
+legend right
+  |= Tipo |= Convencion |
+  | Persona | actor |
+  | Sistema propio | verde |
+  | Sistema externo | naranja |
+endlegend
+@enduml

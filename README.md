@@ -43,8 +43,8 @@
 | AV1.1 | 05/09/2026 | Loa Rojas, Jean Franck | Desarrollo de los capítulos I al V requeridos para el Primer Hito, incluyendo Lean UX, needfinding provisional, requirements specification, diseño, arquitectura, modelo de datos, backlog y evidencias técnicas. |
 | AV1.2 | 05/09/2026 | Loa Rojas, Jean Franck | Desarrollo de las secciones acumulativas de verificación y validación, DevOps y ciclo de experimentación; incorporación del acuerdo SaaS, auditoría heurística, protocolos de evidencia y matriz ética. Las entrevistas permanecen excluidas por decisión del equipo. |
 | AV1.3 | 15/09/2026 | Loa Rojas, Jean Franck | Incorporación de la primera entrevista de needfinding realizada por Jairo Mathias Santiago Atanacio, junto con su registro audiovisual, resumen y análisis preliminar del segmento pequeño negocio. |
-| TB1.1 | 05/10/2026 | Rivera Rupay, Fabricio Jose | Auditoría de todas las ramas remotas del Project Report, creación de `feature/stage-review-report-improvements` desde `develop` e integración controlada de los dos aportes de integrantes que solo existían en `main`, sin modificar la rama estable. |
-| TB1.2 | 05/10/2026 | Rivera Rupay, Fabricio Jose | Incorporación de su fotografía real previamente publicada en Molinex, actualización de su perfil profesional y corrección del Student Outcome con evidencias verificables, límites explícitos y vacíos de participación pendientes. |
+| TB1.1 | 04/10/2026 | Rivera Rupay, Fabricio Jose | Actualización del perfil de integrante y del Student Outcome 4 con información profesional, fotografía real y evidencias verificables de participación; identificación de los aportes todavía pendientes de sustento por parte del equipo. |
+| TB1.2 | 04/10/2026 | Rivera Rupay, Fabricio Jose | Corrección del Architecture Overview y de los diagramas C4, UML y de base de datos para su visualización en el informe, alineándolos con la implementación real de las aplicaciones y del backend de EnergyCore. |
 
 <div style="page-break-after: always;"></div>
 
@@ -932,122 +932,59 @@ El prototipo funcional está implementado en Angular y disponible en [energycore
 
 ## 4.8 Domain Driven Software Architecture
 
+El Architecture Overview representa el estado **AS-IS** comprobado en los repositorios `energycore-website`, `energycore-webapp`, `energycore-mobile` y `energycore-platform`, todos revisados sobre su rama `develop`. La vista muestra los canales, las capas internas de la API, PostgreSQL y los adaptadores externos; no introduce servicios que no existan en el código.
+
+<p align="center">
+  <img src="assets/architecture/architecture-overview.svg" alt="Architecture Overview AS-IS de EnergyCore" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`architecture-overview.puml`](assets/architecture/source/architecture-overview.puml).
+
 ### 4.8.1 Software Architecture Context Diagram
 
-```mermaid
-flowchart LR
-    Visitor[Visitante] --> Landing[EnergyCore Landing Page]
-    User[Usuario] --> Web[Angular Web Application]
-    User --> Mobile[Flutter Android Application]
-    Admin[Administrador] --> Web
-    Landing -->|CTA| Web
-    Web -->|HTTPS / JSON| API[Spring Boot RESTful API]
-    Mobile -->|HTTPS / JSON| API
-    API --> DB[(PostgreSQL)]
-    API --> Mail[Mailchimp adapter]
-    API --> Pay[Payment gateway adapter]
-    Web --> Geo[OpenStreetMap / Nominatim]
-```
+<p align="center">
+  <img src="assets/architecture/c4-context.svg" alt="Diagrama C4 de contexto de EnergyCore" width="100%">
+</p>
+
+La vista C4 de contexto delimita EnergyCore como un único sistema de software y explicita a sus tres tipos de persona y a los sistemas externos con los que intercambia información. **Fuente:** [`c4-context.puml`](assets/architecture/source/c4-context.puml).
 
 ### 4.8.2 Software Architecture Container Diagrams
 
-```mermaid
-flowchart TB
-    subgraph Clients
-      LP[HTML CSS JavaScript Landing Page]
-      WA[Angular SPA]
-      MA[Flutter Android App]
-    end
-    subgraph Platform
-      REST[Spring Boot REST Controllers]
-      APP[Command and Query Services]
-      DOM[DDD Domain Model]
-      INF[JPA and External Adapters]
-    end
-    DB[(PostgreSQL)]
-    WA --> REST
-    MA --> REST
-    REST --> APP --> DOM
-    APP --> INF --> DB
-    LP --> WA
-```
+<p align="center">
+  <img src="assets/architecture/c4-container.svg" alt="Diagrama C4 de contenedores de EnergyCore" width="100%">
+</p>
 
 Los clientes no mantienen bases de datos de producto separadas. La persistencia y las reglas compartidas permanecen en `energycore-platform`.
 
+**Fuente diagram-as-code:** [`c4-container.puml`](assets/architecture/source/c4-container.puml).
+
 ### 4.8.3 Software Architecture Components Diagrams
 
-```mermaid
-flowchart LR
-    subgraph Bounded Contexts
-      IAM[IAM]
-      Billing[Billing]
-      Workplace[Workplace]
-      Device[Device Control]
-      Energy[Energy Monitoring]
-      Notifications[Notifications]
-      Reporting[Reporting]
-      Service[Service Management]
-    end
-    IAM --> Billing
-    Workplace --> Device
-    Device --> Energy
-    Energy --> Notifications
-    Energy --> Reporting
-    Device --> Reporting
-    Notifications --> Reporting
-    IAM --> Service
-    Shared[Shared: Result, events, security, persistence] --> IAM
-    Shared --> Billing
-    Shared --> Workplace
-    Shared --> Device
-    Shared --> Energy
-    Shared --> Notifications
-    Shared --> Reporting
-    Shared --> Service
-```
+**Componentes del RESTful API:**
+
+<p align="center">
+  <img src="assets/architecture/c4-api-components.svg" alt="Diagrama C4 de componentes del RESTful API" width="100%">
+</p>
+
+**Componentes de los clientes web y móvil:**
+
+<p align="center">
+  <img src="assets/architecture/c4-client-components.svg" alt="Diagrama C4 de componentes de los clientes web y móvil" width="100%">
+</p>
 
 Cada bounded context del backend separa `domain`, `application`, `infrastructure` e `interfaces`; Angular y Flutter aplican equivalentes de `domain`, `application`, `infrastructure` y `presentation`.
+
+**Fuentes diagram-as-code:** [`c4-api-components.puml`](assets/architecture/source/c4-api-components.puml) y [`c4-client-components.puml`](assets/architecture/source/c4-client-components.puml).
 
 ## 4.9 Software Object Oriented Design
 
 ### 4.9.1 Class Diagrams
 
-```mermaid
-classDiagram
-    class User
-    class AccessProfile
-    class Location
-    class Room
-    class DeviceAssignment
-    class Device
-    class DeviceGroup
-    class Routine
-    class OperationMode
-    class EnergyReading
-    class AlertRule
-    class Alert
-    class EnergyGoal
-    class ConsumptionReport
-    class Plan
-    class Subscription
-    User --> AccessProfile
-    User --> Location
-    Location --> Room
-    Room --> DeviceAssignment
-    DeviceAssignment --> Device
-    DeviceGroup o-- Device
-    Routine --> DeviceGroup
-    OperationMode o-- Routine
-    Device --> EnergyReading
-    EnergyReading --> AlertRule
-    AlertRule --> Alert
-    User --> EnergyGoal
-    User --> ConsumptionReport
-    User --> Subscription
-    Subscription --> Plan
-```
+<p align="center">
+  <img src="assets/architecture/class-diagram.svg" alt="Diagrama de clases del dominio AS-IS de EnergyCore" width="100%">
+</p>
 
-El diagrama resume relaciones de dominio; las asociaciones físicas exactas se detallan mediante entidades JPA y repositorios de cada bounded context.
+El diagrama resume los agregados y entidades implementados en `energycore-platform/develop`. Las asociaciones por campos terminados en `Id` son relaciones lógicas del dominio; las asociaciones JPA físicas se distinguen en el ERD. **Fuente:** [`class-diagram.puml`](assets/architecture/source/class-diagram.puml).
 
 ### 4.9.2 Class Dictionary
 
@@ -1072,34 +1009,23 @@ El diagrama resume relaciones de dominio; las asociaciones físicas exactas se d
 
 ### 4.10.1 Relational Non Relational Database Diagram
 
-EnergyCore utiliza PostgreSQL. No mantiene una base NoSQL en el alcance actual.
+EnergyCore utiliza PostgreSQL mediante Spring Data JPA. El modelo fue reconstruido desde las **27 clases anotadas con `@Entity`** y `AuditableEntity` de `energycore-platform/develop`; no mantiene una base NoSQL en el alcance actual. Para conservar legibilidad, el ERD se divide en dos vistas complementarias.
 
-```mermaid
-erDiagram
-    ACCESS_PROFILES ||--o{ USERS : assigns
-    USERS ||--o| USER_UI_PREFERENCES : configures
-    USERS ||--o{ LOCATIONS : owns
-    LOCATIONS ||--o{ ROOMS : contains
-    ROOMS ||--o{ DEVICE_ASSIGNMENTS : receives
-    USERS ||--o{ DEVICES : registers
-    DEVICES ||--o{ ENERGY_READINGS : produces
-    USERS ||--o{ DEVICE_GROUPS : creates
-    DEVICE_GROUPS ||--o{ DEVICE_GROUP_DEVICES : includes
-    DEVICES ||--o{ DEVICE_GROUP_DEVICES : belongs
-    USERS ||--o{ ROUTINES : schedules
-    USERS ||--o{ OPERATION_MODES : configures
-    USERS ||--o{ ALERT_RULES : defines
-    ALERT_RULES ||--o{ ALERTS : triggers
-    USERS ||--o{ NOTIFICATION_PREFERENCES : sets
-    USERS ||--o{ ENERGY_GOALS : tracks
-    USERS ||--o{ CONSUMPTION_REPORTS : generates
-    PLANS ||--o{ SUBSCRIPTIONS : selected
-    USERS ||--o{ SUBSCRIPTIONS : owns
-    SUBSCRIPTIONS ||--o{ PAYMENTS : records
-    SUBSCRIPTIONS ||--o{ INVOICES : issues
-    USERS ||--o{ SUPPORT_TICKETS : creates
-    USERS ||--o{ MAINTENANCE_TICKETS : schedules
-```
+**Núcleo de identidad, espacios, dispositivos y monitoreo:**
+
+<p align="center">
+  <img src="assets/architecture/database-core.svg" alt="ERD principal PostgreSQL de EnergyCore" width="100%">
+</p>
+
+**Facturación, notificaciones, reporting y servicio:**
+
+<p align="center">
+  <img src="assets/architecture/database-support.svg" alt="ERD de facturación, notificaciones, reporting y servicio de EnergyCore" width="100%">
+</p>
+
+Cada tabla incluye la PK heredada `id`, atributos relevantes, tipos PostgreSQL aproximados, unicidad y cardinalidades. `FK` identifica asociaciones que Hibernate materializa como constraints por una relación JPA (`@ManyToOne` o `@OneToOne`); `LFK` identifica referencias lógicas almacenadas actualmente como `Long` y validadas por la aplicación. Esta distinción evita presentar como integridad referencial física lo que todavía es una regla de dominio. Todos los agregados heredan además `created_at` y `updated_at`, aunque se omiten en las tablas secundarias para mantener la lectura.
+
+**Fuentes diagram-as-code:** [`database-core.puml`](assets/architecture/source/database-core.puml) y [`database-support.puml`](assets/architecture/source/database-support.puml).
 
 # Capítulo V Product Implementation
 
