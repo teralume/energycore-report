@@ -1,0 +1,31 @@
+@startuml
+title Web Application Wireflow
+left to right direction
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam rectangle {
+  BackgroundColor #F0FDF4
+  BorderColor #15803D
+  FontColor #111827
+}
+
+rectangle Login
+rectangle Dashboard
+rectangle "Energy dashboard" as Energy
+rectangle "Sedes y\nhabitaciones" as Spaces
+rectangle "Dispositivos, grupos,\nrutinas y modos" as Control
+rectangle "Alertas y reglas" as Notifications
+rectangle "Metas y reportes" as Reports
+rectangle "Soporte y\nmantenimiento" as Service
+rectangle "Cuenta, preferencias\ny facturación" as Settings
+
+Login --> Dashboard
+Dashboard --> Energy
+Dashboard --> Spaces
+Dashboard --> Control
+Dashboard --> Notifications
+Dashboard --> Reports
+Dashboard --> Service
+Dashboard --> Settings
+@enduml

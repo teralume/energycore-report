@@ -1,0 +1,54 @@
+@startuml
+title EnergyCore - Architecture Overview (AS-IS)
+left to right direction
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam defaultFontName Arial
+skinparam ArrowColor #166534
+skinparam rectangle {
+  BorderColor #166534
+  BackgroundColor #ECFDF5
+  FontColor #17211A
+}
+
+actor "Visitante" as visitor
+actor "Usuario / Administrador" as user
+
+rectangle "Canales" {
+  rectangle "Landing Page\nHTML/CSS/JavaScript" as landing
+  rectangle "Web Application\nAngular SPA" as web
+  rectangle "Mobile Application\nFlutter Android/iOS" as mobile
+}
+
+rectangle "EnergyCore Platform\nSpring Boot REST API" as api {
+  rectangle "REST Controllers\nJWT + RBAC" as rest
+  rectangle "Application Services\nCommands / Queries" as app
+  rectangle "DDD Domain Model\n8 bounded contexts" as domain
+  rectangle "Infrastructure\nJPA + adapters" as infra
+}
+
+database "PostgreSQL\nNeon / local" as db
+cloud "Payment gateway" as payment
+cloud "Mail provider" as mail
+cloud "OpenStreetMap / Nominatim" as geo
+
+visitor --> landing : conoce el producto
+landing --> web : CTA
+user --> web : HTTPS
+user --> mobile : HTTPS
+web --> rest : JSON / HTTPS
+mobile --> rest : JSON / HTTPS
+rest --> app
+app --> domain
+app --> infra
+infra --> db : JPA
+infra --> payment : HTTPS
+infra --> mail : HTTPS
+web --> geo : geocodificacion
+
+note bottom of db
+  Fuente de datos compartida por web y movil.
+  No existe una base NoSQL en el alcance actual.
+end note
+@enduml

@@ -44,7 +44,8 @@
 | AV1.2 | 05/09/2026 | Loa Rojas, Jean Franck | Desarrollo de las secciones acumulativas de verificación y validación, DevOps y ciclo de experimentación; incorporación del acuerdo SaaS, auditoría heurística, protocolos de evidencia y matriz ética. Las entrevistas permanecen excluidas por decisión del equipo. |
 | AV1.3 | 15/09/2026 | Loa Rojas, Jean Franck | Incorporación de la primera entrevista de needfinding realizada por Jairo Mathias Santiago Atanacio, junto con su registro audiovisual, resumen y análisis preliminar del segmento pequeño negocio. |
 | TB1 | 30/09/2026 | Loa Rojas, Jean Franck | Actualización acumulativa para el Trabajo Parcial: correo institucional del Team Leader, refinamiento del Product Backlog sin historias de 8 puntos, visualización explícita de la base de datos, pruebas, CI/CD, despliegue público verificado y presentación del equipo. |
-| TB1.1 | 05/10/2026 | Loa Rojas, Jean Franck | Preparación final de los archivos del Trabajo Parcial, incorporación del Performance Report, reutilización declarada de la exposición AV1 y actualización del Video About-the-Product para el Sprint 2. |
+| TB1.1 | 04/10/2026 | Rivera Rupay, Fabricio Jose | Corrección de los diagramas de arquitectura y base de datos, actualización del Sprint Backlog y Student Outcome, y revisión integral del informe para el Stage Review. |
+| TB1.2 | 05/10/2026 | Loa Rojas, Jean Franck | Preparación final de los archivos del Trabajo Parcial, incorporación del Performance Report, reutilización declarada de la exposición AV1 y actualización del Video About-the-Product para el Sprint 2. |
 
 <div style="page-break-after: always;"></div>
 
@@ -90,36 +91,28 @@ El paquete [upc-pre-202610-1asi0732-9100-teralume-artifacts-av1.zip](output/zip/
 
 Durante AV1 se preparó la plataforma EnergyCore a partir de un proyecto académico anterior cuya reutilización fue autorizada por el profesor. El trabajo no se limitó a cambiar el nombre del producto: se separaron los entregables en repositorios propios, se actualizó la identidad a Teralume y EnergyCore, se revisaron los contratos entre frontend y backend, se desarrolló una nueva experiencia visual y se incorporó una aplicación móvil en Flutter conectada a la misma API.
 
-#### Participación de Loa Rojas Jean Franck
+El incremento AV1 integró la Landing Page, la Web Application, la aplicación móvil y la API REST sobre una misma propuesta de producto. El equipo organizó los entregables en repositorios independientes, alineó la identidad visual de Teralume y EnergyCore, revisó los contratos entre clientes y backend e incorporó evidencias de diseño, implementación y validación técnica. El historial detallado permanece disponible en GitHub y no se duplica en el cuerpo académico del informe.
 
-- Creó y vinculó los cinco repositorios de EnergyCore con la organización Teralume.
-- Adaptó la solución previamente desarrollada a la identidad y alcance de EnergyCore.
-- Implementó y corrigió la aplicación web Angular y su integración con la API REST.
-- Desarrolló la Landing Page y alineó su navegación con el inicio de sesión de la aplicación.
-- Implementó la aplicación móvil Flutter para Android, con autenticación, consumo energético, gestión de dispositivos y adaptación responsiva.
-- Revisó la estructura DDD del backend y la conexión de los bounded contexts del producto.
-- Preparó la estructura inicial del informe de acuerdo con el enunciado de Diseño de Experimentos de Ingeniería de Software.
+### Trabajo Parcial - Stage Review
 
-#### Evidencias de colaboración y commits
+Para el Trabajo Parcial se revisaron las ramas activas antes de editar y las correcciones se desarrollaron en una rama feature separada. Los repositorios funcionales se utilizaron como fuente de verdad para actualizar arquitectura, diseño de datos, alcance y evidencias, sin modificar funcionalidades que ya operaban correctamente.
 
-Los siguientes commits locales organizan el trabajo existente en bloques verificables. Se generaron con la fecha real de incorporación al control de versiones y no pretenden simular una cronología anterior.
+#### Evidencia de mejora continua desde AV1
 
-| Repositorio | Commits preparados para AV1 |
-|:--|:--|
-| Report | `1a0eced` - estructura y Student Outcome; `4b24a34` - línea base de commits; ampliación AV1 incluida en el cambio actual |
-| Platform | `63d5a7a` - inicialización; `6f7f47e` - bounded contexts; `250517e` - pruebas |
-| WebApp | `d3b1c79` - inicialización; `eb76229` - experiencia web; `85ee2eb` - referencias de diseño |
-| Mobile | `1fe1a80` - inicialización Flutter; `24cf286` - experiencia móvil; `0f545f0` - pruebas y paridad web |
-| Website | `b3adb4e` - Landing Page; `268de90` - sistema de diseño |
+| Observación | Cambio realizado | Artefacto verificable | Estado |
+|:--|:--|:--|:--|
+| Los componentes y la base de datos no se visualizaban en el PDF. | Se reemplazaron los bloques Mermaid por Architecture Overview, diagramas C4, UML y ERD renderizados desde PlantUML. | Secciones 4.8, 4.9 y 4.10; fuentes e imágenes en `assets/architecture`. | Corregido; requiere revisión grupal final. |
+| El Product Backlog no debía conservar historias de 8 Story Points. | Se reestimaron los backlogs AS-IS y To-Be con máximo 5 SP y se priorizó la Landing Page antes de los recorridos autenticados. | Secciones 3.3 y 8.3.2. | Corregido. |
+| El Sprint Backlog requería tareas de 4 a 8 horas, responsables y estado. | Se incorporaron Sprint Goal, Engineering Tasks, horas, responsables y condiciones de cierre. | Sección 5.2.1. | Corregido; quedan revisiones por ejecutar. |
+| Otros flujos dependían de Mermaid crudo. | Se renderizaron Scenario Maps, Impact Map, flujos web, pipelines y el workflow de aprendizaje continuo. | `assets/diagrams` y secciones correspondientes. | Corregido y revisado en el PDF. |
 
-Las ramas fueron publicadas y las capturas disponibles de GitHub se conservan en `assets/evidence/implemented`. La participación posterior de Jairo y Brayan también aparece en el historial remoto de `main`.
+La colaboración individual se sustentará mediante tareas sustanciales, revisiones y entregables del Sprint.
 
 <div style="page-break-after: always;"></div>
 
 ## Contenido
 
 - [Student Outcome](#student-outcome)
-  - [Loa Rojas Jean Franck](#loa-rojas-jean-franck)
 - [Part I As Is Software Project](#part-i-as-is-software-project)
   - [Capítulo I Introducción](#capítulo-i-introducción)
     - [1.1 Startup Profile](#11-startup-profile)
@@ -296,35 +289,20 @@ Las ramas fueron publicadas y las capturas disponibles de GitHub se conservan en
 
 ## Student Outcome
 
-Cada participante del equipo debe sustentar evidencia de cómo las actividades realizadas en el trabajo final han ayudado a desarrollar las dimensiones del student outcome. Por ello en esta sección debe haber una subsección por cada alumno donde éste describa por escrito la relación entre el outcome, sus dimensiones y el trabajo que ha realizado. Esto se complementa con lo reflejado en los testimonios expuestos que forman parte del video About The Team.
-
 El curso contribuye al cumplimiento del Student Outcome ABET:
 
 **ABET EAC Student Outcome 4**
 
 **Criterio:** La capacidad de reconocer responsabilidades éticas y profesionales en situaciones de ingeniería y hacer juicios informados, que deben considerar el impacto de las soluciones de ingeniería en contextos globales, económicos, ambientales y sociales.
 
-En el siguiente cuadro se describen las acciones realizadas y los enunciados de conclusiones que permiten sustentar el logro del ABET EAC Student Outcome 4.
+En el siguiente cuadro se relacionan las decisiones del proyecto con las dimensiones del ABET EAC Student Outcome 4.
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |:--|:--|:--|
-| **4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software** | **Loa Rojas, Jean Franck (U20241E406)**<br>**AV1**<br>Reutilicé un proyecto académico anterior con autorización expresa del profesor y documenté su adaptación bajo una nueva identidad, evitando presentarlo como un producto creado íntegramente desde cero para este curso. Organicé EnergyCore en repositorios independientes para conservar trazabilidad y eliminé referencias funcionales y artefactos de la identidad anterior. En la solución técnica consideré la autenticación con JWT, el cifrado de contraseñas con BCrypt, el almacenamiento seguro del token móvil mediante Android Keystore e iOS Keychain, la separación de responsabilidades mediante bounded contexts y la comunicación honesta de las verificaciones que todavía requieren evidencia. También incorporé una experiencia accesible mediante tema claro y oscuro, diseño responsivo, navegación de retorno en autenticación y mensajes explícitos cuando no existe conexión a Internet.<br><br>**Santiago Atanacio, Jairo Mathias (U202418755)**<br>**AV1**<br>Contribuí en la revisión de estándares de seguridad y privacidad aplicados al consumo de las APIs web y móvil. Revisé la validación de entradas y el manejo de errores para evitar exponer datos sensibles, y apoyé la documentación de restricciones técnicas y verificaciones por completar.<br><br>**Rivera Rupay, Fabricio Jose (U202423883)**<br>**AV1**<br>Participé en la revisión del informe y del material de entrega, comprobando que se diferenciaran capacidades implementadas, evidencias verificadas y actividades aún no cerradas. Apoyé la identificación de riesgos relacionados con credenciales, datos energéticos y afirmaciones de ahorro, promoviendo una comunicación responsable de los resultados.<br><br>**Revilla Quispe, Renzo Zamir (U201717085)**<br>**AV1**<br>Colaboré en la revisión de consistencia entre el alcance del producto, los artefactos de diseño y la evidencia incluida en AV1. Consideré la necesidad de proteger accesos, mantener trazabilidad de cambios y comunicar las limitaciones de conectividad, compatibilidad multiplataforma y validación con usuarios.<br><br>**Huerta Cardenas, Brayan Benjamin (U20241E550)**<br>**AV1**<br>Contribuí a completar la identificación del equipo y revisé la presentación de la evidencia de AV1. Apoyé que el reporte mantuviera autoría visible, datos personales limitados a lo necesario y una separación clara entre ejecución real, compatibilidad preparada y tareas por completar. | La responsabilidad profesional exige conservar trazabilidad sobre lo reutilizado, proteger credenciales y datos energéticos, y diferenciar con claridad implementación, verificación y validación. Por ello no se presentan escenarios omitidos, despliegues no comprobados ni resultados experimentales como éxitos concluyentes. |
-| **4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales** | **Loa Rojas, Jean Franck (U20241E406)**<br>**AV1**<br>Evalué EnergyCore como una solución multiplataforma que debe funcionar en web, Android e iOS sin mantener fuentes de datos separadas, por lo que todos los clientes consumen una única API y base de datos. Consideré el impacto económico mediante el seguimiento de consumo, costos, metas y planes; el impacto ambiental mediante herramientas que permiten identificar consumos elevados, programar dispositivos y promover decisiones de ahorro energético; y el impacto social mediante una interfaz responsiva, soporte en español, inglés y portugués, y avisos de conectividad comprensibles. La adaptación de la solución busca que hogares y pequeños negocios puedan tomar decisiones informadas sin depender de una infraestructura distinta para cada cliente.<br><br>**Santiago Atanacio, Jairo Mathias (U202418755)**<br>**AV1**<br>Evalué con el equipo el impacto operativo y ambiental de sincronizar datos entre dispositivos IoT y clientes web y móvil. Consideré el consumo de batería y ancho de banda, así como la necesidad de mostrar métricas claras para que usuarios sin perfil técnico comprendan costos y hábitos de consumo.<br><br>**Rivera Rupay, Fabricio Jose (U202423883)**<br>**AV1**<br>Analicé cómo una experiencia clara en web y móvil puede facilitar que hogares y pequeños negocios comprendan su consumo sin conocimientos técnicos. Consideré el impacto económico de comparar costos y metas, el ambiental de reducir consumos evitables y el social de utilizar lenguaje comprensible y diseño responsivo.<br><br>**Revilla Quispe, Renzo Zamir (U201717085)**<br>**AV1**<br>Evalué junto al equipo el efecto de alertas, rutinas y reportes sobre la operación cotidiana, procurando que las decisiones energéticas conserven control humano. Consideré los costos del servicio, la continuidad ante fallas de Internet y la utilidad para espacios con distintos dispositivos, sin asumir ahorros aún no medidos.<br><br>**Huerta Cardenas, Brayan Benjamin (U20241E550)**<br>**AV1**<br>Revisé la accesibilidad de la propuesta para usuarios que administran EnergyCore principalmente desde el celular. Consideré el impacto social de una interfaz simple, el económico de relacionar consumo con costo y el ambiental de recibir alertas que permitan actuar ante equipos encendidos o consumos inusuales. | EnergyCore solo debe recomendar una acción cuando puede comunicar la fuente, frescura, alcance y limitaciones de los datos. El valor ambiental o económico se medirá mediante experimentos y telemetría calibrada; la accesibilidad, privacidad, seguridad y autonomía funcionan como condiciones obligatorias del producto. |
+| **4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software** | El equipo documentó la reutilización autorizada del producto base, mantuvo separados los datos demostrativos y las mediciones reales, registró las limitaciones de pruebas y despliegue, y evitó presentar entrevistas o resultados experimentales todavía no obtenidos. También revisó que la arquitectura y el modelo de datos del informe correspondan con la implementación existente. | La responsabilidad profesional exige comunicar con claridad qué está implementado, qué fue verificado y qué continúa planificado. Esta distinción protege a los usuarios, al equipo y a quienes evalúan la solución. |
+| **4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales** | El equipo evaluó privacidad de la telemetría, seguridad del control remoto, accesibilidad de los clientes, costos de infraestructura y límites de las afirmaciones de ahorro. Las decisiones de diseño incorporan perfiles de acceso, confirmación de acciones sensibles, información de frescura, minimización de datos y criterios de detención ética. | EnergyCore puede apoyar decisiones económicas y ambientales únicamente cuando comunica la procedencia y los límites de sus datos. La accesibilidad, privacidad, seguridad y autonomía del usuario son condiciones del producto y no beneficios opcionales. |
 
-#### Evidencias individuales
-
-- **Loa Rojas, Jean Franck (U20241E406):** repositorios Report, Website, WebApp, Mobile y Platform; hashes registrados en Project Report Collaboration Insights.
-- **Santiago Atanacio, Jairo Mathias (U202418755):** perfil, fotografía, entrevista y contenido ABET registrados en el historial de `origin/main`.
-- **Rivera Rupay, Fabricio Jose (U202423883), Revilla Quispe, Renzo Zamir (U201717085) y Huerta Cardenas, Brayan Benjamin (U20241E550):** sus sustentos ABET de AV1 quedaron incorporados en la tabla anterior a partir de su participación en la revisión del informe, la evidencia y los impactos del producto.
-#### Actualización TB1 del Student Outcome
-
-| Integrante | Evidencia acumulativa para TB1 | Relación con el Student Outcome 4 |
-|:--|:--|:--|
-| **Loa Rojas, Jean Franck (U20241E406)** | Refinamiento del backlog sin historias de 8 puntos; documentación visible de PostgreSQL; actualización de pruebas, CI/CD, despliegue, Project Report y Keynote. | Conservó trazabilidad entre requisito, implementación y evidencia; comunicó límites reales de pruebas, entrevistas y fotografías; protegió credenciales al documentar el entorno público. |
-| **Santiago Atanacio, Jairo Mathias (U202418755)** | Primera entrevista real de needfinding, perfil y fotografía incorporados al informe acumulativo. | Recogió evidencia con un participante real y permitió separar hallazgos observados de supuestos del equipo. |
-| **Rivera Rupay, Fabricio Jose (U202423883)** | Revisión acumulativa del informe, artefactos de diseño y alcance documentado. | Apoyó la consistencia entre capacidades implementadas, evidencia disponible y afirmaciones responsables. |
-| **Revilla Quispe, Renzo Zamir (U201717085)** | Revisión acumulativa de la consistencia entre producto, evidencia y material de exposición. | Consideró la trazabilidad y la comunicación de límites técnicos y de validación. |
-| **Huerta Cardenas, Brayan Benjamin (U20241E550)** | Identificación del equipo, fotografía y revisión del material acumulativo. | Apoyó la autoría visible y la presentación responsable de información personal y evidencia del producto. |
+La reflexión individual de cada integrante se complementará en el Video About the Team mediante una responsabilidad sustancial, una decisión ética o profesional y la evidencia del artefacto correspondiente.
 
 <div style="page-break-after: always;"></div>
 
@@ -350,11 +328,9 @@ Teralume es una startup tecnológica peruana orientada a crear productos digital
 |:--|:--:|:--|:--:|:--|
 | Loa Rojas, Jean Franck | U20241E406<br>u20241e406@upc.edu.pe | Ingeniería de Software, Universidad Peruana de Ciencias Aplicadas | <img src="assets/team/jean-loa.jpg" width="170" alt="Jean Franck Loa Rojas"> | Soy Jean Franck Loa Rojas, estudiante de séptimo ciclo de Ingeniería de Software. Aporto experiencia en desarrollo de aplicaciones web con Angular, servicios backend con Java y Spring Boot, aplicaciones móviles con Flutter, modelado de soluciones mediante Domain-Driven Design y administración de repositorios con Git. Me interesa construir productos integrados, documentar las decisiones técnicas y evaluar sus efectos sobre las personas, los costos y el uso responsable de los recursos. |
 | Jairo Mathias Santiago Atanacio | U202418755<br>u202418755@upc.edu.pe | Ingeniería de Software, Universidad Peruana de Ciencias Aplicadas | <img src="assets/team/jairo-santiago.png" width="170" alt="Jairo Mathias Santiago Atanacio"> | Soy Jairo Mathias Santiago Atanacio, estudiante de quinto ciclo de Ingeniería de Software. Cuento con una base sólida en desarrollo de algoritmos con C++, creación de interfaces web con HTML, CSS y JavaScript, y bases de datos relacionales con MySQL y no relacionales con MongoDB. Me interesa transformar problemas complejos en soluciones eficientes y escalables, y aportar con proactividad y empatía en equipos ágiles. |
-| Fabricio Jose Rivera Rupay | U202423883<br>u202423883@upc.edu.pe | Integrante del equipo Teralume | — | Revisión acumulativa del informe, los artefactos de diseño y el alcance documentado de EnergyCore. |
-| Renzo Zamir Revilla Quispe | U201717085<br>u201717085@upc.edu.pe | Ingeniería de Software, Universidad Peruana de Ciencias Aplicadas | <img src="assets/team/renzo-revilla.png" width="170" alt="Renzo Zamir Revilla Quispe"> | Soy Renzo Revilla, estudiante de Ingeniería de Software con experiencia en desarrollo web y móvil. Aporto comunicación efectiva, trabajo en equipo, desarrollo técnico y organización para mantener la coordinación y el cumplimiento de objetivos del proyecto. |
-| Brayan Benjamin Huerta Cardenas | U20241E550<br>u20241e550@upc.edu.pe | Integrante del equipo Teralume | <img src="assets/team/brayan-huerta.png" width="170" alt="Brayan Benjamin Huerta Cardenas"> | Apoyo en la identificación del equipo y revisión del material acumulativo de la entrega. |
-
-_Los nombres, códigos y correos institucionales fueron proporcionados por el equipo; los perfiles describen las contribuciones documentadas para la entrega._
+| Rivera Rupay, Fabricio Jose | U202423883<br>u202423883@upc.edu.pe | Ingeniería de Software, Universidad Peruana de Ciencias Aplicadas | <img src="assets/team/fabricio-rivera.jpeg" width="170" alt="Fabricio Jose Rivera Rupay"> | Soy estudiante de Ingeniería de Software en la UPC. Cuento con experiencia académica en C++, Java y C#, desarrollo web con HTML, CSS y JavaScript, bases de datos relacionales con SQL y no relacionales con MongoDB, y pruebas de software. Aporto al equipo en modelado de soluciones, arquitectura, documentación técnica y revisión de artefactos, con disposición para colaborar y adaptarme a nuevos retos. |
+| Renzo Zamir Revilla Quispe | U201717085<br>u201717085@upc.edu.pe | Ingeniería de Software, Universidad Peruana de Ciencias Aplicadas | <img src="assets/team/renzo-revilla.png" width="170" alt="Renzo Zamir Revilla Quispe"> | Soy Renzo Revilla, estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas, con experiencia en desarrollo web y móvil. Me destaco por mis habilidades en comunicación efectiva y trabajo en equipo, lo que facilita la coordinación y el cumplimiento de objetivos dentro del grupo. Disfruto de la natación y del aprendizaje continuo. Mi aporte al equipo se centra en el desarrollo técnico y en la gestión del proyecto, contribuyendo a mantener un trabajo organizado y eficiente. |
+| Brayan Benjamin Huerta Cardenas | U20241E550<br>u20241e550@upc.edu.pe | Ingeniería de Software, Universidad Peruana de Ciencias Aplicadas | <img src="assets/team/brayan-huerta.png" width="170" alt="Brayan Benjamin Huerta Cardenas"> | Soy estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Me interesa el desarrollo de productos digitales, el trabajo colaborativo y la mejora continua de soluciones de software. Aporto responsabilidad, organización y disposición para participar en la validación y evolución del producto. |
 
 ## 1.2 Solution Profile
 
@@ -565,16 +541,11 @@ La entrevista de Catherine aporta una primera validación parcial de la proto-pe
 
 ### 2.3.5 As Is Scenario Mapping
 
-```mermaid
-flowchart LR
-    A[Recibe o revisa el recibo] --> B[Detecta un monto inesperado]
-    B --> C[Recuerda hábitos y equipos]
-    C --> D[Revisa cada espacio manualmente]
-    D --> E[Apaga o desconecta equipos]
-    E --> F[Espera al siguiente recibo]
-    C -. Falta información por dispositivo .-> G[No identifica la causa]
-    D -. Varias sedes o ausencia .-> H[No puede comprobar el estado]
-```
+<p align="center">
+  <img src="assets/diagrams/as-is-scenario.svg" alt="As-Is Scenario Map de gestión energética manual" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`as-is-scenario.puml`](assets/diagrams/source/as-is-scenario.puml).
 
 Los principales puntos de dolor son la información tardía, la inspección manual y la ausencia de una relación directa entre consumo, espacio y acción.
 
@@ -602,18 +573,11 @@ Los principales puntos de dolor son la información tardía, la inspección manu
 
 ## 3.1 To Be Scenario Mapping
 
-```mermaid
-flowchart LR
-    A[Inicia sesión] --> B[Selecciona sede]
-    B --> C[Consulta dashboard]
-    C --> D{¿Existe alerta o consumo alto?}
-    D -- No --> E[Revisa progreso de meta]
-    D -- Sí --> F[Identifica dispositivo o espacio]
-    F --> G[Apaga, agrupa o programa]
-    G --> H[Configura regla, rutina o modo]
-    H --> I[Consulta lecturas y reporte]
-    I --> E
-```
+<p align="center">
+  <img src="assets/diagrams/to-be-scenario.svg" alt="To-Be Scenario Map de EnergyCore" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`to-be-scenario.puml`](assets/diagrams/source/to-be-scenario.puml).
 
 El escenario futuro reduce la distancia entre observación y acción: la misma plataforma presenta la señal, el contexto y los controles disponibles.
 
@@ -681,27 +645,15 @@ Para TB1 se refinan las historias que mezclaban dos resultados verificables. Se 
 | 20 | US-14 | Tema e idiomas | Should | 5 | Implementado |
 | 21 | US-01 | Landing Page y CTA | Must | 5 | Implementado |
 
-Total referencial del incremento acumulativo TB1: **95 Story Points**. Ninguna historia supera 5 puntos; los puntos expresan complejidad relativa del equipo, no horas.
+Total referencial del incremento acumulativo TB1: **95 Story Points**. Para esta entrega se aplica el feedback específico de AV1: ninguna historia supera 5 puntos y cualquier historia mayor debe dividirse antes de ingresar a un Sprint. Los puntos expresan complejidad relativa del equipo, no horas.
 
 ## 3.4 Impact Mapping
 
-```mermaid
-flowchart TB
-    G[Goal: ayudar a tomar decisiones energéticas informadas]
-    G --> H[Responsable del hogar]
-    G --> N[Administrador de negocio]
-    G --> O[Operador autorizado]
-    H --> H1[Comprende consumo y costo]
-    H --> H2[Reduce olvidos]
-    N --> N1[Controla espacios y sedes]
-    N --> N2[Delega con permisos]
-    O --> O1[Ejecuta tareas seguras]
-    H1 --> F1[Dashboard, lecturas, metas y reportes]
-    H2 --> F2[Alertas, rutinas y modos]
-    N1 --> F3[Sedes, habitaciones, dispositivos y grupos]
-    N2 --> F4[Access Profiles]
-    O1 --> F5[Controles condicionados por permisos]
-```
+<p align="center">
+  <img src="assets/diagrams/impact-map.svg" alt="Impact Map de EnergyCore" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`impact-map.puml`](assets/diagrams/source/impact-map.puml).
 
 # Capítulo IV Product Design
 
@@ -774,17 +726,6 @@ La Landing Page utiliza navegación global por secciones y CTA persistente hacia
 
 ### 4.3.1 Landing Page Wireframe
 
-```mermaid
-flowchart TB
-    N[Header: marca, navegación, idioma, CTA]
-    H[Hero: propuesta + mascota/escena 3D + Probar EnergyCore]
-    P[Problema y propuesta de valor]
-    C[Capacidades y flujo del producto]
-    R[Planes Starter / Professional / Enterprise]
-    F[Contacto UPC + CTA final + footer]
-    N --> H --> P --> C --> R --> F
-```
-
 El wireframe privilegia un recorrido único y comprensible, con CTA al inicio de sesión en los puntos de decisión.
 
 <p align="center">
@@ -818,24 +759,6 @@ El mockup fue materializado directamente en `energycore-website`: tema oscuro gr
 
 ### 4.4.2 Mobile Applications Wireflow Diagrams
 
-```mermaid
-flowchart LR
-    S[Splash] --> L[Login]
-    L -->|Cuenta nueva| R[Registro]
-    L -->|Olvidó clave| P[Recuperación]
-    R --> L
-    P --> L
-    L --> H[Inicio]
-    H --> E[Energía]
-    H --> D[Dispositivos]
-    H --> W[Espacios]
-    H --> A[Alertas]
-    H --> C[Cuenta]
-    D --> G[Grupos]
-    D --> U[Rutinas]
-    D --> M[Modos]
-```
-
 <p align="center">
   <img src="assets/design/energycore-user-flow.png" alt="Wireflow principal de EnergyCore" width="100%">
 </p>
@@ -849,20 +772,6 @@ Los mockups implementados mantienen tarjetas oscuras, acento esmeralda, iconogra
 </p>
 
 ### 4.4.4 Mobile Applications User Flow Diagrams
-
-```mermaid
-flowchart TD
-    A[Usuario autenticado] --> B[Selecciona sede]
-    B --> C[Revisa consumo]
-    C --> D{Requiere acción}
-    D -- Control inmediato --> E[Selecciona dispositivo o grupo]
-    D -- Automatización --> F[Crea rutina o modo]
-    D -- Seguimiento --> G[Crea meta o reporte]
-    E --> H[Confirma resultado]
-    F --> H
-    G --> H
-    H --> I[Recibe estado o alerta]
-```
 
 El flujo completo de autenticación, selección de sede, monitoreo, control y recuperación ante pérdida de conexión se resume en el siguiente prototipo navegacional:
 
@@ -905,17 +814,11 @@ La misma base Flutter incorpora ahora el proyecto `flutter/ios`, con nombre e ic
 
 ### 4.6.2 Web Applications Wireflow Diagrams
 
-```mermaid
-flowchart LR
-    Login --> Dashboard
-    Dashboard --> Energy[Energy dashboard]
-    Dashboard --> Spaces[Sedes y habitaciones]
-    Dashboard --> Control[Dispositivos, grupos, rutinas y modos]
-    Dashboard --> Notifications[Alertas y reglas]
-    Dashboard --> Reports[Metas y reportes]
-    Dashboard --> Service[Soporte y mantenimiento]
-    Dashboard --> Settings[Cuenta, preferencias y facturación]
-```
+<p align="center">
+  <img src="assets/diagrams/web-wireflow.svg" alt="Wireflow de la Web Application" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`web-wireflow.puml`](assets/diagrams/source/web-wireflow.puml).
 
 ### 4.6.3 Web Applications Mockups
 
@@ -927,18 +830,11 @@ La implementación Angular funciona como mockup de alta fidelidad y producto nav
 
 ### 4.6.4 Web Applications User Flow Diagrams
 
-```mermaid
-flowchart TD
-    A[Login] --> B{Sesión válida}
-    B -- No --> C[Error o recuperación]
-    B -- Sí --> D[Dashboard]
-    D --> E[Seleccionar módulo]
-    E --> F{Permiso y plan suficientes}
-    F -- No --> G[Acceso restringido o planes]
-    F -- Sí --> H[Listar y consultar]
-    H --> I[Crear, editar o ejecutar]
-    I --> J[Confirmación y actualización]
-```
+<p align="center">
+  <img src="assets/diagrams/web-user-flow.svg" alt="User Flow de la Web Application" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`web-user-flow.puml`](assets/diagrams/source/web-user-flow.puml).
 
 ## 4.7 Web Applications Prototyping
 
@@ -946,122 +842,59 @@ El prototipo funcional está implementado en Angular y disponible en [energycore
 
 ## 4.8 Domain Driven Software Architecture
 
+El Architecture Overview representa el estado **AS-IS** comprobado en los repositorios `energycore-website`, `energycore-webapp`, `energycore-mobile` y `energycore-platform`, todos revisados sobre su rama `develop`. La vista muestra los canales, las capas internas de la API, PostgreSQL y los adaptadores externos; no introduce servicios que no existan en el código.
+
+<p align="center">
+  <img src="assets/architecture/architecture-overview.svg" alt="Architecture Overview AS-IS de EnergyCore" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`architecture-overview.puml`](assets/architecture/source/architecture-overview.puml).
+
 ### 4.8.1 Software Architecture Context Diagram
 
-```mermaid
-flowchart LR
-    Visitor[Visitante] --> Landing[EnergyCore Landing Page]
-    User[Usuario] --> Web[Angular Web Application]
-    User --> Mobile[Flutter Android Application]
-    Admin[Administrador] --> Web
-    Landing -->|CTA| Web
-    Web -->|HTTPS / JSON| API[Spring Boot RESTful API]
-    Mobile -->|HTTPS / JSON| API
-    API --> DB[(PostgreSQL)]
-    API --> Mail[Mailchimp adapter]
-    API --> Pay[Payment gateway adapter]
-    Web --> Geo[OpenStreetMap / Nominatim]
-```
+<p align="center">
+  <img src="assets/architecture/c4-context.svg" alt="Diagrama C4 de contexto de EnergyCore" width="100%">
+</p>
+
+La vista C4 de contexto delimita EnergyCore como un único sistema de software y explicita a sus tres tipos de persona y a los sistemas externos con los que intercambia información. **Fuente:** [`c4-context.puml`](assets/architecture/source/c4-context.puml).
 
 ### 4.8.2 Software Architecture Container Diagrams
 
-```mermaid
-flowchart TB
-    subgraph Clients
-      LP[HTML CSS JavaScript Landing Page]
-      WA[Angular SPA]
-      MA[Flutter Android App]
-    end
-    subgraph Platform
-      REST[Spring Boot REST Controllers]
-      APP[Command and Query Services]
-      DOM[DDD Domain Model]
-      INF[JPA and External Adapters]
-    end
-    DB[(PostgreSQL)]
-    WA --> REST
-    MA --> REST
-    REST --> APP --> DOM
-    APP --> INF --> DB
-    LP --> WA
-```
+<p align="center">
+  <img src="assets/architecture/c4-container.svg" alt="Diagrama C4 de contenedores de EnergyCore" width="100%">
+</p>
 
 Los clientes no mantienen bases de datos de producto separadas. La persistencia y las reglas compartidas permanecen en `energycore-platform`.
 
+**Fuente diagram-as-code:** [`c4-container.puml`](assets/architecture/source/c4-container.puml).
+
 ### 4.8.3 Software Architecture Components Diagrams
 
-```mermaid
-flowchart LR
-    subgraph Bounded Contexts
-      IAM[IAM]
-      Billing[Billing]
-      Workplace[Workplace]
-      Device[Device Control]
-      Energy[Energy Monitoring]
-      Notifications[Notifications]
-      Reporting[Reporting]
-      Service[Service Management]
-    end
-    IAM --> Billing
-    Workplace --> Device
-    Device --> Energy
-    Energy --> Notifications
-    Energy --> Reporting
-    Device --> Reporting
-    Notifications --> Reporting
-    IAM --> Service
-    Shared[Shared: Result, events, security, persistence] --> IAM
-    Shared --> Billing
-    Shared --> Workplace
-    Shared --> Device
-    Shared --> Energy
-    Shared --> Notifications
-    Shared --> Reporting
-    Shared --> Service
-```
+**Componentes del RESTful API:**
+
+<p align="center">
+  <img src="assets/architecture/c4-api-components.svg" alt="Diagrama C4 de componentes del RESTful API" width="100%">
+</p>
+
+**Componentes de los clientes web y móvil:**
+
+<p align="center">
+  <img src="assets/architecture/c4-client-components.svg" alt="Diagrama C4 de componentes de los clientes web y móvil" width="100%">
+</p>
 
 Cada bounded context del backend separa `domain`, `application`, `infrastructure` e `interfaces`; Angular y Flutter aplican equivalentes de `domain`, `application`, `infrastructure` y `presentation`.
+
+**Fuentes diagram-as-code:** [`c4-api-components.puml`](assets/architecture/source/c4-api-components.puml) y [`c4-client-components.puml`](assets/architecture/source/c4-client-components.puml).
 
 ## 4.9 Software Object Oriented Design
 
 ### 4.9.1 Class Diagrams
 
-```mermaid
-classDiagram
-    class User
-    class AccessProfile
-    class Location
-    class Room
-    class DeviceAssignment
-    class Device
-    class DeviceGroup
-    class Routine
-    class OperationMode
-    class EnergyReading
-    class AlertRule
-    class Alert
-    class EnergyGoal
-    class ConsumptionReport
-    class Plan
-    class Subscription
-    User --> AccessProfile
-    User --> Location
-    Location --> Room
-    Room --> DeviceAssignment
-    DeviceAssignment --> Device
-    DeviceGroup o-- Device
-    Routine --> DeviceGroup
-    OperationMode o-- Routine
-    Device --> EnergyReading
-    EnergyReading --> AlertRule
-    AlertRule --> Alert
-    User --> EnergyGoal
-    User --> ConsumptionReport
-    User --> Subscription
-    Subscription --> Plan
-```
+<p align="center">
+  <img src="assets/architecture/class-diagram.svg" alt="Diagrama de clases del dominio AS-IS de EnergyCore" width="100%">
+</p>
 
-El diagrama resume relaciones de dominio; las asociaciones físicas exactas se detallan mediante entidades JPA y repositorios de cada bounded context.
+El diagrama resume los agregados y entidades implementados en `energycore-platform/develop`. Las asociaciones por campos terminados en `Id` son relaciones lógicas del dominio; las asociaciones JPA físicas se distinguen en el ERD. **Fuente:** [`class-diagram.puml`](assets/architecture/source/class-diagram.puml).
 
 ### 4.9.2 Class Dictionary
 
@@ -1086,7 +919,7 @@ El diagrama resume relaciones de dominio; las asociaciones físicas exactas se d
 
 ### 4.10.1 Relational Non Relational Database Diagram
 
-EnergyCore utiliza PostgreSQL. No mantiene una base NoSQL en el alcance actual.
+EnergyCore utiliza PostgreSQL mediante Spring Data JPA. El modelo fue reconstruido desde las **27 clases anotadas con `@Entity`** y `AuditableEntity` de `energycore-platform/develop`; no mantiene una base NoSQL en el alcance actual. Para conservar legibilidad, el ERD se divide en cuatro vistas complementarias.
 
 La base de datos productiva se aloja en Neon PostgreSQL y es consumida exclusivamente por la API Spring Boot. La Web Application y Flutter no acceden directamente a las tablas. La prueba pública de persistencia registró un usuario y un marcador, promovió una nueva revisión de Cloud Run y comprobó que ambos seguían disponibles después del cambio de revisión.
 
@@ -1099,32 +932,43 @@ La base de datos productiva se aloja en Neon PostgreSQL y es consumida exclusiva
 | `USERS → ENERGY_GOALS / CONSUMPTION_REPORTS` | Permite seguir metas y generar reportes por periodo. |
 | `PLANS → SUBSCRIPTIONS → PAYMENTS / INVOICES` | Mantiene la trazabilidad del flujo académico de suscripción. |
 
-```mermaid
-erDiagram
-    ACCESS_PROFILES ||--o{ USERS : assigns
-    USERS ||--o| USER_UI_PREFERENCES : configures
-    USERS ||--o{ LOCATIONS : owns
-    LOCATIONS ||--o{ ROOMS : contains
-    ROOMS ||--o{ DEVICE_ASSIGNMENTS : receives
-    USERS ||--o{ DEVICES : registers
-    DEVICES ||--o{ ENERGY_READINGS : produces
-    USERS ||--o{ DEVICE_GROUPS : creates
-    DEVICE_GROUPS ||--o{ DEVICE_GROUP_DEVICES : includes
-    DEVICES ||--o{ DEVICE_GROUP_DEVICES : belongs
-    USERS ||--o{ ROUTINES : schedules
-    USERS ||--o{ OPERATION_MODES : configures
-    USERS ||--o{ ALERT_RULES : defines
-    ALERT_RULES ||--o{ ALERTS : triggers
-    USERS ||--o{ NOTIFICATION_PREFERENCES : sets
-    USERS ||--o{ ENERGY_GOALS : tracks
-    USERS ||--o{ CONSUMPTION_REPORTS : generates
-    PLANS ||--o{ SUBSCRIPTIONS : selected
-    USERS ||--o{ SUBSCRIPTIONS : owns
-    SUBSCRIPTIONS ||--o{ PAYMENTS : records
-    SUBSCRIPTIONS ||--o{ INVOICES : issues
-    USERS ||--o{ SUPPORT_TICKETS : creates
-    USERS ||--o{ MAINTENANCE_TICKETS : schedules
-```
+<div style="page-break-before: always;"></div>
+
+**Núcleo de identidad, espacios, dispositivos y monitoreo:**
+
+<p align="center">
+  <img src="assets/architecture/database-core.svg" alt="ERD principal PostgreSQL de EnergyCore" width="100%">
+</p>
+
+<div style="page-break-before: always;"></div>
+
+**Notificaciones:**
+
+<p align="center">
+  <img src="assets/architecture/database-notifications.svg" alt="ERD de notificaciones de EnergyCore" width="100%">
+</p>
+
+<div style="page-break-before: always;"></div>
+
+**Reporting y servicio:**
+
+<p align="center">
+  <img src="assets/architecture/database-support.svg" alt="ERD de reporting y servicio de EnergyCore" width="100%">
+</p>
+
+<div style="page-break-before: always;"></div>
+
+**Facturación:**
+
+<p align="center">
+  <img src="assets/architecture/database-billing.svg" alt="ERD de facturación de EnergyCore" width="100%">
+</p>
+
+Cada tabla incluye la PK heredada `id`, atributos relevantes, tipos PostgreSQL aproximados, unicidad y cardinalidades. `FK` identifica asociaciones que Hibernate materializa como constraints por una relación JPA (`@ManyToOne` o `@OneToOne`); `LFK` identifica referencias lógicas almacenadas actualmente como `Long` y validadas por la aplicación. Esta distinción evita presentar como integridad referencial física lo que todavía es una regla de dominio. Todos los agregados heredan además `created_at` y `updated_at`, aunque se omiten en las tablas secundarias para mantener la lectura.
+
+**Fuentes diagram-as-code:** [`database-core.puml`](assets/architecture/source/database-core.puml), [`database-notifications.puml`](assets/architecture/source/database-notifications.puml), [`database-support.puml`](assets/architecture/source/database-support.puml) y [`database-billing.puml`](assets/architecture/source/database-billing.puml).
+
+<div style="page-break-after: always;"></div>
 
 # Capítulo V Product Implementation
 
@@ -1178,11 +1022,27 @@ La configuración actual permite ejecución local integrada. La API usa el puert
 
 | Sprint | Objetivo | Entregables | Evidencia local |
 |:--|:--|:--|:--|
-| Sprint 1 | Crear la base integrada del producto | Repositorios, backend DDD, Angular y Landing Page | Commits de inicialización y producto |
-| Sprint 2 | Completar la experiencia móvil y la paridad funcional | Flutter Android, autenticación, shell, contextos y conectividad | Commits `1fe1a80`, `24cf286`, `0f545f0` |
-| Sprint 3 | Preparar AV1 y trazabilidad | Informe, verificación, diseño y documentación | Commits del Report y verificaciones registradas |
+| Sprint 1 | Crear la base integrada del producto | Repositorios, backend DDD, Angular y Landing Page | Productos ejecutables y estructura inicial del informe |
+| Sprint 2 | Completar la experiencia móvil y la paridad funcional | Flutter Android, autenticación, shell, contextos y conectividad | Aplicación móvil, pruebas y matriz de paridad |
+| Sprint 3 | Preparar AV1 y trazabilidad | Informe, verificación, diseño y documentación | Informe AV1 y evidencias técnicas |
+| Sprint 4 (TB1) | Corregir el informe con base en el feedback de AV1 y preparar evidencia verificable | Student Outcome, diagramas renderizados, ERD, backlogs y mejora continua | Informe y PDF revisados |
 
-La asignación individual documentada corresponde a Jean Franck Loa Rojas: organización de repositorios, rebranding, backend, Angular, Landing Page, Flutter y documentación. Jairo Mathias Santiago Atanacio incorporó y actualizó su perfil en el Project Report, subió su fotografía y corrigió el formato y una entrada duplicada; estos cambios constan en los commits `8925167`, `89eca8d`, `bc19b77` y `7129be7`. El Team Leader confirma el apoyo de Fabricio, Renzo y Brayan en la preparación de AV1; el detalle de sus tareas individuales no quedó registrado en los repositorios.
+**Sprint Planning - Sprint 4 (TB1).** Backlog actualizado el 04/10/2026. El Sprint Goal es subsanar las observaciones de AV1 mediante artefactos renderizados, contenido consistente con los repositorios del producto y una revisión grupal del entregable.
+
+| ID | Engineering Task | Historia / artefacto | Horas | Responsable | Estado | Evidencia / condición de cierre |
+|:--|:--|:--|--:|:--|:--|:--|
+| ET-01 | Integrar el feedback de AV1 en el informe | Reporte TB1 | 4 h | Equipo de documentación | Done | Matriz de mejora continua actualizada |
+| ET-02 | Modelar y renderizar Architecture Overview, C4 y UML | US-01–US-16 / Architecture | 8 h | Equipo de arquitectura | Done | Fuentes PlantUML e imágenes SVG |
+| ET-03 | Reconstruir el ERD desde las entidades JPA y diferenciar FK/LFK | Database Design | 8 h | Arquitectura y backend | Done | Cuatro vistas ERD contrastadas con 27 entidades |
+| ET-04 | Reestimar Product Backlog y detallar Sprint Planning | Product Backlog | 6 h | Gestión de producto | Done | Backlogs sin historias de 8 SP y tareas de 4–8 h |
+| ET-05 | Generar y revisar el PDF del Stage Review | Reporte TB1 | 4 h | Documentación y QA | Done | PDF sin Mermaid crudo ni imágenes locales faltantes |
+| ET-06 | Revisar la correspondencia entre backend, C4 y ERD | Architecture / Database | 4 h | Jean Loa | To do | Observaciones de revisión resueltas |
+| ET-07 | Ejecutar la suite y actualizar el estado de escenarios BDD | US-02–US-16 | 6 h | Jairo Santiago | To do | Registro de ejecución y resultados actualizados |
+| ET-08 | Revisar evidencia UX de Landing Page y clientes | US-01, US-14 | 4 h | Brayan Huerta | To do | Hallazgos y evidencias visuales consolidados |
+| ET-09 | Realizar revisión cruzada de legibilidad y consistencia | Reporte TB1 | 4 h | Renzo Revilla | To do | Observaciones incorporadas al informe |
+| ET-10 | Validar Student Outcome y testimonio individual | Student Outcome 4 | 4 h | Todos los integrantes | To do | Reflexiones alineadas con responsabilidades sustanciales |
+
+Las tareas pendientes distribuyen la revisión entre los integrantes y se considerarán terminadas cuando su condición de cierre esté incorporada en la entrega.
 
 ### 5.2.2 Implemented Landing Page Evidence
 
@@ -1294,11 +1154,11 @@ La tabla anterior documenta el contrato por bounded context. El 06/09/2026 se ej
 
 ### 5.2.7 Team Collaboration Insights
 
-Antes de esta ampliación del informe se organizaron 13 commits locales distribuidos entre los cinco repositorios. El trabajo confirmado de Jean Franck Loa Rojas abarca configuración, migración de identidad, backend, Web Application, Landing Page, Native Mobile Application y reporte. La primera entrevista real de needfinding ya está incorporada; la síntesis completa se elaborará después de las sesiones requeridas por la muestra.
+El equipo trabaja sobre cinco repositorios coordinados mediante GitFlow y Conventional Commits. Para TB1, los repositorios funcionales se utilizaron como fuente de verificación y los cambios se concentraron en el Project Report, evitando alterar comportamiento correcto del producto.
 
-Para AV1 se aplicó GitFlow sin reconstruir ni falsificar historia: cada repositorio conserva `main`, se creó `develop` y los cambios se desarrollaron en `feature/hito-1-evidence`, `feature/cloud-run-neon` y `feature/firebase-production`. Las ramas feature fueron integradas localmente a `develop` mediante merges `--no-ff` y Conventional Commits. `release/av1` se utiliza como candidato de publicación; `main` solo debe recibir el merge después de validar Cloud Run, Neon y Firebase en sus URLs públicas.
+La colaboración se organiza por frentes: arquitectura y backend validan C4, clases y persistencia; gestión de producto mantiene historias, prioridades y Sprint Backlog; UX revisa la coherencia de Landing Page, Web y Mobile; QA comprueba pruebas, evidencias y legibilidad del PDF; y documentación integra las correcciones en el formato del curso. Las tareas y condiciones de cierre se detallan en la sección 5.2.1.
 
-Las cinco bases de código y sus ramas `develop`/`release/av1` fueron publicadas en la organización de GitHub. La evidencia de ramas muestra los merges GitFlow y su distancia respecto de `main`. GitHub Insights calcula **Contributors** sobre la rama por defecto y excluye merges; por eso la captura todavía refleja los dos commits que ya estaban en `main`, mientras el trabajo AV1 permanece deliberadamente en `release/av1` hasta superar la verificación pública. No se atribuyen aportes a integrantes cuyos datos y commits todavía no han sido confirmados.
+Antes de cerrar la entrega, el informe debe pasar una revisión cruzada, actualizar los resultados de prueba que se vuelvan a ejecutar y consolidar únicamente las evidencias audiovisuales que hayan sido realizadas.
 
 <p align="center">
   <img src="assets/evidence/implemented/github-report-branches.png" alt="Ramas GitFlow publicadas del repositorio del informe" width="100%">
@@ -1543,7 +1403,7 @@ El hallazgo prioritario es la prevención de acciones masivas no deseadas. Ning�
 
 #### 6.4.1.1 Información del grupo auditado
 
-La auditoría se aplicará a otro grupo del mismo curso asignado por el docente. Para evitar inventar una organización, producto o contacto, estos datos se registrarán al momento del intercambio:
+La auditoría se aplicará a otro grupo del mismo curso asignado por el docente. Al momento del intercambio se registrarán los siguientes datos:
 
 | Campo | Registro requerido |
 |:--|:--|
@@ -1554,7 +1414,7 @@ La auditoría se aplicará a otro grupo del mismo curso asignado por el docente.
 | Versión evaluada | Commit SHA o tag inmutable. |
 | Alcance acordado | Tres flujos críticos y plataformas disponibles. |
 
-**Estado de evidencia externa:** grupo auditado aún no asignado o confirmado.
+**Estado:** actividad programada para la asignación de grupos del curso.
 
 #### 6.4.1.2 Cronograma de auditoría realizada
 
@@ -1566,7 +1426,7 @@ La auditoría se aplicará a otro grupo del mismo curso asignado por el docente.
 | D | Sesión de devolución con el grupo auditado. | 30 min | Acta y aceptación de hallazgos. |
 | D+2 | Verificar correcciones declaradas. | 30 min | Informe de cierre. |
 
-Las fechas reales se completarán cuando el docente confirme el intercambio. El cronograma ya define responsables, tiempo y evidencia sin simular que la auditoría ocurrió.
+Las fechas se completarán cuando el docente confirme el intercambio. El cronograma define actividades, duración y salidas esperadas.
 
 #### 6.4.1.3 Contenido de auditoría realizada
 
@@ -1580,13 +1440,13 @@ El paquete de auditoría está compuesto por:
 - trazabilidad de cada hallazgo con captura, ruta, versión y recomendación;
 - acta de devolución y verificación de correcciones.
 
-Formato de hallazgo: `AUD-## | pantalla/ruta | heurística | pasos | resultado observado | impacto | severidad | recomendación | evidencia`. No se consignan hallazgos del otro producto hasta observarlo realmente.
+Formato de hallazgo: `AUD-## | pantalla/ruta | heurística | pasos | resultado observado | impacto | severidad | recomendación | evidencia`.
 
 ### 6.4.2 Auditoría recibida
 
 #### 6.4.2.1 Información del grupo auditor
 
-El grupo auditor externo será el equipo designado por el docente. La ficha deberá registrar startup, producto, NRC, integrantes que participaron, enlace a su reporte y commit evaluado de EnergyCore. **No existe todavía un grupo auditor confirmado**, por lo que no se atribuyen nombres ni observaciones.
+El grupo auditor externo será el equipo designado por el docente. La ficha registrará startup, producto, NRC, integrantes participantes, enlace a su reporte y versión evaluada de EnergyCore.
 
 #### 6.4.2.2 Cronograma de auditoría recibida
 
@@ -1596,17 +1456,17 @@ EnergyCore propondrá el mismo esquema D-3, D-2, D-1, D y D+2 de la auditoría r
 
 Se entregará al grupo auditor una cuenta de prueba sin datos personales, los enlaces de los clientes, un conjunto semilla de sedes/dispositivos/lecturas, tres tareas críticas y un canal para reportar hallazgos. El contenido recibido deberá conservarse sin reescritura y cada observación tendrá una respuesta trazable del equipo EnergyCore.
 
-**Estado de evidencia externa:** no se han recibido hallazgos de otro grupo.
+**Estado:** actividad programada para el intercambio de auditorías.
 
 #### 6.4.2.4 Resumen de modificaciones para subsanar hallazgos
 
-La siguiente matriz queda preparada para la evidencia real:
+La siguiente matriz se completará durante el intercambio de auditorías:
 
 | Hallazgo | Decisión | Cambio | Repositorio / commit | Verificación |
 |:--|:--|:--|:--|:--|
 | Por recibir | — | — | — | — |
 
-No se presentan modificaciones como resultado de auditoría externa antes de recibirla. Los hallazgos de la autoevaluación heurística se mantienen separados para conservar la procedencia de la evidencia.
+Los hallazgos de la autoevaluación heurística se mantienen separados para conservar la procedencia de la evidencia.
 
 # Capítulo VII DevOps Practices
 
@@ -1630,17 +1490,11 @@ Prácticas obligatorias:
 
 ### 7.1.2 Build and Test Suite Pipeline Components
 
-```mermaid
-flowchart LR
-    A[Push / Pull Request] --> B[Checkout]
-    B --> C[Restore dependencies]
-    C --> D[Static analysis]
-    D --> E[Unit tests]
-    E --> F[Integration / BDD tests]
-    F --> G[Production build]
-    G --> H[Security scan]
-    H --> I[Versioned artifact]
-```
+<p align="center">
+  <img src="assets/diagrams/ci-pipeline.svg" alt="Build and Test Suite Pipeline" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`ci-pipeline.puml`](assets/diagrams/source/ci-pipeline.puml).
 
 | Repositorio | Static gate | Test gate | Build artifact |
 |:--|:--|:--|:--|
@@ -1652,13 +1506,13 @@ flowchart LR
 
 Ejecuciones verificadas en la rama `develop` el 15 de septiembre de 2026:
 
-| Repositorio | Commit verificado | Resultado y evidencia |
-|:--|:--|:--|
-| `energycore-platform` | `356d75c` | [Exitosa: tests unitarios, integración, BDD, contenedor y artefactos](https://github.com/teralume/energycore-platform/actions/runs/34974147033) |
-| `energycore-webapp` | `dd994f4` | [Exitosa: tests unitarios, integración HTTP, build y artefacto](https://github.com/teralume/energycore-webapp/actions/runs/34974146278) |
-| `energycore-mobile` | `f781375` | [Exitosa: análisis, tests, APK Android y build de simulador iOS](https://github.com/teralume/energycore-mobile/actions/runs/34974145807) |
-| `energycore-website` | `734e81a` | [Exitosa: tests unitarios, integración, prueba funcional y artefacto](https://github.com/teralume/energycore-website/actions/runs/34974146184) |
-| `energycore-report` | `a922b8f` | [Exitosa: validación documental, ABET, Keynote, ZIP y checksums](https://github.com/teralume/energycore-report/actions/runs/34974149176) |
+| Repositorio | Resultado y evidencia |
+|:--|:--|
+| `energycore-platform` | [Ejecución exitosa: tests unitarios, integración, BDD, contenedor y artefactos](https://github.com/teralume/energycore-platform/actions/runs/34974147033) |
+| `energycore-webapp` | [Ejecución exitosa: tests unitarios, integración HTTP, build y artefacto](https://github.com/teralume/energycore-webapp/actions/runs/34974146278) |
+| `energycore-mobile` | [Ejecución exitosa: análisis, tests, APK Android y build de simulador iOS](https://github.com/teralume/energycore-mobile/actions/runs/34974145807) |
+| `energycore-website` | [Ejecución exitosa: tests unitarios, integración, prueba funcional y artefacto](https://github.com/teralume/energycore-website/actions/runs/34974146184) |
+| `energycore-report` | [Ejecución exitosa: validación documental, ABET, Keynote, ZIP y checksums](https://github.com/teralume/energycore-report/actions/runs/34974149176) |
 
 El pipeline no continúa si falla una prueba. El gate vigente ejecuta 88 pruebas backend, 5 de Angular, 5 de la Landing Page y 11 de Flutter: **109 pruebas automatizadas**, sin fallos ni omisiones en la verificación del 05/10/2026.
 
@@ -1694,21 +1548,11 @@ El backend se empaqueta con un Dockerfile multi-stage y se ejecuta como usuario 
 
 ### 7.3.2 Production Deployment Pipeline Components
 
-```mermaid
-flowchart TD
-    M[Merge a main] --> Q{CI aprobada}
-    Q -- No --> X[Bloquear release]
-    Q -- Sí --> P[Publicar artefactos con SHA]
-    P --> S[Desplegar staging]
-    S --> T{Smoke + seguridad + aprobación}
-    T -- No --> R[Conservar versión anterior]
-    T -- Sí --> B[Desplegar API Cloud Run]
-    B --> W[Desplegar WebApp y Website]
-    W --> V[Verificar health, login, CORS y SPA]
-    V --> O{Resultado}
-    O -- Correcto --> N[Notificar release]
-    O -- Fallo --> Z[Rollback y abrir incidente]
-```
+<p align="center">
+  <img src="assets/diagrams/production-deployment.svg" alt="Production Deployment Pipeline" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`production-deployment.puml`](assets/diagrams/source/production-deployment.puml).
 
 El rollback de Cloud Run debe seleccionar la revisión anterior; Firebase Hosting permite volver a una release previa; Android requiere publicar un nuevo APK corregido. La base de datos necesita migraciones compatibles hacia atrás antes de automatizar el rollback de aplicación.
 
@@ -1987,7 +1831,7 @@ Propiedades comunes: `anonymous_participant_id`, `session_id`, `experiment_id`, 
 | 12 | TS-04 | Dashboard de resultados | Should | 5 | Métricas por variante, segmento y plataforma. |
 | 13 | TS-05 | Exportación anonimizada | Should | 3 | Dataset reproducible sin datos personales. |
 
-Total To-Be referencial: **53 Story Points**. La prioridad se revisará con evidencia experimental y no por cantidad de funcionalidades.
+Total To-Be reestimado: **53 Story Points**. También se aplica aquí el límite indicado en el feedback de AV1: ninguna historia o tarea técnica se estima en 8; si supera 5, debe dividirse antes de planificarla. La prioridad se revisará con evidencia experimental y no por cantidad de funcionalidades.
 
 ### 8.3.3 Pipeline Supported Experiment Driven To Be Software Platform Lifecycle
 
@@ -2027,9 +1871,7 @@ El artefacto desplegable es una imagen Docker no-root para Cloud Run. El entorno
 
 #### 8.3.3.6 Team Collaboration Insights
 
-Jean Franck Loa Rojas preparó la línea base de los cinco repositorios, la paridad web/móvil, las pruebas actuales y el diseño documental del experimento. Las tareas To-Be se asignarán mediante GitHub Issues y cada evidencia deberá enlazar issue, Pull Request, reviewer, commit y pipeline.
-
-Los cinco integrantes ya están identificados. Además de la línea base técnica de Jean Franck Loa Rojas, el historial del Project Report registra las modificaciones de perfil y fotografía de Jairo Mathias Santiago Atanacio. El Team Leader confirma que Fabricio Jose Rivera Rupay, Renzo Zamir Revilla Quispe y Brayan Benjamin Huerta Cardenas apoyaron la preparación de AV1, pero sus tareas específicas no quedaron registradas por integrante. El reporte incorporará una matriz RACI y capturas de GitHub Insights por entrega cuando estén disponibles.
+El trabajo To-Be se distribuirá entre arquitectura, desarrollo web y móvil, backend, validación y documentación. Las tareas se gestionarán mediante GitHub Issues y cada resultado deberá relacionar historia, responsable, revisión y ejecución del pipeline. La sección 5.2.1 conserva las asignaciones de revisión y sus condiciones de cierre.
 
 ### 8.3.4 To Be Validation Interviews
 
@@ -2084,15 +1926,11 @@ Regla posterior: reducir incertidumbre en 1-4 puntos según fuerza de la evidenc
 
 ### 8.5.1 Shareback Session Artifacts Learning Workflow
 
-```mermaid
-flowchart LR
-    D[Dataset congelado] --> A[Análisis reproducible]
-    A --> F[Hallazgos y limitaciones]
-    F --> S[Shareback de 30 minutos]
-    S --> L[Decision log]
-    L --> B[Backlog re-priorizado]
-    B --> N[Nueva pregunta o release]
-```
+<p align="center">
+  <img src="assets/diagrams/continuous-learning.svg" alt="Workflow de aprendizaje continuo y shareback" width="100%">
+</p>
+
+**Fuente diagram-as-code:** [`continuous-learning.puml`](assets/diagrams/source/continuous-learning.puml).
 
 Paquete de shareback:
 
@@ -2169,7 +2007,31 @@ La hipótesis principal se ha convertido en un experimento reproducible: compara
 
 El diseño ético reconoce que la telemetría energética puede revelar hábitos y que un comando remoto puede afectar dispositivos reales. Por ello se priorizan minimización de datos, perfiles, confirmación de alcance, información de frescura, resultados negativos visibles y detención ante riesgo. Esta decisión conecta el Student Outcome 4 con prácticas concretas de ingeniería.
 
-Se recomienda implementar los workflows de CI, migraciones de base de datos, instrumentación anonimizada, observabilidad y rollback antes de automatizar producción. También deben incorporarse evidencias audiovisuales, auditoría entre grupos y resultados de experimentación cuando existan. Este texto fue redactado por Jean Franck Loa Rojas y deberá revisarse como conclusión grupal si se confirman nuevos integrantes.
+Se recomienda implementar los workflows de CI, migraciones de base de datos, instrumentación anonimizada, observabilidad y rollback antes de automatizar producción. También deben incorporarse evidencias audiovisuales, auditoría entre grupos y resultados de experimentación cuando existan. Estas conclusiones constituyen un avance documental y todavía requieren revisión explícita de todos los integrantes antes de presentarse como conclusión grupal.
+
+# Video App Validation
+
+El video de validación de la aplicación seguirá un recorrido reproducible de 7 minutos:
+
+| Tiempo | Evidencia |
+|:--:|:--|
+| 0:00-0:30 | Mostrar tag/commit, URLs o puertos y estado health de la API. |
+| 0:30-1:15 | Landing Page, idioma, responsive y CTA al login. |
+| 1:15-2:00 | Registro, retorno al login, autenticación y recuperación. |
+| 2:00-3:15 | Dashboard, lecturas, costo, filtros y frescura de datos. |
+| 3:15-4:30 | Sede, habitación, dispositivo, asignación y grupo. |
+| 4:30-5:30 | Rutina, modo, regla y alerta. |
+| 5:30-6:15 | Meta, reporte, exportación y planes. |
+| 6:15-6:45 | Android, cambio de idioma/tema y recuperación offline. |
+| 6:45-7:00 | Consolas de pruebas, limitaciones y commit final. |
+
+Checklist de grabación: ocultar credenciales y tokens; usar datos sintéticos; mostrar Web y Android consumiendo la misma API; no cortar errores relevantes; incluir subtítulos; colocar enlaces de repositorio y versión en la descripción.
+
+**Enlace audiovisual:** se incorporará después de grabar y publicar el video.
+
+# Video About the Team
+
+El video grupal presentará a los cinco integrantes. Cada intervención tendrá una duración aproximada de 45 a 60 segundos e incluirá nombre y código, responsabilidad sustancial asumida, decisión ética o profesional relacionada con 4.c.1 o 4.c.2, impacto considerado y artefacto que sustenta la reflexión. **Enlace audiovisual:** se incorporará después de grabar y publicar la evidencia.
 
 # Bibliografía
 
@@ -2214,3 +2076,12 @@ Para TB1 se reutiliza la exposición consolidada de AV1 porque presenta el avanc
 - **Archivo:** `upc-pre-202610-1asi0732-9100-teralume-about-the-product-sprint-2.mp4`.
 - **YouTube:** [Ver About-the-Product de EnergyCore](https://youtu.be/4HOjUHXYUsA).
 - **Microsoft Stream:** [Ver About-the-Product institucional](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241e406_upc_edu_pe/IQBtoXdgjYbdTZJPjvNwEg75AeDDLuhhK7GwfbBt7tmcooU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=2ovKZK).
+## Actividades pendientes para el cierre
+
+Los siguientes artefactos se incorporarán después de ejecutar la actividad correspondiente:
+
+- entrevistas adicionales hasta completar entre tres y cinco participantes por segmento, análisis consolidado y publicación del video en Microsoft Stream;
+- informe de auditoría intercambiado con el grupo que asigne el docente;
+- dataset anonimizado, análisis y decision log del piloto experimental;
+- URLs de Video App Validation y About-the-Team después de su grabación;
+- testimonios de los integrantes vinculados con responsabilidades sustanciales del proyecto.

@@ -1,0 +1,40 @@
+@startuml
+title EnergyCore Clients - C4 Level 3: Components
+top to bottom direction
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam componentStyle rectangle
+
+actor "Usuario" as user
+component "RESTful API" as api
+
+package "Angular Web Application" {
+  [Presentation\nviews, shared UI, routing] as webPresentation
+  [Application\nuse cases and state] as webApplication
+  [Domain\nmodels and contracts] as webDomain
+  [Infrastructure\nHTTP repositories, auth storage] as webInfrastructure
+}
+
+package "Flutter Mobile Application" {
+  [Presentation\nscreens, widgets, navigation] as mobilePresentation
+  [Application\ncontrollers and use cases] as mobileApplication
+  [Domain\nentities and repository contracts] as mobileDomain
+  [Infrastructure\nAPI clients, secure storage] as mobileInfrastructure
+}
+
+user --> webPresentation
+user --> mobilePresentation
+webPresentation --> webApplication
+webApplication --> webDomain
+webApplication --> webInfrastructure
+webInfrastructure --> api : HTTPS/JSON + JWT
+mobilePresentation --> mobileApplication
+mobileApplication --> mobileDomain
+mobileApplication --> mobileInfrastructure
+mobileInfrastructure --> api : HTTPS/JSON + JWT
+
+note bottom of mobileInfrastructure
+  JWT protegido mediante Android Keystore / iOS Keychain.
+end note
+@enduml

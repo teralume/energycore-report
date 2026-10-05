@@ -1,0 +1,31 @@
+@startuml
+title Build and Test Suite Pipeline
+left to right direction
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam rectangle {
+  BackgroundColor #F0FDF4
+  BorderColor #15803D
+  FontColor #111827
+}
+
+rectangle "Push / Pull Request" as A
+rectangle Checkout as B
+rectangle "Restore dependencies" as C
+rectangle "Static analysis" as D
+rectangle "Unit tests" as E
+rectangle "Integration / BDD tests" as F
+rectangle "Production build" as G
+rectangle "Security scan" as H
+rectangle "Versioned artifact" as I #DCFCE7
+
+A --> B
+B --> C
+C --> D
+D --> E
+E --> F
+F --> G
+G --> H
+H --> I
+@enduml

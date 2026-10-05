@@ -1,0 +1,67 @@
+@startuml
+title EnergyCore API - C4 Level 3: Components
+left to right direction
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam componentStyle rectangle
+
+actor "Web / Mobile clients" as client
+database "PostgreSQL" as db
+cloud "External providers" as providers
+
+package "Spring Boot REST API" {
+  [IAM] as iam
+  [Billing] as billing
+  [Workplace] as workplace
+  [Device Control] as device
+  [Energy Monitoring] as energy
+  [Notifications] as notifications
+  [Reporting] as reporting
+  [Service Management] as service
+  [Shared Kernel\nsecurity, results, events, persistence] as shared
+}
+
+client --> iam : authentication / profile
+client --> workplace
+client --> device
+client --> energy
+client --> notifications
+client --> reporting
+client --> billing
+client --> service
+
+iam --> billing : user identity
+iam --> service : user identity
+workplace --> device : locations / rooms
+device --> energy : device state
+device --> reporting : actions
+energy --> notifications : threshold events
+energy --> reporting : readings
+notifications --> reporting : alert events
+
+shared ..> iam
+shared ..> billing
+shared ..> workplace
+shared ..> device
+shared ..> energy
+shared ..> notifications
+shared ..> reporting
+shared ..> service
+
+iam --> db
+billing --> db
+workplace --> db
+device --> db
+energy --> db
+notifications --> db
+reporting --> db
+service --> db
+billing --> providers
+iam --> providers
+
+note bottom
+  Cada bounded context separa interfaces, application, domain e infrastructure.
+  Las dependencias cruzadas se coordinan mediante servicios y eventos.
+end note
+@enduml

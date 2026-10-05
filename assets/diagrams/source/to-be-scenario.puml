@@ -1,0 +1,32 @@
+@startuml
+title To-Be Scenario Map
+left to right direction
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam activity {
+  BackgroundColor #F0FDF4
+  BorderColor #15803D
+  FontColor #111827
+}
+
+rectangle "Inicia sesión" as A
+rectangle "Selecciona sede" as B
+rectangle "Consulta dashboard" as C
+rectangle "¿Existe alerta o\nconsumo alto?" as D #FEF3C7
+rectangle "Revisa progreso\nde meta" as E
+rectangle "Identifica dispositivo\no espacio" as F
+rectangle "Apaga, agrupa\no programa" as G
+rectangle "Configura regla,\nrutina o modo" as H
+rectangle "Consulta lecturas\ny reporte" as I
+
+A --> B
+B --> C
+C --> D
+D --> E : No
+D --> F : Sí
+F --> G
+G --> H
+H --> I
+I --> E
+@enduml

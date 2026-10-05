@@ -15,11 +15,13 @@ jobs:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 2
+      - name: Validate report structure, diagrams, images, and backlogs
+        run: python3 scripts/validate-report.py
       - name: Validate ABET, Keynote, package, and checksums
         run: python3 scripts/validate-av1-artifacts.py
       - name: Check changed text for whitespace errors
         run: git diff --check HEAD^ HEAD
-      - name: Publish verified AV1 delivery artifacts
+      - name: Publish verified report delivery artifacts
         uses: actions/upload-artifact@v7
         with:
           name: energycore-report-${{ github.sha }}

@@ -1,0 +1,177 @@
+@startuml
+title EnergyCore PostgreSQL - Core ERD
+hide methods
+hide stereotypes
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam classAttributeIconSize 0
+
+entity ACCESS_PROFILES {
+  * id : BIGSERIAL <<PK>>
+  --
+  name : VARCHAR(50) <<UQ>>
+  description : VARCHAR(255)
+  created_at : TIMESTAMP
+  updated_at : TIMESTAMP
+}
+entity USERS {
+  * id : BIGSERIAL <<PK>>
+  --
+  access_profile_id : BIGINT <<FK>>
+  full_name : VARCHAR(120)
+  email : VARCHAR(120) <<UQ>>
+  password_hash : VARCHAR
+  status : VARCHAR(30)
+  created_at : TIMESTAMP
+  updated_at : TIMESTAMP
+}
+entity USER_UI_PREFERENCES {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK,UQ>>
+  language : VARCHAR(10)
+  theme : VARCHAR(10)
+}
+entity PASSWORD_RESET_TOKENS {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  token_hash : VARCHAR(64) <<UQ>>
+  expires_at : TIMESTAMP
+  used_at : TIMESTAMP
+}
+entity LOCATIONS {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  name : VARCHAR(120)
+  address : VARCHAR(255)
+  type : VARCHAR(50)
+}
+entity ROOMS {
+  * id : BIGSERIAL <<PK>>
+  --
+  location_id : BIGINT <<LFK>>
+  name : VARCHAR(120)
+  floor : VARCHAR(40)
+}
+entity DEVICES {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  name : VARCHAR(120)
+  room : VARCHAR(120)
+  type : VARCHAR(40)
+  power_watts : NUMERIC(10,2)
+  status : VARCHAR(30)
+}
+entity DEVICE_ASSIGNMENTS {
+  * id : BIGSERIAL <<PK>>
+  --
+  device_id : BIGINT <<LFK>>
+  room_id : BIGINT <<LFK,NULL>>
+  location_id : BIGINT <<LFK>>
+  assigned_at : TIMESTAMP
+}
+entity DEVICE_GROUPS {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  name : VARCHAR(120)
+  description : VARCHAR(255)
+}
+entity DEVICE_GROUP_DEVICES {
+  * id : BIGSERIAL <<PK>>
+  --
+  device_group_id : BIGINT <<LFK>>
+  device_id : BIGINT <<LFK>>
+}
+entity ROUTINES {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  device_id : BIGINT <<LFK,NULL>>
+  group_id : BIGINT <<LFK,NULL>>
+  target_type : VARCHAR(20)
+  target_id : BIGINT
+  action : VARCHAR(20)
+  time : VARCHAR(10)
+  repeat_type : VARCHAR(24)
+  enabled : BOOLEAN
+}
+entity OPERATION_MODES {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  location_id : BIGINT <<LFK>>
+  name : VARCHAR(120)
+  status : VARCHAR(24)
+  rule_profile_id : BIGINT <<LFK,NULL>>
+  preference_id : BIGINT <<LFK,NULL>>
+  last_activated_at : TIMESTAMP
+}
+entity OPERATION_MODE_INTERNAL_ROUTINES {
+  * operation_mode_id : BIGINT <<FK>>
+  * sort_order : INTEGER
+  --
+  name : VARCHAR(120)
+  target_type : VARCHAR(20)
+  target_id : BIGINT
+  action : VARCHAR(20)
+  trigger_time : VARCHAR(10)
+  enabled : BOOLEAN
+}
+entity ENERGY_READINGS {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  device_id : BIGINT <<LFK>>
+  device_name : VARCHAR(120)
+  recorded_at : TIMESTAMP
+  watts : NUMERIC(10,2)
+  kilowatt_hours : NUMERIC(12,6)
+  estimated_cost : NUMERIC(12,6)
+  status : VARCHAR(20)
+}
+entity ENERGY_DEVICE_USAGE_STATES {
+  * id : BIGSERIAL <<PK>>
+  --
+  user_id : BIGINT <<LFK>>
+  device_id : BIGINT <<LFK,UQ>>
+  started_at : TIMESTAMP
+  last_recorded_at : TIMESTAMP
+}
+
+ACCESS_PROFILES ||--o{ USERS : physical FK
+USERS ||..o| USER_UI_PREFERENCES : logical FK
+USERS ||..o{ PASSWORD_RESET_TOKENS : logical FK
+USERS ||..o{ LOCATIONS : logical FK
+LOCATIONS ||..o{ ROOMS : logical FK
+USERS ||..o{ DEVICES : logical FK
+LOCATIONS ||..o{ DEVICE_ASSIGNMENTS : logical FK
+ROOMS |o..o{ DEVICE_ASSIGNMENTS : logical FK
+DEVICES ||..o{ DEVICE_ASSIGNMENTS : logical FK
+USERS ||..o{ DEVICE_GROUPS : logical FK
+DEVICE_GROUPS ||..o{ DEVICE_GROUP_DEVICES : logical FK
+DEVICES ||..o{ DEVICE_GROUP_DEVICES : logical FK
+USERS ||..o{ ROUTINES : logical FK
+DEVICES |o..o{ ROUTINES : optional target
+DEVICE_GROUPS |o..o{ ROUTINES : optional target
+USERS ||..o{ OPERATION_MODES : logical FK
+LOCATIONS ||..o{ OPERATION_MODES : logical FK
+OPERATION_MODES ||--o{ OPERATION_MODE_INTERNAL_ROUTINES : collection table
+USERS ||..o{ ENERGY_READINGS : logical FK
+DEVICES ||..o{ ENERGY_READINGS : logical FK
+USERS ||..o{ ENERGY_DEVICE_USAGE_STATES : logical FK
+DEVICES ||..o| ENERGY_DEVICE_USAGE_STATES : logical FK
+
+legend bottom
+  |= Marker |= Meaning |
+  | PK | primary key inherited from AuditableEntity |
+  | FK | database-enforced JPA association |
+  | LFK | logical foreign key stored as Long; application-enforced |
+  | solid | physical association |
+  | dotted | logical association |
+endlegend
+@enduml

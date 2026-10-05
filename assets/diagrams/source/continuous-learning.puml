@@ -1,0 +1,27 @@
+@startuml
+title Continuous Learning — Shareback Workflow
+left to right direction
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam rectangle {
+  BackgroundColor #F0FDF4
+  BorderColor #15803D
+  FontColor #111827
+}
+
+rectangle "Dataset congelado" as D
+rectangle "Análisis reproducible" as A
+rectangle "Hallazgos y\nlimitaciones" as F
+rectangle "Shareback de\n30 minutos" as S
+rectangle "Decision log" as L
+rectangle "Backlog\nre-priorizado" as B
+rectangle "Nueva pregunta\no release" as N #DCFCE7
+
+D --> A
+A --> F
+F --> S
+S --> L
+L --> B
+B --> N
+@enduml
