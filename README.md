@@ -1995,6 +1995,8 @@ Los workflows de CI existentes aportan evidencia técnica. Aún se requieren pru
 - [Kit para auditorías UX entre grupos](planning/ux-audit-kit-av2.md).
 - [Presentación AV2 editable](output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pptx).
 - [Presentación AV2 en PDF](output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pdf).
+- [Presentación AV2 en Canva](https://www.canva.com/design/DAHYoDC_Zqc/BJZvKHIJtJGlH2Z6kJ0IjQ/edit).
+- [Fuente visual y verificación de los archivos AV2](presentation/av2-keynote-source.md).
 
 ## Enlaces importantes
 

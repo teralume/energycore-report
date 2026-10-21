@@ -1,5 +1,6 @@
 """Check the exported AV2 deck's scope and stale test claims."""
 import json
+import hashlib
 from pathlib import Path
 from zipfile import ZipFile
 from xml.etree import ElementTree as E
@@ -20,4 +21,12 @@ for forbidden in ('8.3.3','8.3.4','8.4.1','8.5.1','8.6.1','17/60','43 escenarios
     assert forbidden not in text,forbidden
 for required in ('8.3.2','53 STORY POINTS','Monitoreo reproducible','60/60','109','24 participantes'):
     assert required in text,required
-print(json.dumps({'slides':len(slides),'scope':'AV2 through 8.3.2','stale_test_claims':0}))
+manifest=json.loads((root/'presentation/av2-keynote-export.json').read_text(encoding='utf-8'))
+assert manifest['slides']==len(slides)
+expected={file.relative_to(root).as_posix(),file.with_suffix('.pdf').relative_to(root).as_posix()}
+assert {entry['path'] for entry in manifest['files']}==expected
+for entry in manifest['files']:
+    artifact=root/entry['path']
+    assert hashlib.sha256(artifact.read_bytes()).hexdigest()==entry['sha256'],f'Stale export record: {artifact.name}'
+assert file.with_suffix('.pdf').read_bytes().startswith(b'%PDF-')
+print(json.dumps({'slides':len(slides),'scope':'AV2 through 8.3.2','stale_test_claims':0,'verified_export_files':2}))
