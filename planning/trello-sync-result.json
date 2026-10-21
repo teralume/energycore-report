@@ -1,0 +1,396 @@
+{
+  "board_url": "https://trello.com/b/kFru7uh2/energycore-product-backlog-y-sprint-planning",
+  "verified_at": "2026-10-20",
+  "sync_status": "SYNCED",
+  "expected_cards": 64,
+  "actual_cards": 64,
+  "missing": [],
+  "status_mismatches": [],
+  "missing_descriptions": [],
+  "cards": [
+    {
+      "id": "TS-01",
+      "url": "https://trello.com/c/TXyMSm5t/35-ts-01-asignaci%C3%B3n-y-configuraci%C3%B3n-de-variantes-5-sp-sprint-5",
+      "status": "Backlog",
+      "description_saved": true
+    },
+    {
+      "id": "TS-02A",
+      "url": "https://trello.com/c/gmvrW9LM/36-ts-02a-contrato-de-eventos-web-3-sp-sprint-5",
+      "status": "Backlog",
+      "description_saved": true
+    },
+    {
+      "id": "TS-02B",
+      "url": "https://trello.com/c/dl0YF815/37-ts-02b-contrato-equivalente-en-flutter-5-sp-sprint-5",
+      "status": "Backlog",
+      "description_saved": true
+    },
+    {
+      "id": "US-21",
+      "url": "https://trello.com/c/AzppMRZG/38-us-21-frescura-y-sincronizaci%C3%B3n-3-sp-sprint-6",
+      "status": "Backlog",
+      "description_saved": true
+    },
+    {
+      "id": "US-17A",
+      "url": "https://trello.com/c/utbxylv0/39-us-17a-explicaci%C3%B3n-de-anomal%C3%ADa-5-sp-sprint-6",
+      "status": "Backlog",
+      "description_saved": true
+    },
+    {
+      "id": "US-17B",
+      "url": "https://trello.com/c/TWWwu1Ef/40-us-17b-acci%C3%B3n-permitida-3-sp-sprint-6",
+      "status": "Backlog",
+      "description_saved": true
+    },
+    {
+      "id": "US-18",
+      "url": "https://trello.com/c/Y7G7fLx2/41-us-18-vista-previa-de-alcance-5-sp-sprint-6",
+      "status": "Backlog",
+      "description_saved": true
+    },
+    {
+      "id": "US-20A",
+      "url": "https://trello.com/c/cLaP3og5/42-us-20a-recuperaci%C3%B3n-despu%C3%A9s-de-desconexi%C3%B3n-5-sp-sprint-7",
+      "status": "Backlog",
+      "description_saved": true
+    },
+    {
+      "id": "US-20B",
+      "url": "https://trello.com/c/u8ZgOlxL/43-us-20b-reintento-idempotente-3-sp-sprint-7",
+      "status": "Backlog",
+      "description_saved": true
+    },
+    {
+      "id": "US-19",
+      "url": "https://trello.com/c/YRJrBEkx/44-us-19-aviso-y-control-de-telemetr%C3%ADa-5-sp-sprint-5",
+      "status": "Backlog",
+      "description_saved": true
+    },
+    {
+      "id": "TS-03",
+      "url": "https://trello.com/c/IjLY3zMD/45-ts-03-dataset-semilla-del-experimento-3-sp-sprint-5",
+      "status": "Backlog",
+      "description_saved": true
+    },
+    {
+      "id": "TS-04",
+      "url": "https://trello.com/c/Mutx2C40/46-ts-04-dashboard-de-resultados-5-sp-sprint-7",
+      "status": "Backlog",
+      "description_saved": true
+    },
+    {
+      "id": "TS-05",
+      "url": "https://trello.com/c/sCAeqRJm/47-ts-05-exportaci%C3%B3n-anonimizada-3-sp-sprint-7",
+      "status": "Backlog",
+      "description_saved": true
+    },
+    {
+      "id": "NF-03",
+      "url": "https://trello.com/c/QT9tfPsu/24-nf-03-latencia-de-consultas-energ%C3%A9ticas-3-sp",
+      "status": "Por iniciar",
+      "description_saved": true
+    },
+    {
+      "id": "NF-04",
+      "url": "https://trello.com/c/wIJfYOfr/25-nf-04-accesibilidad-y-adaptaci%C3%B3n-de-vistas-3-sp",
+      "status": "Por iniciar",
+      "description_saved": true
+    },
+    {
+      "id": "TECH-04",
+      "url": "https://trello.com/c/raMAXnIV/31-tech-04-distribuci%C3%B3n-android-con-api-p%C3%BAblica-5-sp",
+      "status": "Por iniciar",
+      "description_saved": true
+    },
+    {
+      "id": "SPIKE-01",
+      "url": "https://trello.com/c/naZ5l3pT/32-spike-01-dise%C3%B1ar-medici%C3%B3n-cuantitativa-de-rendimiento-4-h-m%C3%A1ximo",
+      "status": "Por iniciar",
+      "description_saved": true
+    },
+    {
+      "id": "SPIKE-02",
+      "url": "https://trello.com/c/4I0FAXhw/33-spike-02-definir-dise%C3%B1o-experimental-e-instrumentaci%C3%B3n-4-h-m%C3%A1ximo",
+      "status": "Por iniciar",
+      "description_saved": true
+    },
+    {
+      "id": "SPIKE-03",
+      "url": "https://trello.com/c/cFhBQyUw/34-spike-03-elegir-distribuci%C3%B3n-m%C3%B3vil-para-la-demostraci%C3%B3n-4-h-m%C3%A1ximo",
+      "status": "Por iniciar",
+      "description_saved": true
+    },
+    {
+      "id": "PLAN-05",
+      "url": "https://trello.com/c/4giUDgtV/52-plan-05-sprint-5-preparar-medici%C3%B3n-reproducible-sprint-5",
+      "status": "Por iniciar",
+      "description_saved": true
+    },
+    {
+      "id": "PLAN-06",
+      "url": "https://trello.com/c/FDYkZKQK/53-plan-06-sprint-6-implementar-tratamientos-seguros-sprint-6",
+      "status": "Por iniciar",
+      "description_saved": true
+    },
+    {
+      "id": "PLAN-07",
+      "url": "https://trello.com/c/8TzKs9GB/54-plan-07-sprint-7-recuperaci%C3%B3n-y-piloto-experimental-sprint-7",
+      "status": "Por iniciar",
+      "description_saved": true
+    },
+    {
+      "id": "ET-06",
+      "url": "https://trello.com/c/JqrDyBWN/60-et-06-revisar-la-correspondencia-entre-backend-c4-y-erd-sprint-4",
+      "status": "Por iniciar",
+      "description_saved": true
+    },
+    {
+      "id": "ET-07",
+      "url": "https://trello.com/c/YmVcNW7v/61-et-07-ejecutar-la-suite-y-actualizar-el-estado-de-escenarios-bdd-sprint-4",
+      "status": "Por iniciar",
+      "description_saved": true
+    },
+    {
+      "id": "ET-08",
+      "url": "https://trello.com/c/7guDd75e/62-et-08-revisar-evidencia-ux-de-landing-page-y-clientes-sprint-4",
+      "status": "Por iniciar",
+      "description_saved": true
+    },
+    {
+      "id": "ET-09",
+      "url": "https://trello.com/c/2AiE7kvE/63-et-09-realizar-revisi%C3%B3n-cruzada-de-legibilidad-y-consistencia-sprint-4",
+      "status": "Por iniciar",
+      "description_saved": true
+    },
+    {
+      "id": "ET-10",
+      "url": "https://trello.com/c/EakY7UaA/64-et-10-validar-student-outcome-y-testimonio-individual-sprint-4",
+      "status": "Por iniciar",
+      "description_saved": true
+    },
+    {
+      "id": "US-02",
+      "url": "https://trello.com/c/nTf9fVbI/1-us-02-registro-e-inicio-de-sesi%C3%B3n-5-sp-sprint-1",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-03",
+      "url": "https://trello.com/c/cR3qfOOh/2-us-03-recuperaci%C3%B3n-de-contrase%C3%B1a-3-sp-sprint-1",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-04A",
+      "url": "https://trello.com/c/miRd470R/3-us-04a-gesti%C3%B3n-de-sedes-5-sp-sprint-1",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-04B",
+      "url": "https://trello.com/c/JDcsoVDO/4-us-04b-gesti%C3%B3n-de-habitaciones-3-sp-sprint-1",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-05",
+      "url": "https://trello.com/c/gxHVjmVx/5-us-05-vinculaci%C3%B3n-de-dispositivos-5-sp-sprint-1",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-06",
+      "url": "https://trello.com/c/nKs6sq5B/6-us-06-control-remoto-5-sp-sprint-1",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-10A",
+      "url": "https://trello.com/c/kuLGxvL7/7-us-10a-dashboard-energ%C3%A9tico-5-sp-sprint-1",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-10B",
+      "url": "https://trello.com/c/PuFNslsw/8-us-10b-hist%C3%B3rico-energ%C3%A9tico-3-sp-sprint-1",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-07",
+      "url": "https://trello.com/c/34HGgQxK/9-us-07-grupos-de-dispositivos-5-sp-sprint-2",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-08",
+      "url": "https://trello.com/c/1H7fe99r/10-us-08-rutinas-5-sp-sprint-2",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-11A",
+      "url": "https://trello.com/c/uVeGKkR1/11-us-11a-reglas-y-alertas-5-sp-sprint-2",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-11B",
+      "url": "https://trello.com/c/HIWLwm6P/12-us-11b-preferencias-de-notificaci%C3%B3n-3-sp-sprint-2",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-12A",
+      "url": "https://trello.com/c/L27ibGqT/13-us-12a-metas-energ%C3%A9ticas-5-sp-sprint-2",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-12B",
+      "url": "https://trello.com/c/40QhXlQN/14-us-12b-reportes-por-periodo-5-sp-sprint-2",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-09",
+      "url": "https://trello.com/c/VrDIV0ua/15-us-09-modos-de-operaci%C3%B3n-5-sp-sprint-2",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-16A",
+      "url": "https://trello.com/c/KQmFAvtw/16-us-16a-comparaci%C3%B3n-de-planes-3-sp-sprint-1",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-16B",
+      "url": "https://trello.com/c/zv9ym6gd/17-us-16b-suscripci%C3%B3n-y-pago-acad%C3%A9mico-5-sp-sprint-1",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-15",
+      "url": "https://trello.com/c/uj7i5T7n/18-us-15-soporte-y-mantenimiento-5-sp-sprint-2",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-13",
+      "url": "https://trello.com/c/Q7UFhKMN/19-us-13-perfiles-y-permisos-5-sp-sprint-2",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-14",
+      "url": "https://trello.com/c/dhBhR8P7/20-us-14-tema-e-idiomas-5-sp-sprint-2",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "US-01",
+      "url": "https://trello.com/c/hF2noQK8/21-us-01-landing-page-y-cta-5-sp-sprint-1",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "NF-05",
+      "url": "https://trello.com/c/qyyeCTc3/26-nf-05-recuperaci%C3%B3n-m%C3%B3vil-sin-duplicaci%C3%B3n-3-sp",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "NF-06",
+      "url": "https://trello.com/c/K7I05zgw/27-nf-06-compatibilidad-m%C3%B3vil-instalable-3-sp",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "TECH-03",
+      "url": "https://trello.com/c/fZFCHhj5/30-tech-03-trazabilidad-ddd-jpa-y-diagramas-3-sp",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "PLAN-01",
+      "url": "https://trello.com/c/Y1aCkOEg/48-plan-01-sprint-1-base-integrada-web-y-api-sprint-1",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "PLAN-02",
+      "url": "https://trello.com/c/jwuMwbiK/49-plan-02-sprint-2-experiencia-m%C3%B3vil-y-automatizaci%C3%B3n-conectadas-sprint-2",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "PLAN-03",
+      "url": "https://trello.com/c/u2SEoccW/50-plan-03-sprint-3-evidencia-de-av1-y-trazabilidad-t%C3%A9cnica-sprint-3",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "PLAN-04",
+      "url": "https://trello.com/c/We6pgTe3/51-plan-04-sprint-4-revisi%C3%B3n-tb1-y-respuesta-a-observaciones-sprint-4",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "ET-01",
+      "url": "https://trello.com/c/CfJoduhC/55-et-01-integrar-el-feedback-de-av1-en-el-informe-sprint-4",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "ET-02",
+      "url": "https://trello.com/c/CpsfX44z/56-et-02-modelar-y-renderizar-architecture-overview-c4-y-uml-sprint-4",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "ET-03",
+      "url": "https://trello.com/c/G7l6Hb2z/57-et-03-reconstruir-el-erd-desde-las-entidades-jpa-y-diferenciar-fk-lfk-sprint-4",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "ET-04",
+      "url": "https://trello.com/c/t3DteER4/58-et-04-reestimar-product-backlog-y-detallar-sprint-planning-sprint-4",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "ET-05",
+      "url": "https://trello.com/c/n9lNxDhY/59-et-05-generar-y-revisar-el-pdf-del-stage-review-sprint-4",
+      "status": "Implementado - por verificar",
+      "description_saved": true
+    },
+    {
+      "id": "NF-01",
+      "url": "https://trello.com/c/ABKedx5F/22-nf-01-autenticaci%C3%B3n-y-autorizaci%C3%B3n-3-sp-sprint-3",
+      "status": "Verificado - pruebas y CI",
+      "description_saved": true
+    },
+    {
+      "id": "NF-02",
+      "url": "https://trello.com/c/I0HfuGKd/23-nf-02-consistencia-de-preferencias-concurrentes-3-sp-sprint-3",
+      "status": "Verificado - pruebas y CI",
+      "description_saved": true
+    },
+    {
+      "id": "TECH-01",
+      "url": "https://trello.com/c/Kg5EouMs/28-tech-01-ci-reproducible-de-los-cinco-repositorios-5-sp-sprint-3",
+      "status": "Verificado - pruebas y CI",
+      "description_saved": true
+    },
+    {
+      "id": "TECH-02",
+      "url": "https://trello.com/c/BKLU3X4q/29-tech-02-exportaci%C3%B3n-csv-desde-la-api-3-sp-sprint-3",
+      "status": "Verificado - pruebas y CI",
+      "description_saved": true
+    }
+  ]
+}

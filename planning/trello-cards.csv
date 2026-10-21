@@ -1,0 +1,210 @@
+﻿id,title,type,sp,timebox_hours,sprint,status,description,owner
+US-02,Registro e inicio de sesión,Funcional,5,,1,Implementado - por verificar,"Criterio de aceptación: Given datos válidos, when confirma el formulario, then el sistema crea o autentica la cuenta y establece una sesión JWT.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-03,Recuperación de contraseña,Funcional,3,,1,Implementado - por verificar,"Criterio de aceptación: Given un correo registrado, when solicita recuperación, then el sistema genera un token temporal y permite definir una nueva contraseña.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-04A,Gestión de sedes,Funcional,5,,1,Implementado - por verificar,"Criterio de aceptación: Given datos válidos, when registra una sede, then queda disponible en el contexto del usuario.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-04B,Gestión de habitaciones,Funcional,3,,1,Implementado - por verificar,"Criterio de aceptación: Given una sede existente, when registra una habitación, then queda asociada a esa sede.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-05,Vinculación de dispositivos,Funcional,5,,1,Implementado - por verificar,"Criterio de aceptación: Given un identificador válido, when completa la vinculación, then el dispositivo queda disponible para asignación y control.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-06,Control remoto,Funcional,5,,1,Implementado - por verificar,"Criterio de aceptación: Given un dispositivo disponible, when cambia su estado, then la plataforma registra y muestra el nuevo estado.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-10A,Dashboard energético,Funcional,5,,1,Implementado - por verificar,"Criterio de aceptación: Given lecturas vigentes, when abre el dashboard, then visualiza KPIs actuales por alcance.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-10B,Histórico energético,Funcional,3,,1,Implementado - por verificar,"Criterio de aceptación: Given un periodo válido, when filtra fechas, then visualiza la serie y los totales del periodo.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-07,Grupos de dispositivos,Funcional,5,,2,Implementado - por verificar,"Criterio de aceptación: Given varios dispositivos, when crea un grupo y ejecuta una acción, then la operación se aplica al alcance definido.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-08,Rutinas,Funcional,5,,2,Implementado - por verificar,"Criterio de aceptación: Given un alcance y horario válidos, when activa la rutina, then queda programada y puede ejecutarse o desactivarse.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-11A,Reglas y alertas,Funcional,5,,2,Implementado - por verificar,"Criterio de aceptación: Given una condición válida, when se cumple, then el sistema genera una alerta trazable.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-11B,Preferencias de notificación,Funcional,3,,2,Implementado - por verificar,"Criterio de aceptación: Given una preferencia u horario silencioso, when lo guarda, then se aplica a las alertas posteriores.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-12A,Metas energéticas,Funcional,5,,2,Implementado - por verificar,"Criterio de aceptación: Given una meta válida, when consulta su progreso, then visualiza valor actual, objetivo y fecha límite.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-12B,Reportes por periodo,Funcional,5,,2,Implementado - por verificar,"Criterio de aceptación: Given un rango válido, when solicita un reporte, then obtiene un resumen consistente de consumo y costo.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-09,Modos de operación,Funcional,5,,2,Implementado - por verificar,"Criterio de aceptación: Given rutinas y reglas compatibles, when activa un modo, then el sistema presenta el impacto previsto y aplica la configuración.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-16A,Comparación de planes,Funcional,3,,1,Implementado - por verificar,"Criterio de aceptación: Given el catálogo disponible, when compara opciones, then visualiza límites y precio de cada plan.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-16B,Suscripción y pago académico,Funcional,5,,1,Implementado - por verificar,"Criterio de aceptación: Given un plan seleccionado, when completa el checkout académico, then se registra la suscripción.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-15,Soporte y mantenimiento,Funcional,5,,2,Implementado - por verificar,"Criterio de aceptación: Given una descripción válida, when crea el ticket, then puede consultar su estado y evolución.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-13,Perfiles y permisos,Funcional,5,,2,Implementado - por verificar,"Criterio de aceptación: Given un usuario y perfil autorizados, when realiza la asignación, then las rutas y operaciones respetan los permisos.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-14,Tema e idiomas,Funcional,5,,2,Implementado - por verificar,"Criterio de aceptación: Given una preferencia disponible, when la selecciona, then web y móvil aplican y conservan su configuración.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+US-01,Landing Page y CTA,Funcional,5,,1,Implementado - por verificar,"Criterio de aceptación: Given que visita la Landing Page, when recorre sus secciones, then visualiza propuesta, capacidades, planes y un CTA al login.
+
+Estado: implementación registrada en Product Backlog; aceptación integral de UI por verificar.
+Evidencia: README §3.2 y §5.2, código del contexto y suites backend/frontend.
+No atribuir cierre individual ni fecha de ejecución sin evidencia.",
+NF-01,Autenticación y autorización,No funcional,3,,3,Verificado - pruebas y CI,"Como titular de una cuenta, quiero que la API proteja mi sesión y permisos para impedir accesos no autorizados.
+
+Aceptación: 0 peticiones protegidas sin token aceptadas; 100 % de casos Owner/Guest de la suite aprobados; BCrypt nunca almacena contraseña en claro.
+
+Evidencia/limitación: IAM: AccessAuthorizationServiceTest, PasswordHashingServiceTest e iam.feature; CI backend del 05/10/2026.",
+NF-02,Consistencia de preferencias concurrentes,No funcional,3,,3,Verificado - pruebas y CI,"Como usuario, quiero conservar mis preferencias cuando hay peticiones simultáneas para no perder cambios.
+
+Aceptación: 24 GET iniciales simultáneos y 24 GET/PUT: una preferencia por usuario, cambios parciales conservados y aislamiento entre cuentas.
+
+Evidencia/limitación: assets/evidence/implemented/preferences-concurrency-smoke.json, 06/09/2026, PostgreSQL local aislado.",
+NF-03,Latencia de consultas energéticas,No funcional,3,,,Por iniciar,"Como usuario, quiero recibir las consultas de dashboard e histórico dentro de un tiempo medible para tomar decisiones con fluidez.
+
+Aceptación: Objetivo propuesto: p95 <= 2000 ms y errores < 1 % en 100 consultas autenticadas, concurrencia 5; separar arranque frío y caliente y registrar entorno/dataset.
+
+Evidencia/limitación: No existe medición de carga que cierre este objetivo; requiere SPIKE-01.",
+NF-04,Accesibilidad y adaptación de vistas,No funcional,3,,,Por iniciar,"Como usuario que navega con teclado o pantalla pequeña, quiero acceder a los controles esenciales sin perder información.
+
+Aceptación: Login y dashboard a 390/768/1440 px; 0 controles esenciales inaccesibles por teclado; 0 defectos críticos de accesibilidad en el alcance auditado.
+
+Evidencia/limitación: Hay estructura accesible y capturas; no una auditoría completa de estos criterios.",
+NF-05,Recuperación móvil sin duplicación,No funcional,3,,,Implementado - por verificar,"Como usuario móvil, quiero recuperar una operación tras una desconexión sin repetir sus efectos.
+
+Aceptación: 5 ciclos sin red/con red: sesión conservada, reintento visible y exactamente un cambio persistido por comando aceptado.
+
+Evidencia/limitación: Cliente con aviso/reintento; cierre de idempotencia y prueba en teléfono aún no demostrados. Relacionada con US-20A/B.",
+NF-06,Compatibilidad móvil instalable,No funcional,3,,,Implementado - por verificar,"Como usuario, quiero instalar la aplicación y usar el mismo backend público desde mi dispositivo.
+
+Aceptación: APK Android release e iOS simulator compilan; login, lectura, CRUD y reporte ejecutados en Android físico con Wi-Fi/datos y API HTTPS pública.
+
+Evidencia/limitación: CI Android e iOS aprobado el 05/10/2026; distribución a testers y ejecución física de estos flujos no verificadas. Relacionada con TECH-04.",
+TECH-01,CI reproducible de los cinco repositorios,Técnica,5,,3,Verificado - pruebas y CI,"Como equipo, queremos verificar cada cambio y publicar sus artefactos para detectar regresiones antes de integrar.
+
+Aceptación: 5 workflows main exitosos en SHA identificable; fallos de tests detienen dependencias; artefactos descargables.
+
+Evidencia/limitación: Workflows main del 05/10/2026; métricas: 88 backend, 5 Angular, 5 Landing, 11 Flutter.",
+TECH-02,Exportación CSV desde la API,Técnica,3,,3,Verificado - pruebas y CI,"Como equipo, queremos exportar lecturas por un contrato HTTP consistente para conectar reportes y clientes.
+
+Aceptación: GET /api/v1/energy-readings/export devuelve text/csv; escenario de aceptación y manejo del rango aprobados.
+
+Evidencia/limitación: EnergyMonitoringController, EnergyReadingsCsvExporter y energy-monitoring.feature; CI backend.",
+TECH-03,"Trazabilidad DDD, JPA y diagramas",Técnica,3,,,Implementado - por verificar,"Como equipo, queremos contrastar modelos y diagramas con el código para conservar coherencia entre capas y datos.
+
+Aceptación: 27 entidades JPA contrastadas con ERD; FK/LFK identificadas; 0 imágenes locales ausentes y 0 bloques Mermaid crudos en reporte.
+
+Evidencia/limitación: Fuentes PlantUML y SVG, scripts/validate-report.py; revisión cruzada ET-06 aún sin acta individual.",
+TECH-04,Distribución Android con API pública,Técnica,5,,,Por iniciar,"Como equipo, queremos distribuir un APK firmado conectado a Cloud Run para demostrar móvil sin localhost.
+
+Aceptación: Release identificada por SHA, firma persistente, API_BASE_URL HTTPS pública, instalación desde enlace y 4 flujos verificados en Android físico.
+
+Evidencia/limitación: Existe APK de CI; no hay release de Firebase App Distribution ni evidencia de instalación desde enlace. Depende de SPIKE-03 y NF-06.",
+SPIKE-01,Diseñar medición cuantitativa de rendimiento,Spike,,4,,Por iniciar,"Pregunta: ¿Cómo medir p95 y errores sin confundir cold start con latencia estable?
+
+Dependencias: NF-03
+
+Salida: Plan de carga, 100 consultas/5 concurrentes, dataset, versión, comandos y plantilla de resultados; no asignar cifras observadas antes de ejecutar.",
+SPIKE-02,Definir diseño experimental e instrumentación,Spike,,4,,Por iniciar,"Pregunta: ¿Qué eventos, asignación y consentimiento permiten comparar variantes sin datos personales?
+
+Dependencias: TS-01, TS-02A/B, US-19
+
+Salida: ADR con alternativas, esquema mínimo, asignación estable, exclusiones, anonimización y decisión sobre piloto; no presentar 24 participantes propuestos como reclutados.",
+SPIKE-03,Elegir distribución móvil para la demostración,Spike,,4,,Por iniciar,"Pregunta: ¿Qué canal permite instalar Android con API pública y qué limita la instalación en iPhone?
+
+Dependencias: TECH-04, NF-06
+
+Salida: ADR con canal Android, firma, requisitos, costos si aplican y acceso de testers; separar build de simulador, dispositivo físico y tienda.",
+TS-01,Asignación y configuración de variantes,Experimento,5,,5,Backlog,"Trabajo To-Be. No implementado/verificado como tratamiento experimental.
+
+Criterio de salida: Variante estable y auditable por sesión.",
+TS-02A,Contrato de eventos web,Experimento,3,,5,Backlog,"Trabajo To-Be. No implementado/verificado como tratamiento experimental.
+
+Criterio de salida: Esquema web validado y sin PII.",
+TS-02B,Contrato equivalente en Flutter,Experimento,5,,5,Backlog,"Trabajo To-Be. No implementado/verificado como tratamiento experimental.
+
+Criterio de salida: Eventos comparables con web.",
+US-21,Frescura y sincronización,Experimento,3,,6,Backlog,"Trabajo To-Be. No implementado/verificado como tratamiento experimental.
+
+Criterio de salida: Timestamp consistente en KPI y detalle.",
+US-17A,Explicación de anomalía,Experimento,5,,6,Backlog,"Trabajo To-Be. No implementado/verificado como tratamiento experimental.
+
+Criterio de salida: Causa, impacto y frescura visibles.",
+US-17B,Acción permitida,Experimento,3,,6,Backlog,"Trabajo To-Be. No implementado/verificado como tratamiento experimental.
+
+Criterio de salida: Alcance y confirmación antes del comando.",
+US-18,Vista previa de alcance,Experimento,5,,6,Backlog,"Trabajo To-Be. No implementado/verificado como tratamiento experimental.
+
+Criterio de salida: Resumen y confirmación antes del comando.",
+US-20A,Recuperación después de desconexión,Experimento,5,,7,Backlog,"Trabajo To-Be. No implementado/verificado como tratamiento experimental.
+
+Criterio de salida: Operación recuperable al volver la red.",
+US-20B,Reintento idempotente,Experimento,3,,7,Backlog,"Trabajo To-Be. No implementado/verificado como tratamiento experimental.
+
+Criterio de salida: Reintento sin duplicación.",
+US-19,Aviso y control de telemetría,Experimento,5,,5,Backlog,"Trabajo To-Be. No implementado/verificado como tratamiento experimental.
+
+Criterio de salida: Consentimiento/opt-out registrado.",
+TS-03,Dataset semilla del experimento,Experimento,3,,5,Backlog,"Trabajo To-Be. No implementado/verificado como tratamiento experimental.
+
+Criterio de salida: Datos idénticos y reiniciables.",
+TS-04,Dashboard de resultados,Experimento,5,,7,Backlog,"Trabajo To-Be. No implementado/verificado como tratamiento experimental.
+
+Criterio de salida: Métricas por variante, segmento y plataforma.",
+TS-05,Exportación anonimizada,Experimento,3,,7,Backlog,"Trabajo To-Be. No implementado/verificado como tratamiento experimental.
+
+Criterio de salida: Dataset reproducible sin datos personales.",

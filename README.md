@@ -14,7 +14,7 @@
 **Profesor**<br>
 **Alex Humberto Sánchez Ponce**
 
-# Informe de Trabajo Parcial
+# Informe de Avance 2
 
 **Startup: Teralume**<br>
 **Producto: EnergyCore**
@@ -46,8 +46,17 @@
 | TB1 | 30/09/2026 | Loa Rojas, Jean Franck | Actualización acumulativa para el Trabajo Parcial: correo institucional del Team Leader, refinamiento del Product Backlog sin historias de 8 puntos, visualización explícita de la base de datos, pruebas, CI/CD, despliegue público verificado y presentación del equipo. |
 | TB1.1 | 04/10/2026 | Rivera Rupay, Fabricio Jose | Corrección de los diagramas de arquitectura y base de datos, actualización del Sprint Backlog y Student Outcome, y revisión integral del informe para el Stage Review. |
 | TB1.2 | 05/10/2026 | Loa Rojas, Jean Franck | Preparación final de los archivos del Trabajo Parcial, incorporación del Performance Report, reutilización declarada de la exposición AV1 y actualización del Video About-the-Product para el Sprint 2. |
+| TB1.3 | 20/10/2026 | Equipo Teralume | Refinamiento de Sprint Planning, criterios cuantitativos y backlog no funcional, técnico y de investigación; estados vinculados a evidencia y preparación del tablero Trello. |
+| AV2.1 | 21/10/2026 | Equipo Teralume | Ajuste del alcance al índice del tercer hito: secciones VI y VII, y VIII hasta 8.3.2; exclusión de contenidos de TB2 y corrección de la procedencia de entrevistas. |
+| AV2.2 | 21/10/2026 | Loa Rojas, Jean Franck | Incorporación de inspección técnica trazable, comprobación pública de disponibilidad, monitor y workflow preparados, kit de auditoría externa y presentación AV2; sin atribuir entrevistas ni auditorías no realizadas. |
 
 <div style="page-break-after: always;"></div>
+
+## Alcance de Avance 2
+
+El documento conserva los capítulos previos como antecedentes corregidos del proyecto acumulativo. El incremento de AV2 sigue la estructura enumerada del tercer hito del Enunciado, páginas 42-43: capítulo VI (6.1-6.4), capítulo VII (7.1-7.4) y capítulo VIII desde 8.1 hasta **8.3.2 To-Be Product Backlog**, además del registro de versiones, Student Outcome, avance de conclusiones, bibliografía y anexos.
+
+Las estimaciones, umbrales de calidad y tamaños de muestra de 8.1-8.2 son propuestas de diseño. No constituyen resultados observados, participantes reclutados ni validación ejecutada. Los enlaces audiovisuales conservados de AV1/TB1 son antecedentes identificados con su entrega de origen; no se presentan como una exposición nueva de AV2.
 
 ## Project Report Collaboration Insights
 
@@ -63,7 +72,7 @@ EnergyCore se desarrolla mediante cinco repositorios independientes dentro de la
 - [Web Application desplegada](https://university-energycorp.web.app)
 - [RESTful API desplegada](https://energycore-platform-ujdgb2zcpq-ue.a.run.app)
 
-## Inventario de artefactos acumulativos para TB1
+## Inventario acumulativo de antecedentes y alcance AV2
 
 | Grupo | Artefactos disponibles | Ubicación o evidencia | Estado |
 |:--|:--|:--|:--:|
@@ -112,180 +121,180 @@ La colaboración individual se sustentará mediante tareas sustanciales, revisio
 
 ## Contenido
 
-- [Student Outcome](#student-outcome)
+  - [Student Outcome](#student-outcome)
 - [Part I As Is Software Project](#part-i-as-is-software-project)
-  - [Capítulo I Introducción](#capítulo-i-introducción)
-    - [1.1 Startup Profile](#11-startup-profile)
-      - [1.1.1 Descripción de la Startup](#111-descripción-de-la-startup)
-      - [1.1.2 Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
-    - [1.2 Solution Profile](#12-solution-profile)
-      - [1.2.1 Antecedentes y problemática](#121-antecedentes-y-problemática)
-      - [1.2.2 Lean UX Process](#122-lean-ux-process)
-        - [1.2.2.1 Lean UX Problem Statements](#1221-lean-ux-problem-statements)
-        - [1.2.2.2 Lean UX Assumptions](#1222-lean-ux-assumptions)
+- [Capítulo I Introducción](#capítulo-i-introducción)
+  - [1.1 Startup Profile](#11-startup-profile)
+    - [1.1.1 Descripción de la Startup](#111-descripción-de-la-startup)
+    - [1.1.2 Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
+  - [1.2 Solution Profile](#12-solution-profile)
+    - [1.2.1 Antecedentes y problemática](#121-antecedentes-y-problemática)
+    - [1.2.2 Lean UX Process](#122-lean-ux-process)
+      - [1.2.2.1 Lean UX Problem Statements](#1221-lean-ux-problem-statements)
+      - [1.2.2.2 Lean UX Assumptions](#1222-lean-ux-assumptions)
       - [1.2.2.3 Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
       - [1.2.2.4 Lean UX Canvas](#1224-lean-ux-canvas)
-    - [1.3 Segmentos objetivo](#13-segmentos-objetivo)
-  - [Capítulo II Requirements Elicitation and Analysis](#capítulo-ii-requirements-elicitation-and-analysis)
-    - [2.1 Competidores](#21-competidores)
-      - [2.1.1 Análisis competitivo](#211-análisis-competitivo)
-      - [2.1.2 Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
-    - [2.2 Entrevistas](#22-entrevistas)
-      - [2.2.1 Diseño de entrevistas](#221-diseño-de-entrevistas)
-      - [2.2.2 Registro de entrevistas](#222-registro-de-entrevistas)
-      - [2.2.3 Análisis de entrevistas](#223-análisis-de-entrevistas)
-    - [2.3 Needfinding](#23-needfinding)
-      - [2.3.1 User Personas](#231-user-personas)
-      - [2.3.2 User Task Matrix](#232-user-task-matrix)
-      - [2.3.3 User Journey Mapping](#233-user-journey-mapping)
-      - [2.3.4 Empathy Mapping](#234-empathy-mapping)
-      - [2.3.5 As Is Scenario Mapping](#235-as-is-scenario-mapping)
-    - [2.4 Ubiquitous Language](#24-ubiquitous-language)
-  - [Capítulo III Requirements Specification](#capítulo-iii-requirements-specification)
-    - [3.1 To Be Scenario Mapping](#31-to-be-scenario-mapping)
-    - [3.2 User Stories](#32-user-stories)
-    - [3.3 Product Backlog](#33-product-backlog)
-    - [3.4 Impact Mapping](#34-impact-mapping)
-  - [Capítulo IV Product Design](#capítulo-iv-product-design)
-    - [4.1 Style Guidelines](#41-style-guidelines)
-      - [4.1.1 General Style Guidelines](#411-general-style-guidelines)
-      - [4.1.2 Web Style Guidelines](#412-web-style-guidelines)
-      - [4.1.3 Mobile Style Guidelines](#413-mobile-style-guidelines)
-        - [4.1.3.1 iOS Mobile Style Guidelines](#4131-ios-mobile-style-guidelines)
-        - [4.1.3.2 Android Mobile Style Guidelines](#4132-android-mobile-style-guidelines)
-    - [4.2 Information Architecture](#42-information-architecture)
-      - [4.2.1 Organization Systems](#421-organization-systems)
-      - [4.2.2 Labeling Systems](#422-labeling-systems)
-      - [4.2.3 SEO Tags and Meta Tags](#423-seo-tags-and-meta-tags)
-      - [4.2.4 Searching Systems](#424-searching-systems)
-      - [4.2.5 Navigation Systems](#425-navigation-systems)
-    - [4.3 Landing Page UI Design](#43-landing-page-ui-design)
-      - [4.3.1 Landing Page Wireframe](#431-landing-page-wireframe)
-      - [4.3.2 Landing Page Mockup](#432-landing-page-mockup)
-    - [4.4 Mobile Applications UX UI Design](#44-mobile-applications-ux-ui-design)
-      - [4.4.1 Mobile Applications Wireframes](#441-mobile-applications-wireframes)
-      - [4.4.2 Mobile Applications Wireflow Diagrams](#442-mobile-applications-wireflow-diagrams)
-      - [4.4.3 Mobile Applications Mockups](#443-mobile-applications-mockups)
-      - [4.4.4 Mobile Applications User Flow Diagrams](#444-mobile-applications-user-flow-diagrams)
-    - [4.5 Mobile Applications Prototyping](#45-mobile-applications-prototyping)
-      - [4.5.1 Android Mobile Applications Prototyping](#451-android-mobile-applications-prototyping)
-      - [4.5.2 iOS Mobile Applications Prototyping](#452-ios-mobile-applications-prototyping)
-    - [4.6 Web Applications UX UI Design](#46-web-applications-ux-ui-design)
-      - [4.6.1 Web Applications Wireframes](#461-web-applications-wireframes)
-      - [4.6.2 Web Applications Wireflow Diagrams](#462-web-applications-wireflow-diagrams)
-      - [4.6.3 Web Applications Mockups](#463-web-applications-mockups)
-      - [4.6.4 Web Applications User Flow Diagrams](#464-web-applications-user-flow-diagrams)
-    - [4.7 Web Applications Prototyping](#47-web-applications-prototyping)
-    - [4.8 Domain Driven Software Architecture](#48-domain-driven-software-architecture)
-      - [4.8.1 Software Architecture Context Diagram](#481-software-architecture-context-diagram)
-      - [4.8.2 Software Architecture Container Diagrams](#482-software-architecture-container-diagrams)
-      - [4.8.3 Software Architecture Components Diagrams](#483-software-architecture-components-diagrams)
-    - [4.9 Software Object Oriented Design](#49-software-object-oriented-design)
-      - [4.9.1 Class Diagrams](#491-class-diagrams)
-      - [4.9.2 Class Dictionary](#492-class-dictionary)
-    - [4.10 Database Design](#410-database-design)
-      - [4.10.1 Relational Non Relational Database Diagram](#4101-relational-non-relational-database-diagram)
-  - [Capítulo V Product Implementation](#capítulo-v-product-implementation)
-    - [5.1 Software Configuration Management](#51-software-configuration-management)
-      - [5.1.1 Software Development Environment Configuration](#511-software-development-environment-configuration)
-      - [5.1.2 Source Code Management](#512-source-code-management)
-      - [5.1.3 Source Code Style Guide and Conventions](#513-source-code-style-guide-and-conventions)
-      - [5.1.4 Software Deployment Configuration](#514-software-deployment-configuration)
-    - [5.2 Product Implementation and Deployment](#52-product-implementation-and-deployment)
-      - [5.2.1 Sprint Backlogs](#521-sprint-backlogs)
-      - [5.2.2 Implemented Landing Page Evidence](#522-implemented-landing-page-evidence)
-      - [5.2.3 Implemented Frontend Web Application Evidence](#523-implemented-frontend-web-application-evidence)
-      - [5.2.4 Implemented Native Mobile Application Evidence](#524-implemented-native-mobile-application-evidence)
-      - [5.2.5 Implemented RESTful API and Serverless Backend Evidence](#525-implemented-restful-api-and-serverless-backend-evidence)
-      - [5.2.6 RESTful API Documentation](#526-restful-api-documentation)
-      - [5.2.7 Team Collaboration Insights](#527-team-collaboration-insights)
-      - [Acuerdo de Servicio SaaS](#acuerdo-de-servicio-saas)
-    - [5.3 Video About the Product](#53-video-about-the-product)
+  - [1.3 Segmentos objetivo](#13-segmentos-objetivo)
+- [Capítulo II Requirements Elicitation and Analysis](#capítulo-ii-requirements-elicitation-and-analysis)
+  - [2.1 Competidores](#21-competidores)
+    - [2.1.1 Análisis competitivo](#211-análisis-competitivo)
+    - [2.1.2 Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
+  - [2.2 Entrevistas](#22-entrevistas)
+    - [2.2.1 Diseño de entrevistas](#221-diseño-de-entrevistas)
+    - [2.2.2 Registro de entrevistas](#222-registro-de-entrevistas)
+      - [Entrevista 1: Catherine Tejada](#entrevista-1-catherine-tejada)
+    - [2.2.3 Análisis de entrevistas](#223-análisis-de-entrevistas)
+  - [2.3 Needfinding](#23-needfinding)
+    - [2.3.1 User Personas](#231-user-personas)
+    - [2.3.2 User Task Matrix](#232-user-task-matrix)
+    - [2.3.3 User Journey Mapping](#233-user-journey-mapping)
+    - [2.3.4 Empathy Mapping](#234-empathy-mapping)
+    - [2.3.5 As Is Scenario Mapping](#235-as-is-scenario-mapping)
+  - [2.4 Ubiquitous Language](#24-ubiquitous-language)
+- [Capítulo III Requirements Specification](#capítulo-iii-requirements-specification)
+  - [3.1 To Be Scenario Mapping](#31-to-be-scenario-mapping)
+  - [3.2 User Stories](#32-user-stories)
+    - [3.2.1 Historias no funcionales](#321-historias-no-funcionales)
+    - [3.2.2 Technical Stories](#322-technical-stories)
+    - [3.2.3 Spike Stories](#323-spike-stories)
+  - [3.3 Product Backlog](#33-product-backlog)
+    - [3.3.1 Backlog de calidad, habilitadores e investigación](#331-backlog-de-calidad-habilitadores-e-investigación)
+  - [3.4 Impact Mapping](#34-impact-mapping)
+- [Capítulo IV Product Design](#capítulo-iv-product-design)
+  - [4.1 Style Guidelines](#41-style-guidelines)
+    - [4.1.1 General Style Guidelines](#411-general-style-guidelines)
+    - [4.1.2 Web Style Guidelines](#412-web-style-guidelines)
+    - [4.1.3 Mobile Style Guidelines](#413-mobile-style-guidelines)
+      - [4.1.3.1 iOS Mobile Style Guidelines](#4131-ios-mobile-style-guidelines)
+      - [4.1.3.2 Android Mobile Style Guidelines](#4132-android-mobile-style-guidelines)
+  - [4.2 Information Architecture](#42-information-architecture)
+    - [4.2.1 Organization Systems](#421-organization-systems)
+    - [4.2.2 Labeling Systems](#422-labeling-systems)
+    - [4.2.3 SEO Tags and Meta Tags](#423-seo-tags-and-meta-tags)
+    - [4.2.4 Searching Systems](#424-searching-systems)
+    - [4.2.5 Navigation Systems](#425-navigation-systems)
+  - [4.3 Landing Page UI Design](#43-landing-page-ui-design)
+    - [4.3.1 Landing Page Wireframe](#431-landing-page-wireframe)
+    - [4.3.2 Landing Page Mockup](#432-landing-page-mockup)
+  - [4.4 Mobile Applications UX UI Design](#44-mobile-applications-ux-ui-design)
+    - [4.4.1 Mobile Applications Wireframes](#441-mobile-applications-wireframes)
+    - [4.4.2 Mobile Applications Wireflow Diagrams](#442-mobile-applications-wireflow-diagrams)
+    - [4.4.3 Mobile Applications Mockups](#443-mobile-applications-mockups)
+    - [4.4.4 Mobile Applications User Flow Diagrams](#444-mobile-applications-user-flow-diagrams)
+  - [4.5 Mobile Applications Prototyping](#45-mobile-applications-prototyping)
+    - [4.5.1 Android Mobile Applications Prototyping](#451-android-mobile-applications-prototyping)
+    - [4.5.2 iOS Mobile Applications Prototyping](#452-ios-mobile-applications-prototyping)
+  - [4.6 Web Applications UX UI Design](#46-web-applications-ux-ui-design)
+    - [4.6.1 Web Applications Wireframes](#461-web-applications-wireframes)
+    - [4.6.2 Web Applications Wireflow Diagrams](#462-web-applications-wireflow-diagrams)
+    - [4.6.3 Web Applications Mockups](#463-web-applications-mockups)
+    - [4.6.4 Web Applications User Flow Diagrams](#464-web-applications-user-flow-diagrams)
+  - [4.7 Web Applications Prototyping](#47-web-applications-prototyping)
+  - [4.8 Domain Driven Software Architecture](#48-domain-driven-software-architecture)
+    - [4.8.1 Software Architecture Context Diagram](#481-software-architecture-context-diagram)
+    - [4.8.2 Software Architecture Container Diagrams](#482-software-architecture-container-diagrams)
+    - [4.8.3 Software Architecture Components Diagrams](#483-software-architecture-components-diagrams)
+  - [4.9 Software Object Oriented Design](#49-software-object-oriented-design)
+    - [4.9.1 Class Diagrams](#491-class-diagrams)
+    - [4.9.2 Class Dictionary](#492-class-dictionary)
+  - [4.10 Database Design](#410-database-design)
+    - [4.10.1 Relational Non Relational Database Diagram](#4101-relational-non-relational-database-diagram)
+- [Capítulo V Product Implementation](#capítulo-v-product-implementation)
+  - [5.1 Software Configuration Management](#51-software-configuration-management)
+    - [5.1.1 Software Development Environment Configuration](#511-software-development-environment-configuration)
+    - [5.1.2 Source Code Management](#512-source-code-management)
+    - [5.1.3 Source Code Style Guide and Conventions](#513-source-code-style-guide-and-conventions)
+    - [5.1.4 Software Deployment Configuration](#514-software-deployment-configuration)
+  - [5.2 Product Implementation and Deployment](#52-product-implementation-and-deployment)
+    - [5.2.1 Sprint Backlogs](#521-sprint-backlogs)
+      - [5.2.1.1 Datos cuantitativos y criterio de capacidad](#5211-datos-cuantitativos-y-criterio-de-capacidad)
+      - [5.2.1.2 Sprint Planning por incremento](#5212-sprint-planning-por-incremento)
+      - [5.2.1.3 Control del Sprint 4 y colaboración](#5213-control-del-sprint-4-y-colaboración)
+      - [5.2.1.4 Definition of Ready, Done y actualización del tablero](#5214-definition-of-ready-done-y-actualización-del-tablero)
+    - [5.2.2 Implemented Landing Page Evidence](#522-implemented-landing-page-evidence)
+    - [5.2.3 Implemented Frontend Web Application Evidence](#523-implemented-frontend-web-application-evidence)
+    - [5.2.4 Implemented Native Mobile Application Evidence](#524-implemented-native-mobile-application-evidence)
+    - [5.2.5 Implemented RESTful API and Serverless Backend Evidence](#525-implemented-restful-api-and-serverless-backend-evidence)
+    - [5.2.6 RESTful API Documentation](#526-restful-api-documentation)
+    - [5.2.7 Team Collaboration Insights](#527-team-collaboration-insights)
+    - [Acuerdo de Servicio SaaS](#acuerdo-de-servicio-saas)
+  - [5.3 Video About the Product](#53-video-about-the-product)
 - [Part II Verification Validation and Pipeline](#part-ii-verification-validation-and-pipeline)
-  - [Capítulo VI Product Verification and Validation](#capítulo-vi-product-verification-and-validation)
-    - [6.1 Testing Suites and Validation](#61-testing-suites-and-validation)
-      - [6.1.1 Core Entities Unit Tests](#611-core-entities-unit-tests)
-      - [6.1.2 Core Integration Tests](#612-core-integration-tests)
-      - [6.1.3 Core Behavior Driven Development](#613-core-behavior-driven-development)
-      - [6.1.4 Core System Tests](#614-core-system-tests)
-    - [6.2 Static Testing and Verification](#62-static-testing-and-verification)
-      - [6.2.1 Static Code Analysis](#621-static-code-analysis)
-        - [6.2.1.1 Coding Standard and Code Conventions](#6211-coding-standard-and-code-conventions)
-        - [6.2.1.2 Code Quality and Code Security](#6212-code-quality-and-code-security)
-      - [6.2.2 Reviews](#622-reviews)
-    - [6.3 Validation Interviews](#63-validation-interviews)
-      - [6.3.1 Diseño de Entrevistas](#631-diseño-de-entrevistas)
-      - [6.3.2 Registro de Entrevistas](#632-registro-de-entrevistas)
-      - [6.3.3 Evaluaciones según heurísticas](#633-evaluaciones-según-heurísticas)
-    - [6.4 Auditoría de Experiencias de Usuario](#64-auditoría-de-experiencias-de-usuario)
-      - [6.4.1 Auditoría realizada](#641-auditoría-realizada)
-        - [6.4.1.1 Información del grupo auditado](#6411-información-del-grupo-auditado)
-        - [6.4.1.2 Cronograma de auditoría realizada](#6412-cronograma-de-auditoría-realizada)
-        - [6.4.1.3 Contenido de auditoría realizada](#6413-contenido-de-auditoría-realizada)
-      - [6.4.2 Auditoría recibida](#642-auditoría-recibida)
-        - [6.4.2.1 Información del grupo auditor](#6421-información-del-grupo-auditor)
-        - [6.4.2.2 Cronograma de auditoría recibida](#6422-cronograma-de-auditoría-recibida)
-        - [6.4.2.3 Contenido de auditoría recibida](#6423-contenido-de-auditoría-recibida)
-        - [6.4.2.4 Resumen de modificaciones para subsanar hallazgos](#6424-resumen-de-modificaciones-para-subsanar-hallazgos)
-  - [Capítulo VII DevOps Practices](#capítulo-vii-devops-practices)
-    - [7.1 Continuous Integration](#71-continuous-integration)
-      - [7.1.1 Tools and Practices](#711-tools-and-practices)
-      - [7.1.2 Build and Test Suite Pipeline Components](#712-build-and-test-suite-pipeline-components)
-    - [7.2 Continuous Delivery](#72-continuous-delivery)
-      - [7.2.1 Tools and Practices](#721-tools-and-practices)
-      - [7.2.2 Stages Deployment Pipeline Components](#722-stages-deployment-pipeline-components)
-    - [7.3 Continuous Deployment](#73-continuous-deployment)
-      - [7.3.1 Tools and Practices](#731-tools-and-practices)
-      - [7.3.2 Production Deployment Pipeline Components](#732-production-deployment-pipeline-components)
-    - [7.4 Continuous Monitoring](#74-continuous-monitoring)
-      - [7.4.1 Tools and Practices](#741-tools-and-practices)
-      - [7.4.2 Monitoring Pipeline Components](#742-monitoring-pipeline-components)
-      - [7.4.3 Alerting Pipeline Components](#743-alerting-pipeline-components)
-      - [7.4.4 Notification Pipeline Components](#744-notification-pipeline-components)
+- [Capítulo VI Product Verification and Validation](#capítulo-vi-product-verification-and-validation)
+  - [6.1 Testing Suites and Validation](#61-testing-suites-and-validation)
+    - [6.1.1 Core Entities Unit Tests](#611-core-entities-unit-tests)
+    - [6.1.2 Core Integration Tests](#612-core-integration-tests)
+    - [6.1.3 Core Behavior Driven Development](#613-core-behavior-driven-development)
+    - [6.1.4 Core System Tests](#614-core-system-tests)
+  - [6.2 Static Testing and Verification](#62-static-testing-and-verification)
+    - [6.2.1 Static Code Analysis](#621-static-code-analysis)
+      - [6.2.1.1 Coding Standard and Code Conventions](#6211-coding-standard-and-code-conventions)
+- [Backend](#backend)
+- [Web Application](#web-application)
+- [Flutter](#flutter)
+- [Landing Page](#landing-page)
+      - [6.2.1.2 Code Quality and Code Security](#6212-code-quality-and-code-security)
+    - [6.2.2 Reviews](#622-reviews)
+  - [6.3 Validation Interviews](#63-validation-interviews)
+    - [6.3.1 Diseño de Entrevistas](#631-diseño-de-entrevistas)
+    - [6.3.2 Registro de Entrevistas](#632-registro-de-entrevistas)
+    - [6.3.3 Evaluaciones según heurísticas](#633-evaluaciones-según-heurísticas)
+  - [6.4 Auditoría de Experiencias de Usuario](#64-auditoría-de-experiencias-de-usuario)
+    - [6.4.1 Auditoría realizada](#641-auditoría-realizada)
+      - [6.4.1.1 Información del grupo auditado](#6411-información-del-grupo-auditado)
+      - [6.4.1.2 Cronograma de auditoría realizada](#6412-cronograma-de-auditoría-realizada)
+      - [6.4.1.3 Contenido de auditoría realizada](#6413-contenido-de-auditoría-realizada)
+    - [6.4.2 Auditoría recibida](#642-auditoría-recibida)
+      - [6.4.2.1 Información del grupo auditor](#6421-información-del-grupo-auditor)
+      - [6.4.2.2 Cronograma de auditoría recibida](#6422-cronograma-de-auditoría-recibida)
+      - [6.4.2.3 Contenido de auditoría recibida](#6423-contenido-de-auditoría-recibida)
+      - [6.4.2.4 Resumen de modificaciones para subsanar hallazgos](#6424-resumen-de-modificaciones-para-subsanar-hallazgos)
+- [Capítulo VII DevOps Practices](#capítulo-vii-devops-practices)
+  - [7.1 Continuous Integration](#71-continuous-integration)
+    - [7.1.1 Tools and Practices](#711-tools-and-practices)
+    - [7.1.2 Build and Test Suite Pipeline Components](#712-build-and-test-suite-pipeline-components)
+  - [7.2 Continuous Delivery](#72-continuous-delivery)
+    - [7.2.1 Tools and Practices](#721-tools-and-practices)
+    - [7.2.2 Stages Deployment Pipeline Components](#722-stages-deployment-pipeline-components)
+  - [7.3 Continuous Deployment](#73-continuous-deployment)
+    - [7.3.1 Tools and Practices](#731-tools-and-practices)
+    - [7.3.2 Production Deployment Pipeline Components](#732-production-deployment-pipeline-components)
+  - [7.4 Continuous Monitoring](#74-continuous-monitoring)
+    - [7.4.1 Tools and Practices](#741-tools-and-practices)
+    - [7.4.2 Monitoring Pipeline Components](#742-monitoring-pipeline-components)
+    - [7.4.3 Alerting Pipeline Components](#743-alerting-pipeline-components)
+    - [7.4.4 Notification Pipeline Components](#744-notification-pipeline-components)
 - [Part III Experiment Driven Lifecycle](#part-iii-experiment-driven-lifecycle)
-  - [Capítulo VIII Experiment Driven Development](#capítulo-viii-experiment-driven-development)
-    - [8.1 Experiment Planning](#81-experiment-planning)
-      - [8.1.1 As Is Summary](#811-as-is-summary)
-      - [8.1.2 Raw Material Assumptions Knowledge Gaps Ideas Claims](#812-raw-material-assumptions-knowledge-gaps-ideas-claims)
-      - [8.1.3 Experiment Ready Questions](#813-experiment-ready-questions)
-      - [8.1.4 Question Backlog](#814-question-backlog)
-      - [8.1.5 Experiment Cards](#815-experiment-cards)
-    - [8.2 Experiment Design](#82-experiment-design)
-      - [8.2.1 Hypotheses](#821-hypotheses)
-      - [8.2.2 Domain Business Metrics](#822-domain-business-metrics)
-      - [8.2.3 Measures](#823-measures)
-      - [8.2.4 Conditions](#824-conditions)
-      - [8.2.5 Scale Calculations and Decisions](#825-scale-calculations-and-decisions)
-      - [8.2.6 Methods Selection](#826-methods-selection)
-      - [8.2.7 Data Analytics Goals KPIs and Metrics Selection](#827-data-analytics-goals-kpis-and-metrics-selection)
-      - [8.2.8 Web and Mobile Tracking Plan](#828-web-and-mobile-tracking-plan)
-    - [8.3 Experimentation](#83-experimentation)
-      - [8.3.1 To Be User Stories](#831-to-be-user-stories)
-      - [8.3.2 To Be Product Backlog](#832-to-be-product-backlog)
-      - [8.3.3 Pipeline Supported Experiment Driven To Be Software Platform Lifecycle](#833-pipeline-supported-experiment-driven-to-be-software-platform-lifecycle)
-        - [8.3.3.1 To Be Sprint Backlogs](#8331-to-be-sprint-backlogs)
-        - [8.3.3.2 Implemented To Be Landing Page Evidence](#8332-implemented-to-be-landing-page-evidence)
-        - [8.3.3.3 Implemented To Be Frontend Web Application Evidence](#8333-implemented-to-be-frontend-web-application-evidence)
-        - [8.3.3.4 Implemented To Be Native Mobile Application Evidence](#8334-implemented-to-be-native-mobile-application-evidence)
-        - [8.3.3.5 Implemented To Be RESTful API and Serverless Backend Evidence](#8335-implemented-to-be-restful-api-and-serverless-backend-evidence)
-        - [8.3.3.6 Team Collaboration Insights](#8336-team-collaboration-insights)
-      - [8.3.4 To Be Validation Interviews](#834-to-be-validation-interviews)
-        - [8.3.4.1 Diseño de Entrevistas](#8341-diseño-de-entrevistas)
-        - [8.3.4.2 Registro de Entrevistas](#8342-registro-de-entrevistas)
-    - [8.4 Experiment Aftermath and Analysis](#84-experiment-aftermath-and-analysis)
-      - [8.4.1 Analysis and Interpretation of Results](#841-analysis-and-interpretation-of-results)
-      - [8.4.2 Re Scored and Re Prioritized Question Backlog](#842-re-scored-and-re-prioritized-question-backlog)
-    - [8.5 Continuous Learning](#85-continuous-learning)
-      - [8.5.1 Shareback Session Artifacts Learning Workflow](#851-shareback-session-artifacts-learning-workflow)
-    - [8.6 To Be Software Platform Pre Launch](#86-to-be-software-platform-pre-launch)
-      - [8.6.1 About the Product Intro Video](#861-about-the-product-intro-video)
-      - [8.6.2 Resumen usando GEES Framework](#862-resumen-usando-gees-framework)
-      - [Matriz de Evaluación Ética y de Impacto](#matriz-de-evaluación-ética-y-de-impacto)
+- [Capítulo VIII Experiment Driven Development](#capítulo-viii-experiment-driven-development)
+  - [8.1 Experiment Planning](#81-experiment-planning)
+    - [8.1.1 As Is Summary](#811-as-is-summary)
+    - [8.1.2 Raw Material Assumptions Knowledge Gaps Ideas Claims](#812-raw-material-assumptions-knowledge-gaps-ideas-claims)
+    - [8.1.3 Experiment Ready Questions](#813-experiment-ready-questions)
+    - [8.1.4 Question Backlog](#814-question-backlog)
+    - [8.1.5 Experiment Cards](#815-experiment-cards)
+  - [8.2 Experiment Design](#82-experiment-design)
+    - [8.2.1 Hypotheses](#821-hypotheses)
+    - [8.2.2 Domain Business Metrics](#822-domain-business-metrics)
+    - [8.2.3 Measures](#823-measures)
+    - [8.2.4 Conditions](#824-conditions)
+    - [8.2.5 Scale Calculations and Decisions](#825-scale-calculations-and-decisions)
+    - [8.2.6 Methods Selection](#826-methods-selection)
+    - [8.2.7 Data Analytics Goals KPIs and Metrics Selection](#827-data-analytics-goals-kpis-and-metrics-selection)
+    - [8.2.8 Web and Mobile Tracking Plan](#828-web-and-mobile-tracking-plan)
+  - [8.3 Experimentation](#83-experimentation)
+    - [8.3.1 To Be User Stories](#831-to-be-user-stories)
+    - [8.3.2 To Be Product Backlog](#832-to-be-product-backlog)
 - [Conclusiones](#conclusiones)
+  - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
-
-<div style="page-break-after: always;"></div>
+  - [Evidencias nuevas de AV2](#evidencias-nuevas-de-av2)
+  - [Enlaces importantes](#enlaces-importantes)
+  - [Videos de Exposiciones](#videos-de-exposiciones)
+    - [Exposición AV1](#exposición-av1)
+    - [Reutilización de la exposición en TB1](#reutilización-de-la-exposición-en-tb1)
+    - [Video About-the-Product Sprint 2](#video-about-the-product-sprint-2)
+  - [Actividades pendientes para el cierre](#actividades-pendientes-para-el-cierre)
 
 ## Student Outcome
 
@@ -619,6 +628,42 @@ Para TB1 se refinan las historias que mezclaban dos resultados verificables. Se 
 | US-16A | Comparar planes. | Given el catálogo disponible, when compara opciones, then visualiza límites y precio de cada plan. |
 | US-16B | Registrar pago y suscripción. | Given un plan seleccionado, when completa el checkout académico, then se registra la suscripción. |
 
+### 3.2.1 Historias no funcionales
+
+Los siguientes criterios convierten calidad en resultados observables. Los umbrales propuestos no se presentan como mediciones realizadas.
+
+| ID / SP | Historia | Criterio cuantitativo | Estado y evidencia |
+| :-- | :-- | :-- | :-- |
+| NF-01 / 3 | Como titular de una cuenta, quiero que la API proteja mi sesión y permisos para impedir accesos no autorizados. | 0 peticiones protegidas sin token aceptadas; 100 % de casos Owner/Guest de la suite aprobados; BCrypt nunca almacena contraseña en claro. | Verificado en pruebas. IAM: AccessAuthorizationServiceTest, PasswordHashingServiceTest e iam.feature; CI backend del 05/10/2026. |
+| NF-02 / 3 | Como usuario, quiero conservar mis preferencias cuando hay peticiones simultáneas para no perder cambios. | 24 GET iniciales simultáneos y 24 GET/PUT: una preferencia por usuario, cambios parciales conservados y aislamiento entre cuentas. | Verificado en pruebas. assets/evidence/implemented/preferences-concurrency-smoke.json, 06/09/2026, PostgreSQL local aislado. |
+| NF-03 / 3 | Como usuario, quiero recibir las consultas de dashboard e histórico dentro de un tiempo medible para tomar decisiones con fluidez. | Objetivo propuesto: p95 <= 2000 ms y errores < 1 % en 100 consultas autenticadas, concurrencia 5; separar arranque frío y caliente y registrar entorno/dataset. | Por verificar. No existe medición de carga que cierre este objetivo; requiere SPIKE-01. |
+| NF-04 / 3 | Como usuario que navega con teclado o pantalla pequeña, quiero acceder a los controles esenciales sin perder información. | Login y dashboard a 390/768/1440 px; 0 controles esenciales inaccesibles por teclado; 0 defectos críticos de accesibilidad en el alcance auditado. | Por verificar. Hay estructura accesible y capturas; no una auditoría completa de estos criterios. |
+| NF-05 / 3 | Como usuario móvil, quiero recuperar una operación tras una desconexión sin repetir sus efectos. | 5 ciclos sin red/con red: sesión conservada, reintento visible y exactamente un cambio persistido por comando aceptado. | Parcial. Cliente con aviso/reintento; cierre de idempotencia y prueba en teléfono aún no demostrados. Relacionada con US-20A/B. |
+| NF-06 / 3 | Como usuario, quiero instalar la aplicación y usar el mismo backend público desde mi dispositivo. | APK Android release e iOS simulator compilan; login, lectura, CRUD y reporte ejecutados en Android físico con Wi-Fi/datos y API HTTPS pública. | Parcial. CI Android e iOS aprobado el 05/10/2026; distribución a testers y ejecución física de estos flujos no verificadas. Relacionada con TECH-04. |
+
+### 3.2.2 Technical Stories
+
+Los identificadores TECH identifican infraestructura y habilitadores del producto actual; se conservan TS-01 a TS-05 para el ciclo experimental del capítulo VIII.
+
+| ID / SP | Historia técnica | Condición de aceptación | Estado y evidencia |
+| :-- | :-- | :-- | :-- |
+| TECH-01 / 5 | Como equipo, queremos verificar cada cambio y publicar sus artefactos para detectar regresiones antes de integrar. | 5 workflows main exitosos en SHA identificable; fallos de tests detienen dependencias; artefactos descargables. | Verificado en CI. Workflows main del 05/10/2026; métricas: 88 backend, 5 Angular, 5 Landing, 11 Flutter. |
+| TECH-02 / 3 | Como equipo, queremos exportar lecturas por un contrato HTTP consistente para conectar reportes y clientes. | GET /api/v1/energy-readings/export devuelve text/csv; escenario de aceptación y manejo del rango aprobados. | Verificado en pruebas. EnergyMonitoringController, EnergyReadingsCsvExporter y energy-monitoring.feature; CI backend. |
+| TECH-03 / 3 | Como equipo, queremos contrastar modelos y diagramas con el código para conservar coherencia entre capas y datos. | 27 entidades JPA contrastadas con ERD; FK/LFK identificadas; 0 imágenes locales ausentes y 0 bloques Mermaid crudos en reporte. | Implementado; revisión abierta. Fuentes PlantUML y SVG, scripts/validate-report.py; revisión cruzada ET-06 aún sin acta individual. |
+| TECH-04 / 5 | Como equipo, queremos distribuir un APK firmado conectado a Cloud Run para demostrar móvil sin localhost. | Release identificada por SHA, firma persistente, API_BASE_URL HTTPS pública, instalación desde enlace y 4 flujos verificados en Android físico. | Por iniciar. Existe APK de CI; no hay release de Firebase App Distribution ni evidencia de instalación desde enlace. Depende de SPIKE-03 y NF-06. |
+
+### 3.2.3 Spike Stories
+
+Cada spike investiga una pregunta, tiene un límite de **4 horas propuestas** y entrega una decisión o un protocolo. No recibe Story Points y no cuenta como funcionalidad completada. Si no resuelve la pregunta dentro del límite, registra lo aprendido y refina el backlog.
+
+| ID | Pregunta | Dependencias | Resultado de salida |
+| :-- | :-- | :-- | :-- |
+| SPIKE-01 | ¿Cómo medir p95 y errores sin confundir cold start con latencia estable? | NF-03 | Plan de carga, 100 consultas/5 concurrentes, dataset, versión, comandos y plantilla de resultados; no asignar cifras observadas antes de ejecutar. |
+| SPIKE-02 | ¿Qué eventos, asignación y consentimiento permiten comparar variantes sin datos personales? | TS-01, TS-02A/B, US-19 | ADR con alternativas, esquema mínimo, asignación estable, exclusiones, anonimización y decisión sobre piloto; no presentar 24 participantes propuestos como reclutados. |
+| SPIKE-03 | ¿Qué canal permite instalar Android con API pública y qué limita la instalación en iPhone? | TECH-04, NF-06 | ADR con canal Android, firma, requisitos, costos si aplican y acceso de testers; separar build de simulador, dispositivo físico y tienda. |
+
+Los tres spikes se registran **Por iniciar**: hay antecedentes técnicos, pero no una investigación cerrada y fechada que cumpla estas condiciones.
+
 ## 3.3 Product Backlog
 
 | Orden | ID | Título | Prioridad | Story Points | Estado TB1 |
@@ -646,6 +691,26 @@ Para TB1 se refinan las historias que mezclaban dos resultados verificables. Se 
 | 21 | US-01 | Landing Page y CTA | Must | 5 | Implementado |
 
 Total referencial del incremento acumulativo TB1: **95 Story Points**. Para esta entrega se aplica el feedback específico de AV1: ninguna historia supera 5 puntos y cualquier historia mayor debe dividirse antes de ingresar a un Sprint. Los puntos expresan complejidad relativa del equipo, no horas.
+
+### 3.3.1 Backlog de calidad, habilitadores e investigación
+
+| ID | Tipo | Prioridad | SP / timebox | Estado real |
+| :-- | :-- | :-- | :-- | :-- |
+| NF-01 | No funcional | Must | 3 SP | Verificado en pruebas |
+| NF-02 | No funcional | Must | 3 SP | Verificado en pruebas |
+| NF-03 | No funcional | Should | 3 SP | Por verificar |
+| NF-04 | No funcional | Should | 3 SP | Por verificar |
+| NF-05 | No funcional | Must | 3 SP | Parcial |
+| NF-06 | No funcional | Must | 3 SP | Parcial |
+| TECH-01 | Técnica | Must | 5 SP | Verificado en CI |
+| TECH-02 | Técnica | Must | 3 SP | Verificado en pruebas |
+| TECH-03 | Técnica | Must | 3 SP | Implementado; revisión abierta |
+| TECH-04 | Técnica | Must | 5 SP | Por iniciar |
+| SPIKE-01 | Spike | Must | 4 h máximo propuesto | Por iniciar |
+| SPIKE-02 | Spike | Must | 4 h máximo propuesto | Por iniciar |
+| SPIKE-03 | Spike | Must | 4 h máximo propuesto | Por iniciar |
+
+Los **95 SP funcionales** se conservan; se agregan **18 SP no funcionales** y **16 SP técnicos**, separados del To-Be experimental de **53 SP**. Los **12 h de spikes** son límites propuestos de investigación; no se suman a SP ni representan horas trabajadas. Son 47 entradas de backlog: 21 funcionales actuales, 6 no funcionales, 4 técnicas, 3 spikes y 13 To-Be. Las historias relacionadas comparten pruebas de salida sin duplicar resultados ni computar el mismo esfuerzo dos veces. Las nuevas estimaciones requieren ratificación del equipo antes de comprometer capacidad.
 
 ## 3.4 Impact Mapping
 
@@ -1020,29 +1085,54 @@ La configuración actual permite ejecución local integrada. La API usa el puert
 
 ### 5.2.1 Sprint Backlogs
 
-| Sprint | Objetivo | Entregables | Evidencia local |
-|:--|:--|:--|:--|
-| Sprint 1 | Crear la base integrada del producto | Repositorios, backend DDD, Angular y Landing Page | Productos ejecutables y estructura inicial del informe |
-| Sprint 2 | Completar la experiencia móvil y la paridad funcional | Flutter Android, autenticación, shell, contextos y conectividad | Aplicación móvil, pruebas y matriz de paridad |
-| Sprint 3 | Preparar AV1 y trazabilidad | Informe, verificación, diseño y documentación | Informe AV1 y evidencias técnicas |
-| Sprint 4 (TB1) | Corregir el informe con base en el feedback de AV1 y preparar evidencia verificable | Student Outcome, diagramas renderizados, ERD, backlogs y mejora continua | Informe y PDF revisados |
+**Actualización de planificación: 20/10/2026.** Se conserva la numeración histórica: Sprints 1-3 de preparación de AV1 y Sprint 4 de revisión TB1. Esta versión incluye los planes de los incrementos 1-4; el trabajo experimental se presenta en AV2 como historias y Product Backlog, sin desarrollar su ejecución.
 
-**Sprint Planning - Sprint 4 (TB1).** Backlog actualizado el 04/10/2026. El Sprint Goal es subsanar las observaciones de AV1 mediante artefactos renderizados, contenido consistente con los repositorios del producto y una revisión grupal del entregable.
+La planificación ampliada se encuentra en [Sprint Planning de antecedentes AV2](planning/sprint-planning-av2.md) y las tarjetas preparadas en [backlog trazable](planning/trello-cards.json). El siguiente registro distingue reconstrucción histórica y revisión documental.
 
-| ID | Engineering Task | Historia / artefacto | Horas | Responsable | Estado | Evidencia / condición de cierre |
-|:--|:--|:--|--:|:--|:--|:--|
-| ET-01 | Integrar el feedback de AV1 en el informe | Reporte TB1 | 4 h | Equipo de documentación | Done | Matriz de mejora continua actualizada |
-| ET-02 | Modelar y renderizar Architecture Overview, C4 y UML | US-01–US-16 / Architecture | 8 h | Equipo de arquitectura | Done | Fuentes PlantUML e imágenes SVG |
-| ET-03 | Reconstruir el ERD desde las entidades JPA y diferenciar FK/LFK | Database Design | 8 h | Arquitectura y backend | Done | Cuatro vistas ERD contrastadas con 27 entidades |
-| ET-04 | Reestimar Product Backlog y detallar Sprint Planning | Product Backlog | 6 h | Gestión de producto | Done | Backlogs sin historias de 8 SP y tareas de 4–8 h |
-| ET-05 | Generar y revisar el PDF del Stage Review | Reporte TB1 | 4 h | Documentación y QA | Done | PDF sin Mermaid crudo ni imágenes locales faltantes |
-| ET-06 | Revisar la correspondencia entre backend, C4 y ERD | Architecture / Database | 4 h | Jean Loa | To do | Observaciones de revisión resueltas |
-| ET-07 | Ejecutar la suite y actualizar el estado de escenarios BDD | US-02–US-16 | 6 h | Jairo Santiago | To do | Registro de ejecución y resultados actualizados |
-| ET-08 | Revisar evidencia UX de Landing Page y clientes | US-01, US-14 | 4 h | Brayan Huerta | To do | Hallazgos y evidencias visuales consolidados |
-| ET-09 | Realizar revisión cruzada de legibilidad y consistencia | Reporte TB1 | 4 h | Renzo Revilla | To do | Observaciones incorporadas al informe |
-| ET-10 | Validar Student Outcome y testimonio individual | Student Outcome 4 | 4 h | Todos los integrantes | To do | Reflexiones alineadas con responsabilidades sustanciales |
+#### 5.2.1.1 Datos cuantitativos y criterio de capacidad
 
-Las tareas pendientes distribuyen la revisión entre los integrantes y se considerarán terminadas cuando su condición de cierre esté incorporada en la entrega.
+| Dato | Valor y alcance | Fuente / fecha |
+|:--|:--|:--|
+| Backlog funcional | 21 historias / 95 SP | Product Backlog; estimación relativa, no horas ni velocidad observada |
+| Verificación automatizada | 109 casos: 88 backend (28 JUnit + 60 BDD), 5 Angular, 5 Landing y 11 Flutter | Ejecuciones y CI main del 05/10/2026; 0 fallos y 0 omitidos en esas suites |
+| CI de entrega | 5 repositorios con workflow main exitoso | GitHub Actions del 05/10/2026; evidencia histórica, no una nueva ejecución del 20/10 |
+| Concurrencia de preferencias | 24 GET y 24 GET/PUT simultáneos con una fila por usuario | preferences-concurrency-smoke.json; 06/09/2026, PostgreSQL local aislado |
+| Consumo de demostración | 1370 W / 3 dispositivos | energy-power-smoke.json; 06/09/2026, datos de demo; no ahorro real ni consumo poblacional |
+| Sprint 4 documental | 10 tareas / 52 h estimadas | Desglose heredado del informe; sin tiempos reales para calcular eficiencia |
+| Investigación nueva | 3 spikes / 4 h máximas cada uno | Propuesta del 20/10/2026, ejecución no iniciada |
+
+No existen registros verificables de disponibilidad personal, horas reales, fechas de las reuniones o velocidad por sprint. Se registran **No medido** y se solicita al equipo confirmar disponibilidad antes del siguiente compromiso. Capacidad futura = suma de horas disponibles confirmadas por integrante menos ceremonias y ausencias confirmadas. No se deriva capacidad de tener cinco integrantes ni de los 109 tests. Las tareas de 4-8 h son estimaciones de planificación, no registros de ejecución.
+
+#### 5.2.1.2 Sprint Planning por incremento
+
+| Sprint | Objetivo | Historias / estimación | Estado y salida |
+| :-- | :-- | :-- | :-- |
+| 1 | Base integrada web y API | US-02, US-03, US-04A, US-04B, US-05, US-06, US-10A, US-10B, US-16A, US-16B, US-01 / 47 SP | Reconstrucción histórica; implementación disponible, sin acta de compromiso original. Backend/Angular/Landing y suites actuales. No acredita pruebas históricas de cada sprint. |
+| 2 | Experiencia móvil y automatización conectadas | US-07, US-08, US-11A, US-11B, US-12A, US-12B, US-09, US-15, US-13, US-14 / 48 SP | Reconstrucción histórica; funcionalidad disponible, aceptación móvil física abierta. Código Flutter, matriz de paridad y CI Android/iOS; no publicación en tienda. |
+| 3 | Evidencia de AV1 y trazabilidad técnica | TECH-01/02/03, NF-01/02: 17 SP formalizados | Reconstrucción histórica; artefactos y automatización disponibles. Reportes AV1, 109 tests y workflows. Las historias TECH/NF se formalizan ahora, sin atribuirles fecha retroactiva. |
+| 4 | Revisión TB1 y respuesta a observaciones | ET-01 a ET-10 / 52 h estimadas | Revisión del Sprint Planning registrado; sin inventar una nueva reunión. README, fuentes PlantUML, SVG, PDF y validadores. |
+
+#### 5.2.1.3 Control del Sprint 4 y colaboración
+
+Se conservan las diez tareas ET del Sprint 4 y sus estimaciones originales (52 h). ET-01/02/03/05 tienen artefactos existentes; ET-04 incorpora ahora el refinamiento solicitado. ET-06 (Jean), ET-07 (Jairo), ET-08 (Brayan), ET-09 (Renzo) y ET-10 (todos) mantienen responsables **propuestos**, no desempeño confirmado. La ejecución automática de suites no acredita que Jairo haya realizado una revisión individual. Las horas reales, revisiones firmadas y aceptación de responsables siguen **No registradas**. El detalle y condición de cierre de cada tarea se conservan en el anexo de planificación.
+
+#### 5.2.1.4 Definition of Ready, Done y actualización del tablero
+
+**Ready:** problema, tipo, alcance, criterio medible, dependencia, estimación <= 5 SP y responsable que acepta la tarea; spikes con pregunta, 4 h y salida definida. **Done:** criterios aprobados en el entorno declarado, tests y artefacto accesibles, revisión identificada, SHA y enlace de evidencia. Un build no demuestra instalación física ni un porcentaje de ahorro. Una tarjeta sin evidencia de aceptación queda en Implementado / Por verificar, aunque el código exista.
+
+El tablero [EnergyCore - Product Backlog y Sprint Planning](https://trello.com/b/kFru7uh2/energycore-product-backlog-y-sprint-planning) fue creado y verificado el **20/10/2026** en la cuenta del Team Leader. Contiene **64 tarjetas persistidas**: 47 entradas de backlog, 7 Sprint Planning y 10 Engineering Tasks. Todas tienen descripción y enlace propio; el tipo, los puntos o timebox y el sprint constan en el título o descripción. Se conservó acceso privado, sin invitaciones ni asignaciones individuales no confirmadas.
+
+| Lista | Tarjetas | Interpretación |
+|:--|--:|:--|
+| Backlog | 13 | Historias experimentales To-Be |
+| Por iniciar | 14 | Trabajo y revisiones aún sin cierre verificable |
+| En curso | 0 | No se atribuye actividad actual sin evidencia |
+| Implementado - por verificar | 33 | Código, artefactos y planificación disponibles, aceptación completa abierta |
+| Verificado - pruebas y CI | 4 | NF-01, NF-02, TECH-01 y TECH-02, en el alcance de pruebas declarado |
+
+La lectura posterior confirmó **64 IDs únicos, 0 tarjetas ausentes, 0 discrepancias de estado y 0 descripciones ausentes**. Los enlaces están registrados en [el acta de sincronización](planning/trello-sync-result.json); los archivos preparados se conservan como fuente del contenido, no como sustituto del tablero.
+
+![Tablero EnergyCore creado y verificado](assets/evidence/implemented/trello-energycore-2026-10-20.png)
 
 ### 5.2.2 Implemented Landing Page Evidence
 
@@ -1271,7 +1361,6 @@ Scenario: Toggling a device from OFF to ON
 ```
 
 Los escenarios se enlazan con historias del Product Backlog y se ejecutan con Cucumber sobre JUnit Platform. El último reporte Surefire registra **60 escenarios ejecutados, 0 omitidos, 0 fallos y 0 errores**. Los steps ejercitan los contratos HTTP reales de IAM, Billing, Device Control, Energy Monitoring, Workplace, Notifications, Reporting y Service Management, incluida la creación y relación de recursos mediante identificadores generados durante cada escenario.
-| 4 | Suite completa | Eliminar el filtro temporal, ejecutar los 60 escenarios y obtener cero fallos. |
 
 ### 6.1.4 Core System Tests
 
@@ -1368,15 +1457,34 @@ Checklist para Pull Request:
 
 En la línea base actual la revisión fue individual. Aunque ya se identificó a los cinco integrantes del equipo, para acreditar una revisión por pares otro integrante deberá aprobar el Pull Request y quedar visible en GitHub.
 
+
+**Inspección técnica del 21/10/2026.** Se contrastaron los HEAD locales con la última ejecución remota disponible y se inspeccionó la configuración del backend. Los cinco HEAD coinciden con el commit de CI consultado; el reporte contiene además cambios AV2 locales todavía no publicados. Esta inspección automatizada no equivale a aprobación humana por pares ni a una nueva ejecución completa de los tests.
+
+| Repositorio | Commit base inspeccionado | Última ejecución consultada |
+|:--|:--|:--|
+| `energycore-platform` | `6ec7a7a` | [success](https://github.com/teralume/energycore-platform/actions/runs/37321256836) |
+| `energycore-webapp` | `dd4c9eb` | [success](https://github.com/teralume/energycore-webapp/actions/runs/37321265630) |
+| `energycore-mobile` | `48d3c00` | [success](https://github.com/teralume/energycore-mobile/actions/runs/37321280273) |
+| `energycore-website` | `303f76b` | [success](https://github.com/teralume/energycore-website/actions/runs/37321271985) |
+| `energycore-report` | `d7e9b83` | [success](https://github.com/teralume/energycore-report/actions/runs/39539551225) |
+
+| Registro | Observación comprobada | Decisión |
+|:--|:--|:--|
+| REV-01 | `application-prod.properties` conserva `spring.jpa.hibernate.ddl-auto=update`. | Riesgo abierto: adoptar y verificar migraciones versionadas antes de cambiar el esquema productivo. |
+| REV-02 | `HealthController` expone `/health` y `/api/v1/health`. | El monitor utiliza `/api/v1/health`; no se considera público `/actuator/health`. |
+| REV-03 | El valor predeterminado de CORS productivo incluye `localhost:4200`. | Revisar la configuración efectiva por entorno antes de retirar orígenes; no se afirma una vulnerabilidad explotada. |
+
+**Registro reproducible:** [inspección de repositorios y CI](assets/evidence/implemented/av2-review-2026-10-21.json), generada con `scripts/collect-av2-review.py`.
+
 ## 6.3 Validation Interviews
 
 ### 6.3.1 Diseño de Entrevistas
 
-El diseño utiliza los guiones definidos en 2.2.1 para contrastar hogares y pequeños negocios. La muestra prevista es de seis participantes: tres por segmento. Hasta ahora existe una entrevista real del segmento pequeño negocio; faltan cinco sesiones para completar la muestra. No se redactan respuestas, participantes ni consentimientos ficticios.
+La validación requiere sesiones con personas de los dos segmentos que interactúen con el producto y permitan evaluar tareas y heurísticas. Se propone una muestra de seis participantes, tres por segmento; aún no se aportan registros de estas sesiones. El guion de needfinding de 2.2.1 es un antecedente de investigación, no sustituye un guion de validación de uso. La planificación no se presenta como validación ejecutada.
 
 ### 6.3.2 Registro de Entrevistas
 
-La entrevista realizada por Jairo Mathias Santiago Atanacio y su análisis se encuentran en 2.2.2 y 2.2.3. Los cinco enlaces audiovisuales restantes y la síntesis comparativa se incorporarán únicamente después de realizar las sesiones reales.
+La entrevista de Jairo Mathias Santiago Atanacio documentada en 2.2.2 y 2.2.3 corresponde a needfinding. No se contabiliza como entrevista de validación ni demuestra interacción con las tareas del producto. Esta sección no cuenta aún con sesiones de validación, consentimientos ni enlaces audiovisuales verificables.
 
 ### 6.3.3 Evaluaciones según heurísticas
 
@@ -1414,7 +1522,7 @@ La auditoría se aplicará a otro grupo del mismo curso asignado por el docente.
 | Versión evaluada | Commit SHA o tag inmutable. |
 | Alcance acordado | Tres flujos críticos y plataformas disponibles. |
 
-**Estado:** actividad programada para la asignación de grupos del curso.
+**Alcance acreditable:** instrumento preparado; no se dispone de grupo auditado confirmado, acta ni hallazgos externos verificables.
 
 #### 6.4.1.2 Cronograma de auditoría realizada
 
@@ -1430,7 +1538,7 @@ Las fechas se completarán cuando el docente confirme el intercambio. El cronogr
 
 #### 6.4.1.3 Contenido de auditoría realizada
 
-El paquete de auditoría está compuesto por:
+El [kit de intercambio de auditorías UX](planning/ux-audit-kit-av2.md) define tres tareas, precondiciones, criterios de éxito, restricciones de seguridad, ficha de hallazgos y acta. Es un instrumento preparado, no una auditoría externa ejecutada. El paquete previsto está compuesto por:
 
 - inventario de tres tareas críticas y sus criterios de éxito;
 - evaluación de las diez heurísticas de Nielsen con severidad 0-4;
@@ -1456,7 +1564,7 @@ EnergyCore propondrá el mismo esquema D-3, D-2, D-1, D y D+2 de la auditoría r
 
 Se entregará al grupo auditor una cuenta de prueba sin datos personales, los enlaces de los clientes, un conjunto semilla de sedes/dispositivos/lecturas, tres tareas críticas y un canal para reportar hallazgos. El contenido recibido deberá conservarse sin reescritura y cada observación tendrá una respuesta trazable del equipo EnergyCore.
 
-**Estado:** actividad programada para el intercambio de auditorías.
+**Alcance acreditable:** instrumento preparado; no se ha aportado informe de otro grupo ni acta de devolución.
 
 #### 6.4.2.4 Resumen de modificaciones para subsanar hallazgos
 
@@ -1564,6 +1672,21 @@ El monitoreo se diseña en cuatro capas: disponibilidad, rendimiento, errores y 
 
 Herramientas objetivo: endpoint `/api/v1/health`, logs estructurados de Spring Boot, métricas de Cloud Run, Cloud Logging/Monitoring, consola de Firebase Hosting y eventos analíticos anonimizados. El acceso a logs y tableros debe seguir mínimo privilegio.
 
+
+**Comprobación pública ejecutada el 21/10/2026:** [`monitor-public-surfaces.py`](scripts/monitor-public-surfaces.py) realizó solicitudes GET sin autenticación ni mutaciones. Conservó estado HTTP, duración y decisión del validador, sin almacenar cuerpos de respuesta, credenciales o datos personales.
+
+| Superficie | Estado | Duración de esta solicitud | Resultado |
+|:--|:--|--:|:--:|
+| api-health | HTTP 200 | 364 ms | PASS |
+| api-contract | HTTP 200 | 676 ms | PASS |
+| webapp | HTTP 200 | 18 ms | PASS |
+
+**Evidencia:** [resultado JSON](assets/evidence/implemented/av2-monitoring-2026-10-21.json). Las duraciones son observaciones puntuales: no son percentiles, SLA, tiempo de tarea del usuario ni mediciones físicas de energía.
+
+El workflow [`monitoring.yml`](.github/workflows/monitoring.yml) está preparado para ejecución manual, cambios del monitor y una programación de seis horas. Primero prueba las reglas de detección; después verifica salud (`status=UP`), un contrato OpenAPI no vacío y HTML de la Web Application. Un error devuelve código de salida distinto de cero, marca el job como fallido y conserva el JSON como artefacto durante 30 días. Las tres pruebas locales del monitor pasaron; son adicionales a las 109 pruebas históricas del producto.
+
+La programación remota entra en funcionamiento al publicar el workflow en la rama predeterminada; no se presenta como ya activada ni como historial de disponibilidad. El resumen de Actions sirve como canal de diagnóstico; los avisos por correo dependen de las preferencias reales de suscripción de cada usuario, sin configurar ni enviar correo desde este script.
+
 ### 7.4.2 Monitoring Pipeline Components
 
 | Señal | Métrica | Ventana | Objetivo inicial |
@@ -1576,7 +1699,7 @@ Herramientas objetivo: endpoint `/api/v1/health`, logs estructurados de Spring B
 | Mobile | Inicio correcto y solicitudes fallidas | sesión | ≥ 99 % de sesiones sin fallo fatal |
 | Producto | Decisiones energéticas completadas | semana | Línea base por establecer en piloto |
 
-Cada despliegue añade versión, entorno y correlation ID a los registros. No se almacenan tokens, contraseñas, datos de tarjeta ni cuerpos completos con información personal.
+Se propone que cada despliegue añada versión, entorno y correlation ID a los registros; la comprobación sintética actual conserva únicamente la ejecución y la URL pública. No se almacenan tokens, contraseñas, datos de tarjeta ni cuerpos completos con información personal.
 
 ### 7.4.3 Alerting Pipeline Components
 
@@ -1589,7 +1712,7 @@ Cada despliegue añade versión, entorno y correlation ID a los registros. No se
 | Cliente incompatible | Aumento de 401/404 tras release | Alta | Validar contratos y configuración API base URL. |
 | Presupuesto | Consumo cloud supera umbral acordado | Alta | Escalar a 0, detener recursos no esenciales y revisar tráfico. |
 
-Los umbrales son iniciales y se ajustarán después de observar una línea base. Se agrupan alertas repetidas para evitar fatiga y se crea un incidente único por causa probable.
+Los umbrales de esta tabla son propuestas y no políticas cloud configuradas. El monitor sintético actual detecta una respuesta fallida por ejecución; aún no acumula tres fallos consecutivos ni calcula percentiles. Los umbrales se ajustarán después de observar una línea base. Se agrupan alertas repetidas para evitar fatiga y se crea un incidente único por causa probable.
 
 ### 7.4.4 Notification Pipeline Components
 
@@ -1667,7 +1790,7 @@ La prioridad inicial usa `Score = (Impacto × Incertidumbre × Alcance) / Esfuer
 | Control | dashboard actual con KPI, gráfico y ranking. |
 | Tratamiento | control + tarjeta explicativa y acción directa. |
 | Evidencia | eventos de tarea, tiempo, resultado, errores y encuesta breve posterior no identificable. |
-| Decisión | adoptar, iterar o descartar según la matriz de 8.4.1. |
+| Decisión propuesta | contrastar los resultados con los criterios de aceptación definidos en el diseño antes de adoptar, iterar o descartar. |
 
 **EC-02 — Confirmación de alcance**
 
@@ -1833,205 +1956,19 @@ Propiedades comunes: `anonymous_participant_id`, `session_id`, `experiment_id`, 
 
 Total To-Be reestimado: **53 Story Points**. También se aplica aquí el límite indicado en el feedback de AV1: ninguna historia o tarea técnica se estima en 8; si supera 5, debe dividirse antes de planificarla. La prioridad se revisará con evidencia experimental y no por cantidad de funcionalidades.
 
-### 8.3.3 Pipeline Supported Experiment Driven To Be Software Platform Lifecycle
-
-#### 8.3.3.1 To Be Sprint Backlogs
-
-| Sprint | Objetivo | Historias | Evidencia de término |
-|:--|:--|:--|:--|
-| Sprint 4 | Preparar medición reproducible | TS-01, TS-02A, TS-02B, TS-03, US-19 | Esquema de eventos, variantes, consentimiento y dataset versionados. |
-| Sprint 5 | Implementar tratamientos seguros | US-17A, US-17B, US-18, US-21 | Capturas, tests, feature flag y smoke en web/Android. |
-| Sprint 6 | Ejecutar piloto y aprender | US-20A, US-20B, TS-04, TS-05 | Dataset anonimizado, análisis, decision log y backlog reordenado. |
-
-Cada sprint mantiene Definition of Done: criterios aprobados, tests, revisión, traducciones ES/EN/PT, responsive, seguridad, evidencia y pipeline verde.
-
-#### 8.3.3.2 Implemented To Be Landing Page Evidence
-
-La Landing Page ya comunica problema, propuesta de valor, capacidades, planes y CTA al login mediante HTML5, CSS3 y JavaScript. Para el ciclo To-Be se instrumentará `landing_cta_clicked` con sección de origen, idioma y viewport, sin cookies innecesarias ni datos personales.
-
-Evidencia que debe acompañar el incremento: commit SHA, capturas 390/768/1440 px, `node --check script.js`, verificación de CTA y payload anonimizado de un evento de prueba. La imagen y la mascota son recursos visuales del producto; no se usarán como sustituto del resultado experimental.
-
-#### 8.3.3.3 Implemented To Be Frontend Web Application Evidence
-
-Angular contiene el dashboard, históricos, control, automatizaciones y alertas necesarios para implementar EC-01 y EC-02 sin crear módulos aislados. El tratamiento se ubicará en Energy Monitoring y delegará comandos a Device Control; los eventos se emitirán desde application mediante un puerto de analítica, no directamente desde componentes.
-
-Evidencia de aceptación: tests del mapper de recomendación, test del componente, contrato del evento, build productivo, comparación control/tratamiento y smoke contra la API. Las advertencias de budget se conservarán visibles hasta reducirlas.
-
-#### 8.3.3.4 Implemented To Be Native Mobile Application Evidence
-
-Flutter ya ofrece dashboard, fallos tipados, banner offline y **Reintentar**, además de paridad funcional documentada con las 30 páginas web. El tratamiento reutilizará la misma semántica de eventos y adaptará la tarjeta a `NavigationBar`/`NavigationRail` sin copiar el layout de escritorio.
-
-La línea base técnica incluye `dart analyze` sin issues y `flutter test` aprobado. El incremento experimental requerirá además test del estado control/tratamiento, test de reintento sin duplicación, captura en emulador y APK asociado al commit.
-
-#### 8.3.3.5 Implemented To Be RESTful API and Serverless Backend Evidence
-
-La API centraliza usuarios, sedes, dispositivos, lecturas, alertas y reportes; por ello será la fuente única para el dataset y el resultado de las acciones. El soporte experimental se implementará como capacidades transversales: asignación de variante, configuración versionada y recepción de eventos anonimizados, sin contaminar las entidades energéticas con detalles de interfaz.
-
-El artefacto desplegable es una imagen Docker no-root para Cloud Run. El entorno público cuenta con salida registrada para health 200, OpenAPI, Swagger, registro, login con JWT, CORS y persistencia entre revisiones. Para el cierre final aún se requieren los 60 escenarios BDD sin omisiones, escaneo de imagen, evento experimental persistido y una prueba documentada de rollback.
-
-#### 8.3.3.6 Team Collaboration Insights
-
-El trabajo To-Be se distribuirá entre arquitectura, desarrollo web y móvil, backend, validación y documentación. Las tareas se gestionarán mediante GitHub Issues y cada resultado deberá relacionar historia, responsable, revisión y ejecución del pipeline. La sección 5.2.1 conserva las asignaciones de revisión y sus condiciones de cierre.
-
-### 8.3.4 To Be Validation Interviews
-
-#### 8.3.4.1 Diseño de Entrevistas
-
-El protocolo utilizará la muestra de seis participantes definida en 6.3.1. La primera entrevista sirve como línea base cualitativa; el diseño experimental no se cerrará hasta completar las cinco sesiones restantes.
-
-#### 8.3.4.2 Registro de Entrevistas
-
-Existe un registro real incorporado en 2.2.2. Los cinco registros restantes se incorporarán únicamente con participante, consentimiento y enlace real.
-
-## 8.4 Experiment Aftermath and Analysis
-
-### 8.4.1 Analysis and Interpretation of Results
-
-Al no haberse ejecutado todavía el piloto, esta sección define el análisis y evita presentar resultados inventados.
-
-1. Validar esquema, timestamps, variante única, duplicados y ausencia de PII.
-2. Aplicar exclusiones predefinidas: caída técnica total, dataset incorrecto o retiro de consentimiento. Los errores del usuario no se excluyen.
-3. Describir muestra por segmento, plataforma y variante.
-4. Calcular éxito, tiempo mediano, IQR, errores, ayuda y confianza con intervalos de confianza.
-5. Comparar proporciones de éxito y distribución de tiempos; reportar tamaño de efecto además de p-value.
-6. Revisar guardrails, datos ausentes y sensibilidad por intención de tratar/per-protocol.
-7. Separar hallazgo, inferencia y recomendación; no generalizar más allá de la muestra.
-
-| Resultado observado | Decisión |
-|:--|:--|
-| Cumple tiempo y éxito; guardrails estables | Adoptar tratamiento y ampliar muestra. |
-| Mejora una métrica, pero no la otra | Iterar explicación/CTA y repetir. |
-| Mejora promedio, pero perjudica un segmento o plataforma | No desplegar globalmente; adaptar y revalidar. |
-| Aumenta acciones equivocadas o expone riesgo | Detener, revertir y rediseñar. |
-| No muestra efecto con instrumentación válida | Descartar o replantear hipótesis. |
-| Datos incompletos o sesgados | Resultado inconcluso; corregir medición antes de decidir. |
-
-**Estado:** protocolo completo; dataset y resultados aún no disponibles.
-
-### 8.4.2 Re Scored and Re Prioritized Question Backlog
-
-Hasta disponer de resultados se conserva un re-score **pre-experimental** basado en riesgo. Después del piloto se actualizarán impacto, incertidumbre y esfuerzo con evidencia.
-
-| Orden provisional | Pregunta | Motivo |
-|--:|:--|:--|
-| 1 | ERQ-04: errores en acciones masivas | Mayor riesgo de daño y severidad heurística. |
-| 2 | ERQ-01: tiempo a acción correcta | Métrica central de valor. |
-| 3 | ERQ-02: decisión correcta | Evita optimizar velocidad a costa de exactitud. |
-| 4 | ERQ-05: recuperación offline | Riesgo alto en el canal móvil. |
-| 5 | ERQ-03: paridad web/Android | Determina si la propuesta funciona en ambos canales. |
-
-Regla posterior: reducir incertidumbre en 1-4 puntos según fuerza de la evidencia; aumentar impacto si aparece daño o exclusión; recalcular esfuerzo con el trabajo realmente observado; registrar fecha, autor y fundamento del cambio.
-
-## 8.5 Continuous Learning
-
-### 8.5.1 Shareback Session Artifacts Learning Workflow
-
-<p align="center">
-  <img src="assets/diagrams/continuous-learning.svg" alt="Workflow de aprendizaje continuo y shareback" width="100%">
-</p>
-
-**Fuente diagram-as-code:** [`continuous-learning.puml`](assets/diagrams/source/continuous-learning.puml).
-
-Paquete de shareback:
-
-- ficha del experimento y versión del protocolo;
-- diagrama de asignación y muestra;
-- resultados primarios, guardrails e intervalos;
-- anomalías y datos excluidos con sustento;
-- comparación por segmento y plataforma;
-- decisión adopt/iterate/discard;
-- backlog antes/después y responsables;
-- una página de lecciones técnicas, de producto y éticas.
-
-La sesión tendrá 5 minutos de contexto, 10 de evidencia, 10 de discusión y 5 de decisiones. El acta registrará desacuerdos y acciones; no se cambiará una conclusión solo para mostrar un resultado favorable.
-
-## 8.6 To Be Software Platform Pre Launch
-
-### 8.6.1 About the Product Intro Video
-
-Guion propuesto para un video de 90 segundos:
-
-| Tiempo | Imagen | Locución |
-|:--:|:--|:--|
-| 0-10 s | Recibo alto, dispositivos y espacios dispersos | “El consumo se vuelve visible demasiado tarde, cuando llega el recibo.” |
-| 10-22 s | Marca, rayo y mascota EnergyCore | “EnergyCore reúne lecturas, espacios y decisiones en una sola plataforma.” |
-| 22-40 s | Dashboard web y recomendación | “Identifica dónde cambia el consumo, comprende su impacto y actúa desde el mismo flujo.” |
-| 40-56 s | Dispositivos, grupos, rutinas y modos | “Controla equipos y automatiza acciones repetitivas con un alcance verificable.” |
-| 56-68 s | Aplicación Android, tema e idiomas | “La experiencia continúa en Android, en español, inglés o portugués, incluso cuando la red falla.” |
-| 68-80 s | Alertas, metas y reportes | “Convierte señales en seguimiento mediante alertas, metas y reportes.” |
-| 80-90 s | CTA al login | “Toma decisiones energéticas con contexto. Prueba EnergyCore.” |
-
-El video debe mostrar la aplicación real, subtítulos, música con licencia y contraste suficiente. No afirmará porcentajes de ahorro ni disponibilidad hasta medirlos. **Enlace audiovisual:** se incorporará después de grabar y publicar el video real.
-
-### 8.6.2 Resumen usando GEES Framework
-
-El enunciado solicita GEES Framework, pero no desarrolla el significado de sus siglas. Para no atribuirle una definición no sustentada, EnergyCore lo operacionaliza en cuatro bloques de síntesis —objetivo, experimento, evidencia y decisión sistémica— que deberán ajustarse a la definición impartida en clase si difiere.
-
-| Bloque | EnergyCore |
-|:--|:--|
-| Objetivo | Ayudar a responsables de hogares y pequeños negocios a identificar y resolver consumos anómalos con menor esfuerzo y riesgo. |
-| Experimento | Comparar dashboard actual frente a recomendación con causa, impacto, frescura y CTA; evaluar confirmación de alcance y recuperación offline. |
-| Evidencia | Éxito de tarea, tiempo a acción correcta, errores, recuperación, confianza, latencia y trazabilidad de versión. |
-| Decisión sistémica | Adoptar solo si mejora valor sin perjudicar seguridad, privacidad, accesibilidad, plataforma o segmento; en caso contrario iterar o revertir. |
-
-La síntesis conecta descubrimiento, implementación, delivery y aprendizaje. La funcionalidad no se considera validada porque exista código; necesita evidencia proporcional al claim.
-
-### Matriz de Evaluación Ética y de Impacto
-
-La matriz se relaciona con el Student Outcome 4: reconocer responsabilidades profesionales y formular decisiones informadas considerando impacto global, económico, ambiental y social.
-
-| Dimensión | Riesgo | Probabilidad | Impacto | Mitigación | Riesgo residual |
-|:--|:--|:--:|:--:|:--|:--:|
-| Privacidad | Inferir rutinas de ocupación a partir de lecturas y horarios. | Media | Alto | Minimización, control de acceso, retención limitada, eventos sin PII. | Medio |
-| Seguridad | Comando no autorizado sobre un dispositivo. | Baja/Media | Alto | JWT, perfiles, autorización backend, confirmación de alcance y logs. | Medio |
-| Autonomía | Automatización ejecutada sin comprensión del usuario. | Media | Alto | Vista previa, explicación, cancelación y estado posterior. | Bajo/Medio |
-| Exactitud | Recomendación basada en telemetría incompleta. | Media | Alto | Frescura visible, nivel de confianza y prohibición de afirmar medición certificada. | Medio |
-| Equidad | Interfaces o planes que excluyen por idioma, dispositivo o costo. | Media | Medio | ES/EN/PT, responsive, accesibilidad, funciones esenciales en Starter. | Bajo/Medio |
-| Ambiental | Efecto rebote o hardware adicional con huella propia. | Baja/Media | Medio | Priorizar software compatible, medir impacto neto y evitar claims verdes no demostrados. | Medio |
-| Económico | El usuario decide sobre una estimación de costo inexacta. | Media | Medio | Mostrar fuente, moneda, periodo y carácter estimado. | Bajo/Medio |
-| Transparencia | Métricas manipuladas o resultados selectivos. | Baja | Alto | Hipótesis y exclusiones previas, dataset versionado, resultados negativos reportados. | Bajo |
-| Disponibilidad | Dependencia de internet impide control remoto. | Alta | Medio | Aviso offline, reintento y recomendación de controles físicos independientes. | Medio |
-| Uso indebido | Supervisión de terceros sin consentimiento. | Baja/Media | Alto | Roles, auditoría de acceso y prohibición de monitoreo oculto. | Medio |
-
-**Criterio de detención ética:** suspender el experimento si se expone información personal, se ejecuta una acción no consentida, se detecta riesgo físico o un segmento queda sistemáticamente perjudicado. La prioridad del usuario prevalece sobre la obtención de una métrica favorable.
-
 # Conclusiones
 
 ## Conclusiones y recomendaciones
 
 EnergyCore cuenta con una base funcional integrada para Landing Page, Web Application, Native Mobile Application y RESTful API. La separación en cinco repositorios mejora la trazabilidad del producto, mientras que la arquitectura por bounded contexts conserva una fuente central de reglas y datos para los clientes web y Android.
 
-La verificación actual demuestra una base técnica ejecutable, aunque no sustituye la validación con usuarios. El backend registra 28 pruebas JUnit y 60 escenarios Cucumber aprobados; Flutter registra 11 pruebas aprobadas; Angular registra 5 pruebas aprobadas y compilación de producción exitosa; la Landing Page cuenta con 5 pruebas unitarias, de integración y funcionales aprobadas. En conjunto se ejecutaron **109 pruebas automatizadas sin fallos**. El siguiente incremento debe ampliar la profundidad del frontend, mantener smoke tests integrados y conservar evidencia por commit.
+La verificación actual demuestra una base técnica ejecutable, aunque no sustituye la validación con usuarios. El backend registra 28 pruebas JUnit y 60 escenarios Cucumber aprobados; Flutter registra 11 pruebas aprobadas; Angular registra 5 pruebas aprobadas y compilación de producción exitosa; la Landing Page cuenta con 5 pruebas unitarias, de integración y funcionales aprobadas. La línea base del 05/10/2026 registra **109 pruebas automatizadas sin fallos**; el 21/10/2026 se consultó su CI, sin repetir toda esa suite. El siguiente incremento debe ampliar la profundidad del frontend, mantener smoke tests integrados y conservar evidencia por commit.
 
-La hipótesis principal se ha convertido en un experimento reproducible: comparar el dashboard actual con una recomendación accionable y medir tiempo, éxito y errores. El piloto de 24 participantes servirá para depurar instrumentación y estimar parámetros; una conclusión confirmatoria requeriría recalcular y alcanzar una muestra suficiente. Hasta ejecutar el piloto, no se afirma que EnergyCore reduzca consumo ni que mejore decisiones.
+La hipótesis principal cuenta con un diseño experimental propuesto: comparar el dashboard actual con una recomendación accionable y medir tiempo, éxito y errores. El piloto de 24 participantes servirá para depurar instrumentación y estimar parámetros; una conclusión confirmatoria requeriría recalcular y alcanzar una muestra suficiente. Hasta ejecutar el piloto, no se afirma que EnergyCore reduzca consumo ni que mejore decisiones.
 
 El diseño ético reconoce que la telemetría energética puede revelar hábitos y que un comando remoto puede afectar dispositivos reales. Por ello se priorizan minimización de datos, perfiles, confirmación de alcance, información de frescura, resultados negativos visibles y detención ante riesgo. Esta decisión conecta el Student Outcome 4 con prácticas concretas de ingeniería.
 
-Se recomienda implementar los workflows de CI, migraciones de base de datos, instrumentación anonimizada, observabilidad y rollback antes de automatizar producción. También deben incorporarse evidencias audiovisuales, auditoría entre grupos y resultados de experimentación cuando existan. Estas conclusiones constituyen un avance documental y todavía requieren revisión explícita de todos los integrantes antes de presentarse como conclusión grupal.
-
-# Video App Validation
-
-El video de validación de la aplicación seguirá un recorrido reproducible de 7 minutos:
-
-| Tiempo | Evidencia |
-|:--:|:--|
-| 0:00-0:30 | Mostrar tag/commit, URLs o puertos y estado health de la API. |
-| 0:30-1:15 | Landing Page, idioma, responsive y CTA al login. |
-| 1:15-2:00 | Registro, retorno al login, autenticación y recuperación. |
-| 2:00-3:15 | Dashboard, lecturas, costo, filtros y frescura de datos. |
-| 3:15-4:30 | Sede, habitación, dispositivo, asignación y grupo. |
-| 4:30-5:30 | Rutina, modo, regla y alerta. |
-| 5:30-6:15 | Meta, reporte, exportación y planes. |
-| 6:15-6:45 | Android, cambio de idioma/tema y recuperación offline. |
-| 6:45-7:00 | Consolas de pruebas, limitaciones y commit final. |
-
-Checklist de grabación: ocultar credenciales y tokens; usar datos sintéticos; mostrar Web y Android consumiendo la misma API; no cortar errores relevantes; incluir subtítulos; colocar enlaces de repositorio y versión en la descripción.
-
-**Enlace audiovisual:** se incorporará después de grabar y publicar el video.
-
-# Video About the Team
-
-El video grupal presentará a los cinco integrantes. Cada intervención tendrá una duración aproximada de 45 a 60 segundos e incluirá nombre y código, responsabilidad sustancial asumida, decisión ética o profesional relacionada con 4.c.1 o 4.c.2, impacto considerado y artefacto que sustenta la reflexión. **Enlace audiovisual:** se incorporará después de grabar y publicar la evidencia.
+Los workflows de CI existentes aportan evidencia técnica. Aún se requieren pruebas de cierre para las capacidades solo descritas y completar la validación con usuarios y el intercambio de auditorías exigidos por AV2. El monitoreo sintético ya cuenta con una comprobación pública y un workflow preparado; faltan su ejecución remota sostenida, la revisión humana por pares y los informes de auditoría entre grupos. No se requieren resultados experimentales adelantados de TB2 en este documento de AV2. Estas conclusiones constituyen un avance documental y todavía requieren revisión explícita de todos los integrantes antes de presentarse como conclusión grupal.
 
 # Bibliografía
 
@@ -2050,6 +1987,14 @@ El video grupal presentará a los cinco integrantes. Cada intervención tendrá 
 - World Wide Web Consortium. (2023). _Web Content Accessibility Guidelines (WCAG) 2.2_. https://www.w3.org/TR/WCAG22/
 
 # Anexos
+
+## Evidencias nuevas de AV2
+
+- [Revisión técnica y CI por commit](assets/evidence/implemented/av2-review-2026-10-21.json).
+- [Comprobación pública de disponibilidad](assets/evidence/implemented/av2-monitoring-2026-10-21.json).
+- [Kit para auditorías UX entre grupos](planning/ux-audit-kit-av2.md).
+- [Presentación AV2 editable](output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pptx).
+- [Presentación AV2 en PDF](output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pdf).
 
 ## Enlaces importantes
 
@@ -2082,6 +2027,5 @@ Los siguientes artefactos se incorporarán después de ejecutar la actividad cor
 
 - entrevistas adicionales hasta completar entre tres y cinco participantes por segmento, análisis consolidado y publicación del video en Microsoft Stream;
 - informe de auditoría intercambiado con el grupo que asigne el docente;
-- dataset anonimizado, análisis y decision log del piloto experimental;
-- URLs de Video App Validation y About-the-Team después de su grabación;
-- testimonios de los integrantes vinculados con responsabilidades sustanciales del proyecto.
+- exposición de AV2 con contenido y participantes correspondientes a esta entrega;
+- actualización individual de Student Outcome, sustentada en contribuciones verificables.

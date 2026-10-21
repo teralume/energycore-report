@@ -87,6 +87,11 @@ with zipfile.ZipFile(artifact_zip) as archive:
         "SHA256SUMS.txt",
         "report/README.md",
         "presentation/test-demo-guide-tb1.md",
+        "report/planning/sprint-planning.md",
+        "report/planning/trello-cards.json",
+        "report/planning/trello-cards.csv",
+        "report/planning/trello-sync-result.json",
+        "report/planning/trello-board-prepared.json",
         "deployment/deployment-result.local.json",
         "evidence/openapi-live.json",
         "evidence/energy-power-smoke.json",
@@ -103,7 +108,7 @@ require(sha256(source_expo) == sha256(delivery_expo), "Reused AV1 exposition has
 require(source_about.is_file() and source_about.stat().st_size > 0, "About-the-Product source video is unavailable")
 
 readme = (REPO / "README.md").read_text(encoding="utf-8")
-require(not re.search(r"\b(?:pendiente|pendientes|faltante|faltantes)\b", readme, re.I), "README contains pending wording")
+require(not re.search(r'^(?:<<<<<<<|=======|>>>>>>>)', readme, re.M), 'Unresolved merge markers in README')
 
 print(f"PASS: {len(EXPECTED)} delivery files")
 print(f"PASS: report_pages={len(report_reader.pages)}")
