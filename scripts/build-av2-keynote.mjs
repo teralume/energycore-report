@@ -11,6 +11,8 @@ const {PresentationFile,FileBlob}=await import(pathToFileURL(path.join(deps,'nod
 const skill=path.join(process.env.USERPROFILE,'.codex/plugins/cache/openai-primary-runtime/presentations/26.1020.11348/skills/presentations');
 const input=path.resolve('output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-tb1.pptx');
 const p=await PresentationFile.importPptx(await FileBlob.load(input));
+const activation=await fs.readFile('assets/evidence/implemented/av2-monitoring-activation-2026-10-21.json','utf8').then(JSON.parse).catch(error=>{if(error.code==='ENOENT')return null;throw error;});
+if(activation&&!(activation.workflow_state==='active'&&activation.run.conclusion==='success'&&activation.probe.passed))throw new Error('Activation evidence must prove an active, passing workflow');
 // The import materializes theme defaults on empty runs. Use the source body font
 // as their fallback, preserving explicit fonts on the imported visible runs.
 const sourceFonts=JSON.parse(execFileSync(path.join(deps,'python/python.exe'),['scripts/extract-pptx-fonts.py',input],{encoding:'utf8'}));
@@ -65,8 +67,8 @@ add('Revisión técnica trazable',[
 add('Monitoreo reproducible',[
  ['COMPROBACIÓN PÚBLICA DEL 21/10/2026','API health: 200 · OpenAPI: 200 · Web Application: 200. Solo solicitudes de lectura, sin cuentas ni datos personales.'],
  ['DETECCIÓN Y EVIDENCIA','El monitor valida status UP, contrato OpenAPI y HTML; termina con fallo ante una respuesta incorrecta y guarda JSON.'],
- ['AUTOMATIZACIÓN PREPARADA','Workflow manual y programado cada 6 horas. Su activación remota requiere publicar el cambio; no se afirma un SLA medido.']
-], 'assets/evidence/implemented/av2-monitoring-2026-10-21.json; scripts/monitor-public-surfaces.py; .github/workflows/monitoring.yml.');
+ [activation?'AUTOMATIZACIÓN ACTIVA':'AUTOMATIZACIÓN PREPARADA',activation?'Workflow activo en main, programado cada 6 horas y con ejecución remota aprobada. No se afirma un SLA medido.':'Workflow manual y programado cada 6 horas. Su activación remota requiere publicar el cambio; no se afirma un SLA medido.']
+], 'assets/evidence/implemented/av2-monitoring-2026-10-21.json; scripts/monitor-public-surfaces.py; .github/workflows/monitoring.yml.'+(activation?' Ejecución remota: '+activation.run.url:''));
 add('Pregunta e hipótesis experimental',[
  ['PREGUNTA','¿Una recomendación con causa y acción ayuda a identificar un consumo anómalo y decidir qué hacer?'],
  ['COMPARACIÓN PROPUESTA','Control: dashboard actual. Tratamiento: recomendación accionable con explicación, impacto y confirmación segura.'],

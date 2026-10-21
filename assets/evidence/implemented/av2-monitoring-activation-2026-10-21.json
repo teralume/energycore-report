@@ -1,0 +1,49 @@
+{
+  "verified_at_utc": "2026-10-21T07:53:58.322504+00:00",
+  "workflow_state": "active",
+  "default_branch": "main",
+  "schedule_utc": "17 */6 * * *",
+  "run": {
+    "conclusion": "success",
+    "databaseId": 39565142305,
+    "event": "workflow_dispatch",
+    "headBranch": "main",
+    "headSha": "2d3c5b24d8765bfe8574b51e7ee616042cf73a70",
+    "status": "completed",
+    "url": "https://github.com/teralume/energycore-report/actions/runs/39565142305",
+    "workflowName": "Public surface monitoring"
+  },
+  "probe": {
+    "checked_at_utc": "2026-10-21T07:53:20.081904+00:00",
+    "mode": "read_only_synthetic",
+    "checks": [
+      {
+        "name": "api-health",
+        "url": "https://energycore-platform-ujdgb2zcpq-ue.a.run.app/api/v1/health",
+        "http_status": 200,
+        "passed": true,
+        "elapsed_ms": 152,
+        "error": null
+      },
+      {
+        "name": "api-contract",
+        "url": "https://energycore-platform-ujdgb2zcpq-ue.a.run.app/v3/api-docs",
+        "http_status": 200,
+        "passed": true,
+        "elapsed_ms": 272,
+        "error": null
+      },
+      {
+        "name": "webapp",
+        "url": "https://university-energycorp.web.app",
+        "http_status": 200,
+        "passed": true,
+        "elapsed_ms": 183,
+        "error": null
+      }
+    ],
+    "limitations": "Point-in-time reachability and payload only; no uptime SLA, browser E2E, user validation, or physical energy measurement.",
+    "passed": true
+  },
+  "limitations": "Activation and a successful synthetic run; no uptime SLA or user validation claim."
+}
