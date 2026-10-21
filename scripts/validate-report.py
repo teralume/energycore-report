@@ -60,7 +60,7 @@ require(not missing_images, f"Missing local images: {missing_images}")
 
 product_backlog = README.split("## 3.3 Product Backlog", 1)[1].split("## 3.4 Impact Mapping", 1)[0]
 to_be_backlog = README.split("### 8.3.2 To Be Product Backlog", 1)[1].split(
-    "### 8.3.3 Pipeline Supported Experiment Driven To Be Software Platform Lifecycle", 1
+    "# Conclusiones", 1
 )[0]
 story_rows = re.findall(r"^\|\s*\d+\s*\|\s*(?:US|TS)-\d+[AB]?\s*\|.*$", product_backlog + to_be_backlog, re.MULTILINE)
 require(story_rows, "No Product Backlog story rows were found.")

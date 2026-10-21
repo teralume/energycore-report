@@ -17,6 +17,11 @@ jobs:
           fetch-depth: 2
       - name: Validate report structure, diagrams, images, and backlogs
         run: python3 scripts/validate-report.py
+      - name: Validate AV2 scope and monitoring detection rules
+        run: |
+          python3 scripts/validate-av2-scope.py
+          python3 scripts/validate-av2-keynote.py
+          python3 scripts/test-monitor-public-surfaces.py
       - name: Validate ABET, Keynote, package, and checksums
         run: python3 scripts/validate-av1-artifacts.py
       - name: Check changed text for whitespace errors
@@ -29,6 +34,7 @@ jobs:
             README.md
             planning
             assets/evidence/implemented/trello-energycore-2026-10-20.png
+            assets/evidence/implemented/av2-*.json
             delivery
             output/docx
             output/pdf

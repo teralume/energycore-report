@@ -1,0 +1,106 @@
+{
+  "checked_at_utc": "2026-10-21T07:36:58.196305+00:00",
+  "review_type": "automated_source_inspection",
+  "repositories": [
+    {
+      "repository": "energycore-platform",
+      "local_head": "6ec7a7a82158b35fed88bd4cf80cabe29e339e26",
+      "latest_remote_run": [
+        {
+          "conclusion": "success",
+          "createdAt": "2026-10-05T14:00:38Z",
+          "databaseId": 37321256836,
+          "headSha": "6ec7a7a82158b35fed88bd4cf80cabe29e339e26",
+          "url": "https://github.com/teralume/energycore-platform/actions/runs/37321256836"
+        }
+      ],
+      "local_equals_ci_revision": true
+    },
+    {
+      "repository": "energycore-webapp",
+      "local_head": "dd4c9eb934c8d70b735b2478adf5f41c2b1a6c64",
+      "latest_remote_run": [
+        {
+          "conclusion": "success",
+          "createdAt": "2026-10-05T14:00:42Z",
+          "databaseId": 37321265630,
+          "headSha": "dd4c9eb934c8d70b735b2478adf5f41c2b1a6c64",
+          "url": "https://github.com/teralume/energycore-webapp/actions/runs/37321265630"
+        }
+      ],
+      "local_equals_ci_revision": true
+    },
+    {
+      "repository": "energycore-mobile",
+      "local_head": "48d3c001cff84aa07f025525ad0333451202e7e8",
+      "latest_remote_run": [
+        {
+          "conclusion": "success",
+          "createdAt": "2026-10-05T14:00:48Z",
+          "databaseId": 37321280273,
+          "headSha": "48d3c001cff84aa07f025525ad0333451202e7e8",
+          "url": "https://github.com/teralume/energycore-mobile/actions/runs/37321280273"
+        }
+      ],
+      "local_equals_ci_revision": true
+    },
+    {
+      "repository": "energycore-website",
+      "local_head": "303f76b00090eb30ef0ac1bd99867e7832f1059e",
+      "latest_remote_run": [
+        {
+          "conclusion": "success",
+          "createdAt": "2026-10-05T14:00:45Z",
+          "databaseId": 37321271985,
+          "headSha": "303f76b00090eb30ef0ac1bd99867e7832f1059e",
+          "url": "https://github.com/teralume/energycore-website/actions/runs/37321271985"
+        }
+      ],
+      "local_equals_ci_revision": true
+    },
+    {
+      "repository": "energycore-report",
+      "local_head": "d7e9b834d8f57ac4dab31187281d510834cc5c65",
+      "latest_remote_run": [
+        {
+          "conclusion": "success",
+          "createdAt": "2026-10-21T03:37:00Z",
+          "databaseId": 39539551225,
+          "headSha": "d7e9b834d8f57ac4dab31187281d510834cc5c65",
+          "url": "https://github.com/teralume/energycore-report/actions/runs/39539551225"
+        }
+      ],
+      "local_equals_ci_revision": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "REV-01",
+      "status": "OPEN",
+      "severity": "medium",
+      "source": "energycore-platform/src/main/resources/application-prod.properties",
+      "observation": "Production schema uses ddl-auto=update; no versioned migration acceptance is established.",
+      "confirmed": true,
+      "action": "Introduce and verify versioned migrations before a production schema change."
+    },
+    {
+      "id": "REV-02",
+      "status": "VERIFIED",
+      "severity": "informational",
+      "source": "energycore-platform/.../HealthController.java",
+      "observation": "Public health routes are /health and /api/v1/health. The new monitor targets /api/v1/health.",
+      "confirmed": true,
+      "action": "Keep the monitor contract aligned with the public controller."
+    },
+    {
+      "id": "REV-03",
+      "status": "OPEN",
+      "severity": "medium",
+      "source": "energycore-platform/src/main/resources/application-prod.properties",
+      "observation": "Default production CORS list includes localhost:4200.",
+      "confirmed": true,
+      "action": "Configure an environment-specific production allowlist and verify actual preflight before removing development defaults."
+    }
+  ],
+  "limitations": "Not a human peer approval, external UX audit, penetration test, or rerun of the historical product test suites."
+}
