@@ -28,7 +28,7 @@ Los criterios de calidad, historias técnicas/spikes del producto base y el To-B
 | 6.2 Análisis estático y reviews | Inspección automática por commit y CI consultado, tres observaciones registradas | No equivale a revisión humana por pares |
 | 6.3 Entrevistas de validación | Un antecedente de needfinding; sin registro de validación de uso | No contar la entrevista de 2.2 como sesión de 6.3 |
 | 6.4 Auditoría realizada/recibida | Protocolo y cronograma relativo; sin grupo externo, acta y devolución verificables | No presentarla como realizada |
-| 7.4 Monitoring/alerting/notifications | Comprobación pública PASS, tres pruebas del monitor y workflow preparado | Falta activar el workflow remoto y observar historial; sin SLA ni percentiles medidos |
+| 7.4 Monitoring/alerting/notifications | Comprobación pública PASS, tres pruebas del monitor y workflow activo con ejecución remota PASS | Falta observar historial; sin SLA ni percentiles medidos |
 | 8.1-8.2 | Preguntas, hipótesis, medidas y diseño propuestos | No afirmar reclutamiento o resultado experimental |
 | 8.3.1-8.3.2 | Historias To-Be y backlog de 53 SP | Estimación, no incremento experimental implementado |
 | Student Outcome | Antecedentes AV1/TB1 | No inventar testimonios o aportes AV2 individuales |
