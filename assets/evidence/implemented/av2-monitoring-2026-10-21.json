@@ -1,0 +1,32 @@
+{
+  "checked_at_utc": "2026-10-21T07:36:14.963549+00:00",
+  "mode": "read_only_synthetic",
+  "checks": [
+    {
+      "name": "api-health",
+      "url": "https://energycore-platform-ujdgb2zcpq-ue.a.run.app/api/v1/health",
+      "http_status": 200,
+      "passed": true,
+      "elapsed_ms": 364,
+      "error": null
+    },
+    {
+      "name": "api-contract",
+      "url": "https://energycore-platform-ujdgb2zcpq-ue.a.run.app/v3/api-docs",
+      "http_status": 200,
+      "passed": true,
+      "elapsed_ms": 676,
+      "error": null
+    },
+    {
+      "name": "webapp",
+      "url": "https://university-energycorp.web.app",
+      "http_status": 200,
+      "passed": true,
+      "elapsed_ms": 18,
+      "error": null
+    }
+  ],
+  "limitations": "Point-in-time reachability and payload only; no uptime SLA, browser E2E, user validation, or physical energy measurement.",
+  "passed": true
+}

@@ -1,0 +1,33 @@
+name: Public surface monitoring
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+  push:
+    paths:
+      - scripts/monitor-public-surfaces.py
+      - scripts/test-monitor-public-surfaces.py
+      - .github/workflows/monitoring.yml
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v6
+      - name: Verify monitoring detection rules
+        run: python3 scripts/test-monitor-public-surfaces.py
+      - name: Check public API and web application
+        run: python3 scripts/monitor-public-surfaces.py
+      - name: Preserve monitoring evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: monitoring-${{ github.run_id }}
+          path: output/monitoring/latest.json
+          if-no-files-found: error
+          retention-days: 30
