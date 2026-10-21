@@ -1458,7 +1458,7 @@ Checklist para Pull Request:
 En la línea base actual la revisión fue individual. Aunque ya se identificó a los cinco integrantes del equipo, para acreditar una revisión por pares otro integrante deberá aprobar el Pull Request y quedar visible en GitHub.
 
 
-**Inspección técnica del 21/10/2026.** Se contrastaron los HEAD locales con la última ejecución remota disponible y se inspeccionó la configuración del backend. Los cinco HEAD coinciden con el commit de CI consultado; el reporte contiene además cambios AV2 locales todavía no publicados. Esta inspección automatizada no equivale a aprobación humana por pares ni a una nueva ejecución completa de los tests.
+**Inspección técnica del 21/10/2026.** Se contrastaron los HEAD locales con la última ejecución remota disponible y se inspeccionó la configuración del backend. Los cinco HEAD coinciden con el commit de CI consultado; esta tabla conserva la línea base inspeccionada antes de publicar los cambios AV2. La activación remota se acredita por separado en 7.4. Esta inspección automatizada no equivale a aprobación humana por pares ni a una nueva ejecución completa de los tests.
 
 | Repositorio | Commit base inspeccionado | Última ejecución consultada |
 |:--|:--|:--|
@@ -1683,9 +1683,9 @@ Herramientas objetivo: endpoint `/api/v1/health`, logs estructurados de Spring B
 
 **Evidencia:** [resultado JSON](assets/evidence/implemented/av2-monitoring-2026-10-21.json). Las duraciones son observaciones puntuales: no son percentiles, SLA, tiempo de tarea del usuario ni mediciones físicas de energía.
 
-El workflow [`monitoring.yml`](.github/workflows/monitoring.yml) está preparado para ejecución manual, cambios del monitor y una programación de seis horas. Primero prueba las reglas de detección; después verifica salud (`status=UP`), un contrato OpenAPI no vacío y HTML de la Web Application. Un error devuelve código de salida distinto de cero, marca el job como fallido y conserva el JSON como artefacto durante 30 días. Las tres pruebas locales del monitor pasaron; son adicionales a las 109 pruebas históricas del producto.
+El workflow [`monitoring.yml`](.github/workflows/monitoring.yml) está publicado y activo en `main`: admite ejecución manual, cambios del monitor y una programación de seis horas (minuto 17, UTC). Primero prueba las reglas de detección; después verifica salud (`status=UP`), un contrato OpenAPI no vacío y HTML de la Web Application. Un error devuelve código de salida distinto de cero, marca el job como fallido y conserva el JSON como artefacto durante 30 días. Las tres pruebas locales del monitor pasaron; son adicionales a las 109 pruebas históricas del producto.
 
-La programación remota entra en funcionamiento al publicar el workflow en la rama predeterminada; no se presenta como ya activada ni como historial de disponibilidad. El resumen de Actions sirve como canal de diagnóstico; los avisos por correo dependen de las preferencias reales de suscripción de cada usuario, sin configurar ni enviar correo desde este script.
+La activación se verificó mediante el estado `active` del workflow y una [ejecución exitosa en main](https://github.com/teralume/energycore-report/actions/runs/39565142305). El [registro de activación y resultado remoto](assets/evidence/implemented/av2-monitoring-activation-2026-10-21.json) identifica commit, ejecución y las tres comprobaciones aprobadas. Esta evidencia inicial no constituye historial de disponibilidad ni un SLA. El resumen de Actions sirve como canal de diagnóstico; los avisos por correo dependen de las preferencias reales de suscripción de cada usuario, sin configurar ni enviar correo desde este script.
 
 ### 7.4.2 Monitoring Pipeline Components
 
@@ -1968,7 +1968,7 @@ La hipótesis principal cuenta con un diseño experimental propuesto: comparar e
 
 El diseño ético reconoce que la telemetría energética puede revelar hábitos y que un comando remoto puede afectar dispositivos reales. Por ello se priorizan minimización de datos, perfiles, confirmación de alcance, información de frescura, resultados negativos visibles y detención ante riesgo. Esta decisión conecta el Student Outcome 4 con prácticas concretas de ingeniería.
 
-Los workflows de CI existentes aportan evidencia técnica. Aún se requieren pruebas de cierre para las capacidades solo descritas y completar la validación con usuarios y el intercambio de auditorías exigidos por AV2. El monitoreo sintético ya cuenta con una comprobación pública y un workflow preparado; faltan su ejecución remota sostenida, la revisión humana por pares y los informes de auditoría entre grupos. No se requieren resultados experimentales adelantados de TB2 en este documento de AV2. Estas conclusiones constituyen un avance documental y todavía requieren revisión explícita de todos los integrantes antes de presentarse como conclusión grupal.
+Los workflows de CI existentes aportan evidencia técnica. Aún se requieren pruebas de cierre para las capacidades solo descritas y completar la validación con usuarios y el intercambio de auditorías exigidos por AV2. El monitoreo sintético ya está activo en GitHub Actions y cuenta con una ejecución remota aprobada; faltan acumular historial, la revisión humana por pares y los informes de auditoría entre grupos. No se requieren resultados experimentales adelantados de TB2 en este documento de AV2. Estas conclusiones constituyen un avance documental y todavía requieren revisión explícita de todos los integrantes antes de presentarse como conclusión grupal.
 
 # Bibliografía
 
