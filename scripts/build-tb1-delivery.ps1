@@ -55,6 +55,9 @@ try {
 
     Copy-RequiredFile (Join-Path $repoRoot 'README.md') (Join-Path $staging 'report\README.md')
     Copy-RequiredFile (Join-Path $repoRoot 'presentation\test-demo-guide-tb1.md') (Join-Path $staging 'presentation\test-demo-guide-tb1.md')
+    Get-ChildItem -LiteralPath (Join-Path $repoRoot 'planning') -File | ForEach-Object {
+        Copy-RequiredFile $_.FullName (Join-Path $staging ('report\planning\' + $_.Name))
+    }
     Copy-RequiredFile (Join-Path $platformRoot 'scripts\deployment-result.local.json') (Join-Path $staging 'deployment\deployment-result.local.json')
     Copy-RequiredFile (Join-Path $repoRoot 'assets\evidence\implemented\openapi-live.json') (Join-Path $staging 'evidence\openapi-live.json')
     Copy-RequiredFile (Join-Path $repoRoot 'assets\evidence\implemented\energy-power-smoke.json') (Join-Path $staging 'evidence\energy-power-smoke.json')
@@ -68,6 +71,7 @@ try {
         'Este paquete conserva evidencia técnica verificable de la entrega acumulativa:',
         '',
         '- fuente Markdown del Project Report;',
+        '- Sprint Planning detallados y backlog trazable preparado para Trello;',
         '- resultado del despliegue de Cloud Run sin credenciales;',
         '- contrato OpenAPI recuperado del servicio;',
         '- resultados JSON de smoke tests de energía, potencia y concurrencia;',
