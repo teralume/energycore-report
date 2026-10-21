@@ -46,6 +46,7 @@
 | TB1 | 30/09/2026 | Loa Rojas, Jean Franck | Actualización acumulativa para el Trabajo Parcial: correo institucional del Team Leader, refinamiento del Product Backlog sin historias de 8 puntos, visualización explícita de la base de datos, pruebas, CI/CD, despliegue público verificado y presentación del equipo. |
 | TB1.1 | 04/10/2026 | Rivera Rupay, Fabricio Jose | Corrección de los diagramas de arquitectura y base de datos, actualización del Sprint Backlog y Student Outcome, y revisión integral del informe para el Stage Review. |
 | TB1.2 | 05/10/2026 | Loa Rojas, Jean Franck | Preparación final de los archivos del Trabajo Parcial, incorporación del Performance Report, reutilización declarada de la exposición AV1 y actualización del Video About-the-Product para el Sprint 2. |
+| TB1.3 | 20/10/2026 | Equipo Teralume | Refinamiento de Sprint Planning, criterios cuantitativos y backlog no funcional, técnico y de investigación; estados vinculados a evidencia y preparación del tablero Trello. |
 
 <div style="page-break-after: always;"></div>
 
@@ -619,6 +620,42 @@ Para TB1 se refinan las historias que mezclaban dos resultados verificables. Se 
 | US-16A | Comparar planes. | Given el catálogo disponible, when compara opciones, then visualiza límites y precio de cada plan. |
 | US-16B | Registrar pago y suscripción. | Given un plan seleccionado, when completa el checkout académico, then se registra la suscripción. |
 
+### 3.2.1 Historias no funcionales
+
+Los siguientes criterios convierten calidad en resultados observables. Los umbrales propuestos no se presentan como mediciones realizadas.
+
+| ID / SP | Historia | Criterio cuantitativo | Estado y evidencia |
+| :-- | :-- | :-- | :-- |
+| NF-01 / 3 | Como titular de una cuenta, quiero que la API proteja mi sesión y permisos para impedir accesos no autorizados. | 0 peticiones protegidas sin token aceptadas; 100 % de casos Owner/Guest de la suite aprobados; BCrypt nunca almacena contraseña en claro. | Verificado en pruebas. IAM: AccessAuthorizationServiceTest, PasswordHashingServiceTest e iam.feature; CI backend del 05/10/2026. |
+| NF-02 / 3 | Como usuario, quiero conservar mis preferencias cuando hay peticiones simultáneas para no perder cambios. | 24 GET iniciales simultáneos y 24 GET/PUT: una preferencia por usuario, cambios parciales conservados y aislamiento entre cuentas. | Verificado en pruebas. assets/evidence/implemented/preferences-concurrency-smoke.json, 06/09/2026, PostgreSQL local aislado. |
+| NF-03 / 3 | Como usuario, quiero recibir las consultas de dashboard e histórico dentro de un tiempo medible para tomar decisiones con fluidez. | Objetivo propuesto: p95 <= 2000 ms y errores < 1 % en 100 consultas autenticadas, concurrencia 5; separar arranque frío y caliente y registrar entorno/dataset. | Por verificar. No existe medición de carga que cierre este objetivo; requiere SPIKE-01. |
+| NF-04 / 3 | Como usuario que navega con teclado o pantalla pequeña, quiero acceder a los controles esenciales sin perder información. | Login y dashboard a 390/768/1440 px; 0 controles esenciales inaccesibles por teclado; 0 defectos críticos de accesibilidad en el alcance auditado. | Por verificar. Hay estructura accesible y capturas; no una auditoría completa de estos criterios. |
+| NF-05 / 3 | Como usuario móvil, quiero recuperar una operación tras una desconexión sin repetir sus efectos. | 5 ciclos sin red/con red: sesión conservada, reintento visible y exactamente un cambio persistido por comando aceptado. | Parcial. Cliente con aviso/reintento; cierre de idempotencia y prueba en teléfono aún no demostrados. Relacionada con US-20A/B. |
+| NF-06 / 3 | Como usuario, quiero instalar la aplicación y usar el mismo backend público desde mi dispositivo. | APK Android release e iOS simulator compilan; login, lectura, CRUD y reporte ejecutados en Android físico con Wi-Fi/datos y API HTTPS pública. | Parcial. CI Android e iOS aprobado el 05/10/2026; distribución a testers y ejecución física de estos flujos no verificadas. Relacionada con TECH-04. |
+
+### 3.2.2 Technical Stories
+
+Los identificadores TECH identifican infraestructura y habilitadores del producto actual; se conservan TS-01 a TS-05 para el ciclo experimental del capítulo VIII.
+
+| ID / SP | Historia técnica | Condición de aceptación | Estado y evidencia |
+| :-- | :-- | :-- | :-- |
+| TECH-01 / 5 | Como equipo, queremos verificar cada cambio y publicar sus artefactos para detectar regresiones antes de integrar. | 5 workflows main exitosos en SHA identificable; fallos de tests detienen dependencias; artefactos descargables. | Verificado en CI. Workflows main del 05/10/2026; métricas: 88 backend, 5 Angular, 5 Landing, 11 Flutter. |
+| TECH-02 / 3 | Como equipo, queremos exportar lecturas por un contrato HTTP consistente para conectar reportes y clientes. | GET /api/v1/energy-readings/export devuelve text/csv; escenario de aceptación y manejo del rango aprobados. | Verificado en pruebas. EnergyMonitoringController, EnergyReadingsCsvExporter y energy-monitoring.feature; CI backend. |
+| TECH-03 / 3 | Como equipo, queremos contrastar modelos y diagramas con el código para conservar coherencia entre capas y datos. | 27 entidades JPA contrastadas con ERD; FK/LFK identificadas; 0 imágenes locales ausentes y 0 bloques Mermaid crudos en reporte. | Implementado; revisión abierta. Fuentes PlantUML y SVG, scripts/validate-report.py; revisión cruzada ET-06 aún sin acta individual. |
+| TECH-04 / 5 | Como equipo, queremos distribuir un APK firmado conectado a Cloud Run para demostrar móvil sin localhost. | Release identificada por SHA, firma persistente, API_BASE_URL HTTPS pública, instalación desde enlace y 4 flujos verificados en Android físico. | Por iniciar. Existe APK de CI; no hay release de Firebase App Distribution ni evidencia de instalación desde enlace. Depende de SPIKE-03 y NF-06. |
+
+### 3.2.3 Spike Stories
+
+Cada spike investiga una pregunta, tiene un límite de **4 horas propuestas** y entrega una decisión o un protocolo. No recibe Story Points y no cuenta como funcionalidad completada. Si no resuelve la pregunta dentro del límite, registra lo aprendido y refina el backlog.
+
+| ID | Pregunta | Dependencias | Resultado de salida |
+| :-- | :-- | :-- | :-- |
+| SPIKE-01 | ¿Cómo medir p95 y errores sin confundir cold start con latencia estable? | NF-03 | Plan de carga, 100 consultas/5 concurrentes, dataset, versión, comandos y plantilla de resultados; no asignar cifras observadas antes de ejecutar. |
+| SPIKE-02 | ¿Qué eventos, asignación y consentimiento permiten comparar variantes sin datos personales? | TS-01, TS-02A/B, US-19 | ADR con alternativas, esquema mínimo, asignación estable, exclusiones, anonimización y decisión sobre piloto; no presentar 24 participantes propuestos como reclutados. |
+| SPIKE-03 | ¿Qué canal permite instalar Android con API pública y qué limita la instalación en iPhone? | TECH-04, NF-06 | ADR con canal Android, firma, requisitos, costos si aplican y acceso de testers; separar build de simulador, dispositivo físico y tienda. |
+
+Los tres spikes se registran **Por iniciar**: hay antecedentes técnicos, pero no una investigación cerrada y fechada que cumpla estas condiciones.
+
 ## 3.3 Product Backlog
 
 | Orden | ID | Título | Prioridad | Story Points | Estado TB1 |
@@ -646,6 +683,26 @@ Para TB1 se refinan las historias que mezclaban dos resultados verificables. Se 
 | 21 | US-01 | Landing Page y CTA | Must | 5 | Implementado |
 
 Total referencial del incremento acumulativo TB1: **95 Story Points**. Para esta entrega se aplica el feedback específico de AV1: ninguna historia supera 5 puntos y cualquier historia mayor debe dividirse antes de ingresar a un Sprint. Los puntos expresan complejidad relativa del equipo, no horas.
+
+### 3.3.1 Backlog de calidad, habilitadores e investigación
+
+| ID | Tipo | Prioridad | SP / timebox | Estado real |
+| :-- | :-- | :-- | :-- | :-- |
+| NF-01 | No funcional | Must | 3 SP | Verificado en pruebas |
+| NF-02 | No funcional | Must | 3 SP | Verificado en pruebas |
+| NF-03 | No funcional | Should | 3 SP | Por verificar |
+| NF-04 | No funcional | Should | 3 SP | Por verificar |
+| NF-05 | No funcional | Must | 3 SP | Parcial |
+| NF-06 | No funcional | Must | 3 SP | Parcial |
+| TECH-01 | Técnica | Must | 5 SP | Verificado en CI |
+| TECH-02 | Técnica | Must | 3 SP | Verificado en pruebas |
+| TECH-03 | Técnica | Must | 3 SP | Implementado; revisión abierta |
+| TECH-04 | Técnica | Must | 5 SP | Por iniciar |
+| SPIKE-01 | Spike | Must | 4 h máximo propuesto | Por iniciar |
+| SPIKE-02 | Spike | Must | 4 h máximo propuesto | Por iniciar |
+| SPIKE-03 | Spike | Must | 4 h máximo propuesto | Por iniciar |
+
+Los **95 SP funcionales** se conservan; se agregan **18 SP no funcionales** y **16 SP técnicos**, separados del To-Be experimental de **53 SP**. Los **12 h de spikes** son límites propuestos de investigación; no se suman a SP ni representan horas trabajadas. Son 47 entradas de backlog: 21 funcionales actuales, 6 no funcionales, 4 técnicas, 3 spikes y 13 To-Be. Las historias relacionadas comparten pruebas de salida sin duplicar resultados ni computar el mismo esfuerzo dos veces. Las nuevas estimaciones requieren ratificación del equipo antes de comprometer capacidad.
 
 ## 3.4 Impact Mapping
 
@@ -1020,29 +1077,57 @@ La configuración actual permite ejecución local integrada. La API usa el puert
 
 ### 5.2.1 Sprint Backlogs
 
-| Sprint | Objetivo | Entregables | Evidencia local |
-|:--|:--|:--|:--|
-| Sprint 1 | Crear la base integrada del producto | Repositorios, backend DDD, Angular y Landing Page | Productos ejecutables y estructura inicial del informe |
-| Sprint 2 | Completar la experiencia móvil y la paridad funcional | Flutter Android, autenticación, shell, contextos y conectividad | Aplicación móvil, pruebas y matriz de paridad |
-| Sprint 3 | Preparar AV1 y trazabilidad | Informe, verificación, diseño y documentación | Informe AV1 y evidencias técnicas |
-| Sprint 4 (TB1) | Corregir el informe con base en el feedback de AV1 y preparar evidencia verificable | Student Outcome, diagramas renderizados, ERD, backlogs y mejora continua | Informe y PDF revisados |
+**Actualización de planificación: 20/10/2026.** Se conserva la numeración histórica: Sprints 1-3 de preparación de AV1 y Sprint 4 de revisión TB1. El ciclo experimental continúa en Sprints 5-7; se evita el doble Sprint 4 que existía entre los capítulos V y VIII.
 
-**Sprint Planning - Sprint 4 (TB1).** Backlog actualizado el 04/10/2026. El Sprint Goal es subsanar las observaciones de AV1 mediante artefactos renderizados, contenido consistente con los repositorios del producto y una revisión grupal del entregable.
+La planificación ampliada se encuentra en [Sprint Planning detallados](planning/sprint-planning.md) y las tarjetas preparadas en [backlog trazable](planning/trello-cards.json). El siguiente registro distingue reconstrucción histórica, revisión documental y trabajo por ejecutar.
 
-| ID | Engineering Task | Historia / artefacto | Horas | Responsable | Estado | Evidencia / condición de cierre |
-|:--|:--|:--|--:|:--|:--|:--|
-| ET-01 | Integrar el feedback de AV1 en el informe | Reporte TB1 | 4 h | Equipo de documentación | Done | Matriz de mejora continua actualizada |
-| ET-02 | Modelar y renderizar Architecture Overview, C4 y UML | US-01–US-16 / Architecture | 8 h | Equipo de arquitectura | Done | Fuentes PlantUML e imágenes SVG |
-| ET-03 | Reconstruir el ERD desde las entidades JPA y diferenciar FK/LFK | Database Design | 8 h | Arquitectura y backend | Done | Cuatro vistas ERD contrastadas con 27 entidades |
-| ET-04 | Reestimar Product Backlog y detallar Sprint Planning | Product Backlog | 6 h | Gestión de producto | Done | Backlogs sin historias de 8 SP y tareas de 4–8 h |
-| ET-05 | Generar y revisar el PDF del Stage Review | Reporte TB1 | 4 h | Documentación y QA | Done | PDF sin Mermaid crudo ni imágenes locales faltantes |
-| ET-06 | Revisar la correspondencia entre backend, C4 y ERD | Architecture / Database | 4 h | Jean Loa | To do | Observaciones de revisión resueltas |
-| ET-07 | Ejecutar la suite y actualizar el estado de escenarios BDD | US-02–US-16 | 6 h | Jairo Santiago | To do | Registro de ejecución y resultados actualizados |
-| ET-08 | Revisar evidencia UX de Landing Page y clientes | US-01, US-14 | 4 h | Brayan Huerta | To do | Hallazgos y evidencias visuales consolidados |
-| ET-09 | Realizar revisión cruzada de legibilidad y consistencia | Reporte TB1 | 4 h | Renzo Revilla | To do | Observaciones incorporadas al informe |
-| ET-10 | Validar Student Outcome y testimonio individual | Student Outcome 4 | 4 h | Todos los integrantes | To do | Reflexiones alineadas con responsabilidades sustanciales |
+#### 5.2.1.1 Datos cuantitativos y criterio de capacidad
 
-Las tareas pendientes distribuyen la revisión entre los integrantes y se considerarán terminadas cuando su condición de cierre esté incorporada en la entrega.
+| Dato | Valor y alcance | Fuente / fecha |
+|:--|:--|:--|
+| Backlog funcional | 21 historias / 95 SP | Product Backlog; estimación relativa, no horas ni velocidad observada |
+| Verificación automatizada | 109 casos: 88 backend (28 JUnit + 60 BDD), 5 Angular, 5 Landing y 11 Flutter | Ejecuciones y CI main del 05/10/2026; 0 fallos y 0 omitidos en esas suites |
+| CI de entrega | 5 repositorios con workflow main exitoso | GitHub Actions del 05/10/2026; evidencia histórica, no una nueva ejecución del 20/10 |
+| Concurrencia de preferencias | 24 GET y 24 GET/PUT simultáneos con una fila por usuario | preferences-concurrency-smoke.json; 06/09/2026, PostgreSQL local aislado |
+| Consumo de demostración | 1370 W / 3 dispositivos | energy-power-smoke.json; 06/09/2026, datos de demo; no ahorro real ni consumo poblacional |
+| Sprint 4 documental | 10 tareas / 52 h estimadas | Desglose heredado del informe; sin tiempos reales para calcular eficiencia |
+| Investigación nueva | 3 spikes / 4 h máximas cada uno | Propuesta del 20/10/2026, ejecución no iniciada |
+
+No existen registros verificables de disponibilidad personal, horas reales, fechas de las reuniones o velocidad por sprint. Se registran **No medido** y se solicita al equipo confirmar disponibilidad antes del siguiente compromiso. Capacidad futura = suma de horas disponibles confirmadas por integrante menos ceremonias y ausencias confirmadas. No se deriva capacidad de tener cinco integrantes ni de los 109 tests. Las tareas de 4-8 h son estimaciones de planificación, no registros de ejecución.
+
+#### 5.2.1.2 Sprint Planning por incremento
+
+| Sprint | Objetivo | Historias / estimación | Estado y salida |
+| :-- | :-- | :-- | :-- |
+| 1 | Base integrada web y API | US-02, US-03, US-04A, US-04B, US-05, US-06, US-10A, US-10B, US-16A, US-16B, US-01 / 47 SP | Reconstrucción histórica; implementación disponible, sin acta de compromiso original. Backend/Angular/Landing y suites actuales. No acredita pruebas históricas de cada sprint. |
+| 2 | Experiencia móvil y automatización conectadas | US-07, US-08, US-11A, US-11B, US-12A, US-12B, US-09, US-15, US-13, US-14 / 48 SP | Reconstrucción histórica; funcionalidad disponible, aceptación móvil física abierta. Código Flutter, matriz de paridad y CI Android/iOS; no publicación en tienda. |
+| 3 | Evidencia de AV1 y trazabilidad técnica | TECH-01/02/03, NF-01/02: 17 SP formalizados | Reconstrucción histórica; artefactos y automatización disponibles. Reportes AV1, 109 tests y workflows. Las historias TECH/NF se formalizan ahora, sin atribuirles fecha retroactiva. |
+| 4 | Revisión TB1 y respuesta a observaciones | ET-01 a ET-10 / 52 h estimadas | Revisión del Sprint Planning registrado; sin inventar una nueva reunión. README, fuentes PlantUML, SVG, PDF y validadores. |
+| 5 | Preparar medición reproducible | TS-01, TS-02A, TS-02B, US-19, TS-03 / 21 SP | Propuesto / Por iniciar. Esquemas, tests de eventos y dataset; aún no existen resultados del piloto. |
+| 6 | Implementar tratamientos seguros | US-21, US-17A, US-17B, US-18 / 16 SP | Propuesto / Por iniciar. Tests de mapper/componente, feature flag y smoke web/Android por generar. |
+| 7 | Recuperación y piloto experimental | US-20A, US-20B, TS-04, TS-05 / 16 SP | Propuesto / Por iniciar. Dataset y análisis por generar; no hay muestra reclutada o resultados medidos. |
+
+#### 5.2.1.3 Control del Sprint 4 y colaboración
+
+Se conservan las diez tareas ET del Sprint 4 y sus estimaciones originales (52 h). ET-01/02/03/05 tienen artefactos existentes; ET-04 incorpora ahora el refinamiento solicitado. ET-06 (Jean), ET-07 (Jairo), ET-08 (Brayan), ET-09 (Renzo) y ET-10 (todos) mantienen responsables **propuestos**, no desempeño confirmado. La ejecución automática de suites no acredita que Jairo haya realizado una revisión individual. Las horas reales, revisiones firmadas y aceptación de responsables siguen **No registradas**. El detalle y condición de cierre de cada tarea se conservan en el anexo de planificación.
+
+#### 5.2.1.4 Definition of Ready, Done y actualización del tablero
+
+**Ready:** problema, tipo, alcance, criterio medible, dependencia, estimación <= 5 SP y responsable que acepta la tarea; spikes con pregunta, 4 h y salida definida. **Done:** criterios aprobados en el entorno declarado, tests y artefacto accesibles, revisión identificada, SHA y enlace de evidencia. Un build no demuestra instalación física ni un porcentaje de ahorro. Una tarjeta sin evidencia de aceptación queda en Implementado / Por verificar, aunque el código exista.
+
+El tablero [EnergyCore - Product Backlog y Sprint Planning](https://trello.com/b/kFru7uh2/energycore-product-backlog-y-sprint-planning) fue creado y verificado el **20/10/2026** en la cuenta del Team Leader. Contiene **64 tarjetas persistidas**: 47 entradas de backlog, 7 Sprint Planning y 10 Engineering Tasks. Todas tienen descripción y enlace propio; el tipo, los puntos o timebox y el sprint constan en el título o descripción. Se conservó acceso privado, sin invitaciones ni asignaciones individuales no confirmadas.
+
+| Lista | Tarjetas | Interpretación |
+|:--|--:|:--|
+| Backlog | 13 | Historias experimentales To-Be |
+| Por iniciar | 14 | Trabajo y revisiones aún sin cierre verificable |
+| En curso | 0 | No se atribuye actividad actual sin evidencia |
+| Implementado - por verificar | 33 | Código, artefactos y planificación disponibles, aceptación completa abierta |
+| Verificado - pruebas y CI | 4 | NF-01, NF-02, TECH-01 y TECH-02, en el alcance de pruebas declarado |
+
+La lectura posterior confirmó **64 IDs únicos, 0 tarjetas ausentes, 0 discrepancias de estado y 0 descripciones ausentes**. Los enlaces están registrados en [el acta de sincronización](planning/trello-sync-result.json); los archivos preparados se conservan como fuente del contenido, no como sustituto del tablero.
+
+![Tablero EnergyCore creado y verificado](assets/evidence/implemented/trello-energycore-2026-10-20.png)
 
 ### 5.2.2 Implemented Landing Page Evidence
 
@@ -1837,13 +1922,15 @@ Total To-Be reestimado: **53 Story Points**. También se aplica aquí el límite
 
 #### 8.3.3.1 To Be Sprint Backlogs
 
-| Sprint | Objetivo | Historias | Evidencia de término |
-|:--|:--|:--|:--|
-| Sprint 4 | Preparar medición reproducible | TS-01, TS-02A, TS-02B, TS-03, US-19 | Esquema de eventos, variantes, consentimiento y dataset versionados. |
-| Sprint 5 | Implementar tratamientos seguros | US-17A, US-17B, US-18, US-21 | Capturas, tests, feature flag y smoke en web/Android. |
-| Sprint 6 | Ejecutar piloto y aprender | US-20A, US-20B, TS-04, TS-05 | Dataset anonimizado, análisis, decision log y backlog reordenado. |
+La secuencia continúa después del Sprint 4 TB1. Estos son planes futuros, no incrementos aceptados.
 
-Cada sprint mantiene Definition of Done: criterios aprobados, tests, revisión, traducciones ES/EN/PT, responsive, seguridad, evidencia y pipeline verde.
+| Sprint | Objetivo | Historias | Estimación / estado |
+| :-- | :-- | :-- | :-- |
+| 5 | Preparar medición reproducible | TS-01, TS-02A, TS-02B, US-19, TS-03 | 21 SP / Por iniciar |
+| 6 | Implementar tratamientos seguros | US-21, US-17A, US-17B, US-18 | 16 SP / Por iniciar |
+| 7 | Recuperación y piloto experimental | US-20A, US-20B, TS-04, TS-05 | 16 SP / Por iniciar |
+
+SPIKE-02 precede el Sprint 5. SPIKE-01 y SPIKE-03 habilitan NF-03 y la demostración móvil antes del piloto. La suma To-Be sigue siendo 53 SP; no incluye 12 h de investigación ni suma de nuevo las historias de calidad relacionadas. Ver el [detalle de planificación](planning/sprint-planning.md) para tareas, responsables propuestos, horas, dependencias y cierre.
 
 #### 8.3.3.2 Implemented To Be Landing Page Evidence
 

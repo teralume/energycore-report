@@ -27,6 +27,8 @@ jobs:
           name: energycore-report-${{ github.sha }}
           path: |
             README.md
+            planning
+            assets/evidence/implemented/trello-energycore-2026-10-20.png
             delivery
             output/docx
             output/pdf
