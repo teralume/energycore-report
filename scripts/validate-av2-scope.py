@@ -1,4 +1,4 @@
-"""Guard the enumerated AV2 cutoff without claiming unfinished activities are complete."""
+"""Guard AV2 scope, including the live rubric's planned To-Be Sprint Backlog."""
 from pathlib import Path
 import re
 import json
@@ -25,6 +25,25 @@ for token in ('# Video App Validation','# Video About the Team'):
 assert not re.search(r'^\| [567] \|.*(?:SP / Por iniciar|Propuesto / Por iniciar)',text,re.M)
 assert 'No se contabiliza como entrevista de validación' in text
 
+planning=(root/'planning/sprint-planning-av2.md').read_text(encoding='utf-8')
+to_be_plan=planning.split('## Sprint 5:',1)[1].split('## Tablero de seguimiento',1)[0]
+report_plan=text.split('#### To-Be Sprint Backlog:',1)[1].split('# Conclusiones',1)[0]
+task_pattern=r'^\| ((?:US|TS)-\d+[AB]?-[AB]) \| [^|]+ \| (\d+) \|'
+planned_tasks=re.findall(task_pattern,to_be_plan,re.M)
+report_tasks=re.findall(task_pattern,report_plan,re.M)
+assert len(planned_tasks)==len(report_tasks)==26, 'Expected 26 engineering tasks in both planning and report'
+assert len(dict(planned_tasks))==26, 'Duplicate planned task identifiers'
+assert dict(planned_tasks)==dict(report_tasks), 'Report and planning estimates differ'
+assert all(4<=int(hours)<=8 for _,hours in planned_tasks), 'Rubric requires tasks of 4 to 8 hours'
+assert sum(int(hours) for _,hours in planned_tasks)==132
+backlog=json.loads((root/'planning/trello-cards.json').read_text(encoding='utf-8'))
+story_ids={card['id'] for card in backlog['cards'] if card['type']=='Experimento'}
+assert {task.rsplit('-',1)[0] for task,_ in planned_tasks}==story_ids, 'Sprint tasks must cover the To-Be backlog'
+assert 'propuestas por iniciar' in report_plan and 'responsables por asignar' in report_plan
+assert 'Benchmark de herramientas DevOps' in text
+benchmark=(root/'planning/devops-benchmark-av2.md').read_text(encoding='utf-8')
+assert all(name in benchmark for name in ('GitHub Actions','GitLab CI/CD','Jenkins','retrospectiva'))
+
 pdf_result=None
 if '--pdf' in sys.argv:
     from pypdf import PdfReader
@@ -33,8 +52,10 @@ if '--pdf' in sys.argv:
     pdftext='\n'.join(p.extract_text() or '' for p in reader.pages)
     assert 'Informe de Avance 2' in pdftext
     assert '8.3.2' in pdftext
+    assert 'To-Be Sprint Backlog' in pdftext and 'Benchmark de herramientas DevOps' in pdftext
+    assert all(task in pdftext for task,_ in report_tasks), 'PDF omits planned engineering tasks'
     for token in ('8.3.3','8.3.4','8.4.1','8.5.1','8.6.1','GEES Framework'):
         assert token not in pdftext,f'Out-of-scope content remains in AV2 PDF: {token}'
     pdf_result={'pages':len(reader.pages),'scope_guard':'PASS'}
 
-print(json.dumps({'required_av2_sections':len(required),'cutoff':'8.3.2','evidence_gaps_remain':True,'pdf':pdf_result},indent=2))
+print(json.dumps({'required_av2_sections':len(required),'cutoff':'8.3.2 plus rubric-required planned sprint backlog','to_be_tasks':len(report_tasks),'estimated_hours':132,'evidence_gaps_remain':True,'pdf':pdf_result},indent=2))

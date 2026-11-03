@@ -1,31 +1,45 @@
 @startuml
-title Build and Test Suite Pipeline
-left to right direction
+title CI configurada por repositorio
+top to bottom direction
 skinparam backgroundColor white
 skinparam shadowing false
 skinparam defaultFontName Arial
+skinparam defaultFontSize 14
+skinparam ArrowColor #15803D
+skinparam roundcorner 12
 skinparam rectangle {
   BackgroundColor #F0FDF4
   BorderColor #15803D
   FontColor #111827
 }
+skinparam note {
+  BackgroundColor #F8FAFC
+  BorderColor #94A3B8
+  FontColor #334155
+}
 
-rectangle "Push / Pull Request" as A
-rectangle Checkout as B
-rectangle "Restore dependencies" as C
-rectangle "Static analysis" as D
-rectangle "Unit tests" as E
-rectangle "Integration / BDD tests" as F
-rectangle "Production build" as G
-rectangle "Security scan" as H
-rectangle "Versioned artifact" as I #DCFCE7
+rectangle "push / pull_request / workflow_dispatch\nen el repositorio correspondiente" as Trigger
+rectangle "Checkout y entorno del job\nJava, Node, Flutter o Python según el repositorio\nPermiso general: contents: read" as Setup
+rectangle "VERIFICACIÓN CONFIGURADA\n\nPlatform (Ubuntu): Maven verify\nJUnit, integración y BDD; Docker build\n\nWebApp (Ubuntu): npm ci, test:ci y build Angular\nWebsite (Ubuntu): npm ci y npm test\n\nMobile (Ubuntu): formato, analyze, test --coverage\ny build APK release\nMobile (macOS, job independiente): build iOS simulator\n\nReport (Ubuntu): validadores del informe, alcance AV2,\npresentación, artefactos y reglas del monitor" as Verify
+rectangle "ARTEFACTOS DEL JOB\n\nPlatform: JAR y reportes de pruebas\nWebApp: dist de producción\nWebsite: HTML, CSS, JavaScript y assets\nMobile: APK, cobertura y Runner.app de simulador\nReport: informe y archivos de entrega\n\nIdentificación mediante SHA del commit" as Artifacts #DCFCE7
 
-A --> B
-B --> C
-C --> D
-D --> E
-E --> F
-F --> G
-G --> H
-H --> I
+Trigger --> Setup
+Setup --> Verify
+Verify --> Artifacts : pasos de compilación/publicación\ncondicionados al resultado del job
+
+note right of Verify
+  Son workflows independientes.
+  No se ejecutan los cinco repositorios
+  como un único pipeline.
+
+  Un fallo marca el job como fallido.
+  Platform conserva sus reportes de
+  pruebas incluso ante un fallo.
+end note
+
+note bottom of Artifacts
+  La configuración no acredita una ejecución nueva.
+  El build de simulador iOS no publica en App Store.
+  El despliegue es un job separado y condicionado.
+end note
 @enduml
