@@ -29,7 +29,7 @@
 | U201717085 | Renzo Zamir Revilla Quispe | u201717085@upc.edu.pe |
 | U20241E550 | Brayan Benjamin Huerta Cardenas | u20241e550@upc.edu.pe |
 
-**Octubre de 2026**
+**Noviembre de 2026**
 
 </div>
 
@@ -49,12 +49,15 @@
 | TB1.3 | 20/10/2026 | Equipo Teralume | Refinamiento de Sprint Planning, criterios cuantitativos y backlog no funcional, técnico y de investigación; estados vinculados a evidencia y preparación del tablero Trello. |
 | AV2.1 | 21/10/2026 | Equipo Teralume | Ajuste del alcance al índice del tercer hito: secciones VI y VII, y VIII hasta 8.3.2; exclusión de contenidos de TB2 y corrección de la procedencia de entrevistas. |
 | AV2.2 | 21/10/2026 | Loa Rojas, Jean Franck | Incorporación de inspección técnica trazable, comprobación pública de disponibilidad, monitor y workflow preparados, kit de auditoría externa y presentación AV2; sin atribuir entrevistas ni auditorías no realizadas. |
+| AV2.3 | 03/11/2026 | Loa Rojas, Jean Franck | Alineación con la rúbrica publicada de S12 AV2: incorporación de Sprint Backlogs To-Be planificados, benchmark de herramientas DevOps y revisión del estado real de CI y operación. |
 
 <div style="page-break-after: always;"></div>
 
 ## Alcance de Avance 2
 
 El documento conserva los capítulos previos como antecedentes corregidos del proyecto acumulativo. El incremento de AV2 sigue la estructura enumerada del tercer hito del Enunciado, páginas 42-43: capítulo VI (6.1-6.4), capítulo VII (7.1-7.4) y capítulo VIII desde 8.1 hasta **8.3.2 To-Be Product Backlog**, además del registro de versiones, Student Outcome, avance de conclusiones, bibliografía y anexos.
+
+La [rúbrica vigente de S12 AV2](https://aulavirtual.upc.edu.pe/ultra/courses/_554468_1/assessment/_74454492_1/overview?courseId=_554468_1), consultada el 03/11/2026, exige también To-Be Sprint Backlogs y un benchmark de alternativas DevOps. Se incorpora la planificación de esos sprints en 8.3.2, con tareas de ingeniería de 4 a 8 horas estimadas. La entrega vence el 09/11/2026 a las 09:00 (UTC-5). La planificación no acredita implementación, ejecución del experimento ni resultados de TB2.
 
 Las estimaciones, umbrales de calidad y tamaños de muestra de 8.1-8.2 son propuestas de diseño. No constituyen resultados observados, participantes reclutados ni validación ejecutada. Los enlaces audiovisuales conservados de AV1/TB1 son antecedentes identificados con su entrega de origen; no se presentan como una exposición nueva de AV2.
 
@@ -252,6 +255,7 @@ La colaboración individual se sustentará mediante tareas sustanciales, revisio
 - [Capítulo VII DevOps Practices](#capítulo-vii-devops-practices)
   - [7.1 Continuous Integration](#71-continuous-integration)
     - [7.1.1 Tools and Practices](#711-tools-and-practices)
+      - [Benchmark de herramientas DevOps](#benchmark-de-herramientas-devops)
     - [7.1.2 Build and Test Suite Pipeline Components](#712-build-and-test-suite-pipeline-components)
   - [7.2 Continuous Delivery](#72-continuous-delivery)
     - [7.2.1 Tools and Practices](#721-tools-and-practices)
@@ -284,6 +288,7 @@ La colaboración individual se sustentará mediante tareas sustanciales, revisio
   - [8.3 Experimentation](#83-experimentation)
     - [8.3.1 To Be User Stories](#831-to-be-user-stories)
     - [8.3.2 To Be Product Backlog](#832-to-be-product-backlog)
+      - [To-Be Sprint Backlog: planificación exigida por la rúbrica AV2](#to-be-sprint-backlog-planificación-exigida-por-la-rúbrica-av2)
 - [Conclusiones](#conclusiones)
   - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
 - [Bibliografía](#bibliografía)
@@ -1085,9 +1090,9 @@ La configuración actual permite ejecución local integrada. La API usa el puert
 
 ### 5.2.1 Sprint Backlogs
 
-**Actualización de planificación: 20/10/2026.** Se conserva la numeración histórica: Sprints 1-3 de preparación de AV1 y Sprint 4 de revisión TB1. Esta versión incluye los planes de los incrementos 1-4; el trabajo experimental se presenta en AV2 como historias y Product Backlog, sin desarrollar su ejecución.
+**Actualización de planificación: 03/11/2026.** Se conserva la numeración histórica: Sprints 1-3 de preparación de AV1 y Sprint 4 de revisión TB1. Esta sección resume los incrementos 1-4. La planificación de los Sprints 5-7 se desarrolla en 8.3.2 para cumplir la rúbrica AV2; sus tareas permanecen propuestas y no se presentan como trabajo ejecutado.
 
-La planificación ampliada se encuentra en [Sprint Planning de antecedentes AV2](planning/sprint-planning-av2.md) y las tarjetas preparadas en [backlog trazable](planning/trello-cards.json). El siguiente registro distingue reconstrucción histórica y revisión documental.
+La planificación ampliada se encuentra en [Sprint Planning de AV2](planning/sprint-planning-av2.md) y las tarjetas preparadas en [backlog trazable](planning/trello-cards.json). El siguiente registro distingue reconstrucción histórica y revisión documental; el plan To-Be conserva sus estados y dependencias en 8.3.2.
 
 #### 5.2.1.1 Datos cuantitativos y criterio de capacidad
 
@@ -1594,7 +1599,24 @@ Prácticas obligatorias:
 - protección de `main`, bloqueo ante gates fallidos y tags por entrega;
 - artefactos identificados con commit SHA.
 
-**Estado:** los cinco repositorios contienen `.github/workflows/ci-cd.yml`. Los workflows se activan con cada commit publicado y con cada Pull Request, bloquean la entrega cuando falla una verificación y publican artefactos identificados por el SHA del commit.
+**Estado:** los cinco repositorios contienen `.github/workflows/ci-cd.yml`. Los workflows se activan con cada commit publicado y con cada Pull Request, impiden que su job dependiente de despliegue continúe cuando falla una verificación y publican artefactos identificados por el SHA del commit. La protección de ramas y la aprobación humana son controles distintos: no se consideran acreditados por la mera existencia de un workflow.
+
+#### Benchmark de herramientas DevOps
+
+Se comparan GitHub Actions, GitLab CI/CD y Jenkins según seis criterios derivados del stack y de los cinco repositorios de EnergyCore. La revisión del 03/11/2026 es documental y retrospectiva: fundamenta conservar la herramienta ya utilizada. No se ejecutaron cargas equivalentes en las tres plataformas, no se midieron costes ni se simula una selección anterior a la implementación.
+
+| Criterio | GitHub Actions | GitLab CI/CD | Jenkins |
+|:--|:--|:--|:--|
+| Integración con GitHub y ramas | Eventos push/PR dentro de los repositorios existentes. | Integración externa con GitHub; comprobar plan y condiciones de mirroring. | Multibranch Pipeline mediante Jenkinsfile e integración configurada. |
+| Java, Angular, Flutter e iOS | Runners Ubuntu y macOS ya usados por EnergyCore. | Runners administrados o propios; comprobar elegibilidad de macOS. | Agentes y toolchains administrados por el equipo; iOS requiere un agente Mac. |
+| Artefactos y despliegue | Artefactos por SHA y jobs con dependencias; deploy condicionado. | Artefactos entre jobs y environments para destinos. | Etapas programables y archiveArtifacts; requiere operar almacenamiento y destinos. |
+| Secretos e identidad | Permisos mínimos por job, OIDC para Cloud Run y secreto Firebase referenciado. | Variables protegidas e ID tokens OIDC. | Credenciales por ámbito y OIDC mediante plugin, con confianza configurada. |
+| Operación | Infraestructura de runners administrada; el equipo mantiene workflows y dependencias. | Runner administrado o propio; integración y adaptación adicionales para este proyecto. | Mantener controlador, agentes, plugins, herramientas y seguridad. |
+| Condiciones de coste | Revisar plan, runners, almacenamiento y retención reales; no asumir coste total cero. | Revisar plan, cuotas y elegibilidad de integración externa/macOS. | Licencia MIT; infraestructura, Mac y administración siguen teniendo coste. |
+
+**Decisión propuesta:** conservar GitHub Actions. Cumple las necesidades documentadas y aprovecha la integración ya verificable de Java, Angular y Flutter, incluido el build de simulador iOS. Migrar a otra herramienta añadiría configuración y operación sin resolver por sí mismo la facturación de Cloud Run, la profundidad de las pruebas o los controles pendientes de despliegue. GitLab y Jenkins siguen siendo alternativas válidas si cambian los requisitos de alojamiento, hardware o control de infraestructura.
+
+**Fuentes y trazabilidad:** [runners de GitHub](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners), [artefactos de Actions](https://docs.github.com/en/actions/tutorials/store-and-share-data), [GitLab con repositorios externos](https://docs.gitlab.com/ci/ci_cd_for_external_repos/), [macOS de GitLab](https://docs.gitlab.com/ci/runners/hosted_runners/macos/), [agentes de Jenkins](https://www.jenkins.io/doc/book/using/using-agents/) y [credenciales Jenkins](https://www.jenkins.io/doc/book/using/using-credentials/). El [benchmark completo](planning/devops-benchmark-av2.md) vincula cada criterio con documentación oficial y los workflows examinados por commit. Esta recomendación no acredita una aprobación grupal ni un experimento de rendimiento.
 
 ### 7.1.2 Build and Test Suite Pipeline Components
 
@@ -1624,6 +1646,10 @@ Ejecuciones verificadas en la rama `develop` el 15 de septiembre de 2026:
 
 El pipeline no continúa si falla una prueba. El gate vigente ejecuta 88 pruebas backend, 5 de Angular, 5 de la Landing Page y 11 de Flutter: **109 pruebas automatizadas**, sin fallos ni omisiones en la verificación del 05/10/2026.
 
+**Lectura de GitHub Actions para AV2.** La [guía de exposición](planning/github-actions-av2.md) indica cómo mostrar el job de CI, los pasos de pruebas, el artefacto Surefire y el deploy condicional. El backend conserva reportes incluso ante fallo y su smoke comprueba `/api/v1/health` con `status=UP`, sin abrir endpoints de Actuator. Un job puede agrupar varios pasos válidos; el resultado se acredita con la ejecución y su commit, no con la cantidad de cajas del diagrama.
+
+La publicación legacy de GitHub Pages de la Landing opera desde `main:/` por separado y no depende del job `verify`. Las ramas consultadas no tienen protección configurada. Estos límites no se presentan como gates de promoción implementados; su configuración requiere un cambio específico posterior.
+
 ## 7.2 Continuous Delivery
 
 ### 7.2.1 Tools and Practices
@@ -1634,23 +1660,27 @@ La versión se asociará con un tag, release notes, checksums y una matriz de co
 
 ### 7.2.2 Stages Deployment Pipeline Components
 
-| Etapa | Entrada | Controles | Salida |
-|:--|:--|:--|:--|
-| Build | Commit aprobado | Dependencias bloqueadas, build limpio | Artefactos por repositorio |
-| Verify | Artefactos | Tests, SAST, secret scan, SBOM, budgets | Candidato verificable |
-| Package | Candidato | SHA, versión y configuración externa | Imagen/JAR/dist/APK/report |
-| Staging | Artefactos versionados | Smoke, CORS, rutas SPA, health y rollback | Release candidate |
-| Approval | Evidencia de staging | Revisión humana y riesgos conocidos | Autorización de promoción |
-| Release | Candidato aprobado | Despliegue inmutable | Versión publicada |
-| Post-release | URL/version | Health, login sintético y logs | Acta de entrega o rollback |
+La matriz distingue la implementación actual de su evolución propuesta. Las etapas objetivo no se contabilizan como jobs ejecutados en Actions.
 
-Los scripts existentes prepararon Cloud Run y Firebase Hosting. La aceptación registrada verificó health 200, OpenAPI, Swagger, registro, login con JWT, CORS, rutas web y persistencia del mismo usuario después de promover una nueva revisión. La Web Application está disponible en [university-energycorp.web.app](https://university-energycorp.web.app) y la API en [energycore-platform-ujdgb2zcpq-ue.a.run.app](https://energycore-platform-ujdgb2zcpq-ue.a.run.app).
+| Etapa | Control o salida | Estado comprobable |
+|:--|:--|:--|
+| Build | Dependencias bloqueadas y compilación; JAR/dist/APK/documentos. | Implementado según el workflow de cada repositorio. |
+| Verify | Tests y controles de compilación/análisis específicos del stack. | Implementado parcialmente; SAST, secret scan y SBOM no están declarados como etapas de estos workflows. |
+| Package | Archivos de build y resultados asociados al SHA del commit. | Implementado; no demuestra una release firmada o promoción del mismo binario a producción. |
+| Staging | Ambiente separado, smoke integrado y evaluación de cambios. | Evolución propuesta; no hay job de staging en los workflows revisados. |
+| Approval | Revisión de evidencias y autorización del entorno. | Evolución propuesta; no se acredita una aprobación protegida de entorno. |
+| Release | Jobs de Cloud Run/Firebase dependientes de verify. | Configurados y condicionados a main + push + variable de habilitación; actualmente omitidos. Se reconstruye desde código, sin promoción binaria inmutable acreditada. |
+| Post-release | Comprobación del endpoint público de salud y monitor independiente. | Smoke configurado y monitoreo activo; no hay rollback automático ni login sintético en el monitor. La API presenta el incidente de 7.4.1. |
+
+Los scripts existentes prepararon Cloud Run y Firebase Hosting. La aceptación histórica verificó health 200, OpenAPI, Swagger, registro, login con JWT, CORS, rutas web y persistencia del mismo usuario después de promover una nueva revisión. Las direcciones se conservan: [Web Application](https://university-energycorp.web.app) y [API](https://energycore-platform-ujdgb2zcpq-ue.a.run.app). La comprobación del 03/11/2026 detectó indisponibilidad del backend; el incidente y su causa se documentan en 7.4.1.
 
 ## 7.3 Continuous Deployment
 
 ### 7.3.1 Tools and Practices
 
 Para Continuous Deployment, `main` promueve automáticamente una versión que haya aprobado todos los gates cuando el repositorio tiene habilitada la variable de despliegue. `energycore-platform` utiliza `GCP_DEPLOY_ENABLED` y autenticación federada; `energycore-webapp` y `energycore-website` utilizan `FIREBASE_DEPLOY_ENABLED` y el secret cifrado de Firebase. Mientras esas variables estén desactivadas, el pipeline conserva y publica los artefactos probados sin modificar producción.
+
+**Estado consultado el 03/11/2026:** las variables de habilitación no están definidas en esos tres repositorios y sus jobs `deploy` se omiten. Por tanto, se acredita CI y publicación de artefactos, junto con una configuración de despliegue condicional; no se afirma que cada commit esté llegando automáticamente a producción.
 
 El backend se empaqueta con un Dockerfile multi-stage y se ejecuta como usuario no-root. El destino diseñado es Cloud Run con mínimo 0 y máximo 1 instancia para controlar costo académico. La Web Application y la Landing Page se destinan a Firebase Hosting; la aplicación móvil se distribuye como APK y no se publica automáticamente en una tienda.
 
@@ -1671,6 +1701,10 @@ El rollback de Cloud Run debe seleccionar la revisión anterior; Firebase Hostin
 El monitoreo se diseña en cuatro capas: disponibilidad, rendimiento, errores y comportamiento de producto. La salud técnica no se equipara al éxito del experimento: una API disponible puede ofrecer una experiencia confusa, y una métrica de clics no demuestra ahorro energético.
 
 Herramientas objetivo: endpoint `/api/v1/health`, logs estructurados de Spring Boot, métricas de Cloud Run, Cloud Logging/Monitoring, consola de Firebase Hosting y eventos analíticos anonimizados. El acceso a logs y tableros debe seguir mínimo privilegio.
+
+**Incidente operativo verificado el 03/11/2026:** Firebase Hosting respondió HTTP 200 y cargó las pantallas de login, registro y recuperación. La API y OpenAPI respondieron HTTP 503. El proyecto `university-energycorp` mantiene `billingEnabled=false` y su cuenta vinculada está cerrada; Cloud Run registra que la solicitud falló porque la facturación está deshabilitada. Las dos URL existentes de Cloud Run presentan el mismo problema. Recuperar la facturación es una condición para volver a comprobar los flujos integrados; cambiar el enlace de Firebase no resuelve la indisponibilidad.
+
+La [ejecución del monitor](https://github.com/teralume/energycore-report/actions/runs/41556710433) conserva el fallo y el [registro de comprobación](assets/evidence/implemented/av2-monitoring-2026-11-03.json) separa disponibilidad web de disponibilidad API. No se han activado cuentas de facturación ni cambiado producción durante esta revisión. El estado aprobado del 21/10 se conserva a continuación como evidencia histórica.
 
 
 **Comprobación pública ejecutada el 21/10/2026:** [`monitor-public-surfaces.py`](scripts/monitor-public-surfaces.py) realizó solicitudes GET sin autenticación ni mutaciones. Conservó estado HTTP, duración y decisión del validador, sin almacenar cuerpos de respuesta, credenciales o datos personales.
@@ -1935,6 +1969,9 @@ Propiedades comunes: `anonymous_participant_id`, `session_id`, `experiment_id`, 
 | TS-01 | Como equipo, quiero asignar variantes de manera consistente para analizar el experimento. | Given un participante elegible, when inicia la prueba, then recibe una sola variante registrada. |
 | TS-02A | Como analista, quiero eventos web con un contrato validado. | Given una acción instrumentada en web, when ocurre, then emite el nombre y esquema acordados sin PII. |
 | TS-02B | Como analista, quiero eventos móviles equivalentes a los de web. | Given la misma acción en Flutter, when ocurre, then emite un evento compatible y comparable. |
+| TS-03 | Como equipo, quiero un dataset semilla reiniciable para comparar variantes con los mismos datos. | Given una sesión preparada, when se reinicia el dataset, then ambas variantes usan los mismos casos y estado inicial. |
+| TS-04 | Como analista, quiero consultar métricas por variante, segmento y plataforma para evaluar las hipótesis. | Given eventos válidos, when consulto el dashboard, then muestra medidas reproducibles y separa datos incompletos sin atribuir resultados antes de la ejecución. |
+| TS-05 | Como analista, quiero exportar datos anonimizados para reproducir el análisis. | Given una exportación autorizada, when se genera el archivo, then conserva el esquema y versión sin nombres, correos ni credenciales. |
 
 ### 8.3.2 To Be Product Backlog
 
@@ -1954,7 +1991,63 @@ Propiedades comunes: `anonymous_participant_id`, `session_id`, `experiment_id`, 
 | 12 | TS-04 | Dashboard de resultados | Should | 5 | Métricas por variante, segmento y plataforma. |
 | 13 | TS-05 | Exportación anonimizada | Should | 3 | Dataset reproducible sin datos personales. |
 
-Total To-Be reestimado: **53 Story Points**. También se aplica aquí el límite indicado en el feedback de AV1: ninguna historia o tarea técnica se estima en 8; si supera 5, debe dividirse antes de planificarla. La prioridad se revisará con evidencia experimental y no por cantidad de funcionalidades.
+Total To-Be reestimado: **53 Story Points**. También se aplica aquí el límite indicado en el feedback de AV1: ninguna historia se estima en 8 SP; si supera 5 SP, debe dividirse antes de planificarla. Las tareas de ingeniería se estiman por separado en horas, con un rango de 4 a 8 h por tarea según la rúbrica. SP y horas no se suman ni se convierten entre sí. La prioridad se revisará con evidencia experimental y no por cantidad de funcionalidades.
+
+#### To-Be Sprint Backlog: planificación exigida por la rúbrica AV2
+
+La rúbrica asigna 2 puntos al Product y Sprint Backlog To-Be: requiere priorizar por los objetivos del experimento, sustentar con Impact Mapping y descomponer las historias en tareas de ingeniería de 4 a 8 h. Los siguientes planes cumplen esa estructura documental. **Son propuestas por iniciar, con responsables por asignar y capacidad del equipo por confirmar.** No representan horas trabajadas, compromisos aceptados ni resultados experimentales.
+
+| Sprint propuesto | Objetivo | Historias | SP | Tareas | Horas estimadas |
+|:--|:--|:--|--:|--:|--:|
+| 5 | Preparar medición reproducible y consentimiento | TS-01, TS-02A, TS-02B, US-19, TS-03 | 21 | 10 | 52 |
+| 6 | Preparar recomendaciones y acciones seguras | US-21, US-17A, US-17B, US-18 | 16 | 8 | 40 |
+| 7 | Preparar recuperación y análisis reproducible | US-20A, US-20B, TS-04, TS-05 | 16 | 8 | 40 |
+| **Total** | **13 historias** | | **53** | **26** | **132** |
+
+**Prioridad y dependencias.** El [Impact Map de 3.4](#34-impact-mapping) conecta la decisión informada y segura con visibilidad, control y recuperación. ERQ-01/02 y EC-01 motivan la explicación y acción sobre anomalías; ERQ-04 y EC-02, la vista previa de alcance; ERQ-05 y EC-03, la recuperación ante fallos. ERQ-03 exige comparar el éxito entre web y Android con instrumentación equivalente. Primero se prepara asignación, consentimiento, eventos y datos semilla; después se implementaría el tratamiento; finalmente se habilitaría la recuperación y la lectura de métricas. Estas dependencias y guardas de seguridad condicionan el orden, junto con el valor del experimento.
+
+**Sprint 5: preparar medición reproducible.** Entrada: resolver SPIKE-02, confirmar disponibilidad y revisar contratos. Salida prevista: asignación estable, consentimiento, contratos de eventos compatibles y dataset reiniciable, respaldados por tests y un SHA. No incluye participantes reclutados ni resultados.
+
+| Tarea | Trabajo de ingeniería previsto | h estimadas |
+|:--|:--|--:|
+| TS-01-A | Definir contrato, identificador anónimo y reglas de asignación de variante. | 4 |
+| TS-01-B | Integrar asignador y pruebas de estabilidad de variante por participante. | 8 |
+| TS-02A-A | Definir esquema de eventos web y campos permitidos sin datos personales. | 4 |
+| TS-02A-B | Integrar emisor web y pruebas de validación del esquema. | 4 |
+| TS-02B-A | Mapear eventos Flutter al mismo contrato y reglas de serialización. | 4 |
+| TS-02B-B | Integrar emisor móvil y pruebas de equivalencia con eventos web. | 8 |
+| US-19-A | Definir aviso, consentimiento, opt-out y reglas de retención. | 4 |
+| US-19-B | Integrar controles de participación y pruebas que impidan eventos tras opt-out. | 8 |
+| TS-03-A | Definir casos semilla y comprobaciones de igualdad entre variantes. | 4 |
+| TS-03-B | Preparar reinicio reproducible del dataset y pruebas de estado inicial. | 4 |
+
+**Sprint 6: preparar tratamientos seguros.** Entrada: medición del Sprint 5 disponible y criterios NF-03/NF-04 revisados. Salida prevista: recomendación con causa y frescura, acción permitida y confirmación de alcance; pruebas de componentes/contratos y smoke web/Android. No se afirma mejora de tiempo ni ahorro energético.
+
+| Tarea | Trabajo de ingeniería previsto | h estimadas |
+|:--|:--|--:|
+| US-21-A | Definir timestamp, criterio de frescura y estado de datos desactualizados. | 4 |
+| US-21-B | Integrar indicadores y pruebas de consistencia entre KPI y detalle. | 4 |
+| US-17A-A | Definir contrato de causa probable, impacto y explicación de la anomalía. | 4 |
+| US-17A-B | Integrar recomendación y pruebas de visualización de causa e impacto. | 8 |
+| US-17B-A | Definir acciones permitidas y reglas de confirmación o descarte. | 4 |
+| US-17B-B | Integrar comando autorizado y pruebas de confirmación y cancelación. | 4 |
+| US-18-A | Definir resumen de dispositivos afectados y consecuencias esperadas. | 4 |
+| US-18-B | Integrar vista previa y pruebas que impidan ejecutar sin confirmación. | 8 |
+
+**Sprint 7: preparar recuperación y análisis.** Entrada: contratos de Sprints 5-6 y criterios NF-05/NF-06 revisados. Salida prevista: reintentos seguros, métricas por variante y exportación anonimizada reproducible. La ejecución del piloto, recolección de datos y análisis de resultados se efectuarán después; estas tablas solo planifican las capacidades necesarias.
+
+| Tarea | Trabajo de ingeniería previsto | h estimadas |
+|:--|:--|--:|
+| US-20A-A | Definir estados de desconexión, reintento y recuperación visible. | 4 |
+| US-20A-B | Integrar recuperación y pruebas de pérdida/restablecimiento de red. | 8 |
+| US-20B-A | Definir identificador de operación y contrato de idempotencia. | 4 |
+| US-20B-B | Integrar control de duplicados y pruebas de solicitudes repetidas. | 4 |
+| TS-04-A | Definir agregaciones por variante, segmento y plataforma. | 4 |
+| TS-04-B | Preparar dashboard y pruebas de cálculo con datos sintéticos conocidos. | 8 |
+| TS-05-A | Definir esquema exportable, anonimización y metadatos de versión. | 4 |
+| TS-05-B | Preparar exportador y pruebas de reproducibilidad y exclusión de datos personales. | 4 |
+
+La condición común de cierre de cada tarea será enlazar el cambio y la prueba del criterio al commit correspondiente. El [Sprint Planning completo](planning/sprint-planning-av2.md) conserva dependencias, estados y condiciones de salida. Las 132 h son suma de estimaciones; no determinan la duración de los sprints ni acreditan disponibilidad. El equipo deberá asignar responsables y confirmar capacidad antes de comprometer la ejecución.
 
 # Conclusiones
 
@@ -1962,13 +2055,13 @@ Total To-Be reestimado: **53 Story Points**. También se aplica aquí el límite
 
 EnergyCore cuenta con una base funcional integrada para Landing Page, Web Application, Native Mobile Application y RESTful API. La separación en cinco repositorios mejora la trazabilidad del producto, mientras que la arquitectura por bounded contexts conserva una fuente central de reglas y datos para los clientes web y Android.
 
-La verificación actual demuestra una base técnica ejecutable, aunque no sustituye la validación con usuarios. El backend registra 28 pruebas JUnit y 60 escenarios Cucumber aprobados; Flutter registra 11 pruebas aprobadas; Angular registra 5 pruebas aprobadas y compilación de producción exitosa; la Landing Page cuenta con 5 pruebas unitarias, de integración y funcionales aprobadas. La línea base del 05/10/2026 registra **109 pruebas automatizadas sin fallos**; el 21/10/2026 se consultó su CI, sin repetir toda esa suite. El siguiente incremento debe ampliar la profundidad del frontend, mantener smoke tests integrados y conservar evidencia por commit.
+La línea base de verificación demuestra una base técnica ejecutable, aunque no sustituye la validación con usuarios. El backend registró 28 pruebas JUnit y 60 escenarios Cucumber aprobados; Flutter, 11 pruebas; Angular, 5 pruebas y compilación de producción exitosa; y la Landing Page, 5 pruebas unitarias, de integración y funcionales. La línea base del 05/10/2026 registra **109 pruebas automatizadas sin fallos**; el 21/10/2026 se consultó su CI, sin repetir toda esa suite. Cada cambio posterior debe superar su propia ejecución de CI: esta línea base histórica no acredita automáticamente otro commit. El siguiente incremento debe ampliar la profundidad del frontend, mantener smoke tests integrados y conservar evidencia por commit.
 
 La hipótesis principal cuenta con un diseño experimental propuesto: comparar el dashboard actual con una recomendación accionable y medir tiempo, éxito y errores. El piloto de 24 participantes servirá para depurar instrumentación y estimar parámetros; una conclusión confirmatoria requeriría recalcular y alcanzar una muestra suficiente. Hasta ejecutar el piloto, no se afirma que EnergyCore reduzca consumo ni que mejore decisiones.
 
 El diseño ético reconoce que la telemetría energética puede revelar hábitos y que un comando remoto puede afectar dispositivos reales. Por ello se priorizan minimización de datos, perfiles, confirmación de alcance, información de frescura, resultados negativos visibles y detención ante riesgo. Esta decisión conecta el Student Outcome 4 con prácticas concretas de ingeniería.
 
-Los workflows de CI existentes aportan evidencia técnica. Aún se requieren pruebas de cierre para las capacidades solo descritas y completar la validación con usuarios y el intercambio de auditorías exigidos por AV2. El monitoreo sintético ya está activo en GitHub Actions y cuenta con una ejecución remota aprobada; faltan acumular historial, la revisión humana por pares y los informes de auditoría entre grupos. No se requieren resultados experimentales adelantados de TB2 en este documento de AV2. Estas conclusiones constituyen un avance documental y todavía requieren revisión explícita de todos los integrantes antes de presentarse como conclusión grupal.
+Los workflows de CI existentes aportan evidencia técnica. Aún se requieren pruebas de cierre para las capacidades solo descritas y completar la validación con usuarios y el intercambio de auditorías exigidos por AV2. El monitoreo sintético está activo: tuvo una ejecución aprobada el 21/10/2026, pero la comprobación del 03/11/2026 detectó el backend inaccesible por facturación deshabilitada; la web pública respondió HTTP 200. Por tanto, CI aprobado no equivale a servicio productivo disponible. Faltan la recuperación del servicio, la revisión humana por pares y los informes de auditoría entre grupos. El Sprint Backlog To-Be se incorpora como planificación exigida por la rúbrica, sin adelantar ejecución ni resultados de TB2. Estas conclusiones constituyen un avance documental y todavía requieren revisión explícita de todos los integrantes antes de presentarse como conclusión grupal.
 
 # Bibliografía
 

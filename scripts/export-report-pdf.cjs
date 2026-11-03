@@ -108,7 +108,11 @@ async function main() {
   });
   try {
     const page = await browser.newPage();
-    await page.goto(pathToFileURL(tempHtmlPath).href, { waitUntil: 'networkidle0', timeout: 0 });
+    await page.goto(pathToFileURL(tempHtmlPath).href, { waitUntil: 'load', timeout: 60000 });
+    await page.evaluate(async () => {
+      await document.fonts.ready;
+      await Promise.all(Array.from(document.images, (image) => image.decode()));
+    });
     await page.pdf({
       path: outputPath,
       format: 'A4',
@@ -122,7 +126,7 @@ async function main() {
     await browser.close();
   }
 
-  fs.rmSync(tempDirectory, { recursive: true, force: true });
+  fs.rmSync(tempHtmlPath, { force: true });
   console.log(outputPath);
 }
 

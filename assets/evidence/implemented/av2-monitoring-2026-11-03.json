@@ -1,0 +1,41 @@
+{
+  "checked_at_utc": "2026-11-03T13:08:52.618166+00:00",
+  "mode": "read_only_synthetic",
+  "checks": [
+    {
+      "name": "api-health",
+      "url": "https://energycore-platform-ujdgb2zcpq-ue.a.run.app/api/v1/health",
+      "http_status": 503,
+      "passed": false,
+      "elapsed_ms": 411,
+      "error": "http_error"
+    },
+    {
+      "name": "api-contract",
+      "url": "https://energycore-platform-ujdgb2zcpq-ue.a.run.app/v3/api-docs",
+      "http_status": 503,
+      "passed": false,
+      "elapsed_ms": 304,
+      "error": "http_error"
+    },
+    {
+      "name": "webapp",
+      "url": "https://university-energycorp.web.app",
+      "http_status": 200,
+      "passed": true,
+      "elapsed_ms": 375,
+      "error": null
+    }
+  ],
+  "limitations": "Point-in-time reachability and payload only; no uptime SLA, browser E2E, user validation, or physical energy measurement.",
+  "passed": false,
+  "cause_verification": {
+    "project": "university-energycorp",
+    "project_state": "ACTIVE",
+    "billing_enabled": false,
+    "linked_billing_account_open": false,
+    "provider_log_timestamp_utc": "2026-11-03T13:07:51.569751Z",
+    "provider_log_message": "The request failed because billing is disabled for this project.",
+    "scope": "Read-only project, billing and Cloud Run log inspection; no secret values retained and no cloud changes."
+  }
+}
