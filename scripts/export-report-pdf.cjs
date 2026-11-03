@@ -97,8 +97,6 @@ async function main() {
     .student-outcome-table th:nth-child(1) { width: 18%; }
     .student-outcome-table th:nth-child(2) { width: 60%; }
     .student-outcome-table th:nth-child(3) { width: 22%; }
-    .review-proposals + table { line-height: 1.35; }
-    .review-proposals + table td { padding: 6px; }
     tr, img, pre, blockquote { break-inside: avoid; }
     h1, h2, h3, h4 { break-after: avoid; }
     pre { white-space: pre-wrap; overflow-wrap: anywhere; }
@@ -147,11 +145,6 @@ async function main() {
         const href = link.getAttribute('href');
         if (href && !/^(?:[a-z][a-z\d+.-]*:|#|\/\/)/i.test(href)) {
           link.href = new URL(href, 'https://github.com/teralume/energycore-report/blob/main/').href;
-        }
-      }
-      for (const paragraph of document.querySelectorAll('p')) {
-        if (paragraph.textContent.trim().startsWith('Revisiones individuales propuestas')) {
-          paragraph.classList.add('review-proposals');
         }
       }
       await document.fonts.ready;
