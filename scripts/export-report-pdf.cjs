@@ -89,6 +89,16 @@ async function main() {
     body { font-family: "Segoe UI", Arial, sans-serif; }
     img { max-width: 100%; height: auto; }
     table { width: 100%; font-size: 9pt; break-inside: auto; }
+    .version-history { font-size: 8.5pt; line-height: 1.35; }
+    .version-history th, .version-history td { padding: 6px; }
+    .student-outcome { break-before: page; }
+    .student-outcome-table { line-height: 1.35; }
+    .student-outcome-table td { vertical-align: top; padding: 8px; }
+    .student-outcome-table th:nth-child(1) { width: 18%; }
+    .student-outcome-table th:nth-child(2) { width: 60%; }
+    .student-outcome-table th:nth-child(3) { width: 22%; }
+    .review-proposals + table { line-height: 1.35; }
+    .review-proposals + table td { padding: 6px; }
     tr, img, pre, blockquote { break-inside: avoid; }
     h1, h2, h3, h4 { break-after: avoid; }
     pre { white-space: pre-wrap; overflow-wrap: anywhere; }
@@ -110,6 +120,40 @@ async function main() {
     const page = await browser.newPage();
     await page.goto(pathToFileURL(tempHtmlPath).href, { waitUntil: 'load', timeout: 60000 });
     await page.evaluate(async () => {
+      // Match the report's Markdown contents links, including accented titles.
+      const slugs = new Map();
+      for (const heading of document.querySelectorAll('h1, h2, h3, h4, h5, h6')) {
+        if (heading.textContent.trim() === 'Registro de Versiones del Informe') {
+          heading.nextElementSibling?.classList.add('version-history');
+        }
+        if (heading.textContent.trim() === 'Student Outcome') {
+          heading.classList.add('student-outcome');
+          let next = heading.nextElementSibling;
+          while (next && next.tagName !== 'TABLE') next = next.nextElementSibling;
+          next?.classList.add('student-outcome-table');
+        }
+        const base = heading.textContent.trim().toLowerCase()
+          .replace(/[^\p{L}\p{N}_\s-]/gu, '').replaceAll(' ', '-');
+        const count = slugs.get(base) || 0;
+        slugs.set(base, count + 1);
+        heading.id = count ? `${base}-${count}` : base;
+      }
+      const missing = Array.from(document.querySelectorAll('a[href^="#"]'))
+        .map((link) => decodeURIComponent(link.getAttribute('href').slice(1)))
+        .filter((target) => target && !document.getElementById(target));
+      if (missing.length) throw new Error(`Missing report link targets: ${[...new Set(missing)].join(', ')}`);
+      // The delivered PDF must not depend on this computer's repository path.
+      for (const link of document.querySelectorAll('a[href]')) {
+        const href = link.getAttribute('href');
+        if (href && !/^(?:[a-z][a-z\d+.-]*:|#|\/\/)/i.test(href)) {
+          link.href = new URL(href, 'https://github.com/teralume/energycore-report/blob/main/').href;
+        }
+      }
+      for (const paragraph of document.querySelectorAll('p')) {
+        if (paragraph.textContent.trim().startsWith('Revisiones individuales propuestas')) {
+          paragraph.classList.add('review-proposals');
+        }
+      }
       await document.fonts.ready;
       await Promise.all(Array.from(document.images, (image) => image.decode()));
     });

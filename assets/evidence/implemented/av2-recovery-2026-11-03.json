@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-11-03",
+  "scope": "Read-only verification of GitHub Actions run, job, artifact and log metadata; no workflow dispatch, billing change, deployment or application-data mutation performed by this audit.",
+  "historical_incident": {
+    "evidence": "av2-monitoring-2026-11-03.json",
+    "checked_at_utc": "2026-11-03T13:08:52.618166+00:00",
+    "checked_at_lima": "2026-11-03T08:08:52.618166-05:00",
+    "api_health_http": 503,
+    "api_contract_http": 503,
+    "webapp_http": 200,
+    "provider_cause_at_that_time": "Billing was disabled for the project; linked account was closed. Historical observation, not a current billing assertion."
+  },
+  "backend": {
+    "run": {
+      "id": 41646065500,
+      "name": "Platform CI and delivery",
+      "head_branch": "main",
+      "head_sha": "3f74d4780a34f96958c6fe4626400d44a9a9f918",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-03T13:37:56Z",
+      "updated_at": "2026-11-03T13:39:46Z",
+      "html_url": "https://github.com/teralume/energycore-platform/actions/runs/41646065500"
+    },
+    "jobs": [
+      {
+        "id": 125951592147,
+        "name": "CI - Tests and container build",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 41646065500,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v6",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-java@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run chmod +x mvnw",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run JUnit and Cucumber acceptance tests",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Preserve test reports even on failure",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Build container from verified source",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Publish tested backend package",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-java@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v6",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      },
+      {
+        "id": 125952517409,
+        "name": "CD - Cloud Run when enabled",
+        "status": "completed",
+        "conclusion": "skipped",
+        "run_id": 41646065500,
+        "logs_url": null,
+        "steps": null
+      }
+    ],
+    "artifacts": [
+      {
+        "id": 13235147141,
+        "name": "energycore-platform-test-reports-3f74d4780a34f96958c6fe4626400d44a9a9f918",
+        "size_in_bytes": 64487,
+        "expired": false,
+        "created_at": "2026-11-03T13:38:59Z",
+        "expires_at": "2027-02-01T13:37:56Z",
+        "digest": "sha256:bb972feaabe4365e0658b5e99eb1eefd48dc932ae167c50c6b6be9782ddd613b"
+      },
+      {
+        "id": 13234109978,
+        "name": "energycore-platform-3f74d4780a34f96958c6fe4626400d44a9a9f918",
+        "size_in_bytes": 61087002,
+        "expired": false,
+        "created_at": "2026-11-03T13:39:40Z",
+        "expires_at": "2027-02-01T13:37:56Z",
+        "digest": "sha256:e45c671c77bc38ff393752aac370c257250a071367829a84972d2c6eec691177"
+      }
+    ],
+    "test_summary": {
+      "junit": 28,
+      "cucumber": 60,
+      "total": 88,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "source": "GitHub job 125951592147 Maven Surefire summary, 2026-11-03T13:38:55Z",
+      "build": "BUILD SUCCESS",
+      "job_url": "https://github.com/teralume/energycore-platform/actions/runs/41646065500/job/125951592147"
+    },
+    "limits": [
+      "CD job conclusion is skipped, not a successful deployment.",
+      "CI used test configuration; it does not prove live PostgreSQL or browser user journeys."
+    ]
+  },
+  "recovery": {
+    "run": {
+      "id": 41651099079,
+      "name": "Public surface monitoring",
+      "head_branch": "main",
+      "head_sha": "e1e26416ea9fbf6fae846271e47109b0fd5e9d43",
+      "event": "workflow_dispatch",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-03T14:10:35Z",
+      "updated_at": "2026-11-03T14:10:56Z",
+      "html_url": "https://github.com/teralume/energycore-report/actions/runs/41651099079"
+    },
+    "jobs": [
+      {
+        "id": 125969160106,
+        "name": "probe",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 41651099079,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v6",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Verify monitoring detection rules",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Check public API and web application",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Preserve monitoring evidence even on failure",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Post Run actions/checkout@v6",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11
+          }
+        ]
+      }
+    ],
+    "artifacts": [
+      {
+        "id": 13237586113,
+        "name": "monitoring-41651099079",
+        "size_in_bytes": 510,
+        "expired": false,
+        "created_at": "2026-11-03T14:10:54Z",
+        "expires_at": "2026-12-03T14:10:53Z",
+        "digest": "sha256:8d4ea74a5fdcc1e8251d28e27630d8d1ab3aeca41ffb2b455da3b37194fcb41f"
+      }
+    ],
+    "result": {
+      "checked_at_utc": "2026-11-03T14:10:53.441338+00:00",
+      "mode": "read_only_synthetic",
+      "checks": [
+        {
+          "name": "api-health",
+          "url": "https://energycore-platform-ujdgb2zcpq-ue.a.run.app/api/v1/health",
+          "http_status": 200,
+          "passed": true,
+          "elapsed_ms": 67,
+          "error": null
+        },
+        {
+          "name": "api-contract",
+          "url": "https://energycore-platform-ujdgb2zcpq-ue.a.run.app/v3/api-docs",
+          "http_status": 200,
+          "passed": true,
+          "elapsed_ms": 70,
+          "error": null
+        },
+        {
+          "name": "webapp",
+          "url": "https://university-energycorp.web.app",
+          "http_status": 200,
+          "passed": true,
+          "elapsed_ms": 71,
+          "error": null
+        }
+      ],
+      "limitations": "Point-in-time reachability and payload only; no uptime SLA, browser E2E, user validation, or physical energy measurement.",
+      "passed": true
+    },
+    "checked_at_lima": "2026-11-03T09:10:53.441338-05:00",
+    "context": "The successful probe followed billing reactivation reported in the working session. This record captures recovered public responses; it neither rechecks billing account state nor proves continuous uptime.",
+    "limits": [
+      "The two probes establish failure and recovery observations, not the exact outage duration or recovery time.",
+      "No authenticated browser E2E, interview, human peer review, UX cross-audit or physical energy measurement is established."
+    ]
+  },
+  "technical_review": {
+    "reviewer_type": "AI-assisted source and evidence inspection; not human peer approval",
+    "backend_commit": "3f74d4780a34f96958c6fe4626400d44a9a9f918",
+    "findings": [
+      {
+        "id": "REV-04",
+        "file": "src/main/resources/application-prod.properties",
+        "line": 15,
+        "observed": "spring.jpa.hibernate.ddl-auto=update",
+        "assessment": "Schema changes are not governed by versioned migrations in this configuration; migration and rollback validation remain unverified.",
+        "status": "open"
+      },
+      {
+        "id": "REV-05",
+        "file": "src/main/resources/application-prod.properties",
+        "line": 22,
+        "observed": "The default production CORS list includes http://localhost:4200 and can be overridden by CORS_ALLOWED_ORIGINS.",
+        "assessment": "Review effective runtime origins before narrowing; this source inspection is not evidence of an exploited vulnerability.",
+        "status": "open"
+      },
+      {
+        "id": "REV-06",
+        "file": ".github/workflows/ci-cd.yml",
+        "line": 68,
+        "observed": "Deploy smoke requests /api/v1/health and requires a JSON object with status=UP.",
+        "assessment": "The earlier endpoint inconsistency is corrected in source. The deployment job was skipped, so this run did not execute its post-deploy smoke.",
+        "status": "source_corrected_deploy_unverified"
+      },
+      {
+        "id": "REV-07",
+        "file": "energycore-report/README.md",
+        "line": 1314,
+        "observed": "Unit-test section still says 23 JUnit methods, but the remote run proves 28 including 5 EnergyDashboardPowerTest cases.",
+        "assessment": "Correct documentation to 28 and include the Energy Monitoring test class.",
+        "status": "documentation_correction_prepared"
+      }
+    ]
+  }
+}
