@@ -1,7 +1,9 @@
 # Benchmark documental de herramientas DevOps para AV2
 
-**Proyecto:** EnergyCore, equipo Teralume.  
-**Fecha de revisión documental:** 3 de noviembre de 2026.  
+**Proyecto:** EnergyCore, equipo Teralume.
+
+**Fecha de revisión documental:** 3 de noviembre de 2026.
+
 **Decisión recomendada:** mantener GitHub Actions para la integración y entrega continua del proyecto.
 
 ## Propósito y método
