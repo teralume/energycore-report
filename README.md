@@ -46,10 +46,11 @@
 | TB1 | 30/09/2026 | Loa Rojas, Jean Franck | Actualización acumulativa para el Trabajo Parcial: correo institucional del Team Leader, refinamiento del Product Backlog sin historias de 8 puntos, visualización explícita de la base de datos, pruebas, CI/CD, despliegue público verificado y presentación del equipo. |
 | TB1.1 | 04/10/2026 | Rivera Rupay, Fabricio Jose | Corrección de los diagramas de arquitectura y base de datos, actualización del Sprint Backlog y Student Outcome, y revisión integral del informe para el Stage Review. |
 | TB1.2 | 05/10/2026 | Loa Rojas, Jean Franck | Preparación final de los archivos del Trabajo Parcial, incorporación del Performance Report, reutilización declarada de la exposición AV1 y actualización del Video About-the-Product para el Sprint 2. |
-| TB1.3 | 20/10/2026 | Equipo Teralume | Refinamiento de Sprint Planning, criterios cuantitativos y backlog no funcional, técnico y de investigación; estados vinculados a evidencia y preparación del tablero Trello. |
-| AV2.1 | 21/10/2026 | Equipo Teralume | Ajuste del alcance al índice del tercer hito: secciones VI y VII, y VIII hasta 8.3.2; exclusión de contenidos de TB2 y corrección de la procedencia de entrevistas. |
+| TB1.3 | 20/10/2026 | Loa Rojas, Jean Franck | Refinamiento de Sprint Planning, criterios cuantitativos y backlog no funcional, técnico y de investigación; estados vinculados a evidencia y preparación del tablero Trello. |
+| AV2.1 | 21/10/2026 | Loa Rojas, Jean Franck | Ajuste del alcance al índice del tercer hito: secciones VI y VII, y VIII hasta 8.3.2; exclusión de contenidos de TB2 y corrección de la procedencia de entrevistas. |
 | AV2.2 | 21/10/2026 | Loa Rojas, Jean Franck | Incorporación de inspección técnica trazable, comprobación pública de disponibilidad, monitor y workflow preparados, kit de auditoría externa y presentación AV2; sin atribuir entrevistas ni auditorías no realizadas. |
 | AV2.3 | 03/11/2026 | Loa Rojas, Jean Franck | Alineación con la rúbrica publicada de S12 AV2: incorporación de Sprint Backlogs To-Be planificados, benchmark de herramientas DevOps y revisión del estado real de CI y operación. |
+| AV2.4 | 03/11/2026 | Loa Rojas, Jean Franck | Corrección del diseño experimental y su relación con el pipeline; guion específico de validación; contribuciones trazadas por autor y entrega; actualización de pruebas y recuperación del servicio con evidencia remota. Edición e inspección técnica asistidas por IA. |
 
 <div style="page-break-after: always;"></div>
 
@@ -60,6 +61,8 @@ El documento conserva los capítulos previos como antecedentes corregidos del pr
 La [rúbrica vigente de S12 AV2](https://aulavirtual.upc.edu.pe/ultra/courses/_554468_1/assessment/_74454492_1/overview?courseId=_554468_1), consultada el 03/11/2026, exige también To-Be Sprint Backlogs y un benchmark de alternativas DevOps. Se incorpora la planificación de esos sprints en 8.3.2, con tareas de ingeniería de 4 a 8 horas estimadas. La entrega vence el 09/11/2026 a las 09:00 (UTC-5). La planificación no acredita implementación, ejecución del experimento ni resultados de TB2.
 
 Las estimaciones, umbrales de calidad y tamaños de muestra de 8.1-8.2 son propuestas de diseño. No constituyen resultados observados, participantes reclutados ni validación ejecutada. Los enlaces audiovisuales conservados de AV1/TB1 son antecedentes identificados con su entrega de origen; no se presentan como una exposición nueva de AV2.
+
+El aporte de este avance está en conectar el problema observable de EnergyCore con una comprobación reproducible: las pruebas protegen reglas existentes; el monitor registra si el entorno puede usarse; y el diseño experimental define qué se compararía y cómo se tomaría una decisión. El [registro de mejoras de AV2](#registro-de-mejoras-de-av2) identifica las correcciones de esta entrega y permite distinguirlas de los antecedentes.
 
 ## Project Report Collaboration Insights
 
@@ -232,10 +235,6 @@ La colaboración individual se sustentará mediante tareas sustanciales, revisio
   - [6.2 Static Testing and Verification](#62-static-testing-and-verification)
     - [6.2.1 Static Code Analysis](#621-static-code-analysis)
       - [6.2.1.1 Coding Standard and Code Conventions](#6211-coding-standard-and-code-conventions)
-- [Backend](#backend)
-- [Web Application](#web-application)
-- [Flutter](#flutter)
-- [Landing Page](#landing-page)
       - [6.2.1.2 Code Quality and Code Security](#6212-code-quality-and-code-security)
     - [6.2.2 Reviews](#622-reviews)
   - [6.3 Validation Interviews](#63-validation-interviews)
@@ -294,12 +293,13 @@ La colaboración individual se sustentará mediante tareas sustanciales, revisio
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
   - [Evidencias nuevas de AV2](#evidencias-nuevas-de-av2)
+  - [Registro de mejoras de AV2](#registro-de-mejoras-de-av2)
   - [Enlaces importantes](#enlaces-importantes)
   - [Videos de Exposiciones](#videos-de-exposiciones)
     - [Exposición AV1](#exposición-av1)
     - [Reutilización de la exposición en TB1](#reutilización-de-la-exposición-en-tb1)
     - [Video About-the-Product Sprint 2](#video-about-the-product-sprint-2)
-  - [Actividades pendientes para el cierre](#actividades-pendientes-para-el-cierre)
+  - [Condiciones de cierre de AV2](#condiciones-de-cierre-de-av2)
 
 ## Student Outcome
 
@@ -309,14 +309,24 @@ El curso contribuye al cumplimiento del Student Outcome ABET:
 
 **Criterio:** La capacidad de reconocer responsabilidades éticas y profesionales en situaciones de ingeniería y hacer juicios informados, que deben considerar el impacto de las soluciones de ingeniería en contextos globales, económicos, ambientales y sociales.
 
-En el siguiente cuadro se relacionan las decisiones del proyecto con las dimensiones del ABET EAC Student Outcome 4.
+El Team Leader confirmó el 03/11/2026 la participación de los cinco integrantes en la elaboración del avance. Esa declaración reconoce el trabajo colectivo; no precisa quién realizó cada tarea. El cuadro diferencia las acciones con respaldo individual de esa participación declarada y conserva la entrega de origen de los antecedentes.
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |:--|:--|:--|
-| **4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software** | El equipo documentó la reutilización autorizada del producto base, mantuvo separados los datos demostrativos y las mediciones reales, registró las limitaciones de pruebas y despliegue, y evitó presentar entrevistas o resultados experimentales todavía no obtenidos. También revisó que la arquitectura y el modelo de datos del informe correspondan con la implementación existente. | La responsabilidad profesional exige comunicar con claridad qué está implementado, qué fue verificado y qué continúa planificado. Esta distinción protege a los usuarios, al equipo y a quienes evalúan la solución. |
-| **4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales** | El equipo evaluó privacidad de la telemetría, seguridad del control remoto, accesibilidad de los clientes, costos de infraestructura y límites de las afirmaciones de ahorro. Las decisiones de diseño incorporan perfiles de acceso, confirmación de acciones sensibles, información de frescura, minimización de datos y criterios de detención ética. | EnergyCore puede apoyar decisiones económicas y ambientales únicamente cuando comunica la procedencia y los límites de sus datos. La accesibilidad, privacidad, seguridad y autonomía del usuario son condiciones del producto y no beneficios opcionales. |
+| **4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software** | **Loa Rojas, Jean Franck — U20241E406**<br>**AV2:** delimitó el avance y documentó qué estaba probado, qué era una propuesta y qué evidencia humana aún no existía. La revisión conservó fallos de CI y del monitor en lugar de reemplazarlos por capturas favorables. Evidencia: [alcance](https://github.com/teralume/energycore-report/commit/638266f) y [actualización de rúbrica](https://github.com/teralume/energycore-report/commit/34fe85e).<br><br>**Jairo Mathias Santiago Atanacio — U202418755**<br>**AV1:** intervino en la redacción de su reflexión sobre privacidad y límites de verificación en Student Outcome ([f449a60](https://github.com/teralume/energycore-report/commit/f449a60)). Ese cambio acredita documentación, no implementación de todos los mecanismos mencionados. **AV2:** participación colectiva confirmada por el Team Leader.<br><br>**Rivera Rupay, Fabricio Jose — U202423883**<br>**TB1:** corrigió atribuciones genéricas del Student Outcome y distinguió aportes documentales de trabajo técnico verificable ([1b96857](https://github.com/teralume/energycore-report/commit/1b96857)). **AV2:** colaboración grupal declarada, sin trasladar el cambio de octubre a esta entrega.<br><br>**Renzo Zamir Revilla Quispe — U201717085**<br>**AV2:** participación en la preparación colectiva del avance confirmada por el Team Leader. No quedó individualizada una revisión técnica en los registros consultados.<br><br>**Brayan Benjamin Huerta Cardenas — U20241E550**<br>**AV2:** colaboración en la elaboración del avance declarada por el Team Leader; no se asigna una prueba o entrevista específica sin su registro. | **AV1/TB1:** el informe debe expresar con claridad quién hizo cada aportación y qué demuestra el artefacto.<br><br>**AV2:** mantener el historial de un fallo permite explicar cómo se corrigió y qué falta comprobar. Una persona puede colaborar fuera de Git; esa participación se reconoce sin inventar autorías técnicas. Una inspección asistida por IA tampoco reemplaza la revisión del equipo. |
+| **4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales** | **Loa Rojas, Jean Franck — U20241E406**<br>**AV2:** documentó la comparación de GitHub Actions, GitLab y Jenkins considerando operación, acceso y costes; separó disponibilidad técnica de ahorro energético y de una experiencia validada. Evidencia: [benchmark DevOps](planning/devops-benchmark-av2.md) y recuperación registrada en 7.4.<br><br>**Jairo Mathias Santiago Atanacio — U202418755**<br>**AV1:** realizó la entrevista de needfinding a Catherine Tejada registrada en 2.2.2. Sus observaciones sobre maquinaria, alertas y costo aportan contexto de un pequeño negocio; una sola entrevista no demuestra ahorro ni representa al segmento completo. **AV2:** participación colectiva según la declaración del Team Leader.<br><br>**Rivera Rupay, Fabricio Jose — U202423883**<br>**TB1:** desarrolló diagramas legibles de arquitectura y datos, incluidos facturación y notificaciones ([fb5953f](https://github.com/teralume/energycore-report/commit/fb5953f), [bcd40c8](https://github.com/teralume/energycore-report/commit/bcd40c8)). Estos permiten discutir relaciones y responsabilidades sobre información; no miden beneficios ambientales. **AV2:** colaboración grupal declarada.<br><br>**Renzo Zamir Revilla Quispe — U201717085**<br>**AV2:** integra la participación colectiva confirmada; la revisión individual de costes y operación se plantea abajo, sin registrarla como realizada.<br><br>**Brayan Benjamin Huerta Cardenas — U20241E550**<br>**AV2:** integra el trabajo grupal declarado; la comprobación personal de claridad y accesibilidad se propone abajo y requiere su evidencia. | **AV1/TB1:** las necesidades recogidas y el modelo de datos ayudan a discutir el efecto de la solución sobre personas y negocios.<br><br>**AV2:** un tiempo menor en una tarea no demuestra menor consumo eléctrico. La interpretación debe considerar seguridad del control remoto, privacidad y coste de operación. La mejora se acepta por su evidencia y sus consecuencias, no por una expectativa de ahorro. |
 
-La reflexión individual de cada integrante se complementará en el Video About the Team mediante una responsabilidad sustancial, una decisión ética o profesional y la evidencia del artefacto correspondiente.
+Las acciones se atribuyen a la entrega en que existe evidencia y las conclusiones expresan el análisis documental del proyecto. La revisión de cada integrante debe confirmar la relación entre su participación y el criterio; un perfil o una fotografía no demuestran por sí solos una decisión de ingeniería.
+
+**Revisiones individuales propuestas para cerrar la atribución de AV2.** Se distribuyen cinco revisiones de alcance comparable. Son propuestas distintas para confirmar y realizar; no se agregan a las acciones anteriores como tareas terminadas.
+
+| Integrante | Revisión propuesta | Evidencia concreta de cierre |
+|:--|:--|:--|
+| Jean Franck Loa Rojas | Contrastar la cifra de pruebas y el alcance del monitor con sus ejecuciones, especialmente los límites de ST-04. | Una observación o conformidad razonada en 6.1/7.4, vinculada al run y al commit. |
+| Jairo Mathias Santiago Atanacio | Recorrer el guion de validación y comprobar que las preguntas no inducen respuestas ni confunden consumo con potencia. | Guion revisado con cambios identificados y explicación de una decisión; no equivale a una entrevista. |
+| Fabricio Jose Rivera Rupay | Contrastar las entidades del diseño de datos con los eventos y campos propuestos para el experimento. | Relación entre modelo y tracking plan, con un ajuste o justificación de compatibilidad. |
+| Renzo Zamir Revilla Quispe | Revisar condiciones de despliegue, recuperación y gasto del servicio frente a los controles realmente activos. | Lista breve de condiciones verificadas y una recomendación fundamentada, sin cambiar facturación. |
+| Brayan Benjamin Huerta Cardenas | Revisar nombres, mensajes y navegación por teclado en un recorrido del producto actual. | Ruta, pasos, captura y observación de usabilidad o accesibilidad; no se presenta como auditoría externa. |
 
 <div style="page-break-after: always;"></div>
 
@@ -1311,7 +1321,7 @@ La estrategia de pruebas sigue una pirámide: reglas de dominio en la base, inte
 
 ### 6.1.1 Core Entities Unit Tests
 
-El backend contiene **23 métodos JUnit** distribuidos entre servicios de dominio, servicios de aplicación, seguridad y manejadores de eventos. Las pruebas se concentran en reglas que pueden evaluarse sin interfaz de usuario.
+El backend registra **28 pruebas JUnit** distribuidas entre servicios de dominio, servicios de aplicación, seguridad y manejadores de eventos. Se corrige la cifra anterior de 23 para incluir los cinco casos de `EnergyDashboardPowerTest`; no se trata de 28 entidades distintas ni de cobertura porcentual del producto.
 
 | Área | Clases de prueba | Reglas cubiertas |
 |:--|:--|:--|
@@ -1321,10 +1331,11 @@ El backend contiene **23 métodos JUnit** distribuidos entre servicios de domini
 | Billing | `BillingCommandServiceImplTest` | Suscripción, validación del flujo académico y cambios de estado. |
 | Reporting | `MonthlyConsumptionReportSchedulerServiceTest`, `ReportingIntegrationEventHandlerTest` | Programación del reporte mensual y reacción a eventos entre contextos. |
 | IAM events | `UserRegisteredEventHandlerTest` | Inicialización posterior al registro sin acoplar el controlador REST. |
+| Energy Monitoring | `EnergyDashboardPowerTest` | Cinco casos: potencia actual sin duplicarla por muestras, totales por ambiente, equipos inactivos, ambientes sin lecturas, datos ausentes y cuenta vacía. |
 
 En Flutter, `domain_models_test.dart` verifica progreso normalizado de metas, disponibilidad y estado de dispositivos, actualización inmutable de preferencias, permisos equivalentes a la Web Application y conservación de las opciones avanzadas de rutinas y modos. Esta combinación protege invariantes en el servidor y en el modelo de presentación móvil.
 
-**Criterio de aprobación:** todos los tests unitarios deben finalizar sin failures ni errors. La ejecución del 05/10/2026 registra 28 pruebas JUnit aprobadas; junto con los 60 escenarios de aceptación, Maven verifica 88 pruebas backend.
+**Resultado backend del 03/11/2026:** [run `41646065500`, main `3f74d478`](https://github.com/teralume/energycore-platform/actions/runs/41646065500) ejecutó Maven `verify` con Java 17: **28 pruebas JUnit + 60 escenarios Cucumber = 88, con 0 fallos, 0 errores y 0 omisiones**. Los reportes Surefire y el JAR quedaron publicados como artefactos asociados al SHA. El [registro de evidencia](assets/evidence/implemented/av2-recovery-2026-11-03.json) conserva sus identificadores y digest. Este resultado no acredita por sí solo todos los flujos de producción ni revalida los tests de los otros repositorios.
 
 ### 6.1.2 Core Integration Tests
 
@@ -1376,7 +1387,7 @@ Las pruebas de sistema se plantean sobre recorridos completos y no sobre compone
 | ST-01 | Landing Page → CTA → login | El CTA abre `/iam/login`; registro y recuperación permiten regresar al login. | Implementado; captura final por incorporar. |
 | ST-02 | Registro → suscripción → dashboard | La sesión se conserva y el usuario entra al shell permitido por su plan. | Flujo implementado; ejecución integrada por registrar. |
 | ST-03 | Sede → habitación → dispositivo → grupo | Los recursos quedan relacionados y el grupo reaparece al consultarlo. | Smoke test disponible; requiere API activa. |
-| ST-04 | Lectura alta → regla → alerta → resolución | La regla genera una alerta que puede leerse y resolverse. | Escenario BDD automatizado y aprobado. |
+| ST-04 | Lectura alta → regla → alerta → resolución | La regla debe generar una alerta que pueda leerse y resolverse. | Componentes BDD aprobados: evaluación HTTP 200 y resolución de una alerta creada directamente. El test no acredita la cadena completa desde la lectura hasta la alerta generada. |
 | ST-05 | Rutina o modo → acción sobre dispositivos | La vista previa muestra alcance y la ejecución actualiza estados. | Implementado; evidencia audiovisual por incorporar. |
 | ST-06 | Meta → dashboard → reporte CSV | El progreso usa lecturas del periodo y el reporte se puede exportar. | Implementado; evidencia integrada por registrar. |
 | ST-07 | Pérdida de red en Android | Aparece aviso persistente, **Reintentar** relanza las cargas y no se pierde la sesión local. | Implementado; prueba manual en emulador por registrar. |
@@ -1481,19 +1492,69 @@ En la línea base actual la revisión fue individual. Aunque ya se identificó a
 
 **Registro reproducible:** [inspección de repositorios y CI](assets/evidence/implemented/av2-review-2026-10-21.json), generada con `scripts/collect-av2-review.py`.
 
+**Inspección técnica complementaria del 03/11/2026.** Se leyó la configuración del backend en `3f74d478` y se contrastó con los resultados remotos del mismo commit. Es revisión asistida por IA de fuentes y evidencias; no sustituye aprobación humana de un Pull Request.
+
+| Registro | Observación comprobada | Alcance y decisión |
+|:--|:--|:--|
+| REV-04 | `application-prod.properties:15` conserva `ddl-auto=update`. | Mantener abierta la verificación de migraciones versionadas y reversión del esquema. |
+| REV-05 | `application-prod.properties:22` incluye `localhost:4200` en la lista CORS predeterminada, reemplazable por variable. | Revisar orígenes efectivos antes de retirar alguno; no se afirma una vulnerabilidad explotada. |
+| REV-06 | El workflow consulta `/api/v1/health` y exige `status=UP`. | Inconsistencia corregida en código; el smoke de deploy no se ejecutó porque CD quedó `skipped`. |
+| REV-07 | La cifra de 23 JUnit omitía cinco casos de `EnergyDashboardPowerTest`. | 6.1.1 se actualiza a 28, respaldado por Surefire del run `41646065500`. |
+
+El [registro complementario](assets/evidence/implemented/av2-recovery-2026-11-03.json) conserva trazabilidad del commit, jobs, artefactos y resultados. La revisión histórica del 21/10 permanece como antecedente.
+
 ## 6.3 Validation Interviews
 
 ### 6.3.1 Diseño de Entrevistas
 
-La validación requiere sesiones con personas de los dos segmentos que interactúen con el producto y permitan evaluar tareas y heurísticas. Se propone una muestra de seis participantes, tres por segmento; aún no se aportan registros de estas sesiones. El guion de needfinding de 2.2.1 es un antecedente de investigación, no sustituye un guion de validación de uso. La planificación no se presenta como validación ejecutada.
+**Objetivo.** Comprobar si una persona puede reconocer el consumo de un periodo, ubicar el dispositivo que le interesa y revisar una automatización sin confundir sus consecuencias. La sesión examina el producto que existe hoy: no muestra como disponibles las recomendaciones experimentales del capítulo VIII.
+
+Se planifican seis sesiones individuales, tres con responsables de hogares urbanos y tres con dueños o administradores de pequeños negocios. El Enunciado establece entre tres y cinco personas por segmento. Se convocará a adultos que realmente administren equipos o gastos eléctricos y que no pertenezcan al equipo desarrollador. Se registrarán su experiencia con aplicaciones similares y el dispositivo habitual; saber programar no será requisito. Estas seis sesiones cualitativas son distintas del piloto experimental de 24 participantes propuesto en 8.2.
+
+**Preparación.** Antes de citar al participante, comprobar acceso a la Landing Page, cliente y API; fijar el commit, navegador o versión Android; y disponer de una cuenta autorizada con datos demostrativos, sin actuadores reales. Si no se puede recorrer un flujo, se registrará la limitación de esa plataforma. No se sustituirá una tarea ejecutada por una captura. La persona decidirá si autoriza grabación y publicación académica en Microsoft Stream; sin autorización de publicación no se difundirá su imagen ni su voz.
+
+La autorización académica no incluye automáticamente GitHub público. Se usarán códigos de participante en el repositorio y se mantendrán nombres, edad, distrito y capturas identificables en el anexo académico de acceso restringido, salvo autorización expresa para difusión pública. La ficha distingue ambos permisos.
+
+| Segmento | Cobertura planificada de la primera ronda | Tareas |
+|:--|:--|:--|
+| Hogar | H01 y H02 en Android; H03 en web. | Landing Page y VAL-01–03 en el cliente asignado. |
+| Pequeño negocio | N01 y N02 en web; N03 en Android. | Landing Page y VAL-01–03 en el cliente asignado. |
+
+Esta distribución propone tres sesiones por cliente y tres por segmento. No acredita disponibilidad de participantes ni una comparación estadística entre plataformas; si una sesión no puede ejecutarse, se registrará su causa y se reprogramará esa cobertura.
+
+| Bloque | Tiempo previsto | Preguntas e indicaciones del moderador |
+|:--|:--:|:--|
+| Contexto y consentimiento | 4 min | «¿Qué equipos y gastos eléctricos administras? ¿Cómo revisas hoy lo que consumen?» Explicar finalidad, uso del video y derecho a detener la sesión. |
+| Primera impresión de la Landing Page | 3 min | «Sin que yo te explique el producto, ¿para qué crees que sirve y qué esperarías poder hacer?» Pedir que señale el texto que sostiene su interpretación. |
+| Tareas con la aplicación | 12–15 min | Entregar una tarea a la vez. «Cuéntame qué estás buscando y qué esperas que ocurra». El moderador observa antes de ayudar y anota cada intervención. |
+| Comprensión y confianza | 4 min | «¿Qué dato usarías para tomar una decisión? ¿Qué no queda claro? ¿Cómo sabes si una acción afecta a un equipo o a varios?» |
+| Cierre | 3 min | «¿Qué cambiarías primero para usarlo en tu hogar o negocio? ¿En qué situación preferirías no usarlo?» Confirmar qué material puede publicarse. |
+
+Las consignas evitan indicar botones o rutas. Los nombres de sedes y equipos se sustituyen por los del conjunto demostrativo documentado en la ficha.
+
+| ID | Consigna | Criterio observable y preguntas de seguimiento |
+|:--|:--|:--|
+| VAL-01 | «Quieres revisar cuánta energía consumiste en el periodo mostrado. Encuentra el dato y explícamelo». | Identifica periodo, cantidad y unidad. Preguntar «¿Es energía, potencia o dinero? ¿Con este dato sabes cuándo se actualizó?» Registrar confusiones entre kWh, W y costo. |
+| VAL-02 | «Necesitas saber dónde está el equipo de demostración y en qué estado aparece». | Localiza la sede, habitación y dispositivo correctos; explica el estado visible sin afirmar que se comprobó un aparato físico. Preguntar qué haría si el estado no cambia. |
+| VAL-03 | «Antes de salir de casa o cerrar tu local, quieres preparar una rutina para los equipos indicados. Revisa a quién afectaría y detente antes de ejecutarla». | Reconoce alcance y horario; encuentra cómo cancelar. Solo se permite guardar o ejecutar si el entorno aislado y los permisos se verificaron previamente. No probar con cargas eléctricas reales. |
+
+Después de cada tarea se preguntará «Del 1, muy difícil, al 7, muy fácil, ¿cómo te resultó?» y «¿Qué parte te hizo dudar?». La escala sirve para describir la sesión; con tres personas por segmento no permite estimar satisfacción poblacional. Se registrarán éxito sin ayuda, éxito con ayuda, no completada o no evaluable por un fallo del entorno. Tiempo, errores, retrocesos y ayuda se conservarán junto al resultado; una tarea fallida no desaparecerá del análisis.
+
+**Análisis previsto.** Agrupar observaciones por tarea y segmento, separar lo visto de lo que la persona declara y asociar cada problema con una heurística y una evidencia con timing. Priorizar por impacto y repetición: impedir una acción sobre el equipo equivocado tiene prioridad sobre una preferencia estética. Los cambios propuestos indicarán pantalla, criterio de aceptación y prueba posterior. El [guion y ficha de validación](planning/validation-interviews-av2.md) permiten registrar las sesiones sin reconstruirlas de memoria.
 
 ### 6.3.2 Registro de Entrevistas
 
-La entrevista de Jairo Mathias Santiago Atanacio documentada en 2.2.2 y 2.2.3 corresponde a needfinding. No se contabiliza como entrevista de validación ni demuestra interacción con las tareas del producto. Esta sección no cuenta aún con sesiones de validación, consentimientos ni enlaces audiovisuales verificables.
+La entrevista a **Catherine Tejada**, realizada por **Jairo Mathias Santiago Atanacio** y documentada en 2.2.2 y 2.2.3, corresponde a needfinding. No se contabiliza como entrevista de validación ni demuestra interacción con las tareas del producto. El registro de AV2 contiene **cero sesiones de validación acreditadas** al 03/11/2026; el guion anterior no modifica ese número.
+
+Cada sesión que se incorpore tendrá código de participante, segmento, nombre y datos solicitados por el Enunciado con su autorización, entrevistador, fecha, cliente y versión, consentimiento, captura, enlace de Microsoft Stream, inicio y fin dentro del video consolidado, duración y resumen por tarea. Los códigos previstos H01–H03 y N01–N03 identifican cupos de reclutamiento, no personas ya entrevistadas. La publicación se comprobará desde una cuenta con el acceso destinado al docente.
+
+El Anexo C contempla un extracto editado de **3–5 minutos por entrevista** dentro del MP4 consolidado. La ficha distinguirá la duración real de la sesión de los tiempos de su extracto y conservará la correspondencia con la grabación original. La edición no eliminará errores o respuestas contradictorias para simular una experiencia exitosa.
 
 ### 6.3.3 Evaluaciones según heurísticas
 
-Se realizó una evaluación de escritorio sobre los flujos implementados, usando las diez heurísticas de Nielsen. La escala va de 0 a 4: 0 no es un problema; 1 cosmético; 2 menor; 3 mayor; 4 crítico. Esta revisión detecta riesgos de interfaz, pero no reemplaza pruebas con usuarios.
+Se conserva una evaluación interna de escritorio sobre los flujos implementados, usando las diez heurísticas de Nielsen. Es un antecedente de usabilidad, no una sesión de validación ni la aplicación completa del Anexo D. La lista interna usa 0 para ausencia de problema; los hallazgos se califican de 1 a 4: superficial, menor, mayor y muy grave. Esta revisión detecta riesgos de interfaz, pero no reemplaza pruebas con usuarios.
+
+Para registrar las sesiones se preparó el [formato de evaluación UX del Anexo D](planning/ux-audit-kit-av2.md), según las páginas físicas 52–53 del Enunciado: identificación del grupo y cliente, sitio/app, tareas incluidas y excluidas, Usability, Inclusive Design e Information Architecture, escala 1–4, tabla resumen y ficha de cada problema con captura y recomendación. La plantilla está vacía; no acredita hallazgos externos ni sesiones ejecutadas.
 
 | Heurística | Evidencia favorable | Hallazgo | Severidad | Acción |
 |:--|:--|:--|:--:|:--|
@@ -1543,17 +1604,16 @@ Las fechas se completarán cuando el docente confirme el intercambio. El cronogr
 
 #### 6.4.1.3 Contenido de auditoría realizada
 
-El [kit de intercambio de auditorías UX](planning/ux-audit-kit-av2.md) define tres tareas, precondiciones, criterios de éxito, restricciones de seguridad, ficha de hallazgos y acta. Es un instrumento preparado, no una auditoría externa ejecutada. El paquete previsto está compuesto por:
+El [kit de intercambio de auditorías UX](planning/ux-audit-kit-av2.md) incorpora la estructura del Anexo D del Enunciado, páginas físicas 52–53. Es un instrumento preparado, no una auditoría externa ejecutada. Su contenido comprende:
 
-- inventario de tres tareas críticas y sus criterios de éxito;
-- evaluación de las diez heurísticas de Nielsen con severidad 0-4;
-- revisión WCAG de contraste, foco, nombres accesibles y navegación por teclado;
-- revisión responsive en 390, 768 y 1440 px;
-- comprobación de estados de carga, vacío, error, offline y éxito;
-- trazabilidad de cada hallazgo con captura, ruta, versión y recomendación;
-- acta de devolución y verificación de correcciones.
+- identificación institucional, profesores, grupo auditor, clientes participantes y sitio/app evaluado;
+- ficha del grupo y versión, con tareas incluidas y excluidas del alcance;
+- evaluación de Usability, Inclusive Design e Information Architecture;
+- escala de problemas 1–4 y tabla resumen: número, problema, severidad y heurística o principio violado;
+- descripción de cada problema con captura ilustrativa y recomendación, complementada por ruta, pasos, resultado esperado/observado y versión;
+- acta de devolución y comprobación posterior de las correcciones.
 
-Formato de hallazgo: `AUD-## | pantalla/ruta | heurística | pasos | resultado observado | impacto | severidad | recomendación | evidencia`.
+Para EnergyCore se proponen tres tareas con datos demostrativos, comprobaciones de teclado, foco, nombres accesibles y adaptación a 390, 768 y 1440 px. Estas decisiones operativas complementan el Anexo D; no son resoluciones obligatorias del enunciado ni una certificación de conformidad WCAG. Si se audita el producto de otro equipo, las tareas se adaptarán a sus flujos reales. Los campos y las tablas se completarán solo con observaciones y evidencia autorizadas.
 
 ### 6.4.2 Auditoría recibida
 
@@ -1573,13 +1633,9 @@ Se entregará al grupo auditor una cuenta de prueba sin datos personales, los en
 
 #### 6.4.2.4 Resumen de modificaciones para subsanar hallazgos
 
-La siguiente matriz se completará durante el intercambio de auditorías:
+No hay modificaciones atribuibles a una auditoría recibida porque todavía no existe un informe externo aportado. Para cerrar un hallazgo se conservarán su identificador original, la decisión justificada, el cambio, el commit y la repetición de los pasos en la versión corregida. Si no se acepta una recomendación, se explicará la restricción de producto o la evidencia que sustenta esa decisión.
 
-| Hallazgo | Decisión | Cambio | Repositorio / commit | Verificación |
-|:--|:--|:--|:--|:--|
-| Por recibir | — | — | — | — |
-
-Los hallazgos de la autoevaluación heurística se mantienen separados para conservar la procedencia de la evidencia.
+Los hallazgos de la autoevaluación heurística de 6.3.3 se mantienen separados. Las correcciones documentales y operativas de este avance se trazan en el registro de mejoras del anexo; no se presentan como recomendaciones de un grupo auditor.
 
 # Capítulo VII DevOps Practices
 
@@ -1644,7 +1700,7 @@ Ejecuciones verificadas en la rama `develop` el 15 de septiembre de 2026:
 | `energycore-website` | [Ejecución exitosa: tests unitarios, integración, prueba funcional y artefacto](https://github.com/teralume/energycore-website/actions/runs/34974146184) |
 | `energycore-report` | [Ejecución exitosa: validación documental, ABET, Keynote, ZIP y checksums](https://github.com/teralume/energycore-report/actions/runs/34974149176) |
 
-El pipeline no continúa si falla una prueba. El gate vigente ejecuta 88 pruebas backend, 5 de Angular, 5 de la Landing Page y 11 de Flutter: **109 pruebas automatizadas**, sin fallos ni omisiones en la verificación del 05/10/2026.
+Los pasos de empaquetado sujetos a éxito no continúan si falla una prueba; la conservación de reportes sí se ejecuta con `if: always()`. La verificación histórica del 05/10/2026 reunió 88 pruebas backend, 5 de Angular, 5 de la Landing Page y 11 de Flutter: **109 pruebas automatizadas**, sin fallos ni omisiones. El 03/11 se revalidaron por separado las 88 del backend en [main `3f74d478`](https://github.com/teralume/energycore-platform/actions/runs/41646065500); no se presenta esta corrida como una nueva ejecución de las 109.
 
 **Lectura de GitHub Actions para AV2.** La [guía de exposición](planning/github-actions-av2.md) indica cómo mostrar el job de CI, los pasos de pruebas, el artefacto Surefire y el deploy condicional. El backend conserva reportes incluso ante fallo y su smoke comprueba `/api/v1/health` con `status=UP`, sin abrir endpoints de Actuator. Un job puede agrupar varios pasos válidos; el resultado se acredita con la ejecución y su commit, no con la cantidad de cajas del diagrama.
 
@@ -1670,9 +1726,9 @@ La matriz distingue la implementación actual de su evolución propuesta. Las et
 | Staging | Ambiente separado, smoke integrado y evaluación de cambios. | Evolución propuesta; no hay job de staging en los workflows revisados. |
 | Approval | Revisión de evidencias y autorización del entorno. | Evolución propuesta; no se acredita una aprobación protegida de entorno. |
 | Release | Jobs de Cloud Run/Firebase dependientes de verify. | Configurados y condicionados a main + push + variable de habilitación; actualmente omitidos. Se reconstruye desde código, sin promoción binaria inmutable acreditada. |
-| Post-release | Comprobación del endpoint público de salud y monitor independiente. | Smoke configurado y monitoreo activo; no hay rollback automático ni login sintético en el monitor. La API presenta el incidente de 7.4.1. |
+| Post-release | Comprobación del endpoint público de salud y monitor independiente. | Smoke configurado; el job CD observado se omitió. El monitor independiente acreditó recuperación puntual el 03/11 a las 14:10 UTC; no hay rollback automático ni login sintético. |
 
-Los scripts existentes prepararon Cloud Run y Firebase Hosting. La aceptación histórica verificó health 200, OpenAPI, Swagger, registro, login con JWT, CORS, rutas web y persistencia del mismo usuario después de promover una nueva revisión. Las direcciones se conservan: [Web Application](https://university-energycorp.web.app) y [API](https://energycore-platform-ujdgb2zcpq-ue.a.run.app). La comprobación del 03/11/2026 detectó indisponibilidad del backend; el incidente y su causa se documentan en 7.4.1.
+Los scripts existentes prepararon Cloud Run y Firebase Hosting. La aceptación histórica verificó health 200, OpenAPI, Swagger, registro, login con JWT, CORS, rutas web y persistencia del mismo usuario después de promover una nueva revisión. Las direcciones se conservan: [Web Application](https://university-energycorp.web.app) y [API](https://energycore-platform-ujdgb2zcpq-ue.a.run.app). El 03/11/2026 se conserva el fallo de las 13:08 UTC y la recuperación pública de las 14:10 UTC, detallados en 7.4.1. Esta última sonda no repitió los recorridos autenticados de la aceptación histórica.
 
 ## 7.3 Continuous Deployment
 
@@ -1698,32 +1754,39 @@ El rollback de Cloud Run debe seleccionar la revisión anterior; Firebase Hostin
 
 ### 7.4.1 Tools and Practices
 
-El monitoreo se diseña en cuatro capas: disponibilidad, rendimiento, errores y comportamiento de producto. La salud técnica no se equipara al éxito del experimento: una API disponible puede ofrecer una experiencia confusa, y una métrica de clics no demuestra ahorro energético.
+El monitoreo implementado comprueba tres superficies públicas mediante solicitudes GET de solo lectura: salud de la API, contrato OpenAPI y HTML de la Web Application. Conserva estado HTTP, duración y resultado del validador, sin guardar cuerpos de respuesta, credenciales o datos personales. La salud técnica no se equipara a validación con usuarios ni a ahorro energético.
 
-Herramientas objetivo: endpoint `/api/v1/health`, logs estructurados de Spring Boot, métricas de Cloud Run, Cloud Logging/Monitoring, consola de Firebase Hosting y eventos analíticos anonimizados. El acceso a logs y tableros debe seguir mínimo privilegio.
+**Incidente y recuperación del 03/11/2026.** El [registro de las 13:08:52 UTC (08:08:52 de Lima)](assets/evidence/implemented/av2-monitoring-2026-11-03.json) muestra API y OpenAPI con HTTP 503, mientras Firebase Hosting respondía 200. La inspección del proveedor identificó facturación deshabilitada y cuenta vinculada cerrada en ese momento. Se conserva este antecedente; no se presenta como el estado posterior a la recuperación.
 
-**Incidente operativo verificado el 03/11/2026:** Firebase Hosting respondió HTTP 200 y cargó las pantallas de login, registro y recuperación. La API y OpenAPI respondieron HTTP 503. El proyecto `university-energycorp` mantiene `billingEnabled=false` y su cuenta vinculada está cerrada; Cloud Run registra que la solicitud falló porque la facturación está deshabilitada. Las dos URL existentes de Cloud Run presentan el mismo problema. Recuperar la facturación es una condición para volver a comprobar los flujos integrados; cambiar el enlace de Firebase no resuelve la indisponibilidad.
+Después de la reactivación de facturación comunicada en la sesión, la [ejecución `41651099079`](https://github.com/teralume/energycore-report/actions/runs/41651099079), sobre `main` en `e1e26416`, comprobó respuestas válidas el **03/11/2026 a las 14:10:53 UTC (09:10:53 de Lima)**:
 
-La [ejecución del monitor](https://github.com/teralume/energycore-report/actions/runs/41556710433) conserva el fallo y el [registro de comprobación](assets/evidence/implemented/av2-monitoring-2026-11-03.json) separa disponibilidad web de disponibilidad API. No se han activado cuentas de facturación ni cambiado producción durante esta revisión. El estado aprobado del 21/10 se conserva a continuación como evidencia histórica.
+| Superficie | HTTP | Duración de esta solicitud | Resultado |
+|:--|:--:|--:|:--:|
+| api-health, objeto JSON con `status=UP` | 200 | 67 ms | PASS |
+| api-contract, OpenAPI 3 con rutas | 200 | 70 ms | PASS |
+| webapp, contenido HTML | 200 | 71 ms | PASS |
 
+**Evidencia de recuperación:** [registro saneado](assets/evidence/implemented/av2-recovery-2026-11-03.json), job `125969160106` y artefacto `monitoring-41651099079`. Las duraciones son observaciones puntuales, no percentiles. Las sondas no determinan el inicio ni la duración exacta de la caída; tampoco demuestran navegación autenticada, persistencia, SLA o disponibilidad continua.
 
-**Comprobación pública ejecutada el 21/10/2026:** [`monitor-public-surfaces.py`](scripts/monitor-public-surfaces.py) realizó solicitudes GET sin autenticación ni mutaciones. Conservó estado HTTP, duración y decisión del validador, sin almacenar cuerpos de respuesta, credenciales o datos personales.
+El workflow [`monitoring.yml`](.github/workflows/monitoring.yml) admite ejecución manual, cambios de sus archivos y cron `17 */6 * * *`. Primero prueba las reglas de detección; después verifica las superficies. Cualquier fallo devuelve un código distinto de cero, marca el job como fallido y conserva el JSON durante 30 días con `if: always()`. La programación de Actions puede retrasarse, por lo que no constituye vigilancia en tiempo real.
 
-| Superficie | Estado | Duración de esta solicitud | Resultado |
-|:--|:--|--:|:--:|
-| api-health | HTTP 200 | 364 ms | PASS |
-| api-contract | HTTP 200 | 676 ms | PASS |
-| webapp | HTTP 200 | 18 ms | PASS |
+Se conservan como antecedentes el [PASS local del 21/10](assets/evidence/implemented/av2-monitoring-2026-10-21.json), la [activación remota de esa fecha](assets/evidence/implemented/av2-monitoring-activation-2026-10-21.json) y el [run fallido anterior](https://github.com/teralume/energycore-report/actions/runs/41556710433). Recuperar la API no convierte en aprobado el deploy de backend: en el run de CI del 03/11 ese job permanece `skipped`.
 
-**Evidencia:** [resultado JSON](assets/evidence/implemented/av2-monitoring-2026-10-21.json). Las duraciones son observaciones puntuales: no son percentiles, SLA, tiempo de tarea del usuario ni mediciones físicas de energía.
-
-El workflow [`monitoring.yml`](.github/workflows/monitoring.yml) está publicado y activo en `main`: admite ejecución manual, cambios del monitor y una programación de seis horas (minuto 17, UTC). Primero prueba las reglas de detección; después verifica salud (`status=UP`), un contrato OpenAPI no vacío y HTML de la Web Application. Un error devuelve código de salida distinto de cero, marca el job como fallido y conserva el JSON como artefacto durante 30 días. Las tres pruebas locales del monitor pasaron; son adicionales a las 109 pruebas históricas del producto.
-
-La activación se verificó mediante el estado `active` del workflow y una [ejecución exitosa en main](https://github.com/teralume/energycore-report/actions/runs/39565142305). El [registro de activación y resultado remoto](assets/evidence/implemented/av2-monitoring-activation-2026-10-21.json) identifica commit, ejecución y las tres comprobaciones aprobadas. Esta evidencia inicial no constituye historial de disponibilidad ni un SLA. El resumen de Actions sirve como canal de diagnóstico; los avisos por correo dependen de las preferencias reales de suscripción de cada usuario, sin configurar ni enviar correo desde este script.
+Cloud Logging/Monitoring, métricas percentiles, saturación y analítica de producto son herramientas objetivo adicionales. El alcance implementado y los controles propuestos se distinguen a continuación.
 
 ### 7.4.2 Monitoring Pipeline Components
 
-| Señal | Métrica | Ventana | Objetivo inicial |
+| Componente implementado | Entrada o control | Salida verificable |
+|:--|:--|:--|
+| Activación | Ejecución manual, cron cada seis horas y cambios de archivos del monitor. | Run asociado al SHA del repositorio. |
+| Prueba del detector | `scripts/test-monitor-public-surfaces.py`: tres tests locales sin red. | Rechaza health distinto de UP, contrato vacío o HTML incorrecto. |
+| Sondas de solo lectura | GET a health, OpenAPI y web, con validación del contenido. | HTTP, duración en ms, PASS/FAIL y error tipado por superficie. |
+| Decisión global | Todas las superficies deben aprobar. | Código 0 o 1 y estado del job. |
+| Conservación | `output/monitoring/latest.json`, resumen de Actions y upload con `if: always()`. | Artefacto de 30 días, incluso ante fallo. |
+
+Las siguientes métricas son **objetivos de evolución**, no métricas agregadas ni políticas actualmente configuradas:
+
+| Señal | Métrica propuesta | Ventana propuesta | Objetivo inicial |
 |:--|:--|:--|:--|
 | Disponibilidad | Respuestas correctas de `/api/v1/health` | 5 min | ≥ 99 % mensual después del lanzamiento medido |
 | Latencia | p50, p95 y p99 por endpoint | 5 y 60 min | p95 < 1.5 s, excluyendo cold start identificado |
@@ -1733,7 +1796,7 @@ La activación se verificó mediante el estado `active` del workflow y una [ejec
 | Mobile | Inicio correcto y solicitudes fallidas | sesión | ≥ 99 % de sesiones sin fallo fatal |
 | Producto | Decisiones energéticas completadas | semana | Línea base por establecer en piloto |
 
-Se propone que cada despliegue añada versión, entorno y correlation ID a los registros; la comprobación sintética actual conserva únicamente la ejecución y la URL pública. No se almacenan tokens, contraseñas, datos de tarjeta ni cuerpos completos con información personal.
+El monitor actual no agrega ventanas de cinco minutos ni emite correlation IDs de negocio. Se propone añadir versión, entorno y correlación a los logs sin almacenar tokens, contraseñas, datos de tarjeta o cuerpos con información personal.
 
 ### 7.4.3 Alerting Pipeline Components
 
@@ -1746,18 +1809,18 @@ Se propone que cada despliegue añada versión, entorno y correlation ID a los r
 | Cliente incompatible | Aumento de 401/404 tras release | Alta | Validar contratos y configuración API base URL. |
 | Presupuesto | Consumo cloud supera umbral acordado | Alta | Escalar a 0, detener recursos no esenciales y revisar tráfico. |
 
-Los umbrales de esta tabla son propuestas y no políticas cloud configuradas. El monitor sintético actual detecta una respuesta fallida por ejecución; aún no acumula tres fallos consecutivos ni calcula percentiles. Los umbrales se ajustarán después de observar una línea base. Se agrupan alertas repetidas para evitar fatiga y se crea un incidente único por causa probable.
+Los umbrales de esta tabla son propuestas y no políticas cloud configuradas. El detector actual marca la ejecución como fallida si alguna superficie devuelve un HTTP o contenido inválido; conserva el JSON y el resumen visible en Actions. No acumula tres fallos consecutivos, calcula percentiles, agrupa avisos ni crea incidentes automáticamente. Esas capacidades y los umbrales se ajustarán después de medir una línea base.
 
 ### 7.4.4 Notification Pipeline Components
 
-El pipeline de notificación separa los avisos de producto de los avisos operativos.
+La salida operativa implementada es el estado del workflow, su resumen y el artefacto JSON en GitHub Actions. Los correos dependen de las preferencias de suscripción del usuario; esta revisión no acredita entrega ni recepción de mensajes. No hay webhook, guardia o creación automática de incidencias demostrados. El siguiente esquema describe la separación propuesta entre avisos de producto y operación:
 
 - **Producto:** `BANNER`, `QUIET`, `INBOX_ONLY` o `MUTED`, respetando preferencias, severidad y horario silencioso.
 - **Operaciones:** crítica y alta notifican al responsable; media se registra para horario de trabajo; baja se incorpora al informe semanal.
 - **Release:** se comunica versión, commit, componentes, resultado de smoke y riesgos conocidos.
 - **Incidente:** incluye correlation ID, inicio, impacto, responsable, mitigación y estado; nunca adjunta secretos.
 
-El cierre exige registrar causa raíz, tiempo de detección, tiempo de recuperación y acción preventiva. En el alcance académico, el canal operativo puede ser GitHub Issues y correo institucional; no se afirma una guardia 24/7.
+Para documentar un cierre se propone registrar causa, detección, mitigación, recuperación observada y acción preventiva. El incidente de 7.4.1 conserva dos sondas y la recuperación pública, pero no permite calcular la duración exacta de la caída. GitHub Issues y correo institucional son canales propuestos; no se afirma una guardia 24/7 ni avisos enviados.
 
 # Part III Experiment Driven Lifecycle
 
@@ -1791,9 +1854,9 @@ El ciclo experimental se concentra en una decisión concreta: **identificar un c
 
 Una pregunta está lista cuando identifica población, intervención, comparación, resultado y ventana de medición.
 
-- **ERQ-01:** En responsables de hogar y administradores de pequeños negocios, ¿una recomendación con causa y CTA reduce al menos 20 % el tiempo mediano para resolver un consumo alto frente al dashboard actual durante una tarea controlada?
-- **ERQ-02:** ¿La recomendación incrementa en al menos 20 puntos porcentuales la proporción de participantes que elige el dispositivo y la acción correctos sin ayuda?
-- **ERQ-03:** ¿La tasa de éxito de la tarea principal en Android queda a no más de 10 puntos porcentuales de la obtenida en web con los mismos datos?
+- **ERQ-01:** En responsables de hogar y administradores de pequeños negocios, ¿una recomendación con causa y CTA reduce al menos 20 % la mediana de tiempo penalizado para resolver un consumo alto, frente al dashboard actual, en una tarea de hasta 600 s? El tiempo penalizado incluye los intentos sin éxito según 8.2.3.
+- **ERQ-02:** ¿La recomendación incrementa en al menos 20 puntos porcentuales la proporción de participantes que identifica el dispositivo y completa la acción correctos, sin ayuda, dentro de 600 s?
+- **ERQ-03:** Con el tratamiento y los mismos datos, ¿la tasa de éxito de Android queda a menos de 10 puntos porcentuales por debajo de la obtenida en web? Se evaluará no inferioridad unilateral, no igualdad ni equivalencia.
 - **ERQ-04:** ¿Mostrar alcance y consecuencias antes de una acción masiva reduce errores de selección sin aumentar más de 15 % el tiempo total?
 - **ERQ-05:** ¿El aviso offline con **Reintentar** permite recuperar al menos 80 % de tareas interrumpidas después de restablecer la red?
 
@@ -1820,7 +1883,7 @@ La prioridad inicial usa `Score = (Impacto × Incertidumbre × Alcance) / Esfuer
 |:--|:--|
 | Creemos que | mostrar causa probable, impacto y CTA permite responder mejor a consumo alto. |
 | Para | responsables de hogar y administradores de pequeños negocios. |
-| Lo sabremos si | el tiempo mediano cae ≥ 20 % y el éxito aumenta ≥ 20 pp, sin elevar errores críticos. |
+| Meta práctica | la mediana de tiempo penalizado cae ≥ 20 % y el éxito autónomo dentro de 600 s aumenta ≥ 20 pp, sin errores críticos. El piloto solo estima; una afirmación confirmatoria exige el diseño y la muestra de 8.2. |
 | Control | dashboard actual con KPI, gráfico y ranking. |
 | Tratamiento | control + tarjeta explicativa y acción directa. |
 | Evidencia | eventos de tarea, tiempo, resultado, errores y encuesta breve posterior no identificable. |
@@ -1832,7 +1895,7 @@ La prioridad inicial usa `Score = (Impacto × Incertidumbre × Alcance) / Esfuer
 |:--|:--|
 | Creemos que | una vista previa de dispositivos afectados previene acciones masivas equivocadas. |
 | Prueba | comparar confirmación genérica frente a resumen con alcance y consecuencias. |
-| Éxito | ≥ 30 % menos selecciones erróneas y aumento de tiempo ≤ 15 %. |
+| Meta práctica | ≥ 30 % menos participantes con alguna selección errónea y razón de medianas de tiempo penalizado ≤ 1.15; si el control no tiene errores, no se calcula reducción relativa. |
 | Guardrail | ningún participante debe aplicar una acción irreversible sobre datos reales. |
 
 **EC-03 — Recuperación offline**
@@ -1841,117 +1904,163 @@ La prioridad inicial usa `Score = (Impacto × Incertidumbre × Alcance) / Esfuer
 |:--|:--|
 | Creemos que | un banner persistente con **Reintentar** permite completar la tarea después de recuperar internet. |
 | Prueba | interrumpir la conectividad durante una carga, restaurarla y solicitar reintento. |
-| Éxito | ≥ 80 % recupera la tarea sin reiniciar sesión; cero duplicaciones de comandos. |
+| Meta práctica | ≥ 80 % recupera la tarea dentro de 120 s desde el restablecimiento de red, sin reiniciar sesión; cero duplicaciones de comandos. |
 | Guardrail | usar ambiente de prueba y operaciones idempotentes o verificables. |
 
 ## 8.2 Experiment Design
 
 ### 8.2.1 Hypotheses
 
-- **H1:** la mediana de `time_to_correct_action_ms` del tratamiento será al menos 20 % menor que la del control.
-- **H2:** la proporción `task_success` del tratamiento será al menos 20 puntos porcentuales mayor que la del control.
-- **H3:** la diferencia absoluta de éxito entre Android y web no superará 10 puntos porcentuales cuando ambos usen el tratamiento.
-- **H4:** al menos 80 % de las tareas interrumpidas por una pérdida de red se completará después de seleccionar **Reintentar**.
-- **H5:** la confirmación con alcance reducirá al menos 30 % los errores de dispositivo sin aumentar más de 15 % el tiempo mediano.
+El diseño compara tareas sobre datos sintéticos; no busca demostrar ahorro eléctrico real. El tiempo de resolución es el resultado primario. El éxito, la diferencia entre plataformas, la recuperación y los errores ayudan a explicar el resultado, pero no se elegirán después de observar los datos para declarar que el experimento funcionó.
 
-Las hipótesis son direccionales y fueron definidas antes de recopilar datos. Si el piloto obliga a cambiar umbrales, el cambio se versionará y no se aplicará retroactivamente.
+Se distingue la hipótesis estadística de la meta práctica. Detectar alguna mejora no demuestra, por sí solo, una reducción de 20 % o un aumento de 20 puntos porcentuales. Las metas se conservarán al interpretar estimaciones e intervalos.
+
+| ID y alcance | Hipótesis nula H0 | Hipótesis alternativa HA | Meta práctica |
+|:--|:--|:--|:--|
+| H1, primaria: tiempo en EC-01 | La razón de medianas de tiempo penalizado, tratamiento/control, es ≥ 1. | La razón de medianas es < 1. | Razón ≤ 0.80: al menos 20 % menos tiempo penalizado. |
+| H2, secundaria: éxito en EC-01 | La diferencia de éxito sin ayuda, tratamiento menos control, es ≤ 0. | La diferencia es > 0. | Aumento de al menos 0.20, es decir, 20 puntos porcentuales. |
+| H3, secundaria: no inferioridad de Android | Con el tratamiento, éxito Android menos éxito web es ≤ -0.10. | La diferencia es > -0.10. | Android no queda más de 10 puntos porcentuales por debajo de web; no se exige equivalencia ni se penaliza que Android resulte mejor. |
+| H4, secundaria: recuperación en EC-03 | La proporción de recuperación sin reiniciar sesión es ≤ 0.80. | La proporción es > 0.80. | Recuperar al menos 80 % de las tareas con interrupción inducida válida, sin comandos duplicados. |
+| H5, secundaria: errores en EC-02 | La proporción de participantes con una selección errónea usando la vista previa es ≥ la del control. | La proporción es menor que en el control. | Reducir esa proporción al menos 30 %, con tiempo penalizado no mayor a 1.15 veces el del control. |
+
+El tiempo penalizado y los denominadores se definen en 8.2.3. Si el control de EC-02 no registra errores, la reducción relativa no se puede calcular: se informará la diferencia absoluta y no se atribuirá un 30 % de mejora.
+
+El piloto será formativo y no confirmará estas hipótesis. Para un estudio confirmatorio posterior, H1 será el único contraste primario, con nivel unilateral de 0.05. H2–H5 se informarán como análisis exploratorios con estimaciones e intervalos; no respaldarán afirmaciones confirmatorias independientes. Si se decide confirmarlas, deberá versionarse antes del reclutamiento un protocolo con muestra propia y control de multiplicidad: primero H1 y, solo si se rechaza su H0, la familia H2–H5 con ajuste de Holm a 0.05. Si H1 no supera ese paso, los demás resultados seguirán siendo exploratorios. La documentación de [R sobre ajustes múltiples](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/p.adjust.html) explica su control del error familiar. No se cambiará la hipótesis primaria al ver un resultado favorable en otra métrica.
 
 ### 8.2.2 Domain Business Metrics
 
-| Métrica | Fórmula | Relación con el dominio |
-|:--|:--|:--|
-| Weekly Active Energy Decisions | usuarios con al menos una alerta resuelta, acción de dispositivo, rutina o meta por semana | Valor operativo, no solo visitas. |
-| Alert Resolution Rate | alertas resueltas / alertas abiertas | Capacidad de convertir una señal en decisión. |
-| Automation Adoption | usuarios que activan una rutina o modo / usuarios activos | Reducción de tareas repetitivas. |
-| Goal Engagement | usuarios que revisan o actualizan una meta / usuarios con meta | Seguimiento sostenido. |
-| Report Export Rate | reportes exportados / reportes generados | Utilidad de la información histórica. |
-| Device Action Success | comandos confirmados / comandos solicitados | Confiabilidad percibida y técnica. |
+Las métricas del negocio representan uso sostenido del producto. Se mantienen separadas de la tarea controlada: una sesión de prueba no acredita adopción semanal ni ahorro energético.
 
-No se usa “energía ahorrada” como KPI principal hasta disponer de telemetría calibrada y una línea base comparable; evitar esa afirmación protege la integridad del experimento.
+| Métrica | Definición operativa | Uso previsto |
+|:--|:--|:--|
+| Weekly Active Energy Decisions | Usuarios distintos con al menos una alerta resuelta, comando confirmado, rutina activada o meta actualizada durante una semana definida. | Observar decisiones realizadas, no solo visitas. |
+| Alert Resolution Rate | Alertas resueltas entre alertas abiertas en el período, conservando las fechas de apertura y resolución. | Evaluar seguimiento de señales. |
+| Automation Adoption | Usuarios que activan al menos una rutina o modo entre usuarios activos del período. | Observar adopción de automatizaciones. |
+| Goal Engagement | Usuarios que revisan o actualizan una meta entre usuarios con una meta disponible. | Observar seguimiento sostenido. |
+| Report Export Rate | Reportes exportados entre reportes generados en el período. | Evaluar uso de información histórica. |
+| Device Action Success | Operaciones únicas confirmadas entre operaciones únicas solicitadas; los reintentos con el mismo identificador no aumentan el denominador. | Evaluar confiabilidad de comandos. |
+
+Cada extracción conservará período, zona horaria, versión y denominador. Si el denominador es cero, la tasa se registrará como no calculable, no como cero éxito ni 100 %. Las cuentas y eventos del experimento se identificarán para no mezclarlos con uso ordinario. No se usa energía ahorrada como KPI hasta contar con telemetría calibrada y una línea base comparable.
 
 ### 8.2.3 Measures
 
-| Variable | Tipo | Unidad / dominio | Fuente |
-|:--|:--|:--|:--|
-| `task_success` | Primaria binaria | 0/1 | Estado final de la tarea. |
-| `time_to_correct_action_ms` | Primaria continua | milisegundos | Eventos inicio/fin. |
-| `wrong_action_count` | Guardrail discreta | conteo | Comandos o selecciones incorrectas. |
-| `help_request_count` | Secundaria discreta | conteo | Registro del facilitador. |
-| `confidence_score` | Secundaria ordinal | 1-5 | Pregunta posterior a la tarea. |
-| `offline_recovery_success` | Primaria binaria para EC-03 | 0/1 | Reintento y finalización. |
-| `api_latency_ms` | Técnica continua | milisegundos | Cliente/API. |
-| `api_error_class` | Técnica nominal | offline/401/validation/5xx/unknown | Manejo tipado de fallos. |
+La unidad de análisis es una persona en su primera tarea asignada de EC-01. EC-02 y EC-03 conservan, por separado, una observación por persona en su tarea correspondiente; no se suman sus registros como participantes nuevos. Repetir una solicitud o reintentar la tarea tampoco crea una observación nueva. El reloj empieza al mostrar el enunciado completo y termina cuando la API confirma el dispositivo y la acción esperados. Se usa el reloj monotónico del cliente para duraciones y UTC para correlacionar eventos.
 
-El reloj comienza cuando se presenta la tarea y termina cuando el estado correcto queda confirmado por la API. Pausas del facilitador se registran y no se eliminan sin una regla previa.
+La ventana propuesta es de **600 segundos por tarea**. Es una regla de diseño, no un tiempo observado. Se revisará únicamente después del piloto y antes de congelar el protocolo confirmatorio.
+
+| Variable | Definición y unidad | Papel |
+|:--|:--|:--|
+| `task_success` | 1 si completa la acción correcta, sin ayuda, dentro de 600 s; 0 en otro caso. | Resultado secundario de EC-01. |
+| `time_to_correct_action_ms` | Duración hasta la confirmación correcta; queda sin valor si no existe confirmación. | Dato observado; nunca se inventa una duración de éxito. |
+| `analysis_time_ms` | Duración observada si `task_success=1`; 600 000 ms si termina sin éxito, pide ayuda o abandona después de iniciar. | Resultado primario: tiempo penalizado por incumplimiento. |
+| `completion_observed` y `termination_reason` | Indican si se observó finalización y si terminó por éxito, timeout, abandono, ayuda, fallo técnico o riesgo. | Permiten distinguir una duración observada de una penalización. |
+| `wrong_action_count` | Selecciones o comandos incorrectos por persona; EC-02 deriva además `any_wrong_action=1` si ocurre al menos uno. | Guarda de seguridad y medida de H5. |
+| `help_request_count` | Solicitudes de ayuda registradas por el facilitador. | Explica dificultad; pedir ayuda impide contar éxito autónomo. |
+| `confidence_score` | Respuesta ordinal 1–5 posterior a la tarea. | Exploratoria; no se interpreta como medida continua exacta. |
+| `offline_recovery_success` | 1 si recupera la tarea en ≤ 120 s desde el restablecimiento de red, sin reiniciar sesión ni duplicar comandos. | Resultado de EC-03. |
+| `api_latency_ms` / `api_error_class` | Duración de petición y clase offline/401/429/validation/5xx/unknown. | Diagnóstico técnico; no sustituye el tiempo de usuario. |
+
+El límite de 600 s evita analizar solo a quienes lograron terminar. Para un timeout, el tiempo real hasta completar está censurado a la derecha: se sabe que supera la ventana, pero no su valor. El análisis primario usa la penalización definida; **600 000 ms no se presenta como una finalización observada**. Se publicarán también éxito, motivos de cierre y distribución de tiempos observados, de modo que la mediana penalizada no oculte fallos.
+
+Se analizará según la variante asignada. Los fallos técnicos posteriores al inicio permanecen en el análisis primario; una sensibilidad separada podrá describir tareas sin incidencias, sin reemplazar el resultado principal. Una sesión que no llegó a mostrar la tarea se registra como pérdida previa al inicio, no como éxito. Si se retira el consentimiento y deben eliminarse los datos, no se reconstruye una respuesta: se informa la pérdida autorizada de forma agregada y se evalúa la sensibilidad a datos faltantes. No se eliminarán tiempos lentos ni pausas después de conocer la variante ganadora.
 
 ### 8.2.4 Conditions
 
-| Factor | Control | Tratamiento |
-|:--|:--|:--|
-| Dashboard | KPI, gráfico, ranking y alertas actuales | Mismos elementos + recomendación explicativa y CTA. |
-| Datos | Dataset semilla idéntico | Dataset semilla idéntico. |
-| Tarea | Identificar causa y reducir consumo | Misma redacción. |
-| Cuenta | Rol y plan equivalentes | Rol y plan equivalentes. |
-| Red | Conectividad estable, salvo EC-03 | Igual condición. |
-| Dispositivo | Web o Android registrado como estrato | Web o Android registrado como estrato. |
+EC-01 utiliza un diseño entre sujetos: cada persona ve una sola variante para que conocer la otra interfaz no facilite la tarea. La asignación se balanceará por los dos segmentos del proyecto. Entre personas que puedan utilizar ambos clientes, primero se asignará web o Android y después control o tratamiento dentro de cada combinación de segmento y plataforma. Si no es posible asignar plataforma, su comparación se declarará observacional y H3 no se interpretará como efecto causal del cliente.
 
-La asignación a variante será aleatoria y estratificada por segmento y plataforma. El facilitador usará un guion fijo y no explicará la interfaz durante la medición. La prueba se ejecutará con datos sintéticos para impedir acciones sobre instalaciones reales.
+| Factor | Control de EC-01 | Tratamiento de EC-01 |
+|:--|:--|:--|
+| Interfaz | Dashboard actual con KPI, gráfico, ranking y alertas. | Los mismos componentes más causa probable, impacto y acción permitida. |
+| Datos y respuesta correcta | Dataset semilla versionado y reiniciable; misma clave de corrección. | Dataset y clave idénticos. |
+| Cuenta y permisos | Rol y plan equivalentes; sin instalaciones reales. | Condiciones idénticas. |
+| Tarea y ayuda | Mismo enunciado, ventana de 600 s y guion del facilitador. | Condiciones idénticas. |
+| Dispositivo | Navegador y Android de prueba registrados, con versiones y tamaño de pantalla. | Mismos equipos por plataforma. |
+| Red | Conexión estable; latencia y errores registrados. | Mismo criterio; no se introduce offline durante EC-01. |
+
+El facilitador explica el objetivo de la sesión, pero no guía la interfaz durante la medición. Un riesgo de seguridad detiene la tarea y se registra como tal. La sesión no controla equipos físicos ni permite acciones irreversibles sobre datos reales.
+
+EC-02 se realiza después de EC-01, con otra tarea equivalente y una asignación independiente a confirmación genérica o vista previa de alcance; cada persona prueba solo una de ellas. El resultado primario de EC-01 ya estará cerrado. EC-03 usa una operación de prueba distinta y la misma interfaz To-Be de recuperación para todas las personas; es una evaluación contra el umbral de 80 %, sin un segundo grupo de control. Se interrumpe la red durante una carga, se registra que la interrupción ocurrió y, tras 20 s, se restablece. La ventana de recuperación empieza en ese momento y dura 120 s. El denominador incluye a todas las personas que iniciaron una interrupción válida; no recuperarse cuenta como fallo. Si la interrupción no llegó a producirse, se registra una incidencia de protocolo y se informa separadamente, sin convertirla en recuperación exitosa.
+
+Antes de convocar sesiones se comprobarán la versión, acceso, datos semilla, consentimiento y funcionamiento del registro. La asignación, facilitación y revisión de datos tendrán responsables aceptados por el equipo; el plan no atribuye esos roles a integrantes que aún no los han confirmado.
 
 ### 8.2.5 Scale Calculations and Decisions
 
-Para detectar un cambio de éxito de 60 % a 85 %, con prueba bilateral, `α = 0.05` y potencia de 80 %, la aproximación para dos proporciones independientes requiere alrededor de **49 observaciones por variante**. Con 10 % de pérdida, la meta confirmatoria sería **55 por variante, 110 en total**.
+El piloto propuesto comprende **24 personas: 12 por segmento**, con reparto balanceado entre dos plataformas y dos variantes. Esto produce tres personas por celda segmento × plataforma × variante. No hay participantes reclutados ni mediciones atribuidas a esta propuesta. Su fin es revisar comprensión del guion, calidad de eventos, tasa de fallos y distribución de tiempos; ese tamaño no demuestra no inferioridad ni las mejoras previstas.
 
-Ese tamaño excede la capacidad inmediata del curso. Se adopta un diseño en dos etapas:
+Como referencia para **H2**, se supone una tasa de éxito de control de 0.60 y una de tratamiento de 0.80. Son supuestos para dimensionar, no resultados del producto. La diferencia es **0.20, equivalente a 20 puntos porcentuales**. Para una comparación bilateral de dos proporciones independientes, con `α=0.05` y potencia `1−β=0.80`, la aproximación normal es:
 
-1. **Piloto formativo:** 24 participantes, 12 por segmento, distribuidos de forma balanceada entre variantes y plataformas. Se reportarán intervalos, tamaños de efecto y problemas de instrumentación; no se afirmará confirmación estadística.
-2. **Experimento confirmatorio:** recalcular el tamaño con la tasa y varianza observadas en el piloto, congelar el protocolo y alcanzar la muestra resultante antes de aceptar o rechazar H1/H2.
+`n ≈ [z(0.975)·√(2·p̄·(1−p̄)) + z(0.80)·√(pC·(1−pC)+pT·(1−pT))]² / (pT−pC)²`
 
-La unidad de análisis es una persona por variante para la hipótesis primaria. Reintentos técnicos se registran, pero no se cuentan como participantes nuevos. No se detendrá la prueba anticipadamente al observar un resultado favorable.
+Con `p̄=0.70`, `z(0.975)=1.959964` y `z(0.80)=0.841621`, resulta **n≈81.224 por variante**, que se redondea a **82**. Al prever 10 % de pérdida de registros utilizables, `ceil(82/0.90)=92`: **184 personas a convocar**. Los fracasos de tarea son resultados válidos y no se descuentan como esa pérdida. La documentación oficial de [R: power.prop.test](https://www.stat.ethz.ch/R-manual/R-devel/library/stats/html/power.prop.test.html) define los parámetros de este cálculo.
+
+Esta cifra es una referencia sin ajuste por múltiples contrastes para detectar una diferencia respecto de cero cuando la diferencia supuesta es 20 pp. **No demuestra que el efecto sea de al menos 20 pp, no dimensiona H1 y no garantiza potencia para H3–H5.** No se adoptará 184 como tamaño definitivo de todo el experimento.
+
+La muestra confirmatoria del tiempo requiere conocer la distribución de `analysis_time_ms`, incluida su masa de fallos en 600 s. No se inventará una desviación estándar ni se aplicará a medianas una fórmula de medias. Se define:
+
+`nT = mínimo n por variante tal que P(rechazar H0 de H1 | distribuciones de tiempo y fallo fijadas en el protocolo) ≥ 0.80`.
+
+Después del piloto se estimarán esas distribuciones y se evaluará `nT` por simulación del análisis elegido, bajo una razón de medianas objetivo de 0.80 y escenarios de fallos explícitos. Se conservarán código, semilla, supuestos y análisis de sensibilidad. Si la masa de timeouts impide estimar la razón con precisión u obtener un intervalo estable, primero se refinará el diseño en una nueva versión.
+
+El confirmatorio se iniciaría solo tras fijar muestra, condiciones y criterio de análisis, sin reutilizar el piloto como confirmación. Si la capacidad académica no alcanza la muestra, el resultado se comunicará como piloto formativo. No se detendrá anticipadamente por observar una diferencia favorable ni se prometerá confirmar cinco hipótesis con 24 personas.
 
 ### 8.2.6 Methods Selection
 
-Se selecciona un experimento controlado entre sujetos para EC-01, evitando que el aprendizaje de una interfaz contamine la otra. EC-02 y EC-03 pueden ejecutarse como pruebas de tarea separadas después de la métrica primaria.
+Se elige un experimento controlado entre sujetos para EC-01 porque el producto ya tiene una interfaz As-Is y se quiere aislar el aporte de la recomendación. Una comparación antes/después confundiría el tratamiento con aprendizaje o cambios de datos; un diseño donde cada persona usa ambas variantes facilitaría la segunda tarea. Las observaciones y la pregunta cerrada de confianza complementan la medición, sin sustituir entrevistas ni presentarse como tales.
 
-Métodos:
+Para H1 se estimará la razón de medianas de `analysis_time_ms`, con intervalos por remuestreo de participantes dentro de variante y estrato, conservando pesos de segmento y plataforma fijados antes del estudio. El plan propone 10 000 remuestreos con semilla versionada y método BCa, cuya estabilidad se revisará en el piloto. Si aparecen intervalos degenerados o no estimables, no se sustituirá el método después para obtener significación: se registrará el límite y se revisará el protocolo antes del confirmatorio. La documentación de [SciPy sobre bootstrap](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html) describe el método y los casos degenerados.
 
-- asignación aleatoria estratificada por segmento y plataforma;
-- dataset semilla y guion de tarea constantes;
-- telemetría de eventos para tiempo, éxito y errores;
-- observación estructurada para solicitudes de ayuda;
-- pregunta Likert de confianza posterior a la tarea;
-- análisis por intención de tratar y análisis de sensibilidad por protocolo;
-- prueba de proporciones para éxito, comparación de tiempo según distribución y tamaños de efecto con intervalos de confianza.
+En un confirmatorio, el límite superior unilateral de 95 % de la razón por debajo de 1 respaldaría alguna reducción. Un estimador ≤0.80 cumple la meta puntual; para afirmar una reducción poblacional de al menos 20 %, ese límite también tendría que ser ≤0.80. Los contrastes secundarios conservarán su carácter exploratorio: diferencias de proporciones para H2/H3, proporción e intervalo binomial para H4 y proporción de personas con error para H5. Una diferencia no significativa entre plataformas no demuestra no inferioridad: H3 exige evaluar expresamente el margen de -0.10. Los métodos de referencia son [comparación de proporciones de statsmodels](https://www.statsmodels.org/stable/generated/statsmodels.stats.proportion.test_proportions_2indep.html) y [prueba binomial de SciPy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html).
 
-Las entrevistas están fuera de esta versión. Una pregunta posterior cerrada no se presentará como entrevista cualitativa.
+El método se incorpora al ciclo de desarrollo mediante la siguiente trazabilidad. La columna de controles existentes describe configuración verificable; no acredita que las historias To-Be estén implementadas o que una sesión se haya ejecutado.
+
+| Etapa SDLC | Trabajo experimental previsto | Apoyo real del proyecto y límite |
+|:--|:--|:--|
+| Planificación y diseño | Versionar preguntas, H0/HA, métricas, contratos y semilla del dataset antes de medir. | El [CI del informe](https://github.com/teralume/energycore-report/blob/main/.github/workflows/ci-cd.yml) valida estructura, alcance y artefactos; no valida estadísticamente el protocolo. |
+| Implementación, Sprint 5 | Preparar asignación, consentimiento, eventos web/móvil y datos reiniciables. | Cambios trazables por SHA en los repositorios. Los contratos To-Be y sus pruebas deben añadirse; su existencia no se deduce del CI actual. |
+| Verificación, Sprints 5–7 | Probar asignación estable, opt-out, esquema de eventos, comandos y recuperación con datos sintéticos. | [Backend](https://github.com/teralume/energycore-platform/blob/main/.github/workflows/ci-cd.yml): Maven/JUnit/Cucumber y Docker. [Web](https://github.com/teralume/energycore-webapp/blob/main/.github/workflows/ci-cd.yml): tests y build. [Flutter](https://github.com/teralume/energycore-mobile/blob/main/.github/workflows/ci-cd.yml): formato, análisis, tests y APK; el build iOS no valida este experimento web/Android. |
+| Preparación de una versión | Fijar SHAs, configuración, dataset y versión del protocolo que usarán ambas variantes. | Actions publica artefactos por SHA. Cloud Run/Firebase tienen deploy condicionado a verify, push a main y variable de habilitación; no existe promoción binaria inmutable ni staging experimental acreditado. |
+| Ejecución controlada, posterior a AV2 | Verificar el entorno y realizar sesiones consentidas con el protocolo congelado. | El [monitor](https://github.com/teralume/energycore-report/blob/main/.github/workflows/monitoring.yml) comprueba health, OpenAPI y web. Su aprobación no mide tareas de personas ni reemplaza la comprobación funcional del entorno. |
+| Análisis y aprendizaje, posterior a AV2 | Exportar datos autorizados, aplicar el análisis fijado y documentar adoptar, iterar o descartar. | TS-04/TS-05 preparan métricas y exportación. No hay un job actual de análisis experimental ni resultados que puedan atribuirse al pipeline. |
+
+La elección aprovecha CI para controlar versiones y defectos del software. La validez de las sesiones, los datos y las inferencias sigue requiriendo revisión humana. La planificación de estas capacidades termina en 8.3.2; su ejecución y resultados no se adelantan en AV2.
 
 ### 8.2.7 Data Analytics Goals KPIs and Metrics Selection
 
-| Goal | KPI de decisión | Umbral | Guardrail |
-|:--|:--|:--|:--|
-| Reducir esfuerzo para actuar | Tiempo mediano a acción correcta | -20 % | Error crítico no aumenta. |
-| Mejorar comprensión | Task success | +20 pp | Solicitudes de ayuda no aumentan. |
-| Mantener paridad | Diferencia Android vs web | ≤ 10 pp | Latencia por plataforma registrada. |
-| Recuperar fallos de red | Offline recovery success | ≥ 80 % | Cero comandos duplicados. |
-| Prevenir acciones erróneas | Wrong action rate | -30 % | Tiempo +15 % como máximo. |
+| Objetivo | KPI y meta práctica | Lectura prevista |
+|:--|:--|:--|
+| Resolver con menos esfuerzo | Razón de medianas de tiempo penalizado ≤0.80. | Primario de EC-01; acompañar siempre con éxito, fallos y tiempos observados. |
+| Completar la acción sin ayuda | Diferencia de éxito tratamiento−control ≥0.20. | Secundario; el intervalo distingue estimación puntual de evidencia sobre la magnitud. |
+| Evitar un deterioro relevante en Android | Diferencia de éxito Android−web >-0.10 con el tratamiento. | No inferioridad unilateral. No exige diferencia absoluta ≤0.10. |
+| Recuperar pérdida de red | Recuperación dentro de 120 s ≥0.80. | Secundario de EC-03; cero comandos duplicados es condición de seguridad. |
+| Prevenir selecciones erróneas | Razón de proporciones con error ≤0.70; razón de tiempos penalizados ≤1.15. | Secundario de EC-02; si el control no tiene errores, no calcular reducción relativa. |
 
-Los KPIs de negocio se observan después de validar la tarea. Las métricas de vanidad, como page views sin acción, no deciden la hipótesis.
+Un resultado prometedor del piloto permitiría refinar el tratamiento y preparar otro estudio, no anunciar una mejora confirmada. Para considerar la adopción después de un confirmatorio se revisarán conjuntamente la evidencia de H1, la magnitud práctica, el éxito y las guardas: un tiempo menor no justifica errores críticos, pérdida de control o duplicación de comandos.
+
+Se mostrarán intervalos y tamaños de efecto, incluso si contradicen la expectativa. Ausencia de significación no equivale a demostrar igualdad; un resultado inconcluso se conserva como tal. Las métricas de negocio de 8.2.2 se observarían después y no se usarán para rescatar una hipótesis de tarea que no se sostuvo. Page views y cantidades de tests tampoco decidirán el efecto del producto.
 
 ### 8.2.8 Web and Mobile Tracking Plan
 
-| Evento | Momento | Propiedades mínimas |
-|:--|:--|:--|
-| `landing_cta_clicked` | CTA al login | locale, viewport, source_section |
-| `auth_login_started` / `auth_login_succeeded` | Inicio y fin de autenticación | platform, elapsed_ms, outcome; nunca email o token |
-| `dashboard_viewed` | Dashboard listo | variant, platform, data_freshness_s |
-| `energy_issue_identified` | Usuario selecciona la causa | task_id, device_category, correct |
-| `device_action_started` / `completed` | Comando energético | action_type, scope_size, elapsed_ms, outcome |
-| `alert_opened` / `resolved` | Gestión de alerta | severity, elapsed_ms, outcome |
-| `routine_created` | Automatización confirmada | target_type, recurrence, outcome |
-| `goal_created` | Meta almacenada | period_type, outcome |
-| `report_exported` | Exportación terminada | format, platform, outcome |
-| `offline_detected` / `offline_retry_selected` / `sync_recovered` | Recuperación de red | task_id, retry_count, elapsed_ms, outcome |
+La instrumentación es trabajo To-Be de TS-01, TS-02A y TS-02B. Los nombres siguientes constituyen el contrato propuesto; no se afirma que ya se recolecten. Web y Flutter deberán producir los mismos campos para una misma acción.
 
-Propiedades comunes: `anonymous_participant_id`, `session_id`, `experiment_id`, `variant`, `segment`, `platform`, `app_version`, `locale`, `theme` y timestamp UTC. Se prohíbe registrar nombre, correo, JWT, contraseña, dirección, datos de tarjeta o texto libre de soporte. La retención experimental propuesta es de 90 días y el diccionario de eventos se versiona junto con el código.
+| Evento | Momento | Campos específicos |
+|:--|:--|:--|
+| `experiment_consent_recorded` | Aceptación o rechazo antes de asignar. | consent_version, accepted; sin eventos conductuales cuando accepted=false. |
+| `experiment_variant_assigned` | Asignación estable de persona, plataforma y variante. | experiment_id, variant, assignment_version. |
+| `task_presented` | Enunciado completo visible; inicia la ventana. | task_id, task_version, deadline_ms, monotonic_start_ms. |
+| `task_help_requested` | Se solicita ayuda. | task_id, help_request_count. |
+| `energy_issue_identified` | Se selecciona una causa. | task_id, device_category, correct. |
+| `device_action_started` / `device_action_completed` | Solicitud y confirmación del comando. | task_id, operation_id, scope_size, elapsed_ms, outcome. |
+| `task_finished` | Cierre único por éxito, timeout, abandono, ayuda, fallo técnico o riesgo. | task_id, completion_observed, task_success, elapsed_ms, termination_reason, wrong_action_count. |
+| `offline_injected` / `network_restored` | Interrupción de prueba comprobada y restablecimiento. | task_id, confirmed, monotonic_ms. |
+| `offline_retry_selected` / `sync_recovered` | Reintento y confirmación de recuperación. | task_id, operation_id, retry_count, elapsed_since_restore_ms, duplicate_detected. |
+| `task_confidence_answered` | Pregunta cerrada al terminar. | task_id, score_1_to_5; sin texto libre. |
+| `experiment_opt_out` | Se deja de participar. | consent_version, scope; detiene nuevas emisiones experimentales. |
+
+Cada evento llevará `event_id`, `session_id`, versión del esquema y timestamp UTC. Después del consentimiento y la asignación se agregarán identificador seudónimo, segmento, plataforma, variante y versiones de aplicación/protocolo/dataset; `task_id` se exige en eventos de tarea. El registro de rechazo no recibe variante ni genera seguimiento conductual. El nombre seudónimo no convierte automáticamente los datos en anónimos; se evita recopilar un vínculo con nombre o correo. Se prohíben JWT, contraseñas, direcciones, datos de pago y texto libre de soporte.
+
+El esquema rechazará campos desconocidos con datos personales, deduplicará por `event_id` y comprobará un único cierre de tarea. Los reintentos de comandos conservarán `operation_id`. `analysis_time_ms` se derivará durante la exportación desde resultado y reglas de 8.2.3, conservando el valor observado separado de la penalización.
+
+Se propone una retención de 90 días para los datos experimentales autorizados, con acceso restringido y eliminación registrada al finalizarla. Es distinta de la retención de 30 días del artefacto del monitor. Antes de una sesión deberán probarse opt-out, pérdidas de red, envío duplicado, orden de eventos y ausencia de datos personales con datos sintéticos. Esas pruebas acreditarán la instrumentación, no participación ni resultados de usuarios.
 
 ## 8.3 Experimentation
 
@@ -2053,15 +2162,15 @@ La condición común de cierre de cada tarea será enlazar el cambio y la prueba
 
 ## Conclusiones y recomendaciones
 
-EnergyCore cuenta con una base funcional integrada para Landing Page, Web Application, Native Mobile Application y RESTful API. La separación en cinco repositorios mejora la trazabilidad del producto, mientras que la arquitectura por bounded contexts conserva una fuente central de reglas y datos para los clientes web y Android.
+La verificación de EnergyCore permite sostener una afirmación concreta: el backend en `3f74d478` aprobó 28 pruebas JUnit y 60 escenarios Cucumber el 03/11/2026. La corrección del escenario de borrado de reportes eliminó una dependencia de octubre sin cambiar la regla de negocio ni omitir la prueba. La cifra histórica de 109 incluye también Angular, Flutter y Landing Page; no representa una nueva ejecución conjunta de todos los componentes en noviembre.
 
-La línea base de verificación demuestra una base técnica ejecutable, aunque no sustituye la validación con usuarios. El backend registró 28 pruebas JUnit y 60 escenarios Cucumber aprobados; Flutter, 11 pruebas; Angular, 5 pruebas y compilación de producción exitosa; y la Landing Page, 5 pruebas unitarias, de integración y funcionales. La línea base del 05/10/2026 registra **109 pruebas automatizadas sin fallos**; el 21/10/2026 se consultó su CI, sin repetir toda esa suite. Cada cambio posterior debe superar su propia ejecución de CI: esta línea base histórica no acredita automáticamente otro commit. El siguiente incremento debe ampliar la profundidad del frontend, mantener smoke tests integrados y conservar evidencia por commit.
+El incidente de facturación mostró por qué no basta con un pipeline de tests aprobado. A las 13:08 UTC del 03/11 la web respondía, pero la API no estaba disponible. El monitor remoto de las 14:10 UTC volvió a obtener health, OpenAPI y web válidos. Se conservan ambas observaciones. Esa recuperación comprueba las superficies públicas; la navegación autenticada y la experiencia de los usuarios necesitan su propia evidencia.
 
-La hipótesis principal cuenta con un diseño experimental propuesto: comparar el dashboard actual con una recomendación accionable y medir tiempo, éxito y errores. El piloto de 24 participantes servirá para depurar instrumentación y estimar parámetros; una conclusión confirmatoria requeriría recalcular y alcanzar una muestra suficiente. Hasta ejecutar el piloto, no se afirma que EnergyCore reduzca consumo ni que mejore decisiones.
+El diseño de AV2 concentra la evaluación en una pregunta: si mostrar una explicación y una acción ayuda a resolver una tarea energética con menos tiempo y sin aumentar el riesgo. Se explicitan hipótesis nulas y alternativas, límites de la muestra, condiciones de abandono y tratamiento de fallos. El piloto de 24 personas está propuesto para revisar el protocolo e instrumentación. No se atribuyen mejoras de tiempo, ahorro eléctrico o satisfacción a un experimento todavía no realizado.
 
-El diseño ético reconoce que la telemetría energética puede revelar hábitos y que un comando remoto puede afectar dispositivos reales. Por ello se priorizan minimización de datos, perfiles, confirmación de alcance, información de frescura, resultados negativos visibles y detención ante riesgo. Esta decisión conecta el Student Outcome 4 con prácticas concretas de ingeniería.
+Las 13 historias To-Be se descomponen en 26 tareas de 4 a 8 horas, con 132 horas estimadas y dependencias entre medición, tratamiento y recuperación. Esta planificación responde a la rúbrica de AV2. La implementación experimental y el análisis de sus resultados no se incorporan como trabajo ejecutado en esta entrega.
 
-Los workflows de CI existentes aportan evidencia técnica. Aún se requieren pruebas de cierre para las capacidades solo descritas y completar la validación con usuarios y el intercambio de auditorías exigidos por AV2. El monitoreo sintético está activo: tuvo una ejecución aprobada el 21/10/2026, pero la comprobación del 03/11/2026 detectó el backend inaccesible por facturación deshabilitada; la web pública respondió HTTP 200. Por tanto, CI aprobado no equivale a servicio productivo disponible. Faltan la recuperación del servicio, la revisión humana por pares y los informes de auditoría entre grupos. El Sprint Backlog To-Be se incorpora como planificación exigida por la rúbrica, sin adelantar ejecución ni resultados de TB2. Estas conclusiones constituyen un avance documental y todavía requieren revisión explícita de todos los integrantes antes de presentarse como conclusión grupal.
+El principal límite de la validación sigue siendo la ausencia de sesiones con usuarios del producto y de informes de auditoría entre grupos. El guion, las fichas y los criterios de aceptación hacen esas actividades ejecutables, pero no reemplazan sus registros. El Student Outcome vincula las contribuciones comprobables con decisiones sobre privacidad, interpretación de datos y comunicación de límites; la atribución y las conclusiones requieren la revisión de los integrantes.
 
 # Bibliografía
 
@@ -2085,11 +2194,26 @@ Los workflows de CI existentes aportan evidencia técnica. Aún se requieren pru
 
 - [Revisión técnica y CI por commit](assets/evidence/implemented/av2-review-2026-10-21.json).
 - [Comprobación pública de disponibilidad](assets/evidence/implemented/av2-monitoring-2026-10-21.json).
+- [Pruebas backend y recuperación pública del 03/11](assets/evidence/implemented/av2-recovery-2026-11-03.json).
+- [Guion y registro de validación del producto actual](planning/validation-interviews-av2.md).
 - [Kit para auditorías UX entre grupos](planning/ux-audit-kit-av2.md).
 - [Presentación AV2 editable](output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pptx).
 - [Presentación AV2 en PDF](output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pdf).
 - [Presentación AV2 en Canva](https://www.canva.com/design/DAHYoDC_Zqc/BJZvKHIJtJGlH2Z6kJ0IjQ/edit).
 - [Fuente visual y verificación de los archivos AV2](presentation/av2-keynote-source.md).
+
+## Registro de mejoras de AV2
+
+| Origen de la observación | Corrección aplicada | Evidencia y límite |
+|:--|:--|:--|
+| Observación docente sobre contenido adelantado; índice del tercer hito. | Se delimita el incremento a VI, VII y VIII hasta 8.3.2. La planificación To-Be se incluye por exigencia explícita de la rúbrica. | Secciones de alcance y 8.3.2; las tareas no se registran como implementadas. |
+| Notas docentes sobre datos cuantitativos, historias no funcionales, técnicas y spikes. | Las preguntas tienen medidas y decisiones; los planes distinguen investigación, calidad y construcción. Las 26 tareas To-Be tienen estimaciones de 4–8 h. | Question Backlog, Experiment Cards y Sprint Planning. Las estimaciones no son horas ejecutadas. |
+| Rúbrica de diseño experimental y revisión de coherencia del 03/11. | Se añaden H0/HA; se armonizan la mejora de éxito de 20 puntos porcentuales, la referencia muestral y el margen Android. Se define cómo contar fallos y límites de tiempo. | 8.2; diseño propuesto sin observaciones ni resultados inventados. |
+| Fallo CI de noviembre al solicitar un reporte de octubre. | El test usa la fecha de la lectura devuelta por la API y verifica creación y borrado. | [Corrección backend](https://github.com/teralume/energycore-platform/commit/abd196438d3d1bd8f7de951aab31fae4aa0e0753) y [88 pruebas aprobadas](https://github.com/teralume/energycore-platform/actions/runs/41646065500). |
+| HTTP 503 de API/OpenAPI con web disponible. | Se reactivó la facturación autorizada y se comprobó la recuperación con el monitor existente. | [Run de recuperación](https://github.com/teralume/energycore-report/actions/runs/41651099079), sin ocultar el fallo anterior ni afirmar disponibilidad continua. |
+| Needfinding mezclado con validación y contribuciones colectivas sin detalle. | Se identifica a Catherine como entrevistada, se diseña una sesión de uso y se separan contribuciones por autor y entrega. | 6.3 y Student Outcome; una sesión diseñada o un aporte anterior no se cuenta como evidencia nueva de AV2. |
+
+Las correcciones anteriores provienen de la rúbrica, observaciones docentes anotadas y revisión técnica. No se atribuyen a una auditoría externa que todavía no se recibió.
 
 ## Enlaces importantes
 
@@ -2116,11 +2240,13 @@ Para TB1 se reutiliza la exposición consolidada de AV1 porque presenta el avanc
 - **Archivo:** `upc-pre-202610-1asi0732-9100-teralume-about-the-product-sprint-2.mp4`.
 - **YouTube:** [Ver About-the-Product de EnergyCore](https://youtu.be/4HOjUHXYUsA).
 - **Microsoft Stream:** [Ver About-the-Product institucional](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241e406_upc_edu_pe/IQBtoXdgjYbdTZJPjvNwEg75AeDDLuhhK7GwfbBt7tmcooU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=2ovKZK).
-## Actividades pendientes para el cierre
+## Condiciones de cierre de AV2
 
-Los siguientes artefactos se incorporarán después de ejecutar la actividad correspondiente:
+El contenido documental y la evidencia técnica no acreditan por sí solos estas actividades humanas:
 
-- entrevistas adicionales hasta completar entre tres y cinco participantes por segmento, análisis consolidado y publicación del video en Microsoft Stream;
-- informe de auditoría intercambiado con el grupo que asigne el docente;
-- exposición de AV2 con contenido y participantes correspondientes a esta entrega;
-- actualización individual de Student Outcome, sustentada en contribuciones verificables.
+- Validación del producto: entre tres y cinco participantes por segmento, con consentimiento, registro, análisis de uso y video accesible. La entrevista previa a Catherine pertenece al needfinding.
+- Auditoría entre grupos: identificación del grupo, informe realizado y recibido, devolución y respuesta trazable a los hallazgos.
+- Revisión del equipo: comprobación de las contribuciones individuales y revisión por otro integrante de los cambios técnicos. No hay aprobación humana acreditada por la inspección asistida.
+- Comunicación de esta entrega: exposición de AV2 y evaluación de participación correspondientes a las actividades realmente realizadas. Los videos anteriores conservan su entrega de origen.
+
+El reclutamiento y la ejecución del experimento To-Be se regirán por su protocolo; sus resultados no se agregan al avance para completar casillas.

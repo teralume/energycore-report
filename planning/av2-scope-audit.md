@@ -28,14 +28,16 @@ Los criterios de calidad, historias técnicas/spikes del producto base y el To-B
 
 | Requisito de AV2 | Evidencia actual | Conclusión |
 |:--|:--|:--|
-| 6.1 Tests | 109 casos históricos y CI; varios recorridos de sistema solo descritos | No equivale a todos los flujos E2E aceptados |
-| 6.2 Análisis estático y reviews | Inspección automática por commit y CI consultado, tres observaciones registradas | No equivale a revisión humana por pares |
+| 6.1 Tests | 109 casos históricos del 05/10; backend `3f74d478` revalidado el 03/11 en run `41646065500`: 28 JUnit + 60 Cucumber, 0 fallos/errores/omisiones | La nueva evidencia cubre 88 tests backend; no es una nueva ejecución de los 109 ni aceptación de todos los flujos E2E |
+| 6.2 Análisis estático y reviews | Inspección automática histórica y lectura complementaria de `3f74d478`: migraciones, CORS, smoke corregido y cifra documental 23→28 | Evidencia técnica asistida por IA; no equivale a revisión humana por pares |
 | 6.3 Entrevistas de validación | Un antecedente de needfinding; sin registro de validación de uso | No contar la entrevista de 2.2 como sesión de 6.3 |
 | 6.4 Auditoría realizada/recibida | Protocolo y cronograma relativo; sin grupo externo, acta y devolución verificables | No presentarla como realizada |
-| 7.4 Monitoring/alerting/notifications | Activación PASS del 21/10 y monitor activo; comprobación del 03/11: web 200, API/OpenAPI 503 por facturación cerrada | Incidente abierto; no ocultar el fallo ni afirmar disponibilidad actual de la API |
+| 7.4 Monitoring/alerting/notifications | Incidente conservado del 03/11 13:08 UTC (08:08 Lima): API/OpenAPI 503. Recuperación observada en run `41651099079`, `e1e26416`, 14:10 UTC (09:10 Lima): las tres superficies 200 y PASS tras reactivación de facturación | Recuperación puntual acreditada; no implica SLA, duración exacta del incidente, flujos autenticados ni recepción efectiva de avisos |
 | 8.1-8.2 | Preguntas, hipótesis, medidas y diseño propuestos | No afirmar reclutamiento o resultado experimental |
 | 8.3.1-8.3.2 | Historias To-Be, backlog de 53 SP y 26 tareas de Sprint Backlog con 132 h estimadas | Planificación requerida por la rúbrica; no incremento experimental implementado |
-| Student Outcome | Antecedentes AV1/TB1 | No inventar testimonios o aportes AV2 individuales |
+| Student Outcome | Acciones AV2 de Jean trazadas, antecedentes AV1/TB1 de Jairo/Fabricio y participación colectiva de los cinco confirmada por el Team Leader el 03/11 | Las cinco revisiones individuales distintas son propuestas; no se convierten en actividades ejecutadas sin confirmación y evidencia |
 | Archivos de AV2 | Reporte y presentación adaptados al alcance | Performance y exposición AV2 requieren su evidencia propia; no renombrar los de TB1 |
 
 Esta auditoría es un documento interno de revisión. No se incluye en el PDF académico ni se usa para afirmar entrega AV2 completa.
+
+La evidencia de CI y recuperación se conserva en [`av2-recovery-2026-11-03.json`](../assets/evidence/implemented/av2-recovery-2026-11-03.json). El job CD del backend siguió `skipped`; aprobar tests y recuperar la API no acredita despliegue automático por commit. La [matriz de capacidades](github-actions-av2.md#matriz-de-capacidades-y-evidencia-del-pipeline) sustenta el pipeline con evidencia sin inventar un porcentaje de implementación.
