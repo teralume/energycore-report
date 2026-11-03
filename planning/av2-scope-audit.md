@@ -35,7 +35,7 @@ Los criterios de calidad, historias técnicas/spikes del producto base y el To-B
 | 7.4 Monitoring/alerting/notifications | Incidente conservado del 03/11 13:08 UTC (08:08 Lima): API/OpenAPI 503. Recuperación observada en run `41651099079`, `e1e26416`, 14:10 UTC (09:10 Lima): las tres superficies 200 y PASS tras reactivación de facturación | Recuperación puntual acreditada; no implica SLA, duración exacta del incidente, flujos autenticados ni recepción efectiva de avisos |
 | 8.1-8.2 | Preguntas, hipótesis, medidas y diseño propuestos | No afirmar reclutamiento o resultado experimental |
 | 8.3.1-8.3.2 | Historias To-Be, backlog de 53 SP y 26 tareas de Sprint Backlog con 132 h estimadas | Planificación requerida por la rúbrica; no incremento experimental implementado |
-| Student Outcome | Acciones AV2 de Jean trazadas, antecedentes AV1/TB1 de Jairo/Fabricio y participación colectiva de los cinco confirmada por el Team Leader el 03/11 | Las cinco revisiones individuales distintas son propuestas; no se convierten en actividades ejecutadas sin confirmación y evidencia |
+| Student Outcome | Contribuciones distintas de los cinco integrantes dentro de cada criterio, confirmadas por el Team Leader el 03/11; antecedentes AV1/TB1 conservados | Atribución declarada por el equipo; los commits y ejecuciones citados respaldan únicamente sus actividades correspondientes. No implica nuevas entrevistas, auditorías ni resultados experimentales |
 | Archivos de AV2 | Reporte y presentación adaptados al alcance | Performance y exposición AV2 requieren su evidencia propia; no renombrar los de TB1 |
 
 Esta auditoría es un documento interno de revisión. No se incluye en el PDF académico ni se usa para afirmar entrega AV2 completa.
