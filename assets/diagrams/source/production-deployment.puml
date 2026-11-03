@@ -1,36 +1,87 @@
 @startuml
-title Production Deployment Pipeline
+title Despliegue configurado y condicionado por repositorio
 skinparam backgroundColor white
 skinparam shadowing false
 skinparam defaultFontName Arial
+skinparam defaultFontSize 14
+skinparam ArrowColor #15803D
 skinparam activity {
   BackgroundColor #F0FDF4
   BorderColor #15803D
   FontColor #111827
 }
+skinparam note {
+  BackgroundColor #F8FAFC
+  BorderColor #94A3B8
+  FontColor #334155
+}
 
 start
-:Merge a main;
-if (¿CI aprobada?) then (No)
-  :Bloquear release;
+:Workflow del repositorio
+Platform, WebApp o Website;
+note right
+  Estado documentado: CD deshabilitado.
+  Este diagrama muestra la configuración,
+  no un despliegue nuevo ejecutado.
+end note
+
+if (¿push a main y flag == true?) then (No)
+  :Job deploy omitido (skipped).
+  CI puede ejecutarse normalmente;
   stop
 else (Sí)
-  :Publicar artefactos con SHA;
-  :Desplegar staging;
-  if (¿Smoke, seguridad y aprobación?) then (No)
-    :Conservar versión anterior;
-    stop
-  else (Sí)
-    :Desplegar API en Cloud Run;
-    :Desplegar WebApp y Website;
-    :Verificar health, login, CORS y SPA;
-    if (¿Resultado correcto?) then (Sí)
-      :Notificar release;
-      stop
-    else (No)
-      :Rollback y abrir incidente;
-      stop
-    endif
-  endif
 endif
+
+note right
+  Platform: GCP_DEPLOY_ENABLED
+  WebApp/Website: FIREBASE_DEPLOY_ENABLED
+  Una variable ausente o distinta de true
+  no habilita el despliegue.
+end note
+
+if (¿verify terminó correctamente?) then (No)
+  :Job deploy omitido por dependencia.
+  needs: verify;
+  stop
+else (Sí)
+endif
+
+if (¿Repositorio Platform?) then (Sí)
+  :Checkout y autenticación OIDC
+  con Workload Identity de Google Cloud;
+  note right
+    contents: read; id-token: write
+    Proveedor de identidad y cuenta
+    de servicio configurados en variables.
+  end note
+  :Desplegar source: . en Cloud Run
+  energycore-platform, us-east1;
+  :Smoke de backend: GET /api/v1/health
+  Debe responder correctamente
+  y contener status = UP;
+else (WebApp / Website)
+  :Checkout y credencial Firebase
+  desde secreto de cuenta de servicio
+  Permiso GitHub: contents: read;
+  if (¿WebApp?) then (Sí)
+    :npm ci y npm run build
+    dentro del job deploy;
+  else (Website)
+  endif
+  :Deploy Firebase Hosting
+  projectId: university-energycorp
+  channelId: live;
+endif
+
+:El resultado del job depende de sus pasos.
+No se configura rollback automático;
+stop
+
+legend bottom
+  MONITOREO INDEPENDIENTE (repositorio Report)
+  Manual, cron cada 6 horas y cambios de archivos específicos.
+  Comprueba /api/v1/health, /v3/api-docs y HTML de WebApp.
+  Conserva JSON incluso al fallar; no garantiza un SLA.
+  No es una etapa ni una aprobación del job deploy.
+endlegend
 @enduml
