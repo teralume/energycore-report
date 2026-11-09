@@ -55,6 +55,7 @@
 | AV2.6 | 09/11/2026 | Loa Rojas, Jean Franck | Revisión de observaciones del parcial. Se recuperaron los aportes de TB1 en Student Outcome, se documentó el recorrido público ST-01 y se incorporaron resultados de ejecución al informe y al keynote. La exposición conserva la grabación de AV1. |
 | AV2.7 | 09/11/2026 | Loa Rojas, Jean Franck | Incorporación de la auditoría realizada a AutoService, con información de ShiftTech, cronograma real, cinco hallazgos y capturas. Actualización del estado de la auditoría de retorno y del Performance de AV2. |
 | AV2.8 | 09/11/2026 | Loa Rojas, Jean Franck | Ejecución observada desde IntelliJ IDEA de los cinco tests del dashboard y de la suite Maven de 88 pruebas. Se incorporan capturas del código y de los resultados, con versión, entorno y registro de Surefire. |
+| AV2.9 | 09/11/2026 | Loa Rojas, Jean Franck | Incorporación del Markdown de auditoría recibido de ShiftTech y respuesta a sus seis observaciones. Se conserva el archivo original y se prepara en Markdown la auditoría de AutoService con sus ocho imágenes. |
 
 <div style="page-break-after: always;"></div>
 
@@ -1579,7 +1580,7 @@ La fecha de envío y el acuse de recibo se incorporarán al producirse el interc
 
 #### 6.4.1.3 Contenido de auditoría realizada
 
-La evaluación sigue las tres dimensiones del Anexo D, páginas físicas 52–53 del Enunciado. El informe independiente contiene identificación, tareas, tabla resumen, pasos de reproducción, capturas y recomendaciones. Se utiliza la escala de severidad 1–4 del anexo. [Auditoría de AutoService en PDF](output/pdf/upc-pre-202610-1asi0732-9100-teralume-ux-audit-autoservice-av2.pdf) · [Versión editable](output/docx/upc-pre-202610-1asi0732-9100-teralume-ux-audit-autoservice-av2.docx).
+La evaluación sigue las tres dimensiones del Anexo D, páginas físicas 52–53 del Enunciado. El informe independiente contiene identificación, tareas, tabla resumen, pasos de reproducción, capturas y recomendaciones. Se utiliza la escala de severidad 1–4 del anexo. [Auditoría de AutoService en PDF](output/pdf/upc-pre-202610-1asi0732-9100-teralume-ux-audit-autoservice-av2.pdf) · [Versión editable](output/docx/upc-pre-202610-1asi0732-9100-teralume-ux-audit-autoservice-av2.docx) · [Versión Markdown para intercambio](output/markdown/upc-pre-202610-1asi0732-9100-teralume-ux-audit-autoservice-av2.md).
 
 | ID | Problema observado | Severidad | Heurística o principio afectado |
 |:--|:--|:--:|:--|
@@ -1707,21 +1708,151 @@ Cómo verificar la corrección.  Comprobar que la página declare es cuando se m
 
 #### 6.4.2.1 Información del grupo auditor
 
-ShiftTech Solutions, equipo de AutoService del NRC 9100, está evaluando EnergyCore según lo comunicado por el Team Leader el 09/11/2026. Sus integrantes figuran en 6.4.1.1. El informe de retorno identificará a quienes participaron efectivamente en esa evaluación.
+Se recibió el Markdown de ShiftTech Solutions, equipo de AutoService del NRC 9100. El documento identifica al grupo como evaluador de EnergyCore y fecha su revisión el 9 de noviembre de 2026. Sus integrantes se indican en 6.4.1.1. La evaluación recibida no individualiza a las personas que realizaron cada recorrido.
 
 #### 6.4.2.2 Cronograma de auditoría recibida
 
-El 09/11/2026 el Team Leader confirmó que ShiftTech ya estaba auditando EnergyCore. Se registrarán la fecha del informe recibido, la devolución de los hallazgos y las comprobaciones de las correcciones al contar con sus evidencias. La planificación anterior de días relativos se sustituye por el registro del intercambio real.
+| Fecha | Actividad registrada | Evidencia |
+|:--|:--|:--|
+| 09/11/2026 | Revisión de EnergyCore declarada por ShiftTech. | Fecha y método de su informe. |
+| 09/11/2026 | Recepción del archivo aportado por el Team Leader. | Auditoria-EnergyCore.md, conservado sin modificar. |
+| 09/11/2026 | Lectura de las seis observaciones y registro de respuesta. | Contenido recibido en 6.4.2.3 y tratamiento en 6.4.2.4. |
+
+Las fechas de corrección y repetición de los recorridos se registrarán cuando esas actividades se ejecuten.
 
 #### 6.4.2.3 Contenido de auditoría recibida
 
-El informe externo se incorporará tal como lo entregue ShiftTech, con sus hallazgos, severidades, capturas y recomendaciones. Al cierre de esta edición aún no se ha recibido ese documento. La auditoría de AutoService incluida en 6.4.1 es la evaluación que Teralume devuelve al otro grupo.
+El informe original se conserva como archivo Markdown con su huella de integridad. ShiftTech emplea prioridades alta, media y baja; se mantiene esa escala tal como fue enviada. Sus observaciones cubren la landing, el cliente web y Android. [Informe recibido](assets/evidence/av2/ux-audit-received/Auditoria-EnergyCore.md) · [Registro de recepción](assets/evidence/av2/ux-audit-received/receipt.json).
+
+El MD referencia dos capturas de Android que no acompañaron el archivo. En la transcripción siguiente se conserva su nombre como referencia textual. El documento original permanece íntegro.
+
+**Auditoría de experiencia de usuario: EnergyCore**
+
+**Equipo evaluador:** ShiftTech Solutions
+**Producto evaluado:** EnergyCore, de Teralume
+**Fecha de revisión:** 9 de noviembre de 2026
+**Tipo de evaluación:** revisión exploratoria de experiencia de usuario y recorridos funcionales seleccionados.
+
+##### Alcance y método
+
+Se revisó el reporte proporcionado por el equipo y se realizaron pruebas exploratorias en la landing page y las aplicaciones web y móvil, utilizando una cuenta de prueba. Se crearon una sede, una habitación y un dispositivo identificados como prueba. Los resultados reflejan los recorridos observados, no una evaluación exhaustiva ni una prueba con usuarios.
+
+| Producto | Dirección o archivo | Estado de la revisión |
+|---|---|---|
+| Landing page | https://teralume.github.io/energycore-website/ | Responde con HTTP 200; se probaron el idioma, una pestaña de público, una pregunta frecuente y el acceso desde un plan. |
+| Aplicación web | https://university-energycorp.web.app/iam/login | Se probó el acceso, la creación de sede, habitación y dispositivo, la vista de consumo y un formulario de rutina. |
+| Aplicación móvil Android | EnergyCore-Android.apk | Se revisaron el acceso al panel, la navegación por energía, dispositivos, espacios y alertas, y la visualización de datos creados desde la web en un emulador Pixel 6. |
+
+##### Escala de prioridad
+
+| Nivel | Interpretación |
+|---|---|
+| Alta | Impide una tarea esencial o expone al usuario a un problema importante. |
+| Media | Dificulta una tarea o deja información relevante sin acceso claro. |
+| Baja | Genera confusión limitada o reduce la claridad, pero permite continuar. |
+
+##### Observaciones de la landing page
+
+###### L-01. No se identifica un enlace al acuerdo de servicio en la navegación pública
+
+- **Prioridad sugerida:** media.
+- **Ubicación:** navegación principal y pie de página.
+- **Comprobación:** consultar la página pública y revisar los destinos de sus enlaces.
+- **Resultado observado:** los enlaces inspeccionados conducen a secciones de la landing, al acceso de la aplicación o a la universidad; no se identificó un enlace a términos y condiciones o al acuerdo de servicio.
+- **Impacto:** una persona interesada en los planes podría no encontrar desde la landing las condiciones aplicables antes de continuar.
+- **Recomendación:** publicar un enlace visible al acuerdo de servicio y comprobar que conduzca al texto correspondiente. El reporte del equipo sí describe un acuerdo académico.
+- **Límite:** no se verificó si existe un enlace equivalente dentro de la aplicación autenticada.
+
+###### L-02. La selección de un plan no se distingue en el destino del enlace
+
+- **Prioridad sugerida:** baja.
+- **Ubicación:** botones de los planes Starter, Professional y Enterprise.
+- **Comprobación:** revisar los destinos declarados de los tres enlaces y seleccionar «Probar Professional».
+- **Resultado observado:** los tres apuntan a la misma dirección de inicio de sesión, sin identificar el plan en la URL. Al seleccionar Professional se mostró el inicio de sesión sin una indicación visible del plan elegido.
+- **Impacto potencial:** después de autenticarse, el usuario podría necesitar volver a elegir el plan y perder el contexto de su selección inicial.
+- **Recomendación:** comprobar el recorrido posterior al inicio de sesión y, si no conserva la elección, informar que deberá seleccionarse nuevamente o preservar la intención de forma segura.
+- **Límite:** no se ha probado el comportamiento posterior al acceso; por ello el impacto es una hipótesis y no un fallo confirmado de suscripción.
+
+##### Aspectos positivos observados
+
+- La landing explica la propuesta de valor, presenta capacidades, planes y preguntas frecuentes.
+- El documento HTML declara una opción de salto al contenido principal y etiquetas para los controles de idioma y navegación.
+- El acceso a la aplicación web está enlazado desde la landing.
+- El selector de español de la landing actualizó el contenido visible. La pestaña «Profesionales» y la expansión de una pregunta frecuente respondieron a la interacción.
+- La cuenta de prueba pudo acceder a la aplicación web. La sede, la habitación y el dispositivo de prueba se crearon y se reflejaron en el panel. El idioma de la vista de dispositivos cambió a inglés y regresó a español.
+- La aplicación móvil abrió y presentó los campos de correo y contraseña, además de las opciones de recuperación de contraseña y creación de cuenta. Estas dos últimas opciones no se han probado.
+- El panel móvil mostró indicadores y opciones de navegación. La sede, habitación y dispositivo creados desde la web aparecieron en la aplicación móvil con la misma cuenta; la pantalla de asignaciones mostró el dispositivo vinculado a la habitación.
+
+##### Hallazgos de la aplicación web
+
+###### W-01. La validación de sede vacía presenta un mensaje genérico
+
+- **Prioridad sugerida:** media.
+- **Ubicación:** Espacios → Sedes → Crear sede.
+- **Pasos:** abrir el formulario, dejar vacío el nombre y seleccionar «Crear sede».
+- **Resultado observado:** apareció «No se pudo crear la sede»; el mensaje no explicó qué campo debía corregirse. En la vista observada, la notificación quedó parcialmente cubierta por el formulario.
+- **Impacto:** el usuario no recibe una orientación clara para completar la operación y puede interpretar el problema como una falla del servicio.
+- **Recomendación:** indicar junto al nombre que es obligatorio, evitar enviar el formulario con datos incompletos y mostrar la notificación por encima del diálogo o dentro de él.
+
+###### W-02. El estado vacío de consumo sugiere una acción ya realizada
+
+- **Prioridad sugerida:** baja.
+- **Ubicación:** Inicio → Consumo energético → Consumo por habitación.
+- **Pasos:** crear una sede, una habitación y un dispositivo asignado; mantener el dispositivo apagado y consultar consumo.
+- **Resultado observado:** aunque el dispositivo figuraba asignado a la habitación, la sección mostró «Sin datos por habitación» y sugirió asignar habitaciones a los dispositivos.
+- **Impacto:** el mensaje puede hacer creer que la asignación falta, cuando la ausencia observada corresponde a que aún no hay lecturas de consumo.
+- **Recomendación:** distinguir entre «no hay dispositivos asignados» y «hay dispositivos asignados, pero todavía no hay lecturas».
+
+##### Hallazgos de la aplicación móvil
+
+###### M-01. La pestaña de habitaciones aparece truncada y su nombre no refleja claramente su contenido
+
+- **Prioridad sugerida:** media.
+- **Ubicación:** Más → Espacios → pestaña central.
+- **Pasos:** abrir Espacios y seleccionar la pestaña central, visible como «Consumo por ha».
+- **Resultado observado:** el título aparece truncado en el emulador; la pantalla presenta habitaciones y opciones para administrarlas.
+- **Impacto:** el nombre visible sugiere una consulta de consumo y puede dificultar que el usuario encuentre la gestión de habitaciones.
+- **Recomendación:** utilizar una etiqueta breve, por ejemplo «Habitaciones», y verificar que se muestre completa en pantallas de distintos tamaños.
+- **Evidencia:** Pantalla de habitaciones (archivo referenciado: auditoria-energycore-evidencias/movil-etiqueta-habitaciones.png).
+
+###### M-02. El botón flotante de alertas se superpone al contenido
+
+- **Prioridad sugerida:** baja.
+- **Ubicación:** Alertas → Bandeja.
+- **Pasos:** abrir la bandeja con varias notificaciones y revisar las tarjetas que aparecen cerca de la parte inferior.
+- **Resultado observado:** el botón «Nueva alerta» se muestra por encima de parte del texto de una tarjeta de notificación.
+- **Impacto:** puede dificultar la lectura o el acceso al contenido de la tarjeta en esa posición.
+- **Recomendación:** reservar espacio para el botón o ajustar su ubicación para que el contenido pueda desplazarse sin quedar cubierto.
+- **Evidencia:** Bandeja de alertas (archivo referenciado: auditoria-energycore-evidencias/movil-alertas.png).
+
+##### Alcance pendiente de comprobación
+
+- **Landing:** navegación completa por teclado y presentación en distintos tamaños.
+- **Web:** registro de cuenta, ejecución de rutinas, alertas, controles de dispositivos, reportes y demás recorridos no mencionados como probados.
+- **Android:** creación y edición completas en todos los módulos, permisos, ejecución de rutinas y comportamiento en dispositivos físicos y otros tamaños de pantalla. La revisión realizada no acredita el funcionamiento completo ni la seguridad del APK.
+
+##### Evidencia técnica consultada
+
+- Landing y ruta de acceso: respuesta HTTP 200 obtenida el 9 de noviembre de 2026.
+- HTML público de la landing: enlaces de planes con destino común al inicio de sesión; controles de idioma y pestañas declarados.
+- APK: identificador `com.teralume.energycore_flutter`, versión declarada `1.0.0`, versión mínima Android API 24. Los metadatos no constituyen una verificación de seguridad.
+- Reporte académico facilitado por Teralume: funcionalidades previstas y descripción del acuerdo de servicio.
+
 
 #### 6.4.2.4 Resumen de modificaciones para subsanar hallazgos
 
-Cada hallazgo que ShiftTech formule sobre EnergyCore se vinculará con la respuesta del equipo, el cambio, el commit y la repetición de sus pasos. Cuando la recomendación se incorpore al backlog o se descarte, se explicará la decisión. El registro comenzará al recibirse el informe.
+Se registró la respuesta inicial a las seis observaciones. Esta edición incorpora el informe recibido y su tratamiento documental. Las correcciones funcionales y la comprobación posterior se registrarán con su commit y evidencia cuando se realicen.
 
-Las observaciones de AutoService corresponden al producto del otro grupo. Los resultados de la autoevaluación de EnergyCore están en 6.3.3 y las correcciones de esta edición se trazan en el anexo.
+| Hallazgo original | Prioridad recibida | Tratamiento inicial | Cambio a comprobar |
+|:--|:--|:--|:--|
+| L-01 | Media | Incorporado al registro de correcciones. | Enlazar el acuerdo de servicio desde la navegación pública y revisar su destino. |
+| L-02 | Baja | Contrastar el recorrido antes de decidir el cambio. | Comprobar si el plan seleccionado se conserva después del login. El propio auditor identifica el impacto como hipótesis. |
+| W-01 | Media | Incorporado al registro de correcciones. | Validar el nombre obligatorio junto al campo y garantizar que el mensaje de error sea visible sobre el diálogo. |
+| W-02 | Baja | Incorporado al registro de correcciones. | Distinguir habitaciones sin dispositivos asignados de aquellas que aún no tienen lecturas. |
+| M-01 | Media | Incorporado al registro de correcciones. | Utilizar Habitaciones como etiqueta breve y comprobar su visualización completa. Se conserva la referencia a la captura solicitada. |
+| M-02 | Baja | Incorporado al registro de correcciones. | Reservar espacio desplazable para el botón Nueva alerta y comprobar que no cubra tarjetas. Se conserva la referencia a la captura solicitada. |
+
+La aplicación de los cambios se verificará con los pasos originales del auditor. Las observaciones de AutoService en 6.4.1 corresponden a la auditoría realizada por Teralume.
 
 
 # Capítulo VII DevOps Practices
@@ -2267,7 +2398,7 @@ El diseño de AV2 concentra la evaluación en una pregunta: si mostrar una expli
 
 Las 13 historias To-Be se descomponen en 26 tareas de 4 a 8 horas, con 132 horas estimadas y dependencias entre medición, tratamiento y recuperación. Esta planificación responde a la rúbrica de AV2. La implementación experimental y el análisis de sus resultados no se incorporan como trabajo ejecutado en esta entrega.
 
-La inspección de AutoService produjo cinco hallazgos sobre navegación y accesibilidad del producto de ShiftTech. La validación de EnergyCore requiere aún las sesiones con usuarios y el informe de auditoría de retorno de ese grupo. El guion, las fichas y los criterios de aceptación hacen esas actividades ejecutables, pero no reemplazan sus registros. El Student Outcome relaciona las contribuciones confirmadas por el Team Leader con decisiones sobre privacidad, interpretación de datos, claridad de la información y condiciones de operación. Las evidencias técnicas citadas conservan el alcance de lo que efectivamente comprobaron.
+La inspección de AutoService produjo cinco hallazgos sobre navegación y accesibilidad del producto de ShiftTech. ShiftTech remitió una evaluación exploratoria de EnergyCore con seis observaciones sobre la landing, el cliente web y Android. El informe y la respuesta inicial están en 6.4.2. La validación con usuarios requiere aún sus registros de sesión. El guion, las fichas y los criterios de aceptación hacen esas actividades ejecutables, pero no reemplazan sus registros. El Student Outcome relaciona las contribuciones confirmadas por el Team Leader con decisiones sobre privacidad, interpretación de datos, claridad de la información y condiciones de operación. Las evidencias técnicas citadas conservan el alcance de lo que efectivamente comprobaron.
 
 # Bibliografía
 
@@ -2296,6 +2427,8 @@ La inspección de AutoService produjo cinco hallazgos sobre navegación y accesi
 - [Pruebas ejecutadas desde IntelliJ IDEA el 9 de noviembre](assets/evidence/av2/ide/test-execution-2026-11-09.json).
 - [ST-01 desde el navegador, 9 de noviembre](assets/evidence/av2/public-navigation/st-01.json) y [sonda de las tres superficies públicas](assets/evidence/av2/public-navigation/public-probe.json).
 - [Guion y registro de validación del producto actual](planning/validation-interviews-av2.md).
+- [Auditoría de AutoService en Markdown](output/markdown/upc-pre-202610-1asi0732-9100-teralume-ux-audit-autoservice-av2.md).
+- [Auditoría de EnergyCore recibida de ShiftTech](assets/evidence/av2/ux-audit-received/Auditoria-EnergyCore.md).
 - [Auditoría realizada de AutoService](output/pdf/upc-pre-202610-1asi0732-9100-teralume-ux-audit-autoservice-av2.pdf) y [registros de la inspección](assets/evidence/av2/ux-audit-autoservice/audit-record.json).
 - [Performance de AV2 en Word](output/docx/upc-pre-202610-1asi0732-9100-teralume-performance-av2.docx) y [en PDF](output/pdf/upc-pre-202610-1asi0732-9100-teralume-performance-av2.pdf).
 - [Presentación AV2 editable](output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pptx).
@@ -2315,10 +2448,10 @@ La inspección de AutoService produjo cinco hallazgos sobre navegación y accesi
 | Rúbrica de diseño experimental y revisión de coherencia del 03/11. | Se añaden H0/HA; se armonizan la mejora de éxito de 20 puntos porcentuales, la referencia muestral y el margen Android. Se define cómo contar fallos y límites de tiempo. | 8.2; diseño propuesto sin observaciones ni resultados inventados. |
 | Fallo CI de noviembre al solicitar un reporte de octubre. | El test usa la fecha de la lectura devuelta por la API y verifica creación y borrado. | [Corrección backend](https://github.com/teralume/energycore-platform/commit/abd196438d3d1bd8f7de951aab31fae4aa0e0753) y [88 pruebas aprobadas](https://github.com/teralume/energycore-platform/actions/runs/41646065500). |
 | HTTP 503 de API/OpenAPI con web disponible. | Se reactivó la facturación autorizada y se comprobó la recuperación con el monitor existente. | [Run de recuperación](https://github.com/teralume/energycore-report/actions/runs/41651099079), sin ocultar el fallo anterior ni afirmar disponibilidad continua. |
-| Intercambio de auditorías con ShiftTech Solutions. | Se incorpora la inspección pública de AutoService, el cronograma real y los cinco hallazgos con capturas. | 6.4.1 e informe independiente. El contenido recibido se agregará en 6.4.2 cuando ShiftTech lo devuelva. |
+| Intercambio de auditorías con ShiftTech Solutions. | Se incorpora la inspección pública de AutoService, el cronograma real y los cinco hallazgos con capturas. | 6.4.1 e informe independiente. En 6.4.2 se incorpora el MD recibido y se registra la respuesta inicial a sus seis observaciones. |
 | Needfinding mezclado con validación y contribuciones colectivas sin detalle. | Se identifica a Catherine como entrevistada, se diseña una sesión de uso y se separan contribuciones por autor y entrega. | 6.3 y Student Outcome; una sesión diseñada o un aporte anterior no se cuenta como evidencia nueva de AV2. |
 
-Las correcciones anteriores provienen de la rúbrica, observaciones docentes anotadas y revisión técnica. No se atribuyen a una auditoría externa que todavía no se recibió.
+Las correcciones anteriores provienen de la rúbrica, observaciones docentes y revisión técnica. El informe externo de ShiftTech se incorpora en 6.4.2 con sus identificadores y comentarios originales. Las correcciones funcionales derivadas se documentarán al aplicarse.
 
 ## Enlaces importantes
 
@@ -2354,7 +2487,7 @@ Para esta entrega se conserva la grabación consolidada de AV1 con el nombre `up
 El contenido documental y la evidencia técnica no acreditan por sí solos estas actividades humanas:
 
 - Validación del producto: entre tres y cinco participantes por segmento, con consentimiento, registro, análisis de uso y video accesible. La entrevista previa a Catherine pertenece al needfinding.
-- Auditoría entre grupos: la inspección de AutoService está documentada en 6.4.1. Se completarán el envío y la devolución con ShiftTech, el informe recibido y la respuesta trazable a sus hallazgos.
+- Auditoría entre grupos: 6.4.1 documenta la inspección de AutoService y 6.4.2 incorpora el MD recibido de ShiftTech. Falta completar sus dos capturas referenciadas y registrar las correcciones y su nueva comprobación.
 - Revisión por pares: conservar la revisión de los cambios técnicos por otro integrante. La declaración de contribuciones no sustituye el registro de esa revisión.
 - Para la exposición se entrega el MP4 de AV1 identificado en el anexo. El Performance de AV2 recoge los aportes del cuadro ABET y las calificaciones de 20/20 con Cumplió a tiempo confirmadas por el Team Leader el 09/11/2026.
 
