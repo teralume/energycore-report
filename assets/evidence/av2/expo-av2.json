@@ -1,0 +1,10 @@
+{
+  "source_delivery": "AV1",
+  "source_file": "upc-pre-202610-1asi0732-9100-teralume-expo-av1.mp4",
+  "destination_delivery": "AV2",
+  "delivered_file": "upc-pre-202610-1asi0732-9100-teralume-expo-av2.mp4",
+  "bytes": 169055179,
+  "duration_seconds": 492.39,
+  "sha256": "c54f08bdbdc59367aead2efb746cb513503ae2ab08493d7d3075255b832cd69e",
+  "same_bytes": true
+}

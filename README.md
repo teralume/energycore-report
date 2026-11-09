@@ -52,6 +52,7 @@
 | AV2.3 | 03/11/2026 | Loa Rojas, Jean Franck | Alineación con la rúbrica publicada de S12 AV2: incorporación de Sprint Backlogs To-Be planificados, benchmark de herramientas DevOps y revisión del estado real de CI y operación. |
 | AV2.4 | 03/11/2026 | Loa Rojas, Jean Franck | Corrección del diseño experimental y su relación con el pipeline; guion específico de validación; contribuciones trazadas por autor y entrega; actualización de pruebas y recuperación del servicio con evidencia remota. Edición e inspección técnica asistidas por IA. |
 | AV2.5 | 03/11/2026 | Loa Rojas, Jean Franck | Incorporación de las contribuciones individuales confirmadas por el Team Leader dentro de los dos criterios ABET y retiro de la tabla de revisiones propuestas. |
+| AV2.6 | 09/11/2026 | Loa Rojas, Jean Franck | Revisión de observaciones del parcial. Se recuperaron los aportes de TB1 en Student Outcome, se documentó el recorrido público ST-01 y se incorporaron resultados de ejecución al informe y al keynote. La exposición conserva la grabación de AV1. |
 
 <div style="page-break-after: always;"></div>
 
@@ -61,68 +62,23 @@ El documento conserva los capítulos previos como antecedentes corregidos del pr
 
 La [rúbrica vigente de S12 AV2](https://aulavirtual.upc.edu.pe/ultra/courses/_554468_1/assessment/_74454492_1/overview?courseId=_554468_1), consultada el 03/11/2026, exige también To-Be Sprint Backlogs y un benchmark de alternativas DevOps. Se incorpora la planificación de esos sprints en 8.3.2, con tareas de ingeniería de 4 a 8 horas estimadas. La entrega vence el 09/11/2026 a las 09:00 (UTC-5). La planificación no acredita implementación, ejecución del experimento ni resultados de TB2.
 
-Las estimaciones, umbrales de calidad y tamaños de muestra de 8.1-8.2 son propuestas de diseño. No constituyen resultados observados, participantes reclutados ni validación ejecutada. Los enlaces audiovisuales conservados de AV1/TB1 son antecedentes identificados con su entrega de origen; no se presentan como una exposición nueva de AV2.
-
-El aporte de este avance está en conectar el problema observable de EnergyCore con una comprobación reproducible: las pruebas protegen reglas existentes; el monitor registra si el entorno puede usarse; y el diseño experimental define qué se compararía y cómo se tomaría una decisión. El [registro de mejoras de AV2](#registro-de-mejoras-de-av2) identifica las correcciones de esta entrega y permite distinguirlas de los antecedentes.
+Las estimaciones, umbrales de calidad y tamaños de muestra de 8.1-8.2 son propuestas de diseño. No constituyen resultados observados, participantes reclutados ni validación ejecutada. Para acompañar este informe se entrega la exposición grabada en AV1. La presentación editable y su PDF incluyen las correcciones de AV2.
 
 ## Project Report Collaboration Insights
 
-EnergyCore se desarrolla mediante cinco repositorios independientes dentro de la organización Teralume. Esta separación permite mantener trazabilidad específica para el informe, la Landing Page, la aplicación web, la aplicación móvil y los servicios de backend.
-
 ### Repositorios del proyecto
 
-- [Project Report](https://github.com/teralume/energycore-report)
-- [Landing Page](https://github.com/teralume/energycore-website)
-- [Frontend Web Application](https://github.com/teralume/energycore-webapp)
-- [Native Mobile Application](https://github.com/teralume/energycore-mobile)
-- [RESTful API](https://github.com/teralume/energycore-platform)
-- [Web Application desplegada](https://university-energycorp.web.app)
-- [RESTful API desplegada](https://energycore-platform-ujdgb2zcpq-ue.a.run.app)
+El trabajo de Teralume se distribuye entre cinco repositorios. [Informe](https://github.com/teralume/energycore-report) · [Landing](https://github.com/teralume/energycore-website) · [Webapp](https://github.com/teralume/energycore-webapp) · [Móvil](https://github.com/teralume/energycore-mobile) · [API](https://github.com/teralume/energycore-platform).
 
-## Inventario acumulativo de antecedentes y alcance AV2
+Accesos al producto. [Landing publicada](https://teralume.github.io/energycore-website/) · [Webapp publicada](https://university-energycorp.web.app) · [Estado público de la API](https://energycore-platform-ujdgb2zcpq-ue.a.run.app/api/v1/health).
 
-| Grupo | Artefactos disponibles | Ubicación o evidencia | Estado |
-|:--|:--|:--|:--:|
-| Investigación | Guion, primera entrevista de needfinding, captura, resumen y análisis preliminar | [Registro de entrevistas](#222-registro-de-entrevistas) y `assets/evidence/interviews` | Parcial |
-| Needfinding | Proto-personas, User Task Matrix, User Journey, Empathy Map y As-Is Scenario Map | [Needfinding](#23-needfinding) | Provisional hasta completar entrevistas |
-| Requirements | To-Be Scenario Map, 16 User Stories, Product Backlog e Impact Map | [Requirements Specification](#capítulo-iii-requirements-specification) | Disponible |
-| Diseño UX/UI | Wireframes de Landing Page, Web Application y Native Mobile Application; mockups y user flows | `assets/design` y [Product Design](#capítulo-iv-product-design) | Disponible |
-| Arquitectura | Diagramas de contexto, contenedores y componentes DDD | [Domain-Driven Software Architecture](#48-domain-driven-software-architecture) | Disponible |
-| Diseño de software y datos | Class Diagram, Class Dictionary y diagrama relacional PostgreSQL | [Software Object-Oriented Design](#49-software-object-oriented-design) y [Database Design](#410-database-design) | Disponible |
-| Implementación | Capturas verificadas de Landing Page, Angular, Flutter Android y Swagger | `assets/evidence/implemented` | Disponible |
-| Contratos y pruebas | OpenAPI, smoke tests de energía y concurrencia de preferencias | `assets/evidence/implemented/*.json` | Disponible |
-| Aplicación móvil | APK Android release no depurable | Paquete complementario, carpeta `mobile` | Disponible |
-| Performance | Participant Performance Report en DOCX y PDF | `output/docx` y `output/pdf` | Disponible |
-| Keynote | Presentación editable y exportación final | `output/keynote/*.pptx` y `output/keynote/*.pdf` | Disponible |
-| Video About-the-Product | Video promocional publicado en YouTube y Microsoft Stream | `upc-pre-202610-1asi0732-9100-teralume-about-the-product-sprint-2.mp4` | Disponible |
-| Video de exposición | Exposición consolidada de AV1 reutilizada para sustentar TB1 | `upc-pre-202610-1asi0732-9100-teralume-expo-tb1.mp4` | Disponible |
+**Historial de entregas**
 
-### Entrega TB1
-
-La versión TB1 conserva el trabajo de AV1 y añade la especificación refinada, el modelo relacional presentado de forma visible, las suites de pruebas, los workflows de GitHub Actions y la evidencia del despliegue público. La presentación mantiene el diseño de Canva del equipo y agrega diapositivas específicas para integrantes, backlog, base de datos, pruebas, CI/CD y estado del incremento.
-
-El paquete [upc-pre-202610-1asi0732-9100-teralume-artifacts-av1.zip](output/zip/upc-pre-202610-1asi0732-9100-teralume-artifacts-av1.zip) reúne estos elementos, incluye un manifiesto y genera huellas SHA-256. El enunciado no fija una nomenclatura específica para el ZIP; el nombre utilizado sigue el patrón general de la entrega.
-
-### Entrega AV1
-
-Durante AV1 se preparó la plataforma EnergyCore a partir de un proyecto académico anterior cuya reutilización fue autorizada por el profesor. El trabajo no se limitó a cambiar el nombre del producto: se separaron los entregables en repositorios propios, se actualizó la identidad a Teralume y EnergyCore, se revisaron los contratos entre frontend y backend, se desarrolló una nueva experiencia visual y se incorporó una aplicación móvil en Flutter conectada a la misma API.
-
-El incremento AV1 integró la Landing Page, la Web Application, la aplicación móvil y la API REST sobre una misma propuesta de producto. El equipo organizó los entregables en repositorios independientes, alineó la identidad visual de Teralume y EnergyCore, revisó los contratos entre clientes y backend e incorporó evidencias de diseño, implementación y validación técnica. El historial detallado permanece disponible en GitHub y no se duplica en el cuerpo académico del informe.
-
-### Trabajo Parcial - Stage Review
-
-Para el Trabajo Parcial se revisaron las ramas activas antes de editar y las correcciones se desarrollaron en una rama feature separada. Los repositorios funcionales se utilizaron como fuente de verdad para actualizar arquitectura, diseño de datos, alcance y evidencias, sin modificar funcionalidades que ya operaban correctamente.
-
-#### Evidencia de mejora continua desde AV1
-
-| Observación | Cambio realizado | Artefacto verificable | Estado |
-|:--|:--|:--|:--|
-| Los componentes y la base de datos no se visualizaban en el PDF. | Se reemplazaron los bloques Mermaid por Architecture Overview, diagramas C4, UML y ERD renderizados desde PlantUML. | Secciones 4.8, 4.9 y 4.10; fuentes e imágenes en `assets/architecture`. | Corregido; requiere revisión grupal final. |
-| El Product Backlog no debía conservar historias de 8 Story Points. | Se reestimaron los backlogs AS-IS y To-Be con máximo 5 SP y se priorizó la Landing Page antes de los recorridos autenticados. | Secciones 3.3 y 8.3.2. | Corregido. |
-| El Sprint Backlog requería tareas de 4 a 8 horas, responsables y estado. | Se incorporaron Sprint Goal, Engineering Tasks, horas, responsables y condiciones de cierre. | Sección 5.2.1. | Corregido; quedan revisiones por ejecutar. |
-| Otros flujos dependían de Mermaid crudo. | Se renderizaron Scenario Maps, Impact Map, flujos web, pipelines y el workflow de aprendizaje continuo. | `assets/diagrams` y secciones correspondientes. | Corregido y revisado en el PDF. |
-
-La colaboración individual se sustentará mediante tareas sustanciales, revisiones y entregables del Sprint.
+| Entrega | Aporte que se conserva en el informe |
+|:--|:--|
+| AV1 | A partir de una base académica previa, Teralume integró la landing, el cliente web, Flutter y la API de EnergyCore en repositorios propios. El capítulo II conserva la entrevista de descubrimiento de esta etapa. |
+| TB1 | El parcial incorporó el modelo relacional visible, la reestimación de historias con un máximo de 5 SP y las suites de pruebas. El cuadro Student Outcome identifica los aportes registrados para este hito. |
+| AV2 | Los capítulos VI y VII presentan las ejecuciones y su alcance. El capítulo VIII diseña el experimento y termina en el backlog de 8.3.2 con la planificación de sprints exigida por la rúbrica. |
 
 <div style="page-break-after: always;"></div>
 
@@ -299,6 +255,7 @@ La colaboración individual se sustentará mediante tareas sustanciales, revisio
   - [Videos de Exposiciones](#videos-de-exposiciones)
     - [Exposición AV1](#exposición-av1)
     - [Reutilización de la exposición en TB1](#reutilización-de-la-exposición-en-tb1)
+    - [Exposición incluida en AV2](#exposición-incluida-en-av2)
     - [Video About-the-Product Sprint 2](#video-about-the-product-sprint-2)
   - [Condiciones de cierre de AV2](#condiciones-de-cierre-de-av2)
 
@@ -310,14 +267,14 @@ El curso contribuye al cumplimiento del Student Outcome ABET:
 
 **Criterio:** La capacidad de reconocer responsabilidades éticas y profesionales en situaciones de ingeniería y hacer juicios informados, que deben considerar el impacto de las soluciones de ingeniería en contextos globales, económicos, ambientales y sociales.
 
-El cuadro reúne las contribuciones de los cinco integrantes para AV2, declaradas y confirmadas por el Team Leader. Los aportes se presentan por persona y criterio; los antecedentes de AV1 y TB1 conservan su entrega de origen. Las referencias a commits y ejecuciones identifican únicamente las actividades que cuentan con ese registro técnico.
+El cuadro reúne las acciones registradas por integrante en cada entrega. El informe AV1 contiene las reflexiones individuales. Para TB1, el informe conserva las conclusiones del equipo y el Performance identifica las responsabilidades de cada participante. El Team Leader confirmó la participación en AV2.
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |:--|:--|:--|
-| **4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software** | **Loa Rojas, Jean Franck - U20241E406**<br>**AV2:** coordinó la integración del informe y sus evidencias técnicas. Delimitó el contenido de la entrega, documentó los resultados de CI y conservó el registro del incidente de disponibilidad junto con su recuperación. Esto permite conocer qué se comprobó y qué corresponde al diseño experimental. Evidencia: [ajuste de alcance](https://github.com/teralume/energycore-report/commit/638266f) y secciones 6.1 y 7.4.<br><br>**Jairo Mathias Santiago Atanacio - U202418755**<br>**AV1:** participó en la redacción de Student Outcome ([f449a60](https://github.com/teralume/energycore-report/commit/f449a60)).<br>**AV2:** colaboró en la revisión del guion de validación y en la claridad de las preguntas dirigidas a los usuarios. Su apoyo se centró en evitar respuestas inducidas y en explicar el consentimiento y el uso académico de la información personal.<br><br>**Rivera Rupay, Fabricio Jose - U202423883**<br>**TB1:** corrigió atribuciones del Student Outcome y desarrolló documentación técnica trazable ([1b96857](https://github.com/teralume/energycore-report/commit/1b96857)).<br>**AV2:** apoyó la revisión de coherencia entre el modelo de datos, los conceptos del dominio y el plan de seguimiento experimental. Contribuyó a distinguir los componentes existentes de las capacidades To-Be descritas en el avance.<br><br>**Renzo Zamir Revilla Quispe - U201717085**<br>**AV2:** participó en la organización de la información sobre despliegue, disponibilidad y recuperación del servicio. Su aporte ayudó a presentar por separado las condiciones de operación, los resultados de pruebas y las limitaciones de la evidencia técnica.<br><br>**Brayan Benjamin Huerta Cardenas - U20241E550**<br>**AV2:** apoyó la revisión de los textos, nombres y explicaciones utilizados para describir los recorridos del producto. Contribuyó a que las tareas, los estados de la interfaz y los criterios de evaluación se expresaran de manera comprensible para personas ajenas al desarrollo. | **AV1/TB1:** la documentación debe relacionar cada aportación con su propósito y con el artefacto correspondiente.<br><br>**AV2:** el trabajo profesional requiere cuidar tanto la corrección técnica como la forma de comunicarla. Revisar el alcance, las preguntas, los datos y las evidencias ayuda a evitar interpretaciones que el producto todavía no puede sostener. El apoyo documental y la ejecución de una prueba tienen alcances distintos dentro del trabajo del equipo. |
-| **4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales** | **Loa Rojas, Jean Franck - U20241E406**<br>**AV2:** documentó la comparación de herramientas DevOps considerando integración, operación y costes. Relacionó las decisiones de infraestructura con la continuidad del servicio y mantuvo separados los resultados técnicos de las afirmaciones sobre ahorro energético. Evidencia: [benchmark DevOps](planning/devops-benchmark-av2.md) y registro de recuperación de 7.4.<br><br>**Jairo Mathias Santiago Atanacio - U202418755**<br>**AV1:** realizó la entrevista de needfinding a Catherine Tejada, registrada en 2.2.2.<br>**AV2:** aportó la perspectiva del usuario al revisar cómo se explican consumo, potencia y costo en el guion. Su contribución orientó las preguntas hacia decisiones cotidianas del hogar o negocio y hacia la comprensión del dato, sin asumir que una opinión individual representa a todo el segmento.<br><br>**Rivera Rupay, Fabricio Jose - U202423883**<br>**TB1:** desarrolló diagramas de arquitectura y datos, incluidos facturación y notificaciones ([fb5953f](https://github.com/teralume/energycore-report/commit/fb5953f), [bcd40c8](https://github.com/teralume/energycore-report/commit/bcd40c8)).<br>**AV2:** contribuyó a revisar qué información necesita el seguimiento experimental y cómo se relaciona con el modelo del producto. Este apoyo conecta la utilidad de los datos con la minimización de información personal y la trazabilidad de las acciones.<br><br>**Renzo Zamir Revilla Quispe - U201717085**<br>**AV2:** apoyó el análisis de las condiciones de operación y sus consecuencias económicas. Ayudó a organizar la explicación de límites de capacidad, disponibilidad y recuperación, para que el uso académico del servicio considere tanto su continuidad como el gasto de infraestructura.<br><br>**Brayan Benjamin Huerta Cardenas - U20241E550**<br>**AV2:** aportó observaciones sobre claridad y accesibilidad de la información presentada al usuario. Su apoyo se orientó a explicar unidades, mensajes y consecuencias de las acciones de forma consistente, considerando a personas con distinta experiencia tecnológica. | **AV1/TB1:** las necesidades recogidas y el modelo del producto permiten discutir sus efectos sobre personas y negocios.<br><br>**AV2:** la utilidad de EnergyCore depende de que el usuario entienda los datos, conserve el control de sus acciones y pueda acceder a un servicio sostenible. La privacidad, la claridad de la información y el coste de operación forman parte de esa evaluación. Los beneficios económicos o ambientales requieren mediciones propias antes de afirmarse como resultados. |
+| **4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software** | **Loa Rojas, Jean Franck · U20241E406**<br>**AV1:** Documentó la reutilización autorizada del proyecto de origen y la adaptación de EnergyCore en repositorios propios.<br>**TB1:** Integró al informe las evidencias de PostgreSQL, pruebas y despliegue, y actualizó la presentación.<br>**AV2:** Coordinó el informe y documentó el fallo y la recuperación del servicio con sus resultados de CI y monitoreo (§6.1 y §7.4).<br><br>**Santiago Atanacio, Jairo Mathias · U202418755**<br>**AV1:** Documentó su reflexión sobre privacidad, manejo de errores y límites de las verificaciones.<br>**TB1:** Su ficha de participación recogió su perfil actualizado y la entrevista de needfinding ya documentada en AV1.<br>**AV2:** Apoyó la revisión del guion de validación para evitar preguntas inducidas y explicar el consentimiento y el uso académico de la información.<br><br>**Rivera Rupay, Fabricio Jose · U202423883**<br>**AV1:** Apoyó la revisión de los materiales para que las capacidades descritas correspondieran a la evidencia disponible.<br>**TB1:** Revisó los artefactos de diseño y corrigió atribuciones de autoría en Student Outcome. [Cambio documentado](https://github.com/teralume/energycore-report/commit/1b96857).<br>**AV2:** Revisó la coherencia entre el modelo de datos y el plan de seguimiento experimental, identificando las capacidades To-Be.<br><br>**Revilla Quispe, Renzo Zamir · U201717085**<br>**AV1:** Contrastó el alcance descrito con los artefactos de diseño y la evidencia de implementación.<br>**TB1:** Revisó la consistencia entre el producto implementado, las evidencias y el contenido de la exposición.<br>**AV2:** Ayudó a organizar la información de despliegue, pruebas y recuperación para explicar las condiciones de operación.<br><br>**Huerta Cardenas, Brayan Benjamin · U20241E550**<br>**AV1:** Apoyó la identificación de los autores y la presentación de la evidencia del equipo.<br>**TB1:** Apoyó la identificación y fotografía del equipo y revisó el material acumulativo de entrega.<br>**AV2:** Revisó los textos de los recorridos del producto para que las tareas y los estados de la interfaz fueran comprensibles. | **AV1:** Identificar la procedencia de componentes y datos permite reconocer la autoría y explicar qué se verificó.<br><br>**TB1:** La exposición y los diagramas deben corresponder al producto implementado y a la evidencia presentada.<br><br>**AV2:** Conservar el fallo de CI y la posterior recuperación permite explicar el alcance real de las comprobaciones. El guion documenta el consentimiento antes de las sesiones de validación. |
+| **4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales** | **Loa Rojas, Jean Franck · U20241E406**<br>**AV1:** Relacionó el uso de una API común en web y móvil con la comprensión del consumo, los costes y las metas.<br>**TB1:** Refinó las estimaciones del backlog y corrigió las historias que superaban cinco puntos para orientar la planificación del esfuerzo.<br>**AV2:** Comparó herramientas DevOps considerando acceso, operación y costes. [Benchmark](planning/devops-benchmark-av2.md).<br><br>**Santiago Atanacio, Jairo Mathias · U202418755**<br>**AV1:** Realizó la entrevista de needfinding al segmento de pequeños negocios registrada en §2.2.2.<br>**TB1:** El Performance recogió esa misma entrevista como antecedente sobre maquinaria, alertas y costes del negocio.<br>**AV2:** Revisó cómo el guion explica el consumo, la potencia y los costes al usuario de un hogar o pequeño negocio.<br><br>**Rivera Rupay, Fabricio Jose · U202423883**<br>**AV1:** Consideró cómo la presentación de costes y metas afecta la comprensión del consumo en hogares y negocios.<br>**TB1:** Desarrolló diagramas del modelo de datos y separó facturación y notificaciones para hacer legibles sus relaciones. [Diagrama revisado](https://github.com/teralume/energycore-report/commit/bcd40c8).<br>**AV2:** Apoyó la revisión de los datos que requiere el seguimiento experimental, su trazabilidad y la minimización de información personal.<br><br>**Revilla Quispe, Renzo Zamir · U201717085**<br>**AV1:** Consideró los costes del servicio, la conectividad y el control del usuario sobre las rutinas.<br>**TB1:** Contrastó las capacidades expuestas con las evidencias del producto para delimitar qué podía comunicarse al público.<br>**AV2:** Apoyó la explicación de cómo la capacidad del servicio y sus mecanismos de recuperación afectan la continuidad y el gasto.<br><br>**Huerta Cardenas, Brayan Benjamin · U20241E550**<br>**AV1:** Relacionó la claridad de la interfaz móvil con la interpretación de costes y alertas.<br>**TB1:** Revisó el material acumulativo en el que el equipo explicó el alcance y los efectos esperados del producto.<br>**AV2:** Aportó observaciones sobre accesibilidad y claridad de las unidades, mensajes y consecuencias de las acciones. | **AV1:** Comprender las unidades y conservar el control de las acciones ayuda al usuario a interpretar sus opciones de consumo.<br><br>**TB1:** El equipo consideró privacidad de la telemetría, accesibilidad, seguridad del control remoto y costes de operación.<br><br>**AV2:** Las decisiones de diseño deben preservar la privacidad y facilitar una interpretación clara. Para cuantificar beneficios económicos o ambientales se necesitan mediciones del consumo. |
 
-Las contribuciones anteriores describen apoyo técnico y documental. El registro de entrevistas, las pruebas automatizadas, las auditorías externas y los resultados experimentales mantienen sus evidencias y estados en las secciones correspondientes.
+Las fuentes históricas se conservan en el [informe AV1, pp. 11–14](output/pdf/upc-pre-202610-1asi0732-9100-teralume-report-av1.pdf), el [informe TB1, p. 10](output/pdf/upc-pre-202610-1asi0732-9100-teralume-report-tb1.pdf) y el [Performance TB1, p. 1](output/pdf/upc-pre-202610-1asi0732-9100-teralume-performance-tb1.pdf).
 
 <div style="page-break-after: always;"></div>
 
@@ -854,7 +811,7 @@ El flujo completo de autenticación, selección de sede, monitoreo, control y re
 
 ### 4.5.1 Android Mobile Applications Prototyping
 
-El prototipo funcional Android se encuentra en [energycore-mobile](https://github.com/teralume/energycore-mobile), subdirectorio `flutter`. Consume `http://10.0.2.2:8080/api/v1` desde el emulador, conserva el JWT mediante Android Keystore y AES-GCM, respeta tema de sistema y ofrece español, inglés y portugués.
+El prototipo funcional Android se encuentra en [energycore-mobile](https://github.com/teralume/energycore-mobile), subdirectorio `flutter`. La ejecución de desarrollo puede conectarse a la API local desde el emulador. El APK de entrega apunta a la API pública de EnergyCore. El cliente conserva el JWT mediante Android Keystore y AES-GCM, respeta tema de sistema y ofrece español, inglés y portugués.
 
 Ejecución en Windows:
 
@@ -1083,7 +1040,7 @@ Se emplean conventional commits (`feat`, `test`, `docs`, `chore`) y la rama esta
 
 ### 5.1.4 Software Deployment Configuration
 
-La configuración actual permite ejecución local integrada. La API usa el puerto 8080; Angular consume `/api/v1`; Flutter usa `10.0.2.2:8080` desde el emulador; y la Landing Page enlaza al login de la Web Application. El perfil `prod` del backend acepta puerto, datasource y credenciales mediante variables de entorno.
+La landing se publica en GitHub Pages y su botón **Try EnergyCore** abre la aplicación Angular en Firebase Hosting. La API Spring Boot se ejecuta en Cloud Run. El cliente Flutter de entrega usa esa API pública. Para desarrollar en un emulador Android se puede configurar la API local en el puerto 8080. El perfil de producción del backend recibe el puerto, el origen de datos y las credenciales mediante configuración del entorno.
 
 **Estado de AV1:** el despliegue público fue verificado entre el 06 y el 07/09/2026. La API está disponible en [Cloud Run](https://energycore-platform-ujdgb2zcpq-ue.a.run.app) y la experiencia web en [Firebase Hosting](https://university-energycorp.web.app). El registro de aceptación conserva health 200, OpenAPI y Swagger disponibles, registro e inicio de sesión, CORS y persistencia entre revisiones.
 
@@ -1144,23 +1101,27 @@ La lectura posterior confirmó **64 IDs únicos, 0 tarjetas ausentes, 0 discrepa
 
 `energycore-website` contiene `index.html`, `styles.css`, `script.js`, mascota, marca SVG e imagen hero 3D. Implementa navegación responsiva, cambio ES/EN, animaciones con movimiento reducido, capacidades, planes Starter/Professional/Enterprise y CTA al login. `node --check script.js` fue ejecutado sin errores.
 
-La Landing Page fue levantada localmente y recorrida en navegador sobre el artefacto actual. La captura siguiente evidencia el hero, la mascota, el recurso 3D, la navegación y el CTA dirigido al inicio de sesión. El recorrido público Landing Page → Web Application fue verificado durante la aceptación del despliegue en [Firebase Hosting](https://university-energycorp.web.app).
+El 9 de noviembre se abrió la landing publicada y se pulsó **Try EnergyCore**. En una sesión nueva, el navegador pasó de GitHub Pages al formulario de acceso de Firebase Hosting. La captura muestra el punto de partida de ST-01. [Landing publicada](https://teralume.github.io/energycore-website/) · [Recorrido registrado](assets/evidence/av2/public-navigation/st-01.json).
 
 <p align="center">
-  <img src="assets/evidence/implemented/landing-desktop.png" alt="Landing Page de EnergyCore ejecutada en navegador" width="100%">
+  <img src="assets/evidence/av2/public-navigation/landing.png" alt="Página pública de EnergyCore en GitHub Pages desde la que se inició ST-01" width="100%">
 </p>
 
 ### 5.2.3 Implemented Frontend Web Application Evidence
 
 `energycore-webapp` implementa autenticación, dashboard, energía, dispositivos, grupos, rutinas, modos, sedes, habitaciones, asignaciones, alertas, reglas, preferencias, metas, reportes, soporte, mantenimiento, planes y configuración de cuenta. Se organiza por bounded contexts con capas `domain`, `application`, `infrastructure` y `presentation`. `npm run build` concluyó correctamente, con advertencias no bloqueantes de presupuesto de estilos.
 
-El 06/09/2026 se ejecutó el build existente de Angular contra el backend real Spring Boot y una base PostgreSQL 18.4 local aislada. Se comprobó inicio de sesión → centro operativo → consumo energético → dispositivos, con una cuenta, tres equipos y lecturas de demostración persistidas en PostgreSQL. No se interceptaron respuestas HTTP en estas nuevas capturas. Los datos no provienen de sensores físicos y esta ejecución no demuestra despliegue ni persistencia en Neon.
-
-El rebuild de Angular en esta sesión quedó bloqueado por `spawn EPERM`; se documenta el hash del bundle usado, los commits y los límites de la prueba en la [auditoría de evidencias](presentation/evidence-audit-2026-09-06.md). El HTTP 500 de preferencias observado durante el primer acceso fue reproducido y corregido: se sincronizó la inicialización/actualización por usuario mediante un bloqueo transaccional en PostgreSQL. La [regresión de concurrencia](assets/evidence/implemented/preferences-concurrency-smoke.json) aprobó 24 GET iniciales simultáneos y 24 GET/PUT simultáneos, además de persistencia ES/EN/PT y aislamiento entre cuentas. En navegador se verificó login → inicio → cambio PT → ES con siete respuestas de preferencias HTTP 200 y ningún 500. Esta comprobación no equivale a un gate completo de todos los módulos.
+El 9 de noviembre, ST-01 llegó al formulario de acceso público, abrió el registro, regresó al inicio de sesión y recorrió la recuperación de contraseña. No se enviaron formularios. La captura muestra la pantalla a la que llegó el botón de la landing. [Webapp publicada](https://university-energycorp.web.app/iam/login) · [Registro de navegación](assets/evidence/av2/public-navigation/st-01.json).
 
 <p align="center">
-  <img src="assets/evidence/implemented/webapp-live-login.png" alt="Inicio de sesión real de EnergyCore en el entorno local" width="100%">
+  <img src="assets/evidence/av2/public-navigation/login.png" alt="Pantalla pública de acceso de EnergyCore en Firebase Hosting durante ST-01" width="100%">
 </p>
+
+**Recorrido autenticado en desarrollo (6 de septiembre).** Las capturas de consumo, dispositivos y preferencias que siguen corresponden a la ejecución local documentada a continuación.
+
+El 06/09/2026 se ejecutó el build existente de Angular contra el backend real Spring Boot y una base PostgreSQL 18.4 local aislada. Se comprobó inicio de sesión → centro operativo → consumo energético → dispositivos, con una cuenta, tres equipos y lecturas de demostración persistidas en PostgreSQL. No se interceptaron respuestas HTTP en estas nuevas capturas. Los datos no provienen de sensores físicos y esta ejecución no demuestra despliegue ni persistencia en Neon.
+
+La recompilación de Angular del 6 de septiembre quedó bloqueado por `spawn EPERM`; se documenta el hash del bundle usado, los commits y los límites de la prueba en la [auditoría de evidencias](presentation/evidence-audit-2026-09-06.md). El HTTP 500 de preferencias observado durante el primer acceso fue reproducido y corregido: se sincronizó la inicialización/actualización por usuario mediante un bloqueo transaccional en PostgreSQL. La [regresión de concurrencia](assets/evidence/implemented/preferences-concurrency-smoke.json) aprobó 24 GET iniciales simultáneos y 24 GET/PUT simultáneos, además de persistencia ES/EN/PT y aislamiento entre cuentas. En navegador se verificó login → inicio → cambio PT → ES con siete respuestas de preferencias HTTP 200 y ningún 500. Esta comprobación no equivale a un gate completo de todos los módulos.
 
 <p align="center">
   <img src="assets/evidence/implemented/webapp-live-home.png" alt="Centro operativo de EnergyCore conectado a Spring Boot y PostgreSQL local con datos de demostración" width="100%">
@@ -1254,15 +1215,7 @@ El equipo trabaja sobre cinco repositorios coordinados mediante GitFlow y Conven
 
 La colaboración se organiza por frentes: arquitectura y backend validan C4, clases y persistencia; gestión de producto mantiene historias, prioridades y Sprint Backlog; UX revisa la coherencia de Landing Page, Web y Mobile; QA comprueba pruebas, evidencias y legibilidad del PDF; y documentación integra las correcciones en el formato del curso. Las tareas y condiciones de cierre se detallan en la sección 5.2.1.
 
-Antes de cerrar la entrega, el informe debe pasar una revisión cruzada, actualizar los resultados de prueba que se vuelvan a ejecutar y consolidar únicamente las evidencias audiovisuales que hayan sido realizadas.
-
-<p align="center">
-  <img src="assets/evidence/implemented/github-report-branches.png" alt="Ramas GitFlow publicadas del repositorio del informe" width="100%">
-</p>
-
-<p align="center">
-  <img src="assets/evidence/implemented/github-platform-branches.png" alt="Ramas GitFlow publicadas del backend" width="100%">
-</p>
+Las ramas del informe y de la API conservan el historial de integración. La figura siguiente procede de GitHub Insights y muestra la actividad histórica del repositorio del informe. Las evidencias de despliegue y sus fechas se encuentran en el capítulo VII. [Ramas del informe](https://github.com/teralume/energycore-report/branches) · [Ramas de la API](https://github.com/teralume/energycore-platform/branches).
 
 <p align="center">
   <img src="assets/evidence/implemented/github-report-contributors.png" alt="GitHub Insights Contributors del repositorio del informe" width="100%">
@@ -1357,17 +1310,28 @@ La Web Application añade un smoke test ejecutable, `scripts/smoke-device-group-
 
 La especificación BDD se expresa en Gherkin y usa Given-When-Then. Existen **8 feature files** y **60 escenarios** para IAM, Billing, Workplace, Device Control, Energy Monitoring, Notifications, Reporting y Service Management.
 
-Ejemplo representativo:
+En el escenario de encendido, Cucumber crea un enchufe de prueba, envía la orden de cambio de estado y comprueba tanto el código HTTP como el valor devuelto por la API. El escenario y las definiciones de sus pasos corresponden al mismo commit verificado. [Escenario ejecutado](https://github.com/teralume/energycore-platform/blob/3f74d4780a34f96958c6fe4626400d44a9a9f918/src/test/resources/features/device-control.feature#L47-L54) · [Pasos HTTP](https://github.com/teralume/energycore-platform/blob/3f74d4780a34f96958c6fe4626400d44a9a9f918/src/test/java/com/teralume/energycore/acceptance/CommonHttpSteps.java).
 
 ```gherkin
 Scenario: Toggling a device from OFF to ON
-  Given an authenticated user with a registered device
-  And the device is OFF
-  When the user toggles the device
-  Then the API returns the device with status ON
+  Given the client sends a POST request to "/devices" with body:
+    """
+{"name":"Toggle Device","type":"SMART_PLUG","powerWatts":60}
+    """
+  When the client sends a PATCH request to "/devices/{last}/toggle"
+  Then the response status code is 200
+  And the response body contains "status" equal to "ON"
 ```
 
 Los escenarios se enlazan con historias del Product Backlog y se ejecutan con Cucumber sobre JUnit Platform. El último reporte Surefire registra **60 escenarios ejecutados, 0 omitidos, 0 fallos y 0 errores**. Los steps ejercitan los contratos HTTP reales de IAM, Billing, Device Control, Energy Monitoring, Workplace, Notifications, Reporting y Service Management, incluida la creación y relación de recursos mediante identificadores generados durante cada escenario.
+
+**Ejecuciones de pruebas por repositorio.** El 3 de noviembre de 2026 el backend completó 28 pruebas JUnit y 60 escenarios Cucumber. En las ejecuciones del 5 de octubre aprobaron 5 pruebas de Angular, 5 de la Landing Page y 11 de Flutter. La figura identifica la fecha y el commit de cada ejecución.
+
+<p align="center">
+  <img src="assets/evidence/av2-ci/test-runs.png" alt="Extractos de resultados de cuatro repositorios en GitHub Actions, con fecha, commit y número de ejecución" width="100%">
+</p>
+
+Los cuatro registros conservan los resultados individuales. [Maven Surefire](https://github.com/teralume/energycore-platform/actions/runs/41646065500/job/125951592147) · [Angular](https://github.com/teralume/energycore-webapp/actions/runs/37321265630/job/111800630135) · [Landing Page](https://github.com/teralume/energycore-website/actions/runs/37321271985/job/111800652741) · [Flutter](https://github.com/teralume/energycore-mobile/actions/runs/37321280273/job/111800676705).
 
 ### 6.1.4 Core System Tests
 
@@ -1375,7 +1339,7 @@ Las pruebas de sistema se plantean sobre recorridos completos y no sobre compone
 
 | ID | Recorrido | Resultado esperado | Estado de evidencia |
 |:--|:--|:--|:--|
-| ST-01 | Landing Page → CTA → login | El CTA abre `/iam/login`; registro y recuperación permiten regresar al login. | Implementado; captura final por incorporar. |
+| ST-01 | Landing Page → CTA → login | El CTA abre `/iam/login`. Desde registro y recuperación se puede volver al login. | **PASS, 09/11/2026, 06:20 UTC.** El navegador recorrió la Landing pública, «Try EnergyCore», login, registro, regreso, recuperación y regreso. Se enviaron 0 formularios. [Registro del recorrido](assets/evidence/av2/public-navigation/st-01.json). |
 | ST-02 | Registro → suscripción → dashboard | La sesión se conserva y el usuario entra al shell permitido por su plan. | Flujo implementado; ejecución integrada por registrar. |
 | ST-03 | Sede → habitación → dispositivo → grupo | Los recursos quedan relacionados y el grupo reaparece al consultarlo. | Smoke test disponible; requiere API activa. |
 | ST-04 | Lectura alta → regla → alerta → resolución | La regla debe generar una alerta que pueda leerse y resolverse. | Componentes BDD aprobados: evaluación HTTP 200 y resolución de una alerta creada directamente. El test no acredita la cadena completa desde la lectura hasta la alerta generada. |
@@ -1764,6 +1728,14 @@ El workflow [`monitoring.yml`](.github/workflows/monitoring.yml) admite ejecuci�
 Se conservan como antecedentes el [PASS local del 21/10](assets/evidence/implemented/av2-monitoring-2026-10-21.json), la [activación remota de esa fecha](assets/evidence/implemented/av2-monitoring-activation-2026-10-21.json) y el [run fallido anterior](https://github.com/teralume/energycore-report/actions/runs/41556710433). Recuperar la API no convierte en aprobado el deploy de backend: en el run de CI del 03/11 ese job permanece `skipped`.
 
 Cloud Logging/Monitoring, métricas percentiles, saturación y analítica de producto son herramientas objetivo adicionales. El alcance implementado y los controles propuestos se distinguen a continuación.
+
+**Despliegue y operación pública.** El registro de aceptación del 7 de septiembre de 2026 (UTC) identifica la revisión de Cloud Run, con health y Swagger en HTTP 200 y OpenAPI verificado. El 3 de noviembre, CI construyó el contenedor y publicó el JAR del backend. Su job de despliegue quedó omitido. La figura reúne esos antecedentes y la ejecución programada del monitor del 8 de noviembre, iniciada a las 22:08 UTC (17:08 en Lima). Las tres superficies devolvieron HTTP 200. Las duraciones corresponden a las solicitudes individuales de esa ejecución.
+
+<p align="center">
+  <img src="assets/evidence/av2-ci/deployment-monitoring.png" alt="Registro fechado de la revisión Cloud Run, ejecución de CI del backend y sonda programada de salud, OpenAPI y la web" width="100%">
+</p>
+
+La comprobación pública del 9 de noviembre a las 06:19 UTC volvió a validar salud, contrato OpenAPI y HTML de la WebApp. El recorrido ST-01 de 6.1.4 verificó después la navegación del navegador hasta las pantallas públicas de autenticación. [Registro histórico de despliegue incluido en el ZIP de TB1](output/zip/upc-pre-202610-1asi0732-9100-teralume-artifacts-tb1.zip) · [CI del backend](https://github.com/teralume/energycore-platform/actions/runs/41646065500) · [Monitor programado del 8 de noviembre](https://github.com/teralume/energycore-report/actions/runs/42528712452/job/128877915297) · [Comprobación del 9 de noviembre](assets/evidence/av2/public-navigation/public-probe.json) · [Extractos de los registros](assets/evidence/av2-ci/execution-records-2026-11-09.json).
 
 ### 7.4.2 Monitoring Pipeline Components
 
@@ -2186,11 +2158,13 @@ El principal límite de la validación sigue siendo la ausencia de sesiones con 
 - [Revisión técnica y CI por commit](assets/evidence/implemented/av2-review-2026-10-21.json).
 - [Comprobación pública de disponibilidad](assets/evidence/implemented/av2-monitoring-2026-10-21.json).
 - [Pruebas backend y recuperación pública del 03/11](assets/evidence/implemented/av2-recovery-2026-11-03.json).
+- [Ejecuciones originales de CI y extractos de logs](assets/evidence/av2-ci/execution-records-2026-11-09.json).
+- [ST-01 desde el navegador, 9 de noviembre](assets/evidence/av2/public-navigation/st-01.json) y [sonda de las tres superficies públicas](assets/evidence/av2/public-navigation/public-probe.json).
 - [Guion y registro de validación del producto actual](planning/validation-interviews-av2.md).
 - [Kit para auditorías UX entre grupos](planning/ux-audit-kit-av2.md).
 - [Presentación AV2 editable](output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pptx).
 - [Presentación AV2 en PDF](output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pdf).
-- [Presentación AV2 en Canva](https://www.canva.com/design/DAHYoDC_Zqc/BJZvKHIJtJGlH2Z6kJ0IjQ/edit).
+- [Diseño base en Canva](https://www.canva.com/design/DAHYoDC_Zqc/BJZvKHIJtJGlH2Z6kJ0IjQ/edit). Las diapositivas con las correcciones del 9 de noviembre se distribuyen en el PPTX y el PDF enlazados arriba.
 - [Fuente visual y verificación de los archivos AV2](presentation/av2-keynote-source.md).
 
 ## Registro de mejoras de AV2
@@ -2198,6 +2172,9 @@ El principal límite de la validación sigue siendo la ausencia de sesiones con 
 | Origen de la observación | Corrección aplicada | Evidencia y límite |
 |:--|:--|:--|
 | Observación docente sobre contenido adelantado; índice del tercer hito. | Se delimita el incremento a VI, VII y VIII hasta 8.3.2. La planificación To-Be se incluye por exigencia explícita de la rúbrica. | Secciones de alcance y 8.3.2; las tareas no se registran como implementadas. |
+| La PPT y el reporte mostraban pocos resultados de ejecución. | Se incorporaron los conteos y las fuentes de cada suite, la comprobación pública y el recorrido ST-01. | Capítulos V a VII y keynote AV2. Cada evidencia indica su fecha, entorno y alcance. |
+| La procedencia de las imágenes de despliegue era confusa. | Se capturaron la landing y el acceso web en sus URL públicas y se sustituyeron dos capturas de ramas por enlaces al historial. | 5.2.2, 5.2.3 y 5.2.7. Las capturas locales de septiembre se identifican por separado. |
+| El cuadro Student Outcome omitía las acciones del parcial. | Se reconstruyeron los aportes de TB1 en los dos criterios a partir del Performance del equipo y del historial del proyecto. | Cuadro acumulativo AV1, TB1 y AV2 y referencias bajo la tabla. |
 | Notas docentes sobre datos cuantitativos, historias no funcionales, técnicas y spikes. | Las preguntas tienen medidas y decisiones; los planes distinguen investigación, calidad y construcción. Las 26 tareas To-Be tienen estimaciones de 4–8 h. | Question Backlog, Experiment Cards y Sprint Planning. Las estimaciones no son horas ejecutadas. |
 | Rúbrica de diseño experimental y revisión de coherencia del 03/11. | Se añaden H0/HA; se armonizan la mejora de éxito de 20 puntos porcentuales, la referencia muestral y el margen Android. Se define cómo contar fallos y límites de tiempo. | 8.2; diseño propuesto sin observaciones ni resultados inventados. |
 | Fallo CI de noviembre al solicitar un reporte de octubre. | El test usa la fecha de la lectura devuelta por la API y verifica creación y borrado. | [Corrección backend](https://github.com/teralume/energycore-platform/commit/abd196438d3d1bd8f7de951aab31fae4aa0e0753) y [88 pruebas aprobadas](https://github.com/teralume/energycore-platform/actions/runs/41646065500). |
@@ -2209,7 +2186,7 @@ Las correcciones anteriores provienen de la rúbrica, observaciones docentes ano
 ## Enlaces importantes
 
 - [Project Report](https://github.com/teralume/energycore-report)
-- [Landing Page](https://github.com/teralume/energycore-website)
+- [Código de la landing](https://github.com/teralume/energycore-website) · [Landing publicada](https://teralume.github.io/energycore-website/)
 - [Frontend Web Application](https://github.com/teralume/energycore-webapp)
 - [Native Mobile Application](https://github.com/teralume/energycore-mobile)
 - [RESTful API](https://github.com/teralume/energycore-platform)
@@ -2226,6 +2203,10 @@ Las correcciones anteriores provienen de la rúbrica, observaciones docentes ano
 
 Para TB1 se reutiliza la exposición consolidada de AV1 porque presenta el avance acumulativo del producto, sus integrantes, la arquitectura y las evidencias implementadas. El archivo se entrega con la nomenclatura `upc-pre-202610-1asi0732-9100-teralume-expo-tb1.mp4`; su contenido y su huella SHA-256 corresponden al video AV1 original.
 
+### Exposición incluida en AV2
+
+Para esta entrega se conserva la grabación consolidada de AV1 con el nombre `upc-pre-202610-1asi0732-9100-teralume-expo-av2.mp4`. Los dos MP4 son idénticos. El informe y el keynote AV2 documentan las pruebas y las correcciones posteriores a la grabación. [Ver la exposición en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241e406_upc_edu_pe/IQAkgo0agXNcQ6niBO2B2AdfAfjjUJBZmUbQTy6c8-moYCg?e=QLRzKM&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) · [Verificación del archivo entregado](assets/evidence/av2/expo-av2.json).
+
 ### Video About-the-Product Sprint 2
 
 - **Archivo:** `upc-pre-202610-1asi0732-9100-teralume-about-the-product-sprint-2.mp4`.
@@ -2238,6 +2219,6 @@ El contenido documental y la evidencia técnica no acreditan por sí solos estas
 - Validación del producto: entre tres y cinco participantes por segmento, con consentimiento, registro, análisis de uso y video accesible. La entrevista previa a Catherine pertenece al needfinding.
 - Auditoría entre grupos: identificación del grupo, informe realizado y recibido, devolución y respuesta trazable a los hallazgos.
 - Revisión por pares: conservar la revisión de los cambios técnicos por otro integrante. La declaración de contribuciones no sustituye el registro de esa revisión.
-- Comunicación de esta entrega: exposición de AV2 y evaluación de participación correspondientes a las actividades realmente realizadas. Los videos anteriores conservan su entrega de origen.
+- Para la exposición se entrega el MP4 de AV1 identificado en el anexo. La evaluación individual de AV2 requiere que el Team Leader confirme las responsabilidades y calificaciones de este hito.
 
 El reclutamiento y la ejecución del experimento To-Be se regirán por su protocolo; sus resultados no se agregan al avance para completar casillas.

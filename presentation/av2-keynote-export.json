@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "delivery": "AV2",
   "design_url": "https://www.canva.com/design/DAHYoDC_Zqc/BJZvKHIJtJGlH2Z6kJ0IjQ/edit",
   "slides": 27,
@@ -7,20 +7,46 @@
   "visual_review": {
     "pages_reviewed": 27,
     "status": "pass",
-    "pptx_font": "DM Sans"
+    "pptx_font": "DM Sans",
+    "renderer": "Microsoft PowerPoint PDF export",
+    "pdf_pages": 27,
+    "pdf_page_text_matched": 27,
+    "evidence_pages": [
+      13,
+      14,
+      18,
+      20,
+      21,
+      23
+    ]
   },
   "files": [
     {
       "path": "output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pptx",
-      "sha256": "682444c10f465e8a91477596fd8ea255400f1c959cef4aa343ae5fd675f8491e",
-      "bytes": 16457141,
-      "source": "Validated editable presentation imported into the final Canva design"
+      "sha256": "43742ec663611251c82e6d7697c5c1b370276190d6a39cf51452e113246b953f",
+      "bytes": 17816967,
+      "source": "Existing editable AV2 PowerPoint updated with dated product and CI evidence"
     },
     {
       "path": "output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pdf",
-      "sha256": "a59337398a99015f562248125d17e3034c039445782059da2823de14fddece54",
-      "bytes": 5947424,
-      "source": "PDF exported from the final Canva design"
+      "sha256": "482cbba93e42a13a67dfd28d897888690e2c6a3bbce4f71b65721089b964f7f8",
+      "bytes": 2374957,
+      "source": "PDF exported from the reviewed PowerPoint on 2026-11-09"
     }
+  ],
+  "review_date": "2026-11-09",
+  "canva_sync": "not_synced",
+  "current_revision_source": "PPTX",
+  "changed_slides": [
+    13,
+    14,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    25,
+    26
   ]
 }

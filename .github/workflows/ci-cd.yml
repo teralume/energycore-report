@@ -37,6 +37,8 @@ jobs:
             presentation/av2-keynote-export.json
             assets/evidence/implemented/trello-energycore-2026-10-20.png
             assets/evidence/implemented/av2-*.json
+            assets/evidence/av2
+            assets/evidence/av2-ci
             delivery
             output/docx
             output/pdf
