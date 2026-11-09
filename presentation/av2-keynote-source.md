@@ -1,20 +1,21 @@
-# Presentación AV2: fuente visual y archivos
+# Presentación de EnergyCore para AV2
 
-El diseño vigente está en [Canva](https://www.canva.com/design/DAHYoDC_Zqc/BJZvKHIJtJGlH2Z6kJ0IjQ/edit). Conserva 27 diapositivas y el alcance de AV2 hasta 8.3.2. El enlace conserva los permisos del propietario.
+La edición del 9 de noviembre de 2026 mantiene 27 diapositivas y llega hasta el Product Backlog de la sección 8.3.2. Para exponer esta edición, abre el [PowerPoint](../output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pptx) o el [PDF exportado desde PowerPoint](../output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pdf).
 
-Archivos publicados:
+El diseño anterior conserva su enlace de Canva. La sincronización de esta revisión requiere reconectar la cuenta. [Diseño de Canva](https://www.canva.com/design/DAHYoDC_Zqc/BJZvKHIJtJGlH2Z6kJ0IjQ/edit)
 
-- [PowerPoint editable](../output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pptx): archivo editable validado que se importó para aplicar el diseño en Canva.
-- [PDF](../output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pdf): exportación del diseño final desde Canva, revisada página por página.
-- [Registro de integridad](av2-keynote-export.json): hashes SHA-256 y procedencia de ambos archivos.
+## Evidencia para la exposición
 
-El diseño usa fondo marfil, verde oscuro, acentos lima y tipografía DM Sans. Se revisaron las 27 páginas y se comprobó que el texto del PowerPoint esté presente en la página correspondiente del PDF. El PDF fija la apariencia para exponer; PowerPoint requiere DM Sans para conservar la misma tipografía al editar.
+| Páginas | Qué mostrar | Fuente |
+| --- | --- | --- |
+| 13–14 | Recorrido de la landing al login y navegación a registro y recuperación en el navegador. Las capturas corresponden al 9 de noviembre. | [ST-01](../assets/evidence/av2/public-navigation/st-01.json) |
+| 18 | Resultados de backend, web, landing y Flutter. Cada registro identifica la ejecución, la fecha y el commit del componente. | [Extractos de GitHub Actions](../assets/evidence/av2-ci/execution-records-2026-11-09.json) |
+| 20 | La prueba del dashboard comprueba potencia y energía con 200 lecturas preparadas. Las notas incluyen el comando Maven. | [Prueba JUnit](https://github.com/teralume/energycore-platform/blob/3f74d4780a34f96958c6fe4626400d44a9a9f918/src/test/java/com/teralume/energycore/energymonitoring/application/services/EnergyDashboardPowerTest.java) |
+| 21–23 | Aceptación en septiembre, CI posterior y sondeos públicos de noviembre. El deploy condicional se omitió en el run del backend. | [Ejecución del monitor](https://github.com/teralume/energycore-report/actions/runs/42528712452) · [Lectura del 9 de noviembre](../assets/evidence/av2/public-navigation/public-probe.json) |
+| 25–26 | Piloto propuesto y distribución del backlog en los sprints 5, 6 y 7. | [Capítulo VIII](../README.md) |
 
-## Actualizaciones posteriores
+## Verificación de los archivos
 
-1. Editar el diseño vigente y mantener el límite de AV2. Las hipótesis, el piloto y el backlog propuestos no representan resultados ejecutados.
-2. Exportar todas las páginas a PDF y PowerPoint; revisar visualmente las 27 páginas antes de reemplazar los archivos publicados.
-3. Actualizar el registro de integridad con los hashes de los archivos revisados y su procedencia real.
-4. Ejecutar `python scripts/validate-av2-keynote.py` y los controles del repositorio antes de publicar.
+Se revisaron las 27 páginas renderizadas y se contrastó el texto editable del PPT con la página correspondiente del PDF. Las cuatro capturas y láminas de evidencia de las páginas 13, 14, 18 y 23 se verifican contra los PNG del repositorio. El [registro de integridad](av2-keynote-export.json) conserva la procedencia y el SHA-256 de cada archivo.
 
-`node scripts/build-av2-keynote.mjs` verifica los archivos publicados. Ya no reconstruye AV2 a partir del PPT de TB1: esa generación antigua sobrescribía el diseño aprobado. Los entregables de AV1 y TB1 mantienen sus propios archivos.
+Después de editar, exporta nuevamente las 27 páginas, revisa las imágenes y actualiza el registro. Ejecuta `python scripts/validate-av2-keynote.py` y `node scripts/build-av2-keynote.mjs`. La presentación utiliza DM Sans.
