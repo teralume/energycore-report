@@ -54,6 +54,7 @@
 | AV2.5 | 03/11/2026 | Loa Rojas, Jean Franck | Incorporación de las contribuciones individuales confirmadas por el Team Leader dentro de los dos criterios ABET y retiro de la tabla de revisiones propuestas. |
 | AV2.6 | 09/11/2026 | Loa Rojas, Jean Franck | Revisión de observaciones del parcial. Se recuperaron los aportes de TB1 en Student Outcome, se documentó el recorrido público ST-01 y se incorporaron resultados de ejecución al informe y al keynote. La exposición conserva la grabación de AV1. |
 | AV2.7 | 09/11/2026 | Loa Rojas, Jean Franck | Incorporación de la auditoría realizada a AutoService, con información de ShiftTech, cronograma real, cinco hallazgos y capturas. Actualización del estado de la auditoría de retorno y del Performance de AV2. |
+| AV2.8 | 09/11/2026 | Loa Rojas, Jean Franck | Ejecución observada desde IntelliJ IDEA de los cinco tests del dashboard y de la suite Maven de 88 pruebas. Se incorporan capturas del código y de los resultados, con versión, entorno y registro de Surefire. |
 
 <div style="page-break-after: always;"></div>
 
@@ -1282,6 +1283,12 @@ En Flutter, `domain_models_test.dart` verifica progreso normalizado de metas, di
 
 **Resultado backend del 03/11/2026:** [run `41646065500`, main `3f74d478`](https://github.com/teralume/energycore-platform/actions/runs/41646065500) ejecutó Maven `verify` con Java 17: **28 pruebas JUnit + 60 escenarios Cucumber = 88, con 0 fallos, 0 errores y 0 omisiones**. Los reportes Surefire y el JAR quedaron publicados como artefactos asociados al SHA. El [registro de evidencia](assets/evidence/implemented/av2-recovery-2026-11-03.json) conserva sus identificadores y digest. Este resultado no acredita por sí solo todos los flujos de producción ni revalida los tests de los otros repositorios.
 
+**Ejecución desde IntelliJ IDEA, 09/11/2026.** Se abrió el código de EnergyDashboardPowerTest y se ejecutó la clase con el runner JUnit del editor. Los cinco métodos aprobaron y el proceso finalizó con código 0. La prueba visible prepara 200 lecturas y comprueba 120 W de potencia actual, 2 kWh acumulados y un costo estimado de 1,5. Esos cinco casos forman parte de los 28 JUnit de la suite del backend.
+
+<p align="center">
+  <img src="assets/evidence/av2/ide/intellij-dashboard-tests.png" alt="IntelliJ IDEA. Código de EnergyDashboardPowerTest junto a los cinco tests aprobados y salida con código 0" width="100%">
+</p>
+
 ### 6.1.2 Core Integration Tests
 
 Las pruebas de integración del backend levantan el contexto Spring Boot en un puerto aleatorio mediante `@SpringBootTest(webEnvironment = RANDOM_PORT)` y activan el perfil `test`. H2 reemplaza a PostgreSQL únicamente durante la suite; Spring Security y la cadena HTTP permanecen activas.
@@ -1306,6 +1313,14 @@ La Web Application añade un smoke test ejecutable, `scripts/smoke-device-group-
 | Error de CORS | Preflight desde el origen público permitido. |
 
 **Estado:** existe la infraestructura de integración y hay escenarios ejecutados con cero fallos. El smoke test completo debe repetirse contra el entorno que se entregue y su salida debe adjuntarse como evidencia.
+
+**Compilación y suite desde el panel Maven de IntelliJ, 09/11/2026.** Se ejecutó Lifecycle → test sobre el commit 3f74d478. Maven compiló el proyecto, usó H2 para la aceptación y terminó a las 02:41:02, hora de Lima, con **88 pruebas, 0 fallos, 0 errores y 0 omitidas**, y **BUILD SUCCESS**. Los reportes Surefire registran 28 casos JUnit y 60 escenarios Cucumber. La captura siguiente es del editor durante esa ejecución. [Registro de la ejecución local](assets/evidence/av2/ide/test-execution-2026-11-09.json).
+
+IntelliJ usó el JDK 21.0.11 instalado y el nivel de lenguaje 17 declarado por el proyecto. El primer intento había fallado antes de ejecutar tests porque el IDE seleccionó el SDK 27. Se corrigió esa selección y se repitió la compilación. El resultado local amplía la evidencia de CI de noviembre con una ejecución observada desde el editor.
+
+<p align="center">
+  <img src="assets/evidence/av2/ide/intellij-maven-suite.png" alt="IntelliJ IDEA. Panel Maven con Tests run 88, Failures 0, Errors 0, Skipped 0 y BUILD SUCCESS" width="100%">
+</p>
 
 ### 6.1.3 Core Behavior Driven Development
 
@@ -2242,7 +2257,9 @@ La condición común de cierre de cada tarea será enlazar el cambio y la prueba
 
 ## Conclusiones y recomendaciones
 
-La verificación de EnergyCore permite sostener una afirmación concreta: el backend en `3f74d478` aprobó 28 pruebas JUnit y 60 escenarios Cucumber el 03/11/2026. La corrección del escenario de borrado de reportes eliminó una dependencia de octubre sin cambiar la regla de negocio ni omitir la prueba. La cifra histórica de 109 incluye también Angular, Flutter y Landing Page; no representa una nueva ejecución conjunta de todos los componentes en noviembre.
+La ejecución local desde IntelliJ del 09/11/2026 aprobó las 88 pruebas del backend, con 28 casos JUnit y 60 escenarios Cucumber, sin fallos, errores u omisiones. Se conservan las capturas del código y de los resultados en 6.1.1 y 6.1.2.
+
+La verificación anterior de EnergyCore registra que el backend en `3f74d478` aprobó 28 pruebas JUnit y 60 escenarios Cucumber el 03/11/2026. La corrección del escenario de borrado de reportes eliminó una dependencia de octubre sin cambiar la regla de negocio ni omitir la prueba. La cifra histórica de 109 incluye también Angular, Flutter y Landing Page; no representa una nueva ejecución conjunta de todos los componentes en noviembre.
 
 El incidente de facturación mostró por qué no basta con un pipeline de tests aprobado. A las 13:08 UTC del 03/11 la web respondía, pero la API no estaba disponible. El monitor remoto de las 14:10 UTC volvió a obtener health, OpenAPI y web válidos. Se conservan ambas observaciones. Esa recuperación comprueba las superficies públicas; la navegación autenticada y la experiencia de los usuarios necesitan su propia evidencia.
 
@@ -2276,6 +2293,7 @@ La inspección de AutoService produjo cinco hallazgos sobre navegación y accesi
 - [Comprobación pública de disponibilidad](assets/evidence/implemented/av2-monitoring-2026-10-21.json).
 - [Pruebas backend y recuperación pública del 03/11](assets/evidence/implemented/av2-recovery-2026-11-03.json).
 - [Ejecuciones originales de CI y extractos de logs](assets/evidence/av2-ci/execution-records-2026-11-09.json).
+- [Pruebas ejecutadas desde IntelliJ IDEA el 9 de noviembre](assets/evidence/av2/ide/test-execution-2026-11-09.json).
 - [ST-01 desde el navegador, 9 de noviembre](assets/evidence/av2/public-navigation/st-01.json) y [sonda de las tres superficies públicas](assets/evidence/av2/public-navigation/public-probe.json).
 - [Guion y registro de validación del producto actual](planning/validation-interviews-av2.md).
 - [Auditoría realizada de AutoService](output/pdf/upc-pre-202610-1asi0732-9100-teralume-ux-audit-autoservice-av2.pdf) y [registros de la inspección](assets/evidence/av2/ux-audit-autoservice/audit-record.json).
