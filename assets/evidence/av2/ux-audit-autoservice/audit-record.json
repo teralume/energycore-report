@@ -1,0 +1,145 @@
+{
+  "fecha_local": "2026-11-09",
+  "zona": "America/Lima",
+  "hora_confirmacion_local": "02:11:26–02:11:36",
+  "hora_accesibilidad_local": "02:12:34",
+  "agente": "Microsoft Edge 157.0.4341.42, navegador automatizado, lenguaje es-PE",
+  "vistas": {
+    "escritorio": [
+      1366,
+      820
+    ],
+    "movil_emulado": [
+      390,
+      844
+    ]
+  },
+  "URLs": {
+    "landing": "https://upc-shift-tech-solutions-team-1.github.io/LandingPage-AutoService/",
+    "web": "https://autoservice-web-kappa.vercel.app/login"
+  },
+  "alcance": "Inspección de expertos de interfaces públicas. No participaron usuarios reales. No se utilizaron credenciales ni códigos de orden. No se creó ninguna cuenta. Dispositivo móvil emulado.",
+  "hallazgos": [
+    {
+      "id": "AS-01",
+      "titulo": "Los botones de los planes regresan a la portada",
+      "severidad_0_4": 3,
+      "categoria": "Arquitectura de información / navegación",
+      "pasos": [
+        "Landing en inglés > Pricing",
+        "En Business pulsar Contact Sales. Desde Free repetir con Get Started."
+      ],
+      "observacion": "Ambos llevan a # con el hero visible. La prueba no inicia la contratación ni abre contacto de ventas. El enlace primario del hero sí llega a login.",
+      "accion": "Conectar Free al punto de registro y Business al formulario real de ventas. Verificar también el CTA de Pro.",
+      "imagenes": [
+        "15-pricing-actions.png",
+        "16-pricing-business-after.png",
+        "03-get-started.png"
+      ],
+      "source_case": "AUT-01"
+    },
+    {
+      "id": "AS-02",
+      "titulo": "El campo de contraseña carece del nombre accesible Contraseña",
+      "severidad_0_4": 3,
+      "categoria": "Accesibilidad / formularios",
+      "pasos": [
+        "Login en español. Enfocar correo, pulsar Tab, revisar nombre accesible del control de contraseña. Volver al correo y pulsar el rótulo Contraseña."
+      ],
+      "observacion": "Tab llega al input, pero el árbol informa un textbox llamado ••••••••. El rótulo apunta al contenedor DIV, no al input, y hacer clic en el rótulo no enfoca el campo.",
+      "accion": "Asociar la etiqueta al identificador del input y verificar el nombre accesible en ambos idiomas.",
+      "imagenes": [
+        "19-password-keyboard-focus.png",
+        "20-password-accessibility-extract.png"
+      ],
+      "registro": "password-accessibility.json",
+      "source_case": "AUT-03"
+    },
+    {
+      "id": "AS-03",
+      "titulo": "El acceso del cliente existente desaparece del menú móvil",
+      "severidad_0_4": 2,
+      "categoria": "Arquitectura de información / navegación móvil",
+      "pasos": [
+        "Comparar la cabecera de escritorio con el menú abierto a 390 px. Cerrar el menú y pulsar Start Free Trial."
+      ],
+      "observacion": "La navegación móvil enumera Home, Features, How it Works, Pricing, Contact; el acceso Login visible en escritorio queda oculto. El CTA de prueba gratuita sí conduce a login.",
+      "accion": "Incluir acceso a la cuenta con un rótulo claro en el menú móvil.",
+      "imagenes": [
+        "desktop-landing.png",
+        "12-mobile-menu.png",
+        "18-mobile-login-via-hero.png"
+      ],
+      "source_case": "AUT-05"
+    },
+    {
+      "id": "AS-04",
+      "titulo": "La demostración anunciada solo muestra PENDIENTE",
+      "severidad_0_4": 2,
+      "categoria": "Usabilidad / correspondencia entre promesa y contenido",
+      "pasos": [
+        "Landing > ES > Sobre el producto > Ve AutoService en acción."
+      ],
+      "observacion": "El panel de demostración muestra PENDIENTE. La sección carece de reproductor, botón o iframe.",
+      "accion": "Publicar una demostración reproducible o retirar temporalmente la invitación y ofrecer un recorrido accesible.",
+      "imagenes": [
+        "17-demo-heading.png"
+      ],
+      "source_case": "AUT-02"
+    },
+    {
+      "id": "AS-05",
+      "titulo": "La página de acceso declara inglés mientras presenta español",
+      "severidad_0_4": 2,
+      "categoria": "Accesibilidad / identificación del idioma",
+      "pasos": [
+        "Abrir login en español, inspeccionar el idioma de la página. Pasar a EN."
+      ],
+      "observacion": "El encabezado Iniciar Sesión se encuentra en una página con lang=en. La interfaz sí pasa a inglés con EN. El atributo tiene consecuencias potenciales para pronunciación, no medidas con usuarios.",
+      "accion": "Sincronizar document.documentElement.lang con el idioma de la interfaz.",
+      "imagenes": [
+        "10-lang-es.png",
+        "11-lang-en.png"
+      ],
+      "registro": "password-accessibility.json",
+      "source_case": "AUT-04"
+    }
+  ],
+  "comprobaciones_favorables": [
+    {
+      "pasos": "Llegar desde login a ¿Es cliente del taller?; pulsar Buscar Mi Orden con el campo vacío.",
+      "resultado": "El portal /tracking se abre y responde «Por favor ingresa un código de seguimiento».",
+      "evidencia": "14-tracking-empty.png"
+    },
+    {
+      "pasos": "Desde login abrir ¿Olvidó su contraseña?.",
+      "resultado": "Se abre el diálogo Recuperar Contraseña.",
+      "evidencia": "07-forgot.png"
+    },
+    {
+      "pasos": "Desde login abrir Registre su Taller aquí.",
+      "resultado": "Aparece formulario de alta.",
+      "evidencia": "08-registration.png"
+    },
+    {
+      "pasos": "En landing a 390 px abrir/cerrar el menú y pulsar el CTA de la portada.",
+      "resultado": "El menú abre y la app carga el login, sin desbordamiento horizontal de la página.",
+      "evidencia": "18-mobile-login-via-hero.png"
+    }
+  ],
+  "registros": [
+    "checks.json",
+    "confirmation.json",
+    "password-accessibility.json"
+  ],
+  "documents": {
+    "pdf": {
+      "path": "output/pdf/upc-pre-202610-1asi0732-9100-teralume-ux-audit-autoservice-av2.pdf",
+      "sha256": "32be4541f862b8c388d731508cc31dd032b308e2b1b4e002824ef0c1126b76d7"
+    },
+    "docx": {
+      "path": "output/docx/upc-pre-202610-1asi0732-9100-teralume-ux-audit-autoservice-av2.docx",
+      "sha256": "27c37ee7bc4009e81bf25af674670939ac8e64919c478a91dc2b2bd36997a68a"
+    }
+  }
+}
