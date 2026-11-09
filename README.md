@@ -53,6 +53,7 @@
 | AV2.4 | 03/11/2026 | Loa Rojas, Jean Franck | Corrección del diseño experimental y su relación con el pipeline; guion específico de validación; contribuciones trazadas por autor y entrega; actualización de pruebas y recuperación del servicio con evidencia remota. Edición e inspección técnica asistidas por IA. |
 | AV2.5 | 03/11/2026 | Loa Rojas, Jean Franck | Incorporación de las contribuciones individuales confirmadas por el Team Leader dentro de los dos criterios ABET y retiro de la tabla de revisiones propuestas. |
 | AV2.6 | 09/11/2026 | Loa Rojas, Jean Franck | Revisión de observaciones del parcial. Se recuperaron los aportes de TB1 en Student Outcome, se documentó el recorrido público ST-01 y se incorporaron resultados de ejecución al informe y al keynote. La exposición conserva la grabación de AV1. |
+| AV2.7 | 09/11/2026 | Loa Rojas, Jean Franck | Incorporación de la auditoría realizada a AutoService, con información de ShiftTech, cronograma real, cinco hallazgos y capturas. Actualización del estado de la auditoría de retorno y del Performance de AV2. |
 
 <div style="page-break-after: always;"></div>
 
@@ -1532,65 +1533,181 @@ El hallazgo prioritario es la prevención de acciones masivas no deseadas. Ning�
 
 #### 6.4.1.1 Información del grupo auditado
 
-La auditoría se aplicará a otro grupo del mismo curso asignado por el docente. Al momento del intercambio se registrarán los siguientes datos:
+El 9 de noviembre el Team Leader recibió el informe de ShiftTech Solutions y los enlaces públicos de AutoService para el intercambio de auditorías. Se inspeccionaron la Landing Page y las pantallas públicas de la aplicación mediante navegador automatizado.
 
-| Campo | Registro requerido |
+| Campo | Información del equipo y producto |
 |:--|:--|
-| Startup y producto | Nombre oficial y enlace al reporte. |
-| Grupo / NRC | Identificador confirmado por el equipo auditado. |
-| Contacto | Integrante autorizado para coordinar la auditoría. |
-| Artefactos | Landing Page, Web Application, Native Mobile Application y reporte. |
-| Versión evaluada | Commit SHA o tag inmutable. |
-| Alcance acordado | Tres flujos críticos y plataformas disponibles. |
+| Grupo auditor | Teralume, equipo de EnergyCore. Inspección técnica asistida por navegador. |
+| Startup y producto auditado | ShiftTech Solutions / AutoService. |
+| Curso, NRC y profesor | Diseño de Experimentos de Ingeniería de Software (1ASI0732), NRC 9100, Alex Humberto Sánchez Ponce. |
+| Integrantes del grupo auditado | Angel Thyago Flores Eusebio (U20231B781), Daniel Jonatan Aquino Solorzano (U202217678), Brandon Wilder Soto Palacios (U202315640), Juan Antonio Sanchez Cuadrado (U202319404) y Mario Alonso Fernández (U202317807), según su informe. |
+| Fuentes recibidas | Informe de 265 páginas fechado el 05/10/2026, Landing Page en GitHub Pages y acceso web en Vercel. |
+| Versión inspeccionada | Despliegues públicos servidos el 09/11/2026 entre las 02:10 y las 02:12, hora de Lima. No se proporcionó SHA de esos despliegues. |
+| Entorno | Microsoft Edge 157.0.4341.42, escritorio de 1366 × 820 y móvil emulado de 390 × 844. |
+| Participantes del grupo cliente | La inspección se realizó sin una sesión con participantes de ShiftTech. |
 
-**Alcance acreditable:** instrumento preparado; no se dispone de grupo auditado confirmado, acta ni hallazgos externos verificables.
+**Tareas incluidas.** Elegir un plan, localizar la demostración, acceder desde móvil, identificar los campos del formulario, cambiar el idioma y encontrar el seguimiento de una orden. Se abrieron las pantallas de registro y recuperación.
+
+**Alcance excluido.** Creación de cuentas, envío de recuperación por correo, consulta de órdenes con códigos reales, pagos, área autenticada del taller y aplicación móvil nativa. Los tamaños empleados son condiciones de la inspección. [Landing evaluada](https://upc-shift-tech-solutions-team-1.github.io/LandingPage-AutoService/) · [Web Application evaluada](https://autoservice-web-kappa.vercel.app/login) · [Repositorio del informe de ShiftTech](https://github.com/upc-shift-tech-solutions-team-1/report).
 
 #### 6.4.1.2 Cronograma de auditoría realizada
 
-| Momento | Actividad | Duración | Salida |
-|:--|:--|--:|:--|
-| D-3 | Confirmar alcance, versión y accesos de prueba. | 20 min | Ficha de auditoría. |
-| D-2 | Revisión individual por heurísticas y accesibilidad. | 60 min | Hallazgos preliminares. |
-| D-1 | Consolidar duplicados y asignar severidad. | 30 min | Backlog priorizado. |
-| D | Sesión de devolución con el grupo auditado. | 30 min | Acta y aceptación de hallazgos. |
-| D+2 | Verificar correcciones declaradas. | 30 min | Informe de cierre. |
+| Fecha y hora de Lima | Actividad realizada | Evidencia |
+|:--|:--|:--|
+| 09/11/2026, antes de la inspección | Lectura del reporte recibido para identificar el grupo, el producto y el seguimiento público descrito en la página 247. | Informe proporcionado por el Team Leader. |
+| 09/11/2026, 02:10 | Inspección de navegación pública, formularios y adaptación móvil. | Capturas y registro del navegador. |
+| 09/11/2026, 02:11 | Repetición de la selección de planes y del acceso al portal de seguimiento. | Registro de confirmación. |
+| 09/11/2026, 02:12 | Comprobación de foco, nombre accesible y cambio de idioma. | Extracto del árbol de accesibilidad y capturas ES/EN. |
+| 09/11/2026, después de la inspección | Consolidación de cinco hallazgos y preparación del informe para devolución. | Informe de auditoría en PDF y Word. |
 
-Las fechas se completarán cuando el docente confirme el intercambio. El cronograma define actividades, duración y salidas esperadas.
+La fecha de envío y el acuse de recibo se incorporarán al producirse el intercambio. Los registros del navegador miden una ejecución técnica y no el tiempo de tarea de un participante. [Registro y evidencias](assets/evidence/av2/ux-audit-autoservice/audit-record.json).
 
 #### 6.4.1.3 Contenido de auditoría realizada
 
-El [kit de intercambio de auditorías UX](planning/ux-audit-kit-av2.md) incorpora la estructura del Anexo D del Enunciado, páginas físicas 52–53. Es un instrumento preparado, no una auditoría externa ejecutada. Su contenido comprende:
+La evaluación sigue las tres dimensiones del Anexo D, páginas físicas 52–53 del Enunciado. El informe independiente contiene identificación, tareas, tabla resumen, pasos de reproducción, capturas y recomendaciones. Se utiliza la escala de severidad 1–4 del anexo. [Auditoría de AutoService en PDF](output/pdf/upc-pre-202610-1asi0732-9100-teralume-ux-audit-autoservice-av2.pdf) · [Versión editable](output/docx/upc-pre-202610-1asi0732-9100-teralume-ux-audit-autoservice-av2.docx).
 
-- identificación institucional, profesores, grupo auditor, clientes participantes y sitio/app evaluado;
-- ficha del grupo y versión, con tareas incluidas y excluidas del alcance;
-- evaluación de Usability, Inclusive Design e Information Architecture;
-- escala de problemas 1–4 y tabla resumen: número, problema, severidad y heurística o principio violado;
-- descripción de cada problema con captura ilustrativa y recomendación, complementada por ruta, pasos, resultado esperado/observado y versión;
-- acta de devolución y comprobación posterior de las correcciones.
+| ID | Problema observado | Severidad | Heurística o principio afectado |
+|:--|:--|:--:|:--|
+| AS-01 | Los botones de los planes Free y Business regresan a la portada. | 3, mayor | Usability. Correspondencia entre la acción anunciada y su resultado. |
+| AS-02 | El campo de contraseña se identifica mediante puntos en el árbol de accesibilidad. | 3, mayor | Inclusive Design. Ofrecer una experiencia comparable. |
+| AS-03 | El menú móvil omite el inicio de sesión disponible en escritorio. | 2, menor | Information Architecture. Facilidad para encontrar la ruta de acceso. |
+| AS-04 | La sección de demostración anuncia contenido que no puede verse. | 2, menor | Information Architecture. Utilidad del contenido anunciado. |
+| AS-05 | El acceso en español conserva el idioma principal declarado en inglés. | 2, menor | Inclusive Design. Comunicar el idioma del contenido. |
 
-Para EnergyCore se proponen tres tareas con datos demostrativos, comprobaciones de teclado, foco, nombres accesibles y adaptación a 390, 768 y 1440 px. Estas decisiones operativas complementan el Anexo D; no son resoluciones obligatorias del enunciado ni una certificación de conformidad WCAG. Si se audita el producto de otro equipo, las tareas se adaptarán a sus flujos reales. Los campos y las tablas se completarán solo con observaciones y evidencia autorizadas.
+La severidad es el juicio de la inspección sobre el alcance observado. No se realizaron sesiones con usuarios ni se midió la frecuencia con la que cada problema afecta al público.
+
+<div style="break-inside: avoid;">
+
+**AS-01. Los planes pierden su destino.**
+
+Dónde se observa.  Landing en inglés, sección Pricing.
+
+Cómo reproducirlo.  Abrir Pricing. Pulsar Get Started en Free. Regresar a Pricing y pulsar Contact Sales en Business.
+
+Resultado observado.  En ambos casos la URL termina en /# y reaparece la cabecera de la landing. No se abre el registro ni un canal de ventas.
+
+Impacto.  Una persona que ya eligió el plan debe descubrir otra forma de inscribirse o contactar con el equipo de ventas de AutoService.
+
+Recomendación.  Enlazar Free con el alta del taller y Business con un contacto de ventas operativo.
+
+Cómo verificar la corrección.  Repetir ambas selecciones desde Pricing y confirmar que cada destino corresponde a la etiqueta del botón.
+
+<p align="center">
+  <img src="assets/evidence/av2/ux-audit-autoservice/15-pricing-actions.png" alt="Botones de selección de planes de AutoService" width="100%">
+</p>
+
+</div>
+
+<div style="break-inside: avoid;">
+
+**AS-02. La contraseña se identifica como una serie de puntos.**
+
+Dónde se observa.  Formulario público de inicio de sesión en español.
+
+Cómo reproducirlo.  Enfocar el correo, pulsar Tab y revisar cómo identifica el navegador el campo de contraseña. Hacer clic en su etiqueta visible.
+
+Resultado observado.  Tab alcanza el campo. El árbol de accesibilidad lo nombra «••••••••». La etiqueta «Contraseña» apunta al contenedor y al pulsarla no enfoca la entrada.
+
+Impacto.  Quien navega por nombres de controles puede llegar al campo sin saber qué dato se le pide. La inspección se hizo en el navegador, sin una sesión con usuarios de lectores de pantalla.
+
+Recomendación.  Asociar «Contraseña» al identificador del campo de entrada. Mantener la máscara para ocultar los caracteres escritos.
+
+Cómo verificar la corrección.  En español, el navegador debe exponer el nombre «Contraseña»; en inglés, «Password». Pulsar la etiqueta debe colocar el foco en el campo.
+
+<p align="center">
+  <img src="assets/evidence/av2/ux-audit-autoservice/20-password-accessibility-extract.png" alt="Extracto del árbol de accesibilidad de AutoService" width="100%">
+</p>
+
+</div>
+
+<div style="break-inside: avoid;">
+
+**AS-03. El menú móvil omite el inicio de sesión.**
+
+Dónde se observa.  Landing en inglés, vista móvil emulada de 390 × 844.
+
+Cómo reproducirlo.  Abrir el menú móvil y buscar Login. Cerrar el menú y probar Start Free Trial en la portada.
+
+Resultado observado.  El menú muestra Home, Features, How it Works, Pricing y Contact. En escritorio se ofrece Login en la cabecera. En móvil, Start Free Trial sí lleva al login.
+
+Impacto.  Un usuario que ya tiene cuenta debe interpretar una invitación a iniciar una prueba gratuita como la entrada a su cuenta.
+
+Recomendación.  Incluir Login o Iniciar sesión en el menú móvil y darle el mismo destino que en escritorio.
+
+Cómo verificar la corrección.  Abrir el menú en un ancho de 390 px y acceder mediante el enlace explícito de inicio de sesión.
+
+<p align="center">
+  <img src="assets/evidence/av2/ux-audit-autoservice/12-mobile-menu.png" alt="Menú móvil de AutoService y acceso mediante Start Free Trial" width="42%">
+</p>
+
+</div>
+
+<div style="break-inside: avoid;">
+
+**AS-04. La demostración anunciada no se puede ver.**
+
+Dónde se observa.  Landing en español, bloque «Ve AutoService en acción».
+
+Cómo reproducirlo.  Bajar hasta «Sobre el producto» y buscar el contenido que enseña el recorrido desde la recepción hasta la facturación.
+
+Resultado observado.  El bloque contiene únicamente la palabra «PENDIENTE». Durante la inspección no había un reproductor ni una secuencia de pantallas que mostrara el recorrido.
+
+Impacto.  Un taller que intenta valorar el producto no puede revisar la demostración que promete esa sección.
+
+Recomendación.  Publicar una demostración reproducible con subtítulos o una secuencia de pantallas explicadas. Mientras se prepara, mostrar solo materiales disponibles.
+
+Cómo verificar la corrección.  Acceder desde la landing publicada y comprobar que el visitante puede abrir y entender la demostración.
+
+<p align="center">
+  <img src="assets/evidence/av2/ux-audit-autoservice/17-demo-heading.png" alt="Sección de demostración de AutoService con contenido PENDIENTE" width="100%">
+</p>
+
+</div>
+
+<div style="break-inside: avoid;">
+
+**AS-05. El idioma declarado no sigue la selección del usuario.**
+
+Dónde se observa.  Selector ES / EN del formulario de acceso.
+
+Cómo reproducirlo.  Elegir ES y comprobar el título visible y el idioma principal declarado por la página. Repetir con EN.
+
+Resultado observado.  Con ES se muestran «Iniciar Sesión» y «Bienvenido», pero el documento declara inglés (lang=en). Al elegir EN, el formulario pasa a «Log In» y «Welcome» y el atributo continúa en inglés.
+
+Impacto.  Una tecnología de asistencia que usa el idioma del documento puede aplicar pronunciación inglesa al contenido en español.
+
+Recomendación.  Actualizar el idioma principal del documento al elegir ES o EN, también en la primera carga.
+
+Cómo verificar la corrección.  Comprobar que la página declare es cuando se muestre en español y en cuando se muestre en inglés.
+
+<p align="center">
+  <img src="assets/evidence/av2/ux-audit-autoservice/10-lang-es.png" alt="Acceso de AutoService en español con idioma principal inglés comprobado en el navegador" width="100%">
+</p>
+
+</div>
+
+**Comprobaciones favorables.** Desde el login, ¿Es cliente del taller? abre el Portal de Seguimiento. Al pulsar Buscar Mi Orden sin código, aparece Por favor ingresa un código de seguimiento. Se abren también Recuperar Contraseña y Registrar Taller. La navegación móvil permite abrir y cerrar el menú y llegar al login mediante el CTA. Estas observaciones corresponden a las pantallas públicas.
 
 ### 6.4.2 Auditoría recibida
 
 #### 6.4.2.1 Información del grupo auditor
 
-El grupo auditor externo será el equipo designado por el docente. La ficha registrará startup, producto, NRC, integrantes participantes, enlace a su reporte y versión evaluada de EnergyCore.
+ShiftTech Solutions, equipo de AutoService del NRC 9100, está evaluando EnergyCore según lo comunicado por el Team Leader el 09/11/2026. Sus integrantes figuran en 6.4.1.1. El informe de retorno identificará a quienes participaron efectivamente en esa evaluación.
 
 #### 6.4.2.2 Cronograma de auditoría recibida
 
-EnergyCore propondrá el mismo esquema D-3, D-2, D-1, D y D+2 de la auditoría realizada. Antes de D-3 se congelará una versión con tag; durante D se revisará cada hallazgo; en D+2 se responderá con estado **aceptado**, **mitigado**, **rechazado con sustento** o **incorporado al backlog**.
+El 09/11/2026 el Team Leader confirmó que ShiftTech ya estaba auditando EnergyCore. Se registrarán la fecha del informe recibido, la devolución de los hallazgos y las comprobaciones de las correcciones al contar con sus evidencias. La planificación anterior de días relativos se sustituye por el registro del intercambio real.
 
 #### 6.4.2.3 Contenido de auditoría recibida
 
-Se entregará al grupo auditor una cuenta de prueba sin datos personales, los enlaces de los clientes, un conjunto semilla de sedes/dispositivos/lecturas, tres tareas críticas y un canal para reportar hallazgos. El contenido recibido deberá conservarse sin reescritura y cada observación tendrá una respuesta trazable del equipo EnergyCore.
-
-**Alcance acreditable:** instrumento preparado; no se ha aportado informe de otro grupo ni acta de devolución.
+El informe externo se incorporará tal como lo entregue ShiftTech, con sus hallazgos, severidades, capturas y recomendaciones. Al cierre de esta edición aún no se ha recibido ese documento. La auditoría de AutoService incluida en 6.4.1 es la evaluación que Teralume devuelve al otro grupo.
 
 #### 6.4.2.4 Resumen de modificaciones para subsanar hallazgos
 
-No hay modificaciones atribuibles a una auditoría recibida porque todavía no existe un informe externo aportado. Para cerrar un hallazgo se conservarán su identificador original, la decisión justificada, el cambio, el commit y la repetición de los pasos en la versión corregida. Si no se acepta una recomendación, se explicará la restricción de producto o la evidencia que sustenta esa decisión.
+Cada hallazgo que ShiftTech formule sobre EnergyCore se vinculará con la respuesta del equipo, el cambio, el commit y la repetición de sus pasos. Cuando la recomendación se incorpore al backlog o se descarte, se explicará la decisión. El registro comenzará al recibirse el informe.
 
-Los hallazgos de la autoevaluación heurística de 6.3.3 se mantienen separados. Las correcciones documentales y operativas de este avance se trazan en el registro de mejoras del anexo; no se presentan como recomendaciones de un grupo auditor.
+Las observaciones de AutoService corresponden al producto del otro grupo. Los resultados de la autoevaluación de EnergyCore están en 6.3.3 y las correcciones de esta edición se trazan en el anexo.
+
 
 # Capítulo VII DevOps Practices
 
@@ -2133,7 +2250,7 @@ El diseño de AV2 concentra la evaluación en una pregunta: si mostrar una expli
 
 Las 13 historias To-Be se descomponen en 26 tareas de 4 a 8 horas, con 132 horas estimadas y dependencias entre medición, tratamiento y recuperación. Esta planificación responde a la rúbrica de AV2. La implementación experimental y el análisis de sus resultados no se incorporan como trabajo ejecutado en esta entrega.
 
-El principal límite de la validación sigue siendo la ausencia de sesiones con usuarios del producto y de informes de auditoría entre grupos. El guion, las fichas y los criterios de aceptación hacen esas actividades ejecutables, pero no reemplazan sus registros. El Student Outcome relaciona las contribuciones confirmadas por el Team Leader con decisiones sobre privacidad, interpretación de datos, claridad de la información y condiciones de operación. Las evidencias técnicas citadas conservan el alcance de lo que efectivamente comprobaron.
+La inspección de AutoService produjo cinco hallazgos sobre navegación y accesibilidad del producto de ShiftTech. La validación de EnergyCore requiere aún las sesiones con usuarios y el informe de auditoría de retorno de ese grupo. El guion, las fichas y los criterios de aceptación hacen esas actividades ejecutables, pero no reemplazan sus registros. El Student Outcome relaciona las contribuciones confirmadas por el Team Leader con decisiones sobre privacidad, interpretación de datos, claridad de la información y condiciones de operación. Las evidencias técnicas citadas conservan el alcance de lo que efectivamente comprobaron.
 
 # Bibliografía
 
@@ -2161,7 +2278,8 @@ El principal límite de la validación sigue siendo la ausencia de sesiones con 
 - [Ejecuciones originales de CI y extractos de logs](assets/evidence/av2-ci/execution-records-2026-11-09.json).
 - [ST-01 desde el navegador, 9 de noviembre](assets/evidence/av2/public-navigation/st-01.json) y [sonda de las tres superficies públicas](assets/evidence/av2/public-navigation/public-probe.json).
 - [Guion y registro de validación del producto actual](planning/validation-interviews-av2.md).
-- [Kit para auditorías UX entre grupos](planning/ux-audit-kit-av2.md).
+- [Auditoría realizada de AutoService](output/pdf/upc-pre-202610-1asi0732-9100-teralume-ux-audit-autoservice-av2.pdf) y [registros de la inspección](assets/evidence/av2/ux-audit-autoservice/audit-record.json).
+- [Performance de AV2 en Word](output/docx/upc-pre-202610-1asi0732-9100-teralume-performance-av2.docx) y [en PDF](output/pdf/upc-pre-202610-1asi0732-9100-teralume-performance-av2.pdf).
 - [Presentación AV2 editable](output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pptx).
 - [Presentación AV2 en PDF](output/keynote/upc-pre-202610-1asi0732-9100-teralume-keynote-av2.pdf).
 - [Diseño base en Canva](https://www.canva.com/design/DAHYoDC_Zqc/BJZvKHIJtJGlH2Z6kJ0IjQ/edit). Las diapositivas con las correcciones del 9 de noviembre se distribuyen en el PPTX y el PDF enlazados arriba.
@@ -2179,6 +2297,7 @@ El principal límite de la validación sigue siendo la ausencia de sesiones con 
 | Rúbrica de diseño experimental y revisión de coherencia del 03/11. | Se añaden H0/HA; se armonizan la mejora de éxito de 20 puntos porcentuales, la referencia muestral y el margen Android. Se define cómo contar fallos y límites de tiempo. | 8.2; diseño propuesto sin observaciones ni resultados inventados. |
 | Fallo CI de noviembre al solicitar un reporte de octubre. | El test usa la fecha de la lectura devuelta por la API y verifica creación y borrado. | [Corrección backend](https://github.com/teralume/energycore-platform/commit/abd196438d3d1bd8f7de951aab31fae4aa0e0753) y [88 pruebas aprobadas](https://github.com/teralume/energycore-platform/actions/runs/41646065500). |
 | HTTP 503 de API/OpenAPI con web disponible. | Se reactivó la facturación autorizada y se comprobó la recuperación con el monitor existente. | [Run de recuperación](https://github.com/teralume/energycore-report/actions/runs/41651099079), sin ocultar el fallo anterior ni afirmar disponibilidad continua. |
+| Intercambio de auditorías con ShiftTech Solutions. | Se incorpora la inspección pública de AutoService, el cronograma real y los cinco hallazgos con capturas. | 6.4.1 e informe independiente. El contenido recibido se agregará en 6.4.2 cuando ShiftTech lo devuelva. |
 | Needfinding mezclado con validación y contribuciones colectivas sin detalle. | Se identifica a Catherine como entrevistada, se diseña una sesión de uso y se separan contribuciones por autor y entrega. | 6.3 y Student Outcome; una sesión diseñada o un aporte anterior no se cuenta como evidencia nueva de AV2. |
 
 Las correcciones anteriores provienen de la rúbrica, observaciones docentes anotadas y revisión técnica. No se atribuyen a una auditoría externa que todavía no se recibió.
@@ -2217,8 +2336,8 @@ Para esta entrega se conserva la grabación consolidada de AV1 con el nombre `up
 El contenido documental y la evidencia técnica no acreditan por sí solos estas actividades humanas:
 
 - Validación del producto: entre tres y cinco participantes por segmento, con consentimiento, registro, análisis de uso y video accesible. La entrevista previa a Catherine pertenece al needfinding.
-- Auditoría entre grupos: identificación del grupo, informe realizado y recibido, devolución y respuesta trazable a los hallazgos.
+- Auditoría entre grupos: la inspección de AutoService está documentada en 6.4.1. Se completarán el envío y la devolución con ShiftTech, el informe recibido y la respuesta trazable a sus hallazgos.
 - Revisión por pares: conservar la revisión de los cambios técnicos por otro integrante. La declaración de contribuciones no sustituye el registro de esa revisión.
-- Para la exposición se entrega el MP4 de AV1 identificado en el anexo. La evaluación individual de AV2 requiere que el Team Leader confirme las responsabilidades y calificaciones de este hito.
+- Para la exposición se entrega el MP4 de AV1 identificado en el anexo. El Performance de AV2 recoge los aportes del cuadro ABET y las calificaciones de 20/20 con Cumplió a tiempo confirmadas por el Team Leader el 09/11/2026.
 
 El reclutamiento y la ejecución del experimento To-Be se regirán por su protocolo; sus resultados no se agregan al avance para completar casillas.
