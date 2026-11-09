@@ -1,0 +1,282 @@
+{
+  "captured_at_utc": "2026-11-09T07:42:18.336294+00:00",
+  "repository": "teralume/energycore-platform",
+  "commit": "3f74d4780a34f96958c6fe4626400d44a9a9f918",
+  "ide": "IntelliJ IDEA 2026.2.3",
+  "jdk": "JetBrains Runtime 21.0.11",
+  "project_java_version": 17,
+  "entry_points": [
+    {
+      "runner": "IntelliJ JUnit",
+      "target": "EnergyDashboardPowerTest",
+      "passed": 5,
+      "exit_code": 0,
+      "seconds": 3.622,
+      "screenshot": "intellij-dashboard-tests.png"
+    },
+    {
+      "runner": "IntelliJ Maven tool window",
+      "target": "Lifecycle > test",
+      "passed": 88,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "build": "SUCCESS",
+      "seconds": 41.41,
+      "finished_at": "2026-11-09T02:41:02-05:00",
+      "screenshot": "intellij-maven-suite.png"
+    }
+  ],
+  "counting": "Five dashboard tests are included in the 28 JUnit cases. Total 28 JUnit + 60 Cucumber = 88.",
+  "setup_recovery": [
+    {
+      "stage": "IDE startup",
+      "result": "original cache .port access failure",
+      "resolution": "separate temporary system/log directories for this session"
+    },
+    {
+      "stage": "initial JPS compile",
+      "result": "ExceptionInInitializerError on com.sun.tools.javac.tree.EndPosTable before tests ran",
+      "initial_project_sdk": 27,
+      "resolution": "selected existing JDK 21 and Java language level 17; recompilation and test run succeeded"
+    }
+  ],
+  "suites": [
+    {
+      "name": "com.teralume.energycore.acceptance.CucumberRunnerTest",
+      "tests": 60,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "28.806",
+      "report_written_at_utc": "2026-11-09T07:41:02.033094+00:00",
+      "source_xml_sha256": "1f69998a6ef95ffac4a4c90f9d01b33988faf55b9492e711131c267cf464caf5",
+      "cases": [
+        "Listing the available service plans",
+        "Checking out a subscription with valid card details",
+        "Checkout is rejected when card details are incomplete",
+        "Retrieving the current subscription after checkout",
+        "Cancelling the current subscription",
+        "Listing invoices for the authenticated user",
+        "Registering a new device",
+        "Registering a device is rejected without a name",
+        "Registering a device is rejected with non-positive power",
+        "Listing all devices of the user",
+        "Toggling a device from OFF to ON",
+        "Setting a device status explicitly",
+        "Deleting a device",
+        "Creating a scheduled routine that turns a device off at night",
+        "Enabling and disabling a routine",
+        "Executing a routine on demand",
+        "Creating a device group with member devices",
+        "Executing a group action turns off all member devices simultaneously",
+        "Previewing an operation mode before activation",
+        "Activating an operation mode",
+        "Retrieving the energy dashboard summary",
+        "Recording simulated telemetry",
+        "Retrieving the current sampling settings",
+        "Updating the sampling interval",
+        "Successful user registration",
+        "Registration is rejected for an invalid email",
+        "Registration is rejected for a password shorter than 8 characters",
+        "Registration is rejected when the email is already in use",
+        "Successful sign in returns a JWT token",
+        "Sign in is rejected with wrong credentials",
+        "A protected endpoint rejects requests without a token",
+        "A protected endpoint accepts a valid Bearer token",
+        "Requesting a password recovery link",
+        "Updating the authenticated user profile",
+        "Deleting the authenticated user account",
+        "Creating a high-consumption alert rule",
+        "Evaluating rules when the threshold is exceeded",
+        "Listing active alerts",
+        "Marking an alert as read",
+        "Resolving an alert",
+        "Toggling an alert rule on and off",
+        "Reading the notification preferences",
+        "Disabling monthly report emails from the preferences",
+        "Retrieving the platform reporting summary",
+        "Creating an energy saving goal",
+        "Listing energy goals",
+        "Updating an energy goal target",
+        "Deleting a stored report",
+        "Exporting energy readings as CSV",
+        "Opening a support ticket",
+        "Listing support tickets",
+        "Changing the status of a support ticket",
+        "Scheduling a maintenance ticket for a device",
+        "Closing a maintenance ticket",
+        "Creating a location",
+        "Listing all locations of the user",
+        "Updating a location",
+        "Deleting a location",
+        "Creating a room inside a location",
+        "Assigning a device to a room"
+      ]
+    },
+    {
+      "name": "com.teralume.energycore.billing.application.internal.commandservices.BillingCommandServiceImplTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "1.167",
+      "report_written_at_utc": "2026-11-09T07:40:30.790638+00:00",
+      "source_xml_sha256": "f9dc242b2c8630f04a4b20f638ecb649fae9b9614cb5bed094008fc30d79c3ad",
+      "cases": [
+        "checkoutPublishesSubscriptionAndPaymentDomainEvents",
+        "cancelSubscriptionKeepsEndDateAtCurrentBillingCycleEnd"
+      ]
+    },
+    {
+      "name": "com.teralume.energycore.devicecontrol.domain.services.DevicePairingCatalogServiceTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "0.018",
+      "report_written_at_utc": "2026-11-09T07:40:30.803665+00:00",
+      "source_xml_sha256": "64b48f7ab35d7e916c369f658d6cff815578ee9460c674e5c17644ccb4d2095c",
+      "cases": [
+        "resolveShouldNormalizePairingCode",
+        "resolveShouldRejectUnknownPairingCode"
+      ]
+    },
+    {
+      "name": "com.teralume.energycore.devicecontrol.domain.services.RoutineSchedulePolicyServiceTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "0.031",
+      "report_written_at_utc": "2026-11-09T07:40:30.827866+00:00",
+      "source_xml_sha256": "ef7e3c65b79458b768505702f514325a53d0d0aaa1796dcdc3101bdd09d77532",
+      "cases": [
+        "customIntervalRoutineUsesCreationDateAsAnchor",
+        "dailyRoutineIsDueOncePerScheduledOccurrence",
+        "weeklyScheduleRequiresAtLeastOneDay",
+        "onceRoutineIsDueOnStartDateAndThenStops",
+        "weeklyRoutineUsesSelectedDays"
+      ]
+    },
+    {
+      "name": "com.teralume.energycore.energymonitoring.application.services.EnergyDashboardPowerTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "0.326",
+      "report_written_at_utc": "2026-11-09T07:40:31.156945+00:00",
+      "source_xml_sha256": "ffedf30b7a21aba72d58de9eb1e589c8a199bda9bdbfdc983d32789d19329105",
+      "cases": [
+        "emptyAccountHasZeroPowerAndNoRooms",
+        "repeatedSamplesAccumulateEnergyButNotCurrentPower",
+        "roomPowerMatchesActiveDevicesAndRetainsHistoryForInactiveDevices",
+        "includesActiveRoomsBeforeTheirFirstReading",
+        "unknownAndBlankRoomsKeepHistoryWithoutInventingCurrentPower"
+      ]
+    },
+    {
+      "name": "com.teralume.energycore.iam.application.internal.eventhandlers.UserRegisteredEventHandlerTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "0.04",
+      "report_written_at_utc": "2026-11-09T07:40:31.193164+00:00",
+      "source_xml_sha256": "0a1c35ecf007062f4736101e75f44702401d5950b24802b84b3364f6ae7042e2",
+      "cases": [
+        "translatesDomainEventIntoIntegrationEvent"
+      ]
+    },
+    {
+      "name": "com.teralume.energycore.iam.application.security.AccessAuthorizationServiceTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "0.274",
+      "report_written_at_utc": "2026-11-09T07:40:31.480086+00:00",
+      "source_xml_sha256": "46795cc142009d2c0f763c4cc1407fb9daf7d897d3a77c05c07d1a1f1f16bf9b",
+      "cases": [
+        "activeUserCanPassWithoutModulePermission",
+        "currentUserCanReadOwnAccountWithoutManagementPermission",
+        "guestCannotPassManagementPermission",
+        "ownerCanPassRequiredPermission"
+      ]
+    },
+    {
+      "name": "com.teralume.energycore.iam.application.services.AuthApplicationServiceTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "0.315",
+      "report_written_at_utc": "2026-11-09T07:40:31.786174+00:00",
+      "source_xml_sha256": "7e1fa2c425d5eda7e1cbe1e1e6bc526cb1326d7f1be4646c60b9830bb17501a7",
+      "cases": [
+        "recoverPasswordDoesNotRevealUnknownEmail",
+        "recoverPasswordStoresHashedOneTimeTokenAndDeliversRawToken",
+        "resetPasswordConsumesTokenAndStoresNewPasswordHash"
+      ]
+    },
+    {
+      "name": "com.teralume.energycore.iam.domain.services.AccessProfilePolicyServiceTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "0.004",
+      "report_written_at_utc": "2026-11-09T07:40:31.792952+00:00",
+      "source_xml_sha256": "0afc34684d72f6c8426f27df6dcfa6d777e2058c6aa9211a2891868f72d4d8f4",
+      "cases": [
+        "ownerCanManageBillingAndAccess",
+        "guestCanOnlyUseLimitedDailyControl"
+      ]
+    },
+    {
+      "name": "com.teralume.energycore.iam.infrastructure.security.PasswordHashingServiceTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "0.248",
+      "report_written_at_utc": "2026-11-09T07:40:32.077494+00:00",
+      "source_xml_sha256": "1eff5e0b454f6dde361e11f7e38242219e71fe99459e67e52a0de05d7c7f7c7b",
+      "cases": [
+        "hashStoresPasswordAsBcryptAndMatchesRawValue"
+      ]
+    },
+    {
+      "name": "com.teralume.energycore.reporting.application.internal.eventhandlers.ReportingIntegrationEventHandlerTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "0.082",
+      "report_written_at_utc": "2026-11-09T07:40:32.122864+00:00",
+      "source_xml_sha256": "5b6bccb9161f097fb6065786529a799b1d707432f64495824e9593955729afd6",
+      "cases": [
+        "recordsEnergyThresholdIntegrationEventForReporting"
+      ]
+    },
+    {
+      "name": "com.teralume.energycore.reporting.application.services.MonthlyConsumptionReportSchedulerServiceTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "0.091",
+      "report_written_at_utc": "2026-11-09T07:40:32.214713+00:00",
+      "source_xml_sha256": "3fe1f2386d35d55ffb07fbfa653bb22cc1f0c5b42648cd57e6742997a663c1bc",
+      "cases": [
+        "generatesMonthlyReportAndNotificationForActiveUser",
+        "skipsUserWhenMonthlyReportPreferenceIsDisabled"
+      ]
+    }
+  ],
+  "screenshots": {
+    "intellij-dashboard-tests.png": "85910c6f116300cd2e28b17d6cc08686feaabe5dea1e7e8f1d0474c65d462986",
+    "intellij-maven-suite.png": "d33a76175ea386482e304cc9e8820e9bec7d467244ab01eaab590426b6cad6e9"
+  }
+}
