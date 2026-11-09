@@ -1,0 +1,20 @@
+{
+  "received_date": "2026-11-09",
+  "source": "ShiftTech Solutions supplied by Team Leader",
+  "source_file": "Auditoria-EnergyCore.md",
+  "source_sha256": "bfb06cc5a56060f756eb6da48481046cf59660c80d96e481b8686e0859449a36",
+  "findings": [
+    "L-01",
+    "L-02",
+    "W-01",
+    "W-02",
+    "M-01",
+    "M-02"
+  ],
+  "priority_scale": "Alta / Media / Baja, retained as supplied",
+  "referenced_images_not_supplied": [
+    "auditoria-energycore-evidencias/movil-etiqueta-habitaciones.png",
+    "auditoria-energycore-evidencias/movil-alertas.png"
+  ],
+  "response": "Documented for triage; implementation and retest are not claimed."
+}

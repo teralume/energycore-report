@@ -41,6 +41,7 @@ jobs:
             assets/evidence/av2-ci
             delivery
             output/docx
+            output/markdown
             output/pdf
             output/keynote
             output/zip
