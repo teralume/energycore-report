@@ -1,0 +1,575 @@
+{
+  "record_type": "extractos_de_ejecuciones_de_github_actions",
+  "review_date": "2026-11-09",
+  "branch": "main",
+  "deployment_acceptance_history": {
+    "source": "output/zip/upc-pre-202610-1asi0732-9100-teralume-artifacts-tb1.zip :: deployment/deployment-result.local.json (also verified in Entregables/TB1)",
+    "finished_utc": "2026-09-07T01:38:17.9449241Z",
+    "revision": "energycore-platform-persist-0907012918",
+    "api_url": "https://energycore-platform-ujdgb2zcpq-ue.a.run.app",
+    "web_url": "https://university-energycorp.web.app",
+    "health_http": 200,
+    "swagger_http": 200,
+    "openapi": "VERIFIED"
+  },
+  "selection": "Última ejecución completada encontrada por workflow y rama durante la revisión. Cada resultado corresponde a su fecha y SHA independientes.",
+  "providers": "GitHub Actions run list, run jobs, artifact metadata and job logs.",
+  "runs": {
+    "platform": {
+      "repository": "teralume/energycore-platform",
+      "run": {
+        "conclusion": "success",
+        "createdAt": "2026-11-03T13:37:56Z",
+        "databaseId": 41646065500,
+        "event": "push",
+        "headSha": "3f74d4780a34f96958c6fe4626400d44a9a9f918",
+        "status": "completed",
+        "updatedAt": "2026-11-03T13:39:46Z",
+        "url": "https://github.com/teralume/energycore-platform/actions/runs/41646065500",
+        "workflowName": "Platform CI and delivery"
+      },
+      "jobs": [
+        {
+          "name": "CI - Tests and container build",
+          "id": 125951592147,
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Run actions/checkout@v6",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-java@v5",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run chmod +x mvnw",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run JUnit and Cucumber acceptance tests",
+              "conclusion": "success"
+            },
+            {
+              "name": "Preserve test reports even on failure",
+              "conclusion": "success"
+            },
+            {
+              "name": "Build container from verified source",
+              "conclusion": "success"
+            },
+            {
+              "name": "Publish tested backend package",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "CD - Cloud Run when enabled",
+          "id": 125952517409,
+          "conclusion": "skipped",
+          "steps": []
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 13235147141,
+          "name": "energycore-platform-test-reports-3f74d4780a34f96958c6fe4626400d44a9a9f918",
+          "expired": false,
+          "created_at": "2026-11-03T13:38:59Z",
+          "size_in_bytes": 64487
+        },
+        {
+          "id": 13234109978,
+          "name": "energycore-platform-3f74d4780a34f96958c6fe4626400d44a9a9f918",
+          "expired": false,
+          "created_at": "2026-11-03T13:39:40Z",
+          "size_in_bytes": 61087002
+        }
+      ],
+      "surefire": [
+        {
+          "suite": "com.teralume.energycore.billing.application.internal.commandservices.BillingCommandServiceImplTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "com.teralume.energycore.devicecontrol.domain.services.RoutineSchedulePolicyServiceTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "com.teralume.energycore.devicecontrol.domain.services.DevicePairingCatalogServiceTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "com.teralume.energycore.reporting.application.internal.eventhandlers.ReportingIntegrationEventHandlerTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "com.teralume.energycore.reporting.application.services.MonthlyConsumptionReportSchedulerServiceTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "com.teralume.energycore.iam.application.internal.eventhandlers.UserRegisteredEventHandlerTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "com.teralume.energycore.iam.application.services.AuthApplicationServiceTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "com.teralume.energycore.iam.application.security.AccessAuthorizationServiceTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "com.teralume.energycore.iam.infrastructure.security.PasswordHashingServiceTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "com.teralume.energycore.iam.domain.services.AccessProfilePolicyServiceTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "com.teralume.energycore.energymonitoring.application.services.EnergyDashboardPowerTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "com.teralume.energycore.acceptance.CucumberRunnerTest",
+          "tests": 60,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "TOTAL",
+          "tests": 88,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      ]
+    },
+    "webapp": {
+      "repository": "teralume/energycore-webapp",
+      "run": {
+        "conclusion": "success",
+        "createdAt": "2026-10-05T14:00:42Z",
+        "databaseId": 37321265630,
+        "event": "push",
+        "headSha": "dd4c9eb934c8d70b735b2478adf5f41c2b1a6c64",
+        "status": "completed",
+        "updatedAt": "2026-10-05T14:01:55Z",
+        "url": "https://github.com/teralume/energycore-webapp/actions/runs/37321265630",
+        "workflowName": "Web application CI and delivery"
+      },
+      "jobs": [
+        {
+          "name": "verify",
+          "id": 111800630135,
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Run actions/checkout@v6",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v7",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci",
+              "conclusion": "success"
+            },
+            {
+              "name": "Unit and API integration tests",
+              "conclusion": "success"
+            },
+            {
+              "name": "Production build and system contract",
+              "conclusion": "success"
+            },
+            {
+              "name": "Publish tested web application",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "deploy",
+          "id": 111801186257,
+          "conclusion": "skipped",
+          "steps": []
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 11350056020,
+          "name": "energycore-webapp-dd4c9eb934c8d70b735b2478adf5f41c2b1a6c64",
+          "expired": false,
+          "created_at": "2026-10-05T14:01:51Z",
+          "size_in_bytes": 1854402
+        }
+      ],
+      "test_log_excerpt": [
+        "✓  energycore-webapp  src/app/energy-monitoring/domain/services/energy-statistics.service.spec.ts (2 tests) 9ms",
+        "✓  energycore-webapp  src/app/iam/infrastructure/api/auth-api.service.spec.ts (1 test) 24ms",
+        "✓  energycore-webapp  src/app/app.spec.ts (2 tests) 92ms",
+        "Test Files  3 passed (3)",
+        "Tests  5 passed (5)"
+      ]
+    },
+    "website": {
+      "repository": "teralume/energycore-website",
+      "run": {
+        "conclusion": "success",
+        "createdAt": "2026-10-05T14:00:45Z",
+        "databaseId": 37321271985,
+        "event": "push",
+        "headSha": "303f76b00090eb30ef0ac1bd99867e7832f1059e",
+        "status": "completed",
+        "updatedAt": "2026-10-05T14:00:57Z",
+        "url": "https://github.com/teralume/energycore-website/actions/runs/37321271985",
+        "workflowName": "Website CI and delivery"
+      },
+      "jobs": [
+        {
+          "name": "verify",
+          "id": 111800652741,
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Run actions/checkout@v6",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v7",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci",
+              "conclusion": "success"
+            },
+            {
+              "name": "Unit, integration, and functional tests",
+              "conclusion": "success"
+            },
+            {
+              "name": "Publish tested website artifact",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "deploy",
+          "id": 111800736569,
+          "conclusion": "skipped",
+          "steps": []
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 11350315943,
+          "name": "energycore-website-303f76b00090eb30ef0ac1bd99867e7832f1059e",
+          "expired": false,
+          "created_at": "2026-10-05T14:00:53Z",
+          "size_in_bytes": 3357228
+        }
+      ],
+      "test_log_excerpt": [
+        "✔ the deployed static contract serves the application shell (51.598876ms)",
+        "✔ HTML, CSS, JavaScript, and local assets are connected (4.581411ms)",
+        "✔ JavaScript defines the destination application URL (3.905704ms)",
+        "✔ the landing page exposes its core accessible structure (3.084373ms)",
+        "✔ the landing page includes a route to the EnergyCore application (0.344225ms)",
+        "ℹ tests 5",
+        "ℹ pass 5",
+        "ℹ fail 0",
+        "ℹ skipped 0"
+      ]
+    },
+    "mobile": {
+      "repository": "teralume/energycore-mobile",
+      "run": {
+        "conclusion": "success",
+        "createdAt": "2026-10-05T14:00:48Z",
+        "databaseId": 37321280273,
+        "event": "push",
+        "headSha": "48d3c001cff84aa07f025525ad0333451202e7e8",
+        "status": "completed",
+        "updatedAt": "2026-10-05T14:06:26Z",
+        "url": "https://github.com/teralume/energycore-mobile/actions/runs/37321280273",
+        "workflowName": "Mobile CI and delivery"
+      },
+      "jobs": [
+        {
+          "name": "ios-compatibility",
+          "id": 111800676410,
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Run actions/checkout@v6",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run subosito/flutter-action@v2",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run flutter pub get",
+              "conclusion": "success"
+            },
+            {
+              "name": "Build iOS simulator application",
+              "conclusion": "success"
+            },
+            {
+              "name": "Publish iOS simulator build",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "android",
+          "id": 111800676705,
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Run actions/checkout@v6",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-java@v5",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run subosito/flutter-action@v2",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run flutter pub get",
+              "conclusion": "success"
+            },
+            {
+              "name": "Formatting",
+              "conclusion": "success"
+            },
+            {
+              "name": "Static analysis",
+              "conclusion": "success"
+            },
+            {
+              "name": "Unit, widget, and compatibility tests",
+              "conclusion": "success"
+            },
+            {
+              "name": "Build releasable Android package",
+              "conclusion": "success"
+            },
+            {
+              "name": "Publish tested APK and coverage",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 11350481526,
+          "name": "energycore-mobile-ios-simulator-48d3c001cff84aa07f025525ad0333451202e7e8",
+          "expired": false,
+          "created_at": "2026-10-05T14:04:17Z",
+          "size_in_bytes": 51106277
+        },
+        {
+          "id": 11350331525,
+          "name": "energycore-mobile-android-48d3c001cff84aa07f025525ad0333451202e7e8",
+          "expired": false,
+          "created_at": "2026-10-05T14:05:54Z",
+          "size_in_bytes": 28062287
+        }
+      ],
+      "test_log_excerpt": [
+        "✅ flutter/test/localization_test.dart: core modules are translated for en",
+        "✅ flutter/test/localization_test.dart: core modules are translated for es",
+        "✅ flutter/test/localization_test.dart: core modules are translated for pt",
+        "✅ flutter/test/widget_test.dart: EnergyCore brand renders with the emerald theme",
+        "✅ flutter/test/domain_models_test.dart: EnergyCore domain rules goal progress is normalized between zero and one",
+        "✅ flutter/test/domain_models_test.dart: EnergyCore domain rules device availability and power state follow backend status",
+        "✅ flutter/test/domain_models_test.dart: EnergyCore domain rules notification preferences update without losing other values",
+        "✅ flutter/test/domain_models_test.dart: EnergyCore domain rules access profiles expose the same permissions as the web client",
+        "✅ flutter/test/domain_models_test.dart: EnergyCore domain rules routine input preserves advanced scheduling choices",
+        "✅ flutter/test/domain_models_test.dart: EnergyCore domain rules operation mode input keeps integrated automation policies",
+        "✅ flutter/test/ios_auth_test.dart: iOS at iPhone width opens authentication without a saved session (variant: TargetPlatform.iOS)",
+        "🎉 11 tests passed."
+      ]
+    },
+    "report": {
+      "repository": "teralume/energycore-report",
+      "run": {
+        "conclusion": "success",
+        "createdAt": "2026-11-03T22:26:44Z",
+        "databaseId": 41730853970,
+        "event": "push",
+        "headSha": "1e105903e4e825664fbfd3abad805181d686f086",
+        "status": "completed",
+        "updatedAt": "2026-11-03T22:27:16Z",
+        "url": "https://github.com/teralume/energycore-report/actions/runs/41730853970",
+        "workflowName": "Report CI and delivery"
+      },
+      "jobs": [
+        {
+          "name": "verify",
+          "id": 126247470425,
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Run actions/checkout@v6",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate report structure, diagrams, images, and backlogs",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate AV2 scope and monitoring detection rules",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate ABET, Keynote, package, and checksums",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check changed text for whitespace errors",
+              "conclusion": "success"
+            },
+            {
+              "name": "Publish verified report delivery artifacts",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 13276426655,
+          "name": "energycore-report-1e105903e4e825664fbfd3abad805181d686f086",
+          "expired": false,
+          "created_at": "2026-11-03T22:27:13Z",
+          "size_in_bytes": 202934275
+        }
+      ]
+    },
+    "monitor": {
+      "repository": "teralume/energycore-report",
+      "run": {
+        "conclusion": "success",
+        "createdAt": "2026-11-08T22:08:25Z",
+        "databaseId": 42528712452,
+        "event": "schedule",
+        "headSha": "1e105903e4e825664fbfd3abad805181d686f086",
+        "status": "completed",
+        "updatedAt": "2026-11-08T22:09:28Z",
+        "url": "https://github.com/teralume/energycore-report/actions/runs/42528712452",
+        "workflowName": "Public surface monitoring"
+      },
+      "jobs": [
+        {
+          "name": "probe",
+          "id": 128877915297,
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Run actions/checkout@v6",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify monitoring detection rules",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check public API and web application",
+              "conclusion": "success"
+            },
+            {
+              "name": "Preserve monitoring evidence even on failure",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 13636920033,
+          "name": "monitoring-42528712452",
+          "expired": false,
+          "created_at": "2026-11-08T22:09:25Z",
+          "size_in_bytes": 515
+        }
+      ],
+      "probe": {
+        "checked_at_utc": "2026-11-08T22:08:38.428876+00:00",
+        "mode": "read_only_synthetic",
+        "checks": [
+          {
+            "name": "api-health",
+            "url": "https://energycore-platform-ujdgb2zcpq-ue.a.run.app/api/v1/health",
+            "http_status": 200,
+            "passed": true,
+            "elapsed_ms": 40791,
+            "error": null
+          },
+          {
+            "name": "api-contract",
+            "url": "https://energycore-platform-ujdgb2zcpq-ue.a.run.app/v3/api-docs",
+            "http_status": 200,
+            "passed": true,
+            "elapsed_ms": 5371,
+            "error": null
+          },
+          {
+            "name": "webapp",
+            "url": "https://university-energycorp.web.app",
+            "http_status": 200,
+            "passed": true,
+            "elapsed_ms": 276,
+            "error": null
+          }
+        ],
+        "limitations": "Point-in-time reachability and payload only; no uptime SLA, browser E2E, user validation, or physical energy measurement.",
+        "passed": true
+      }
+    }
+  }
+}

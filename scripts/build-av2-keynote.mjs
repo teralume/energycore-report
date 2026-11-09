@@ -1,4 +1,4 @@
-// Canva is the visual authority. Never regenerate AV2 from the older TB1 deck.
+// Verify the reviewed AV2 files against their recorded export provenance.
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -11,5 +11,5 @@ for (const file of manifest.files) {
   const hash = createHash('sha256').update(bytes).digest('hex');
   if (hash !== file.sha256) throw new Error(`Export changed: ${file.path}. Review it and update the export record.`);
 }
-console.log('AV2: the reviewed PPTX and Canva PDF match the export record. No files were overwritten.');
+console.log('AV2: the reviewed PPTX and PDF match the export record. No files were overwritten.');
 console.log('For a new revision, follow presentation/av2-keynote-source.md.');

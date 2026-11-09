@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-11-09T06:20:03.124Z",
+  "case": "ST-01",
+  "browser": "157.0.4341.42",
+  "landing_http": 200,
+  "cta_label": "Try EnergyCore",
+  "visits": [
+    "https://teralume.github.io/energycore-website/",
+    "https://university-energycorp.web.app/iam/login",
+    "https://university-energycorp.web.app/iam/register",
+    "https://university-energycorp.web.app/iam/login",
+    "https://university-energycorp.web.app/iam/recover-password",
+    "https://university-energycorp.web.app/iam/login"
+  ],
+  "result": "PASS",
+  "inputs_submitted": 0
+}

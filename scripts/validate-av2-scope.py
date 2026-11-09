@@ -25,6 +25,16 @@ for token in ('# Video App Validation','# Video About the Team'):
 assert not re.search(r'^\| [567] \|.*(?:SP / Por iniciar|Propuesto / Por iniciar)',text,re.M)
 assert 'No se contabiliza como entrevista de validación' in text
 
+# The partial review requires an individual history inside each ABET criterion.
+criteria = re.findall(r'^\| \*\*4\.c\.[12] [^|]+\| ([^|]+)\| ([^|]+)\|$', text, re.M)
+assert len(criteria) == 2, 'Expected two Student Outcome criteria'
+team_codes = {'U20241E406', 'U202418755', 'U202423883', 'U201717085', 'U20241E550'}
+for actions, conclusions in criteria:
+    members = re.findall(r'· (U[0-9A-Z]+)\*\*(.*?)(?=<br><br>\*\*|$)', actions)
+    assert len(members) == 5 and {code for code, _ in members} == team_codes
+    for entry in [paragraph for _, paragraph in members] + [conclusions]:
+        assert re.findall(r'\*\*(AV1|TB1|AV2):\*\*', entry) == ['AV1', 'TB1', 'AV2'], 'Missing milestone in ABET table'
+
 planning=(root/'planning/sprint-planning-av2.md').read_text(encoding='utf-8')
 to_be_plan=planning.split('## Sprint 5:',1)[1].split('## Tablero de seguimiento',1)[0]
 report_plan=text.split('#### To-Be Sprint Backlog:',1)[1].split('# Conclusiones',1)[0]
