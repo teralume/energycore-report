@@ -1,0 +1,63 @@
+{
+  "startUTC": "2026-11-09T07:11:26.953Z",
+  "endUTC": "2026-11-09T07:11:36.602Z",
+  "browser": "157.0.4341.42",
+  "locale": "es-PE",
+  "viewports": [
+    [
+      1366,
+      820
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "steps": [
+    {
+      "case": "Login vacío",
+      "text": "Iniciar Sesión\n\nAcceda a su cuenta para gestionar su taller\n\n🇪🇸\nES\n🇺🇸\nEN\nBienvenido\n\nIngrese sus credenciales para continuar\n\nCORREO ELECTRÓNICO\nCONTRASEÑA\nEnter a password\nIniciar Sesión\n¿Olvidó su contraseña?\nGoogle\nMicrosoft\nO\n¿Aún no tiene un taller?Registre su Taller aquí\n¿Es cliente del taller?",
+      "native": [],
+      "alert": [],
+      "network": []
+    },
+    {
+      "case": "Seguir orden mediante enlace público. Campo vacío.",
+      "url": "https://autoservice-web-kappa.vercel.app/tracking",
+      "inputPlaceholder": "Ingresa el código de tu orden aquí",
+      "emptySearchDisabled": false,
+      "body": "Portal de Seguimiento\n\nBienvenido. Ingresa el código de la orden que te brindó tu taller para poder trackear tu vehículo en tiempo real.\n\nBuscar Mi Orden\nPor favor ingresa un código de seguimiento",
+      "native": [],
+      "network": []
+    },
+    {
+      "case": "Tarjeta Business",
+      "href": "#",
+      "after": "https://upc-shift-tech-solutions-team-1.github.io/LandingPage-AutoService/#",
+      "heroVisible": true,
+      "scroll": 8
+    },
+    {
+      "case": "Demostración",
+      "body": "SOBRE EL PRODUCTO\nVe AutoService en acción\n\nDescubre cómo AutoService simplifica las operaciones diarias de tu taller, desde la recepción hasta la facturación.\n\nPENDIENTE\nSeguro y confiable\nConfiguración rápida\nPanel intuitivo",
+      "players": 0
+    },
+    {
+      "case": "Navegación móvil",
+      "visibleHeaderLinks": [
+        "\n                \n                AutoService\n            ",
+        "Home",
+        "Features",
+        "How it Works",
+        "Pricing",
+        "Contact"
+      ],
+      "heroDestination": "https://autoservice-web-kappa.vercel.app/login",
+      "scrollSize": [
+        390,
+        390
+      ],
+      "ariaMenu": null
+    }
+  ]
+}
