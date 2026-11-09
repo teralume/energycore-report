@@ -4,3 +4,6 @@
 *.pdf binary
 *.docx binary
 
+# Preserve the external auditor's intentional Markdown hard line breaks.
+assets/evidence/av2/ux-audit-received/Auditoria-EnergyCore.md text eol=lf whitespace=-blank-at-eol
+
